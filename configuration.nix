@@ -27,43 +27,53 @@
 #	- Detemrine how x11 is being used and attempt to remove it.
 
 { config, pkgs, lib, ... }: {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
    ########################
   ## System Configuration ##
    ########################
   
-  ## Bootloader ##
+  boot = {
+    ## Bootloader ##
+    loader = {
+      systemd-boot = {
+        enable = true;
+	configurationLimit = 10;
+      };
+      efi.canTouchEfiVariables = true;
+    };
+    
+    ## Kernal(s) ##
+    # TODO: Determine how to install multiple kernels and boot into the latest automatically.
+#    kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+    ## Kernel Module(s) ##
+    # TODO: Dynamicly determine what module(s) should be used based on hardware.
+    # Tempeture monitoring:   Intel AMD
+#    initrd.kernelModules = [ "coretemp" "k10temp" ];
+  };
 
   ## Networking ##
-
-  networking.hostName = "framework-13";
-  # Enables wireless support via wpa_supplicant.
-  # networking.wireless.enable = true;
-
-  # Configure network proxy.
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "framework-13";
+    # Enables wireless support via wpa_supplicant.
+    # TODO: Figure out why this causes issues and ensure wirelsss works (somehow).
+    #wireless.enable = true;
+    # Configure network proxy.
+    #proxy.default = "http://user:password@proxy:port/";
+    #proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Enable networking.
+    networkmanager.enable = true;
+  };
 
   ## Time ##
-
-  # Set your time zone.
   time.timeZone = "America/Chicago";
 
   ## Language/Character Set ##
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -76,15 +86,15 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  ## Hardware/Driver Configuration ##
+   ####################################
+  ## Driver Instilation/Configuration ##
+   ####################################
 
-  # Printing #
-
+  ## Printing ##
   # Enable CUPS printing driver.
   services.printing.enable = true;
 
-  # Sound #
-
+  ## Sound ##
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -94,7 +104,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
+    # If you want to use JACK applications, uncomment this.
     #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
@@ -102,42 +112,34 @@
     #media-session.enable = true;
   };
 
-  # User I/O #
-
+  ## User I/O ##
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  #services.xserver.libinput.enable = true;
 
   # Finger print reader driver setup.
   # TODO: Test.
-#  services.fprintd.enable = true;
-#  services.fprintd.tod.enable = true;
-  # TODO: Determine which of the bellow drivers should be used (ideally programaticly).
-#  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
-#  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
+#  services.fprintd = {
+#    enable = true;
+#    tod = {
+#      enable = true;
+      # TODO: Determine which of the bellow drivers should be used (ideally programaticly).
+#      driver = pkgs.libfprint-2-tod1-vfs0090;
+#      driver = pkgs.libfprint-2-tod1-goodix;
+#    };
+#  };
 
-   ########################
-  ## Program Installation ##
-   ########################
+   ###############################
+  ## System Package Installation ##
+   ###############################
 
-  ## System Packages ##
-
-  # Allow unfree packages
+  # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
-
-  # Virtualisation #
-
-  # TODO: Auto detect if in a VM.
-  # Guest.
-  virtualisation.virtualbox.guest.enable = true;
-  # Host.
-#  virtualisation.virtualbox.host.enable = true;
-#  virtualisation.virtualbox.host.enableExtenstionPack = true;
-#  user.extraGroups.vboxusers.members = [ "reedclanton" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # Driver(s) #
+    # TODO: Dynamicly install driver(s) based on hardware.
 #    mesa
 #    linux-firmware
 #    microcodeIntel
@@ -147,21 +149,54 @@
 #    xf86videovmware
 #    bluez
 #    cups
-#    pkgs.fprintd
     # Text Tool(s) #
     neovim
     nano
     # System Tool(s) #
     wget
-    git
+    pkgs.git
     openssh
     rsync
+    brightnessctl
     # Terminal Tool(s) #
     man-pages
     man-pages-posix
+    tmux
+    neofetch
+#    bash-completion
+#    nix-bash-completions
     # Terminal(s) #
     bash
   ];
+
+  ## Virtualisation ##
+  users.extraGroups.vboxusers.members = [ "reedclanton" ];
+  # TODO: Auto detect if in a VM.
+  virtualisation.virtualbox.guest = {
+    enable = true;
+  };
+#  virtualisation.virtualbox.host = {
+#    enable = true;
+#    enableExtenstionPack = true;
+#  };
+
+   ################################
+  ## System Package Configuration ##
+   ################################
+#  programs.git.config = {
+#    enable = true;
+#    userName = "ReedClanton";
+#    user.name = "ReedClanton";
+#  };
+
+  programs.bash = {
+    enableCompletion = true;
+    enableLsColors = true;
+    shellAliases = {
+      c = "clear;pwd;ls -GAp";
+      g = "c;git branch -a;git status";
+    };
+  };
 
   ## User Package(s) & Flatpak(s) ##
 
@@ -215,12 +250,8 @@
       docker-buildx
       # TODO: Python
       # Terminal Tool(s) #
-      tmux
-      neofetch
       bat
       htop
-      bash-completion
-      nix-bash-completions
       # TODO: Find a better terminal web browser.
       lynx
       # Terminal(s) #
