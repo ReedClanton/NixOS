@@ -4,6 +4,7 @@
 
 # TODO:
 #	- Disable auto start of gdm.
+#	- Move `fileSystems."/" from hardware-configuration.nix to this file and change it to use a drive label rather than uuid (maybe).
 #	- Configure console (font, size, colors, etc.).
 #	- Configure system from disk partitoning up
 #	- Determine if the following can have packages removed and installed via flatpak:
@@ -28,7 +29,12 @@
 #	- Handle transfering of data.
 #	- Detemrine how x11 is being used and attempt to remove it.
 
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }:
+let
+  normalUserName = "reedclanton";
+  normalUserRealName = "ReedClanton";
+in
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -55,7 +61,7 @@
 
     ## Kernel Module(s) ##
     # TODO: Dynamicly determine what module(s) should be used based on hardware.
-    # Tempeture monitoring:   Intel AMD
+    # Tempeture monitoring:    Intel      AMD
 #    initrd.kernelModules = [ "coretemp" "k10temp" ];
   };
 
@@ -64,10 +70,10 @@
     hostName = "framework-13";
     # Enables wireless support via wpa_supplicant.
     # TODO: Figure out why this causes issues and ensure wirelsss works (somehow).
-    #wireless.enable = true;
+#    wireless.enable = true;
     # Configure network proxy.
-    #proxy.default = "http://user:password@proxy:port/";
-    #proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+#    proxy.default = "http://user:password@proxy:port/";
+#    proxy.noProxy = "127.0.0.1,localhost,internal.domain";
     # Enable networking.
     networkmanager.enable = true;
   };
@@ -171,7 +177,7 @@
   ];
 
   ## Virtualisation ##
-  users.extraGroups.vboxusers.members = [ "reedclanton" ];
+  users.extraGroups.vboxusers.members = [ "${normalUserName}" ];
   # TODO: Auto detect if in a VM.
   virtualisation.virtualbox.guest = {
     enable = true;
@@ -187,7 +193,7 @@
   # TODO: Figoure out why git config won't get applied.
   system.activationScripts = {
     gitConfig = ''
-      /run/current-system/sw/bin/git config --global user.name "ReedClanton"
+      /run/current-system/sw/bin/git config --global user.name "${normalUserRealName}"
     '';
     gitConfigEmail = ''
       /run/current-system/sw/bin/git config --global user.email "clantonreed@gmail.com"
@@ -199,7 +205,7 @@
 #  programs.git.config = [ { userName = "TEST"; } { user.name = "TEST2"; } { core.editor = "nvim"; } ];
 #  programs.git = {
 #    enable = true;
-#    userName = "ReedClanton";
+#    userName = "${normalUserRealName}";
 #    userEmail = "clantonreed@gmail.com";
 #    coreEditor = "nvim";
 #  };
@@ -260,9 +266,9 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.reedclanton = {
+  users.users.${normalUserName} = {
     isNormalUser = true;
-    description = "ReedClanton";
+    description = "${normalUserRealName}";
     extraGroups = [ "networkmanager" "wheel" "lp" "scanner" ];
     initialPassword = "password";
     shell = pkgs.bash;
@@ -339,7 +345,7 @@
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "reedclanton";
+  services.xserver.displayManager.autoLogin.user = "${normalUserName}";
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
