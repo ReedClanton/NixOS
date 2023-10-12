@@ -4,6 +4,7 @@
 
 # TODO:
 #	- Disable auto start of gdm.
+#	- Configure console (font, size, colors, etc.).
 #	- Configure system from disk partitoning up
 #	- Determine if the following can have packages removed and installed via flatpak:
 #		- gnome-color-manager -> org.gnome.ColorViewer
@@ -21,6 +22,7 @@
 #	- Add user packages:
 #		- ...
 #	- Configure git.
+#	- Configure bluetooth audio.
 #	- Break up this file.
 #	- Handle Gnome configuration.
 #	- Handle transfering of data.
@@ -44,6 +46,7 @@
 	configurationLimit = 10;
       };
       efi.canTouchEfiVariables = true;
+      timeout = 1;
     };
     
     ## Kernal(s) ##
@@ -163,8 +166,6 @@
     man-pages-posix
     tmux
     neofetch
-#    bash-completion
-#    nix-bash-completions
     # Terminal(s) #
     bash
   ];
@@ -183,11 +184,37 @@
    ################################
   ## System Package Configuration ##
    ################################
-#  programs.git.config = {
+  # TODO: Figoure out why git config won't get applied.
+  system.activationScripts = {
+    gitConfig = ''
+      /run/current-system/sw/bin/git config --global user.name "ReedClanton"
+    '';
+    gitConfigEmail = ''
+      /run/current-system/sw/bin/git config --global user.email "clantonreed@gmail.com"
+    '';
+    gitConfigEditor = ''
+      /run/current-system/sw/bin/git config --global core.editor "nvim"
+    '';
+  };
+#  programs.git.config = [ { userName = "TEST"; } { user.name = "TEST2"; } { core.editor = "nvim"; } ];
+#  programs.git = {
 #    enable = true;
 #    userName = "ReedClanton";
-#    user.name = "ReedClanton";
+#    userEmail = "clantonreed@gmail.com";
+#    coreEditor = "nvim";
 #  };
+
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    configure = {
+      customRC = ''
+        " Turn line numbers on.
+        set number
+	" TODO: Fill out the rest and figure out why these changes aren't being applied.
+      '';
+    };
+  };
 
   programs.bash = {
     enableCompletion = true;
@@ -236,7 +263,9 @@
   users.users.reedclanton = {
     isNormalUser = true;
     description = "ReedClanton";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "lp" "scanner" ];
+    initialPassword = "password";
+    shell = pkgs.bash;
     packages = with pkgs; [
       # System Tool(s) #
       xdg-utils
