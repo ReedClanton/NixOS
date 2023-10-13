@@ -44,26 +44,7 @@ in
   ## System Configuration ##
    ########################
   
-  boot = {
-    ## Bootloader ##
-    loader = {
-      systemd-boot = {
-        enable = true;
-	configurationLimit = 10;
-      };
-      efi.canTouchEfiVariables = true;
-      timeout = 1;
-    };
-    
-    ## Kernal(s) ##
-    # TODO: Determine how to install multiple kernels and boot into the latest automatically.
-#    kernelPackages = pkgs.linuxPackages_latest;
-
-    ## Kernel Module(s) ##
-    # TODO: Dynamicly determine what module(s) should be used based on hardware.
-    # Tempeture monitoring:    Intel      AMD
-#    initrd.kernelModules = [ "coretemp" "k10temp" ];
-  };
+  boot = import ./system/setup/boot.nix;
 
   ## Networking ##
   networking = {
@@ -76,6 +57,11 @@ in
 #    proxy.noProxy = "127.0.0.1,localhost,internal.domain";
     # Enable networking.
     networkmanager.enable = true;
+    # Open ports in the firewall.
+    #networking.firewall.allowedTCPPorts = [ ... ];
+    #networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    #networking.firewall.enable = false;
   };
 
   ## Time ##
@@ -137,6 +123,11 @@ in
 #    };
 #  };
 
+   ###########################
+  ## Default Package Removal ##
+   ###########################
+  services.xserver.excludePackages = [ pkgs.xterm ];
+
    ###############################
   ## System Package Installation ##
    ###############################
@@ -163,7 +154,7 @@ in
     nano
     # System Tool(s) #
     wget
-    pkgs.git
+    git
     openssh
     rsync
     brightnessctl
@@ -222,13 +213,26 @@ in
     };
   };
 
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+
   programs.bash = {
     enableCompletion = true;
     enableLsColors = true;
-    shellAliases = {
-      c = "clear;pwd;ls -GAp";
-      g = "c;git branch -a;git status";
-    };
+#    shellAliases = {
+#      c = "clear;pwd;ls -GAp";
+#      g = "c;git branch -a;git status";
+#    };
+  };
+  environment.shellAliases = {
+#    src = ". $HOME/.bashrc";
+    ssh = "ssh -X";
+    grep = "grep --color=auto";
+    ip = "ip --color=auto";
+    ls = "ls --color=auto";
+    c = "clear;pwd;ls -GAp";
+    g = "c;git branch -a;git status";
+    gF = "git fetch --all -ftp";
   };
 
   ## User Package(s) & Flatpak(s) ##
@@ -265,7 +269,7 @@ in
     '';
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account.
   users.users.${normalUserName} = {
     isNormalUser = true;
     description = "${normalUserRealName}";
@@ -276,7 +280,7 @@ in
       # System Tool(s) #
       xdg-utils
       xdg-user-dirs
-#      xdg-ninja
+      xdg-ninja
       os-prober
       brightnessctl
       # Development Tool(s) #
@@ -359,17 +363,6 @@ in
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -378,6 +371,10 @@ in
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
+   #############################################
+  ## Generate List of All Installed Package(s) ##
+   #############################################
+  
   # Generate list of installed packages in `/etc/current-system-packages`.
   environment.etc."current-system-packages".text =
     let
@@ -386,4 +383,24 @@ in
       formatted = builtins.concatStringsSep "\n" sortedUnique;
     in
   formatted;
+
+   ###################
+  ## System Updating ##
+   ###################
+  
+  system.autoUpgrade.enable = true;
+
+   ###################
+  ## System Clean Up ##
+   ###################
+  
+  nix = {
+    settings.auto-optimise-store = true;
+    # Garbase collection.
+    gc = {
+      automatic = false;
+      dates = "weekly";
+      options = "--delete-older-than 3m";
+    };
+  };
 }
