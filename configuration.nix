@@ -44,7 +44,27 @@ in
   ## System Configuration ##
    ########################
   
-  boot = import ./system/setup/boot.nix;
+#  boot = import ./system/setup/boot.nix;
+  boot = {
+    ## Bootloader ##
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 10;
+      };
+      efi.canTouchEfiVariables = true;
+      timeout = 1;
+    };
+
+    ## Kernel(s) ##
+    # TODO: Detemrine how to install multiple kernels and boot into the latest automatically.
+#    kernelPackages = pkgs.linuxPackages_latest;
+
+    ## Kernel Module(s) ##
+    # TODO: Dynamicly determine what module(s) should be used based on hardware.
+    # Empeture monitoring:    Intel      AMD
+#    initrd.kernelModules = [ "coretemp" "k10temp" ];
+  };
 
   ## Networking ##
   networking = {
@@ -58,10 +78,10 @@ in
     # Enable networking.
     networkmanager.enable = true;
     # Open ports in the firewall.
-    #networking.firewall.allowedTCPPorts = [ ... ];
-    #networking.firewall.allowedUDPPorts = [ ... ];
+#    networking.firewall.allowedTCPPorts = [ ... ];
+#    networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
-    #networking.firewall.enable = false;
+#    networking.firewall.enable = false;
   };
 
   ## Time ##
@@ -100,16 +120,16 @@ in
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this.
-    #jack.enable = true;
+#    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
-    #media-session.enable = true;
+#    media-session.enable = true;
   };
 
   ## User I/O ##
   # Enable touchpad support (enabled default in most desktopManager).
-  #services.xserver.libinput.enable = true;
+#  services.xserver.libinput.enable = true;
 
   # Finger print reader driver setup.
   # TODO: Test.
@@ -181,7 +201,7 @@ in
    ################################
   ## System Package Configuration ##
    ################################
-  # TODO: Figoure out why git config won't get applied.
+  # TODO: Figure out why git config won't get applied.
   system.activationScripts = {
     gitConfig = ''
       /run/current-system/sw/bin/git config --global user.name "${normalUserRealName}"
@@ -219,10 +239,6 @@ in
   programs.bash = {
     enableCompletion = true;
     enableLsColors = true;
-#    shellAliases = {
-#      c = "clear;pwd;ls -GAp";
-#      g = "c;git branch -a;git status";
-#    };
   };
   environment.shellAliases = {
 #    src = ". $HOME/.bashrc";
@@ -357,11 +373,11 @@ in
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+#  programs.mtr.enable = true;
+#  programs.gnupg.agent = {
+#    enable = true;
+#    enableSSHSupport = true;
+#  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
