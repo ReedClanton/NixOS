@@ -424,7 +424,7 @@ in
     ## System Updating ##
     settings.auto-optimise-store = true;
 
-    ## Garbase Collection ##
+    ## Garbage Collection ##
     gc = {
       automatic = false;
       dates = "weekly";
