@@ -160,15 +160,23 @@ in
   environment.systemPackages = with pkgs; [
     # Driver(s) #
     # TODO: Dynamicly install driver(s) based on hardware.
+    # Basic system driver(s)/firmware.
 #    mesa
 #    linux-firmware
+    # Microcode.
 #    microcodeIntel
 #    microcodeAmd
+    # Integrated graphics driver(s).
 #    xf86videointel
+    # VM driver(s).
 #    pkgs.virtualboxGuestAdditions
 #    xf86videovmware
+    # Bluetooth driver.
 #    bluez
+    # Standards based printer driver.
 #    cups
+    # HP printer driver.
+#    hplip
     # Text Tool(s) #
     neovim
     nano
@@ -406,13 +414,17 @@ in
   
   system.autoUpgrade.enable = true;
 
-   ###################
-  ## System Clean Up ##
-   ###################
+   ##############################
+  ## NixOS System Configuration ##
+   ##############################
   
   nix = {
+    extraOptions = "experimental-features = nix-command flakes";
+
+    ## System Updating ##
     settings.auto-optimise-store = true;
-    # Garbase collection.
+
+    ## Garbase Collection ##
     gc = {
       automatic = false;
       dates = "weekly";
