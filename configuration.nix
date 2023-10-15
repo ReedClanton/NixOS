@@ -44,7 +44,6 @@ in
   ## System Configuration ##
    ########################
   
-#  boot = import ./system/setup/boot.nix;
   boot = {
     ## Bootloader ##
     loader = {
@@ -60,10 +59,18 @@ in
     # TODO: Detemrine how to install multiple kernels and boot into the latest automatically.
 #    kernelPackages = pkgs.linuxPackages_latest;
 
-    ## Kernel Module(s) ##
-    # TODO: Dynamicly determine what module(s) should be used based on hardware.
-    # Empeture monitoring:    Intel      AMD
-#    initrd.kernelModules = [ "coretemp" "k10temp" ];
+    ## Initialization ##
+    initrd = {
+      # Kernel Module(s) #
+      # TODO: Dynamicly determine what module(s) should be used based on hardware.
+      # Temp monitoring: Intel      AMD
+#      kernelModules = [ "coretemp" "k10temp" ];
+      
+      # File System #
+      # Disable file system check on ext4 VMs (not needed and may cause problems).
+      # TODO: Auto detect if in VM.
+      checkJournalingFS = false;
+    };
   };
 
   ## Networking ##
@@ -169,7 +176,7 @@ in
     # Integrated graphics driver(s).
 #    xf86videointel
     # VM driver(s).
-#    pkgs.virtualboxGuestAdditions
+#    virtualboxGuestAdditions
 #    xf86videovmware
     # Bluetooth driver.
 #    bluez
@@ -200,6 +207,12 @@ in
   # TODO: Auto detect if in a VM.
   virtualisation.virtualbox.guest = {
     enable = true;
+  };
+  # Map VM shared directory at boot.
+  fileSystems."/virtualboxshare" = {
+    fsType = "vboxsf";
+    device = "Shared";
+    options = [ "rw" "nofail" ];
   };
 #  virtualisation.virtualbox.host = {
 #    enable = true;
