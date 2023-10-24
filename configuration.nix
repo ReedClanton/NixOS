@@ -68,7 +68,7 @@ in
       
       # File System #
       # Disable file system check on ext4 VMs (not needed and may cause problems).
-      # TODO: Auto detect if in VM.
+      # TODO: Auto detect if in VM. When not, set to true.
       checkJournalingFS = false;
     };
   };
@@ -185,11 +185,10 @@ in
     # HP printer driver.
 #    hplip
     # Text Tool(s) #
-    neovim
     nano
     # System Tool(s) #
     wget
-    git
+#    git
     openssh
     rsync
     brightnessctl
@@ -223,24 +222,24 @@ in
   ## System Package Configuration ##
    ################################
   # TODO: Figure out why git config won't get applied.
-  system.activationScripts = {
-    gitConfig = ''
-      /run/current-system/sw/bin/git config --global user.name "${normalUserRealName}"
-    '';
-    gitConfigEmail = ''
-      /run/current-system/sw/bin/git config --global user.email "clantonreed@gmail.com"
-    '';
-    gitConfigEditor = ''
-      /run/current-system/sw/bin/git config --global core.editor "nvim"
-    '';
-  };
+#  system.activationScripts = {
+#    gitConfig = ''
+#      /run/current-system/sw/bin/git config --global user.name "${normalUserRealName}"
+#    '';
+#    gitConfigEmail = ''
+#      /run/current-system/sw/bin/git config --global user.email "clantonreed@gmail.com"
+#    '';
+#    gitConfigEditor = ''
+#      /run/current-system/sw/bin/git config --global core.editor "nvim"
+#    '';
+#  };
 #  programs.git.config = [ { userName = "TEST"; } { user.name = "TEST2"; } { core.editor = "nvim"; } ];
-#  programs.git = {
-#    enable = true;
+  programs.git = {
+    enable = true;
 #    userName = "${normalUserRealName}";
 #    userEmail = "clantonreed@gmail.com";
 #    coreEditor = "nvim";
-#  };
+  };
 
   programs.neovim = {
     enable = true;
@@ -406,7 +405,7 @@ in
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.05"; # Did you read the comment?
+  system.stateVersion = "unstable"; # Did you read the comment?
 
    #############################################
   ## Generate List of All Installed Package(s) ##
