@@ -236,6 +236,27 @@ in
 #    };
 #  };
 
+   ##################
+  ## Virtualisation ##
+   ##################
+
+  users.extraGroups.vboxusers.members = [ "${normalUserName}" ];
+  # TODO: Auto detect if in a VM.
+  virtualisation.virtualbox.guest = {
+    enable = true;
+#    x11 = false;
+  };
+  # Map VM shared directory at boot.
+  fileSystems."/virtualboxshare" = {
+    fsType = "vboxsf";
+    device = "Shared";
+    options = [ "rw" "nofail" ];
+  };
+#  virtualisation.virtualbox.host = {
+#    enable = true;
+#    enableExtenstionPack = true;
+#  };
+
    ###########################
   ## Default Package Removal ##
    ###########################
@@ -243,15 +264,72 @@ in
 #  services.xserver.excludePackages = [ pkgs.xterm ];
   services.xserver.excludePackages = [];
 
-   ###############################
-  ## System Package Installation ##
-   ###############################
+   ###############################################
+  ## System Package Configuration & Installation ##
+   ###############################################
 
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  ## Git ##
+  # TODO: Figure out why git config won't get applied.
+#  system.activationScripts = {
+#    gitConfig = ''
+#      /run/current-system/sw/bin/git config --global user.name "${normalUserRealName}"
+#    '';
+#    gitConfigEmail = ''
+#      /run/current-system/sw/bin/git config --global user.email "clantonreed@gmail.com"
+#    '';
+#    gitConfigEditor = ''
+#      /run/current-system/sw/bin/git config --global core.editor "nvim"
+#    '';
+#  };
+#  programs.git.config = [ { userName = "TEST"; } { user.name = "TEST2"; } { core.editor = "nvim"; } ];
+  programs.git = {
+    enable = true;
+#    userName = "${normalUserRealName}";
+#    userEmail = "clantonreed@gmail.com";
+#    coreEditor = "nvim";
+  };
+
+  ## NeoVim ##
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    configure = {
+      customRC = ''
+        " Turn line numbers on.
+        set number
+    " TODO: Fill out the rest and figure out why these changes aren't being applied.
+      '';
+    };
+  };
+
+  ## SSH ##
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+
+  ## BASH ##
+  programs.bash = {
+    enableCompletion = true;
+    enableLsColors = true;
+  };
+  environment.shellAliases = {
+#    src = ". $HOME/.bashrc";
+    ssh = "ssh -X";
+    grep = "grep --color=auto";
+    ip = "ip --color=auto";
+    ls = "ls --color=auto";
+    c = "clear;pwd;ls -GAp";
+    g = "c;git branch -a;git status";
+    gF = "git fetch --all -ftp";
+  };
+
+   #########################################
+  ## Additional System Package Instilation ##
+   #########################################
+
+  # Install packages system wide that need no system or user level configuration.
   environment.systemPackages = with pkgs; [
     # Driver(s) #
     # TODO (LOW) (BLOCKED):
@@ -288,110 +366,9 @@ in
     bash
   ];
 
-  ## Virtualisation ##
-  users.extraGroups.vboxusers.members = [ "${normalUserName}" ];
-  # TODO: Auto detect if in a VM.
-  virtualisation.virtualbox.guest = {
-    enable = true;
-#    x11 = false;
-  };
-  # Map VM shared directory at boot.
-  fileSystems."/virtualboxshare" = {
-    fsType = "vboxsf";
-    device = "Shared";
-    options = [ "rw" "nofail" ];
-  };
-#  virtualisation.virtualbox.host = {
-#    enable = true;
-#    enableExtenstionPack = true;
-#  };
-
-   ################################
-  ## System Package Configuration ##
-   ################################
-  # TODO: Figure out why git config won't get applied.
-#  system.activationScripts = {
-#    gitConfig = ''
-#      /run/current-system/sw/bin/git config --global user.name "${normalUserRealName}"
-#    '';
-#    gitConfigEmail = ''
-#      /run/current-system/sw/bin/git config --global user.email "clantonreed@gmail.com"
-#    '';
-#    gitConfigEditor = ''
-#      /run/current-system/sw/bin/git config --global core.editor "nvim"
-#    '';
-#  };
-#  programs.git.config = [ { userName = "TEST"; } { user.name = "TEST2"; } { core.editor = "nvim"; } ];
-  programs.git = {
-    enable = true;
-#    userName = "${normalUserRealName}";
-#    userEmail = "clantonreed@gmail.com";
-#    coreEditor = "nvim";
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    configure = {
-      customRC = ''
-        " Turn line numbers on.
-        set number
-	" TODO: Fill out the rest and figure out why these changes aren't being applied.
-      '';
-    };
-  };
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  programs.bash = {
-    enableCompletion = true;
-    enableLsColors = true;
-  };
-  environment.shellAliases = {
-#    src = ". $HOME/.bashrc";
-    ssh = "ssh -X";
-    grep = "grep --color=auto";
-    ip = "ip --color=auto";
-    ls = "ls --color=auto";
-    c = "clear;pwd;ls -GAp";
-    g = "c;git branch -a;git status";
-    gF = "git fetch --all -ftp";
-  };
-
-  ## User Package(s) & Flatpak(s) ##
-
-  # Flatpak #
-
-  # Install Flatpak.
-  services.flatpak.enable = true;
-  # Add Flatpak repo(s).
-  system.activationScripts = {
-    flathub = ''
-      /run/current-system/sw/bin/flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    '';
-  };
-  # Install flatpaks.
-  system.activationScripts = {
-    flatpakInstallGnomeSystemUtilities = ''
-      /run/current-system/sw/bin/flatpak install -y org.gnome.Calculator org.gnome.clocks org.gnome.Calendar org.gnome.TextEditor org.gnome.gedit org.gnome.Weather org.gnome.Epiphany org.gnome.Evince org.gnome.Characters org.gnome.Contacts org.gnome.font-viewer org.gnome.Loupe org.gnome.SimpleScan
-    '';
-    flatpakInstallTextTools = ''
-      /run/current-system/sw/bin/flatpak install -y com.github.liferooter.textpieces org.libreoffice.LibreOffice
-    '';
-#    flatpakInstallMediaTools = ''
-#      /run/current-system/sw/bin/flatpak install -y fr.romainvigier.MetadataCleaner org.nickvision.tubeconverter org.videolan.VLC org.audacityteam.Audacity org.gimp.GIMP com.jgraph.drawio.desktop io.gitlab.gregorni.ASCIIImages org.freecadweb.FreeCAD org.blender.Blender
-#    '';
-    flatpakInstallSystemUtilities = ''
-      /run/current-system/sw/bin/flatpak install -y com.github.tchx84.Flatseal com.usebottles.bottles com.transmissionbt.Transmission
-    '';
-#    flatpakInstallGaming = ''
-#      /run/current-system/sw/bin/flatpak install -y com.valvesoftware.Steam com.mojang.Minecraft
-#    '';
-    flatpakInstallUserApplications = ''
-      /run/current-system/sw/bin/flatpak install -y org.mozilla.firefox org.telegram.desktop us.zoom.Zoom
-    '';
-  };
+   ##############################################
+  ## User Package(s) Requering No Configuration ##
+   ##############################################
 
   # Define a user account.
   users.users.${normalUserName} = {
@@ -424,6 +401,40 @@ in
       # Font(s) #
       source-code-pro
     ];
+  };
+
+   ##############
+  ## Flatpak(s) ##
+   ##############
+
+  # Install Flatpak.
+  services.flatpak.enable = true;
+  # Add Flatpak repo(s).
+  system.activationScripts = {
+    flathub = ''
+      /run/current-system/sw/bin/flatpak remote-add --system --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
+  # Install flatpaks.
+  system.activationScripts = {
+    flatpakInstallGnomeSystemUtilities = ''
+      /run/current-system/sw/bin/flatpak install -y org.gnome.Calculator org.gnome.clocks org.gnome.Calendar org.gnome.TextEditor org.gnome.gedit org.gnome.Weather org.gnome.Epiphany org.gnome.Evince org.gnome.Characters org.gnome.Contacts org.gnome.font-viewer org.gnome.Loupe org.gnome.SimpleScan
+    '';
+    flatpakInstallTextTools = ''
+      /run/current-system/sw/bin/flatpak install -y com.github.liferooter.textpieces org.libreoffice.LibreOffice
+    '';
+#    flatpakInstallMediaTools = ''
+#      /run/current-system/sw/bin/flatpak install -y fr.romainvigier.MetadataCleaner org.nickvision.tubeconverter org.videolan.VLC org.audacityteam.Audacity org.gimp.GIMP com.jgraph.drawio.desktop io.gitlab.gregorni.ASCIIImages org.freecadweb.FreeCAD org.blender.Blender
+#    '';
+    flatpakInstallSystemUtilities = ''
+      /run/current-system/sw/bin/flatpak install -y com.github.tchx84.Flatseal com.usebottles.bottles com.transmissionbt.Transmission
+    '';
+#    flatpakInstallGaming = ''
+#      /run/current-system/sw/bin/flatpak install -y com.valvesoftware.Steam com.mojang.Minecraft
+#    '';
+    flatpakInstallUserApplications = ''
+      /run/current-system/sw/bin/flatpak install -y org.mozilla.firefox org.telegram.desktop us.zoom.Zoom
+    '';
   };
 
    #######
