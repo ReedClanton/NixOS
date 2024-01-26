@@ -1,0 +1,7 @@
+/common/modules/networking/wifi.nix
+/hosts/desktop/config/sops/
+/hosts/desktop/modules/sops/
+/users/reedclanton/home/config/sops/
+/users/reedclanton/home/data/
+/users/reedclanton/home/modules/sops/
+

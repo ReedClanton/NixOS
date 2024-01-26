@@ -1,0 +1,54 @@
+session_name: NixOS
+start_directory: "~/.config/nixos/"
+shell_command_before: clear;pwd;ls -GAp
+windows:
+  - window_name: Run
+    layout: even-horizontal
+    panes:
+      - focus: true
+  - window_name: ./
+    focus: true
+    layout: even-horizontal
+    panes:
+      - focus: true
+  - window_name: common/
+    layout: even-horizontal
+    start_directory: "./common/"
+    panes:
+      - focus: true
+  - window_name: common/
+    layout: even-horizontal
+    start_directory: "./common/"
+    panes:
+      - focus: true
+  - window_name: config/
+    layout: even-horizontal
+    start_directory: "./config/"
+    panes:
+      - focus: true
+  - window_name: data/
+    layout: even-horizontal
+    start_directory: "./data/"
+    panes:
+      - focus: true
+  - window_name: data/
+    layout: even-horizontal
+    start_directory: "./data/"
+    panes:
+      - focus: true
+  - window_name: hosts/
+    layout: even-horizontal
+    start_directory: "./hosts/"
+    panes:
+      - focus: true
+  - window_name: hosts/
+    layout: even-horizontal
+    start_directory: "./hosts/"
+    panes:
+      - focus: true
+  - window_name: users/
+    layout: even-horizontal
+    start_directory: "./users/"
+    panes:
+      - focus: true
+

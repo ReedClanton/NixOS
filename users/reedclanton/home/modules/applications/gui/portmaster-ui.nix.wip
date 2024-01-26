@@ -1,0 +1,11 @@
+{ stdenv, fetchFromGitHub }: stdenv.mkDerivation rec {
+	name = "portmaster-ui";
+	version = "0.8.2";
+	src = fetchFromGitHub {
+		owner = "safing";
+		repo = "${name}";
+		rev = "v${version}";
+		sha256 = "sha256-22245b9f09afd0a8d19c1d84e0ac652ad6fdba30baf7b2d57c41a86847990982";
+	};
+}
+

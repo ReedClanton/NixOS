@@ -1,0 +1,67 @@
+session_name: Web
+start_directory: "~"
+supress_history: true
+shell_command_before: lynx -accept_all_cookies
+windows:
+  - window_name: Web-1
+    focus: true
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-2
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-3
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-4
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-5
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-6
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      -
+      - 
+  - window_name: Web-7
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-8
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-9
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+  - window_name: Web-10
+    layout: 9ea9,187x50,0,0{93x50,0,0,5,46x50,94,0,25,46x50,141,0,26}
+    panes:
+      - focus: true
+      - 
+      - 
+
