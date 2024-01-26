@@ -4,6 +4,9 @@
 let
 	userShell = pkgs.zsh;
 in {
+	imports = [
+		./modules/networking
+	];
 	users = {
 		defaultUserShell = userShell;
 		users.${user.name} = {
