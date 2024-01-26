@@ -1,18 +1,16 @@
-let
-	# Import known networks.
-	wifi = import ./wifi.nix;
-in {
+{
 	networking = {
 		hostName = "nixos";
 		networkmanager.enable = true;
-		# This must be set is host specific nix file.
+		# This must be set in host specific nix file.
 #		unmanaged = [ ];
 		# This is wpa_supplicant.
 		wireless = {
 			enable = true;
 			# Empty means all wireless interfaces are included.
 			interfaces = [ ];
-			networks = wifi;
+			# This must be set in host/user specific nix file.
+#			networks = { };
 			userControlled.enable = true;
 		};
 	};
