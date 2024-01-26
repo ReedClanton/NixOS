@@ -1,5 +1,5 @@
 session_name: NixOS
-start_directory: "~/.config/nixos/"
+start_directory: "~/.config/NixOS/"
 shell_command_before: clear;pwd;ls -GAp
 windows:
   - window_name: Run
