@@ -21,11 +21,6 @@ windows:
     start_directory: "./common/"
     panes:
       - focus: true
-  - window_name: config/
-    layout: even-horizontal
-    start_directory: "./config/"
-    panes:
-      - focus: true
   - window_name: data/
     layout: even-horizontal
     start_directory: "./data/"
@@ -44,6 +39,11 @@ windows:
   - window_name: hosts/
     layout: even-horizontal
     start_directory: "./hosts/"
+    panes:
+      - focus: true
+  - window_name: users/
+    layout: even-horizontal
+    start_directory: "./users/"
     panes:
       - focus: true
   - window_name: users/
