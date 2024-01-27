@@ -107,7 +107,7 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/gui/hyprland")
+					(./. + "/users/${user.name}/home/modules/gui/kde")
 				];
 			nixos-desktop-tty = mkComputer
 				# Name of host and UI.
