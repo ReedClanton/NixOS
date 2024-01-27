@@ -1,4 +1,4 @@
-{ inputs, config, lib, hostName, ... }: {
+{ lib, hostName, ... }: {
 	imports = [
 		../../../../modules/networking
 	];
