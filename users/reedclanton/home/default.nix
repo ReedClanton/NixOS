@@ -1,4 +1,4 @@
-{ pkgs, config, user, shell, ... }: {
+{ config, user, shell, ... }: {
 	imports = [
 		./modules/applications/tty
 	];

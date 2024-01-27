@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }: {
+{ pkgs, user, ... }: {
 	programs.firefox = {
 		enable = true;
 		# TODO: Test this by disabling it while in gnome and seeing if anything changes.

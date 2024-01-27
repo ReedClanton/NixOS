@@ -1,6 +1,6 @@
 # System level user configuration.
 
-{ pkgs, config, user, ... }:
+{ pkgs, user, ... }:
 let
 	userShell = pkgs.zsh;
 in {

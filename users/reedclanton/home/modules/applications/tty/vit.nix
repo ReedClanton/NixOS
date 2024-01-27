@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 	home.packages = with pkgs; [ vit ];
 	xdg.configFile."vit/config.ini" = {
 		executable = true;
