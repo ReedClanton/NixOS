@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
 	environment.systemPackages = with pkgs; [
 		# Tool(s): NixOS #
 		home-manager

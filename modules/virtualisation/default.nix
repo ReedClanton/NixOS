@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, user, ... }: {
+{ user, ... }: {
 	users.extraGroups.vboxuser.members = [ user.name ];
 	virtualisation = {
 		vmware.host.enable = true;

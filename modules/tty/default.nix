@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ... }: {
+{ ... }: {
 	## TTY Login Prompt Setup ##
 	environment.etc.issue = {
 		text = ''

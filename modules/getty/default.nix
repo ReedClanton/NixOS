@@ -1,4 +1,4 @@
-{ config, inputs, user, ... }: {
+{ user, ... }: {
 	services.getty.autologinUser = user.name;
 }
 

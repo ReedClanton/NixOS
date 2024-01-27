@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, user, ... }: {
+{ user, ... }: {
 	security.sudo = {
 		enable = true;
 		wheelNeedsPassword = true;

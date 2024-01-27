@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ... }: {
+{ ... }: {
 	xdg = {
 		autostart.enable = true;
 		icons.enable = true;

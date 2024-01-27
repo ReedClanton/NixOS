@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, user, ... }: {
+{ user, ... }: {
 	time.timeZone = user.timeZone;
 }
 

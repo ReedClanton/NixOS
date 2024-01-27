@@ -13,7 +13,6 @@
 		./modules/sops
 		./modules/networking
 		../../modules/nix
-		../../modules/nixpkgs
 		./modules/packages
 		../../modules/printing
 		../../modules/programs

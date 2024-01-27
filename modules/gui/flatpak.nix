@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, flatpaks, ... }: {
+{ pkgs, ... }: {
 	environment.systemPackages = with pkgs; [ flatpak ];
 
 	services.flatpak = {
