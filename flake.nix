@@ -114,10 +114,7 @@
 				"desktop"
 				"tty"
 				# Additional module(s).
-				[
-					## Modules(s) ##
-					## Configuration ##
-				]
+				[ ]
 				# Additional Home Manager module(s).
 				[ ];
 		};
