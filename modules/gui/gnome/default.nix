@@ -9,24 +9,22 @@
 		xserver = {
 			# Enable the X11 windowing system (for some reason this is needed to enable wayland).
 			enable = true;
-			# Enable the GNOME Desktop Environment.
 			displayManager = {
 				gdm = {
 					enable = true;
 					wayland = true;
 				};
-				# Enable automatic login.
 				autoLogin = {
 					enable = true;
 					user = user.name;
 				};
 			};
-			# Enable VE.
+			# Enable Desktop Environment.
 			desktopManager.gnome.enable = true;
 			# Configure keymap in X11.
 			layout = user.services.xserver.layout;
 			xkbVariant = user.services.xserver.xkbVariant;
-			# Exclude default packages I don't want.
+			# Exclude default X11 packages I don't want.
 			excludePackages = with pkgs; [ xterm ];
 		};
 	};
@@ -39,7 +37,7 @@
 	systemd.services."autovt@tty1".enable = false;
 
 	environment = {
-		# Remove part(s) of Gnome I don't want.
+		# Remove part(s) of GNOME I don't want.
 		gnome.excludePackages = (with pkgs; [
 			gnome-photos
 		]) ++ (with pkgs.gnome; [

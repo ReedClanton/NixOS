@@ -9,12 +9,13 @@
 		xwayland.enable = true;
 	};
 
-	# Install Gnome specific programs/package(s).
 	environment = {
+		# Don't really know why, or if, this is really needed...
 		sessionVariables = {
 			WLR_NO_HARDWARE_CURSORS = "1";
 			WLR_RENDERER_ALLOW_SOFTWARE= "1"; 
 		};
+		# Install Hyprland specific package(s).
 		systemPackages = with pkgs; [
 			gtk3
 			# Kitty stuff.

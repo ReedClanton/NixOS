@@ -6,37 +6,35 @@
 	services.xserver = {
 		# Enable the X11 windowing system (for some reason this is needed to enable wayland).
 		enable = true;
-		# Enable the GNOME Desktop Environment.
 		displayManager = {
 			sddm = {
 				enable = true;
 #				autoLogin.relogin = true;
 				wayland.enable = true;
 			};
-			# Enable automatic login.
 			autoLogin = {
 				enable = true;
 				user = user.name;
 			};
 		};
-		# Enable VE.
+		# Enable Desktop Environment.
 		desktopManager.plasma5.enable = true;
 		# Configure keymap in X11.
 		layout = user.services.xserver.layout;
 		xkbVariant = user.services.xserver.xkbVariant;
-		# Exclude default packages I don't want.
+		# Exclude default X11 packages I don't want.
 		excludePackages = with pkgs; [ xterm ];
 	};
 
 	environment = {
 		# Remove part(s) of KDE I don't want.
 #		plasma5.excludePackages = (with pkgs; [
-#			# NoOp
+			# NoOp
 #		]) ++ (with pkgs.libsForQt5; [
-#			# NoOp
+			# NoOp
 #		]);
 
-		# Install KDE specific programs/package(s).
+		# Install KDE specific package(s).
 		systemPackages = with pkgs.libsForQt5; [
 			xdg-desktop-portal-kde
 		];
