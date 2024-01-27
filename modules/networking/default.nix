@@ -17,7 +17,6 @@
 
 	systemd.network.networks =
 	let
-		# This is used multiple times in what's bellow.
 		networkConfig = {
 			DHCP = "yes";
 			DNSSEC = "yes";
