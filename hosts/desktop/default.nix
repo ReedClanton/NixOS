@@ -10,7 +10,7 @@
 		../../common/modules/boot/efi-systemd.nix
 		../../common/modules/getty
 		../../common/modules/language
-#		./modules/sop
+		./modules/sops
 		./modules/networking
 		../../common/modules/nix
 		../../common/modules/nixpkgs
@@ -22,7 +22,7 @@
 		../../common/modules/sudo
 		../../common/modules/time
 		../../common/modules/tty
-#		../../common/modules/v4l2loopback
+		../../common/modules/v4l2loopback
 		../../common/modules/virtualisation
 		../../common/modules/xdg
 	];

@@ -37,14 +37,13 @@
 		in inputs.nixpkgs.lib.nixosSystem {
 			inherit system;
 			# Allow NixOS to access flake data.
-			specialArgs = { inherit hostName inputs nixos-hardware pkgs shell sops-nix system user; };
+			specialArgs = { inherit hostName inputs nixos-hardware pkgs shell system user; };
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
-				sops-nix.nixosModules.sops
 				
 				## Configuration ##
-				# Host specific configuration (path derived from provided name of host.
+				# Host specific configuration (path derived from provided name of host).
 				./hosts/${host}
 				# User's NixOS Configruration.
 				(./. + "/users/${user.name}")
@@ -52,16 +51,12 @@
 				{
 					home-manager = {
 						# Allow Home Manager to access flake data.
-						extraSpecialArgs = { inherit hostName inputs pkgs shell sops-nix system user; };
+						extraSpecialArgs = { inherit hostName inputs pkgs shell system user; };
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [
 							# Basic Home Manager setup.
 							(./. + "/users/${user.name}/home")
-							# Instilation and setup of basic set of applications installed by Home Manager.
-							(./. + "/users/${user.name}/home/modules/applications/tty")
-#							(./. + "/users/${user.name}/home/modules/sops")
-							(./. + "/users/${user.name}/home/modules/xdg")
 						] ++ extraHomeModules;
 					};
 				}
@@ -83,7 +78,7 @@
 				# Additional Home Manager module(s).
 				[
 					(./. + "/users/${user.name}/home/modules/applications/gui")
-					(./. + "/users/${user.name}/home/modules/dconf")
+					(./. + "/users/${user.name}/home/modules/gui/gnome/")
 				];
 			nixos-desktop-hyprland = mkComputer
 				# Name of host and UI.
@@ -123,7 +118,6 @@
 				# Additional module(s).
 				[
 					## Modules(s) ##
-					flatpaks.nixosModules.default
 					## Configuration ##
 				]
 				# Additional Home Manager module(s).

@@ -1,8 +1,87 @@
-{ inputs, config, ... }:
-let
-	# Import known networks.
-	wifi = import ./wifi.nix;
-in {
-	networking.wireless.networks = wifi;
+{ inputs, config, ... }: {
+	networking.wireless = {
+		environmentFile = config.sops.secrets."wireless.env".path;
+		networks = {
+			private = {
+				priority = 500;
+				psk = "@private_psk@";
+			};
+			"private-2.4" = {
+				priority = 400;
+				psk = "@private_2_4_psk@";
+			};
+			"iPhone 13 Pro" = {
+				priority = 450;
+				psk = "@iPhone_13_Pro_psk@";
+			};
+			"Primary" = {
+				priority = 350;
+				psk = "@Primary_psk@";
+			};
+			"Becks Coffee" = {
+				priority = 300;
+				psk = "@Becks_Coffee_psk@";
+			};
+			"CaffeLuce5g" = {
+				priority = 300;
+				psk = "@CaffeLuce5g_psk@";
+			};
+			"COLGuest" = {
+				priority = 300;
+				psk = "@COLGuest_psk@";
+			};
+			"Copper_Kettle_Guest" = {
+				priority = 300;
+				psk = "@Copper_Kettle_Guest_psk@";
+			};
+			"DBC Guest" = {
+				priority = 300;
+				psk = "@DBC_Guest_psk@";
+			};
+			"HOME-D182" = {
+				priority = 400;
+				psk = "@HOME_D182_psk@";
+			};
+			"Jade Mountain Guest" = {
+				priority = 300;
+				psk = "@Jade_Mountain_Guest_psk@";
+			};
+			"LittleToadGuest" = {
+				priority = 300;
+				psk = "@LittleToadGuest_psk@";
+			};
+			"MySpectrumWiFi76-2G" = {
+				priority = 400;
+				psk = "@MySpectrumWiFi76_2G_psk@";
+			};
+			"Neds Public" = {
+				priority = 300;
+				psk = "@Neds_Public_psk@";
+			};
+			"Sauls Guests" = {
+				priority = 300;
+				psk = "@Sauls_Guests_psk@";
+			};
+			"Silke2" = {
+				priority = 300;
+				psk = "@Silke2_psk@";
+			};
+			"Station 26 Guest" = {
+				priority = 300;
+				psk = "@Station_26_Guest_psk@";
+			};
+			"The Frothy Cup-Guest" = {
+				priority = 300;
+				psk = "@The_Frothy_Cup_Guest_psk@";
+			};
+			"thelaundryroom" = {
+				priority = 300;
+				psk = "@thelaundryroom_psk@";
+			};
+			"JCPL-PUBLIC" = {
+				priority = 200;
+			};
+		};
+	};
 }
 

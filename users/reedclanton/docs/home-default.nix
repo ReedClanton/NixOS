@@ -1,6 +1,6 @@
 { pkgs, config, user, shell, ... }: {
 	imports = [
-		./modules/applications/tty
+		<homeManagerModulesHere>
 	];
 
 	home = {
@@ -11,7 +11,7 @@
 		# You should not change this value, even if you update Home Manager. If you do
 		# want to update the value, then make sure to first check the Home Manager
 		# release notes.
-		stateVersion = "23.11";
+		stateVersion = "<nixMajorVersion>.<nixMinorVersion>"; # Ex: "23.22"
 		username = user.name;
 		homeDirectory = user.home;
 		shellAliases = shell.aliases;
@@ -38,20 +38,20 @@
 		mimeApps = {
 			enable = true;
 			associations.added = {
-				"text/html" = [ "firefox.desktop" "org.gnome.gedit.desktop" ];
-				"text/plain" = [ "org.gnome.gedit.desktop" ];
-				"text/xml" = [ "firefox.desktop" "org.gnome.gedit.desktop" ];
-				"x-scheme-handler/http" = [ "firefox.desktop" ];
-				"x-scheme-handler/https" = [ "firefox.desktop" ];
+				"text/html" = [ "<browser>" "<textEditor>" ];
+				"text/plain" = [ "<textEditor>" ];
+				"text/xml" = [ "<browser>" "<textEditor>" ];
+				"x-scheme-handler/http" = [ "<browser>" ];
+				"x-scheme-handler/https" = [ "<browser>" ];
 			};
 			defaultApplications = {
 				# Firefox.
-				"text/html" = [ "firefox.desktop" ];
-				"x-scheme-handler/http" = [ "firefox.desktop" ];
-				"x-scheme-handler/https" = [ "firefox.desktop" ];
+				"text/html" = [ "<browser>" ];
+				"x-scheme-handler/http" = [ "<browser>" ];
+				"x-scheme-handler/https" = [ "<browser>" ];
 				# Gedit.
-				"text/plain" = [ "org.gnome.gedit.desktop" ];
-				"text/xml" = [ "org.gnome.gedit.desktop" ];
+				"text/plain" = [ "<textEditor>" ];
+				"text/xml" = [ "<textEditor>" ];
 			};
 		};
 		userDirs = {
