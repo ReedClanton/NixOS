@@ -6,6 +6,7 @@ let
 in {
 	imports = [
 		./modules/networking
+		./modules/sops
 	];
 
 	users = {

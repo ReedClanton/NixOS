@@ -6,7 +6,6 @@
 		../../modules/boot/efi-systemd.nix
 		../../modules/getty
 		../../modules/language
-		./modules/sops
 		./modules/networking
 		../../modules/nix
 		./modules/packages
