@@ -62,7 +62,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/a05e33c3-2ed0-4f27-85f7-59779ccdd078" = {
-      apps = [ "org.audacityteam.Audacity.desktop" "org.blender.Blender.desktop" "com.jgraph.drawio.desktop.desktop" "org.freecadweb.FreeCAD.desktop" "io.freetubeapp.FreeTube.desktop" "org.gimp.GIMP.desktop" "org.gnome.Loupe.desktop" "com.obsproject.Studio.desktop" "org.nickvision.tubeconverter.desktop" "vlc.desktop" ];
+      apps = [ "org.audacityteam.Audacity.desktop" "org.blender.Blender.desktop" "com.jgraph.drawio.desktop.desktop" "droidcam.desktop" "org.freecadweb.FreeCAD.desktop" "io.freetubeapp.FreeTube.desktop" "org.gimp.GIMP.desktop" "org.gnome.Loupe.desktop" "com.obsproject.Studio.desktop" "org.nickvision.tubeconverter.desktop" "vlc.desktop" ];
       name = "Multi-Media";
       translate = false;
     };

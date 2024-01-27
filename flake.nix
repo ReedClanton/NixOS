@@ -77,7 +77,6 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/applications/gui")
 					(./. + "/users/${user.name}/home/modules/gui/gnome/")
 				];
 			nixos-desktop-hyprland = mkComputer
@@ -93,7 +92,6 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/applications/gui")
 					(./. + "/users/${user.name}/home/modules/gui/hyprland")
 				];
 			nixos-desktop-kde = mkComputer
@@ -109,7 +107,7 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/applications/gui")
+					(./. + "/users/${user.name}/home/modules/gui/hyprland")
 				];
 			nixos-desktop-tty = mkComputer
 				# Name of host and UI.

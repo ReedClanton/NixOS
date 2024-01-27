@@ -1,6 +1,5 @@
 { ... }: {
 	imports = [
 		../../applications/gui
-		./dconf
 	];
 }
