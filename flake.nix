@@ -73,7 +73,7 @@
 					## Modules(s) ##
 					flatpaks.nixosModules.default
 					## Configuration ##
-					./common/modules/gui/gnome
+					./modules/gui/gnome
 				]
 				# Additional Home Manager module(s).
 				[
@@ -89,7 +89,7 @@
 					## Modules(s) ##
 					flatpaks.nixosModules.default
 					## Configuration ##
-					./common/modules/gui/hyprland
+					./modules/gui/hyprland
 				]
 				# Additional Home Manager module(s).
 				[
@@ -105,7 +105,7 @@
 					## Modules(s) ##
 					flatpaks.nixosModules.default
 					## Configuration ##
-					./common/modules/gui/kde
+					./modules/gui/kde
 				]
 				# Additional Home Manager module(s).
 				[

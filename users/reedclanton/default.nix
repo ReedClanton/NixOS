@@ -7,6 +7,7 @@ in {
 	imports = [
 		./modules/networking
 	];
+
 	users = {
 		defaultUserShell = userShell;
 		users.${user.name} = {

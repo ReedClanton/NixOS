@@ -1,6 +1,6 @@
-{ inputs, config, pkgs, lib, ... }: {
+{ inputs, config, pkgs, ... }: {
 	imports = [
-		../../../../common/modules/packages
+		../../../../modules/packages
 	];
 
 	environment.systemPackages = with pkgs; [

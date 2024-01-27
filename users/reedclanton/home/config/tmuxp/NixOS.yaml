@@ -11,19 +11,14 @@ windows:
     layout: even-horizontal
     panes:
       - focus: true
-  - window_name: common/
+  - window_name: modules/
     layout: even-horizontal
-    start_directory: "./common/"
+    start_directory: "./modules/"
     panes:
       - focus: true
-  - window_name: common/
+  - window_name: modules/
     layout: even-horizontal
-    start_directory: "./common/"
-    panes:
-      - focus: true
-  - window_name: data/
-    layout: even-horizontal
-    start_directory: "./data/"
+    start_directory: "./modules/"
     panes:
       - focus: true
   - window_name: data/

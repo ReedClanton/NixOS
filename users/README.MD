@@ -4,9 +4,9 @@ Each user should have one directory located in the same directory as this file. 
 
 # User's Directory Content(s)
 
-1. `./<userName>/default.nix` (admin users only):
+1. `./<userName>/default.nix`:
   - Contains user's *system* configuration (i.e. NixOS configuration, *not* Home Manager).
-2. `./<userName>/modules/` (admin users only):
+2. `./<userName>/modules/`:
   - Contains NixOS system module(s) (i.e. NixOS configuration, *not* Home Manager).
   - Note(s):
     - Each module should consist of a directory that contains `.nix` file(s) (normally at least a `default.nix`).

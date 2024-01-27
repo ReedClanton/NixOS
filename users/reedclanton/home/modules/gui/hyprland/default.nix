@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, ... }: {
 	wayland.windowManager.hyprland = {
 		extraConfig = builtins.readFile ../../../config/hyprland/hyprland.conf;	
 	};

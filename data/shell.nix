@@ -47,7 +47,7 @@
 		#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
 		if command -v tmux &> /dev/null && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
 			if command -v tmuxp &> /dev/null; then
-				exec tmuxp load ~/.config/nixos/users/reedclanton/home/config/tmuxp/Default.yaml
+				exec tmuxp load ~/.config/NixOS/users/reedclanton/home/config/tmuxp/Default.yaml
 			fi
 		fi
 		

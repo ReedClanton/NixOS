@@ -1,4 +1,4 @@
-{ config, pkgs, shell, ... }: {
+{ config, shell, ... }: {
 	programs.zsh = {
 		enable = true;
 		enableCompletion = shell.completion;

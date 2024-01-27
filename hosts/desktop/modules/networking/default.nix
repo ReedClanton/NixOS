@@ -1,6 +1,6 @@
-{ inputs, config, pkgs, lib, hostName, ... }: {
+{ inputs, config, lib, hostName, ... }: {
 	imports = [
-		../../../../common/modules/networking
+		../../../../modules/networking
 	];
 
 	networking = {

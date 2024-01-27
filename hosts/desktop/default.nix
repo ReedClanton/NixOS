@@ -7,23 +7,23 @@
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
 		# Setup this host.
-		../../common/modules/boot/efi-systemd.nix
-		../../common/modules/getty
-		../../common/modules/language
+		../../modules/boot/efi-systemd.nix
+		../../modules/getty
+		../../modules/language
 		./modules/sops
 		./modules/networking
-		../../common/modules/nix
-		../../common/modules/nixpkgs
+		../../modules/nix
+		../../modules/nixpkgs
 		./modules/packages
-		../../common/modules/printing
-		../../common/modules/programs
-		../../common/modules/sound
-		../../common/modules/ssh
-		../../common/modules/sudo
-		../../common/modules/time
-		../../common/modules/tty
-		../../common/modules/v4l2loopback
-		../../common/modules/virtualisation
-		../../common/modules/xdg
+		../../modules/printing
+		../../modules/programs
+		../../modules/sound
+		../../modules/ssh
+		../../modules/sudo
+		../../modules/time
+		../../modules/tty
+		../../modules/v4l2loopback
+		../../modules/virtualisation
+		../../modules/xdg
 	];
 }
