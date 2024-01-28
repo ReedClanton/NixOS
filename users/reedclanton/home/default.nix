@@ -1,6 +1,7 @@
 { config, user, shell, ... }: {
 	imports = [
 		./modules/applications/tty
+#		./modules/sops
 	];
 
 	home = {
