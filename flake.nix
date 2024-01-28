@@ -41,6 +41,8 @@
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
+				# TODO: Remove inputs. from start of line.
+				sops-nix.nixosModules.sops
 				
 				## Configuration ##
 				# Host specific configuration (path derived from provided name of host).
@@ -55,6 +57,11 @@
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [
+							## External Module(s) ##
+#							inputs.sops-nix.homeManagerModule
+							sops-nix.homeManagerModules.sops
+							
+							## Configuration ##
 							# Basic Home Manager setup.
 							(./. + "/users/${user.name}/home")
 						] ++ extraHomeModules;

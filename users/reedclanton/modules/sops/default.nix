@@ -1,6 +1,4 @@
-{ config, inputs, pkgs, user, ... }: {
-	imports = [ inputs.sops-nix.nixosModules.sops ];
-
+{ config, inputs, pkgs, sops-nix, user, ... }: {
 	environment.systemPackages = with pkgs; [ sops ];
 
 	sops = {
