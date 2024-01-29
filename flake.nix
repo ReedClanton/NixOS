@@ -58,7 +58,6 @@
 						useUserPackages = true;
 						users."${user.name}".imports = [
 							## External Module(s) ##
-#							inputs.sops-nix.homeManagerModule
 							sops-nix.homeManagerModules.sops
 							
 							## Configuration ##
@@ -77,7 +76,7 @@
 				"gnome"
 				# Additional module(s).
 				[
-					## Modules(s) ##
+					## Module(s) ##
 					flatpaks.nixosModules.default
 					## Configuration ##
 					./modules/gui/gnome
@@ -92,7 +91,7 @@
 				"hyprland"
 				# Additional module(s).
 				[
-					## Modules(s) ##
+					## Module(s) ##
 					flatpaks.nixosModules.default
 					## Configuration ##
 					./modules/gui/hyprland
@@ -107,7 +106,7 @@
 				"kde"
 				# Additional module(s).
 				[
-					## Modules(s) ##
+					## Module(s) ##
 					flatpaks.nixosModules.default
 					## Configuration ##
 					./modules/gui/kde
@@ -122,6 +121,65 @@
 				"tty"
 				# Additional module(s).
 				[ ]
+				# Additional Home Manager module(s).
+				[ ];
+			nixos-framework13-gnome = mkComputer
+				# Name of host and UI.
+				"framework13"
+				"gnome"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					flatpaks.nixosModules.default
+					nixos-hardware.nixosModules.framework-11th-gen-intel
+					## Configuration ##
+					./modules/gui/gnome
+				]
+				# Additional Home Manager module(s).
+				[
+					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+				];
+			nixos-framework13-hyprland = mkComputer
+				# Name of host and UI.
+				"framework13"
+				"hyprland"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					flatpaks.nixosModules.default
+					nixos-hardware.nixosModules.framework-11th-gen-intel
+					## Configuration ##
+					./modules/gui/hyprland
+				]
+				# Additional Home Manager module(s).
+				[
+					(./. + "/users/${user.name}/home/modules/gui/hyprland")
+				];
+			nixos-framework13-kde = mkComputer
+				# Name of host and UI.
+				"framework13"
+				"kde"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					flatpaks.nixosModules.default
+					nixos-hardware.nixosModules.framework-11th-gen-intel
+					## Configuration ##
+					./modules/gui/kde
+				]
+				# Additional Home Manager module(s).
+				[
+					(./. + "/users/${user.name}/home/modules/gui/kde")
+				];
+			nixos-framework13-tty = mkComputer
+				# Name of host and UI.
+				"framework13"
+				"tty"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					nixos-hardware.nixosModules.framework-11th-gen-intel
+				]
 				# Additional Home Manager module(s).
 				[ ];
 		};
