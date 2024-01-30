@@ -1,3 +1,5 @@
+# Enables video and audio loopback device.
+
 { config, ... }: {
 	boot = {
 		# Make v4l2loopback kernel module avilable to NixOS.

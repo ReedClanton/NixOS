@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+	# Default system wide package(s).
 	environment.systemPackages = with pkgs; [
 		# Tool(s): NixOS #
 		home-manager
