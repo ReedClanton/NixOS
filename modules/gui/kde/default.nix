@@ -1,8 +1,4 @@
 { pkgs, user, ... }: {
-	imports = [
-		../default.nix
-	];
-
 	services.xserver = {
 		# Enable the X11 windowing system (for some reason this is needed to enable wayland).
 		enable = true;
