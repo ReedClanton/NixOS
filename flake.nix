@@ -182,6 +182,59 @@
 				]
 				# Additional Home Manager module(s).
 				[ ];
+			nixos-vm-gnome = mkComputer
+				# Name of host and UI.
+				"vm"
+				"gnome"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					flatpaks.nixosModules.default
+					## Configuration ##
+					./modules/gui/gnome
+				]
+				# Additional Home Manager module(s).
+				[
+					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+				];
+			nixos-vm-hyprland = mkComputer
+				# Name of host and UI.
+				"vm"
+				"hyprland"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					flatpaks.nixosModules.default
+					## Configuration ##
+					./modules/gui/hyprland
+				]
+				# Additional Home Manager module(s).
+				[
+					(./. + "/users/${user.name}/home/modules/gui/hyprland")
+				];
+			nixos-vm-kde = mkComputer
+				# Name of host and UI.
+				"vm"
+				"kde"
+				# Additional module(s).
+				[
+					## Module(s) ##
+					flatpaks.nixosModules.default
+					## Configuration ##
+					./modules/gui/kde
+				]
+				# Additional Home Manager module(s).
+				[
+					(./. + "/users/${user.name}/home/modules/gui/kde")
+				];
+			nixos-vm-tty = mkComputer
+				# Name of host and UI.
+				"vm"
+				"tty"
+				# Additional module(s).
+				[ ]
+				# Additional Home Manager module(s).
+				[ ];
 		};
 	};
 }
