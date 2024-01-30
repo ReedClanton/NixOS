@@ -7,6 +7,7 @@ windows:
     layout: even-horizontal
     panes:
       - focus: true
+        shell_command: clear;pwd;ls -GAp;git branch -a;git status
   - window_name: ./
     layout: even-horizontal
     panes:

@@ -1,11 +1,14 @@
-{ ... }: {
-	boot.loader = {
-		systemd-boot = {
-			enable = true;
-			configurationLimit = 10;
+{ pkgs, ... }: {
+	boot = {
+		kernelPackages = pkgs.linuxPackages_latest;
+		loader = {
+			efi.canTouchEfiVariables = true;
+			systemd-boot = {
+				enable = true;
+				configurationLimit = 10;
+			};
+			timeout = 1;
 		};
-		efi.canTouchEfiVariables = true;
-		timeout = 1;
 	};
 }
 
