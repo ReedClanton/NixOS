@@ -1,4 +1,4 @@
-{ nix-flatpak, pkgs, ... }: {
+{ nix-flatpak, pkgs, user, ... }: {
 	home.packages = with pkgs; [ flatpak ];
 
 	services.flatpak = {
@@ -15,5 +15,10 @@
 			onActivation = true;
 		};
 	};
+
+	xdg.systemDirs.data = [
+		"/var/lib/flatpak/exports/share"
+		"${user.home}/.local/share/flatpak/exports/share"
+	];
 }
 
