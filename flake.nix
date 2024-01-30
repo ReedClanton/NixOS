@@ -195,7 +195,7 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+					(./. + "/users/${user.name}/home/modules/gui/gnome/minimalist.nix")
 				];
 			nixos-vm-hyprland = mkComputer
 				# Name of host and UI.
@@ -210,7 +210,7 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/gui/hyprland")
+					(./. + "/users/${user.name}/home/modules/gui/hyprland/minimalist.nix")
 				];
 			nixos-vm-kde = mkComputer
 				# Name of host and UI.
@@ -225,7 +225,7 @@
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/gui/kde")
+					(./. + "/users/${user.name}/home/modules/gui/kde/minimalist.nix")
 				];
 			nixos-vm-tty = mkComputer
 				# Name of host and UI.
