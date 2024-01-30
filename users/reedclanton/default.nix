@@ -5,6 +5,7 @@ let
 	userShell = pkgs.zsh;
 in {
 	imports = [
+		./modules/docker
 		./modules/networking
 		./modules/sops
 	];
@@ -22,6 +23,4 @@ in {
 			shell = userShell;
 		};
 	};
-
-	virtualisation.docker.enable = true;
 }

@@ -1,4 +1,4 @@
-{ ... }: {
+{ user, ... }: {
 	networking = {
 		hostName = "nixos";
 		networkmanager.enable = true;
@@ -48,4 +48,6 @@
 			dhcpV4Config.RouteMetric = 1024;
 		};
 	};
+
+	users.users."${user.name}".extraGroups = [ "networkmanager" ];
 }

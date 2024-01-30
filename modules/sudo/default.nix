@@ -408,5 +408,7 @@
 			];
 		}];
 	};
+
+	users.users.${user.name}.extraGroups = [ "wheel" ];
 }
 
