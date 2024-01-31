@@ -99,7 +99,7 @@
 
     "org/gnome/desktop/peripherals/mouse" = {
       accel-profile = "flat";
-      speed = -0.7509727626459144;
+      speed = -0.8;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
