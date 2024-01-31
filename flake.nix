@@ -89,7 +89,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+					(./. + "/users/${user.name}/home/modules/gui/gnome")
 				];
 			nixos-desktop-hyprland = mkComputer
 				# Name of host and UI.
@@ -151,7 +151,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+					(./. + "/users/${user.name}/home/modules/gui/gnome")
 				];
 			nixos-framework13-hyprland = mkComputer
 				# Name of host and UI.

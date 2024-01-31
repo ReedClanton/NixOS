@@ -8,10 +8,7 @@
 			location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
 		}];
 		update = {
-			auto = {
-				enable = true;
-				onCalendar = "daily";
-			};
+			auto.enable = true;
 			onActivation = true;
 		};
 	};
