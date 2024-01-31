@@ -1,2 +1,4 @@
 /users/*/home/data/*
+/users/*/id_ed25519
+/users/*/keys.txt
 
