@@ -80,9 +80,10 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					# NoOp
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -98,9 +99,10 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					# NoOp
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -116,9 +118,10 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					# NoOp
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -143,8 +146,10 @@
 				[
 					## Module(s) ##
 					nixos-hardware.nixosModules.framework-11th-gen-intel
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -161,8 +166,10 @@
 				[
 					## Module(s) ##
 					nixos-hardware.nixosModules.framework-11th-gen-intel
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -179,8 +186,10 @@
 				[
 					## Module(s) ##
 					nixos-hardware.nixosModules.framework-11th-gen-intel
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -207,9 +216,10 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					# NoOp
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -225,9 +235,10 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					# NoOp
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
@@ -243,9 +254,10 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					# NoOp
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[

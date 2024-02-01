@@ -1,5 +1,9 @@
-{ nix-flatpak, pkgs, user, ... }: {
-	home.packages = with pkgs; [ flatpak ];
+{ nix-flatpak, pkgs, ... }: {
+	imports = [
+		../../home/modules/gui/flatpak/applications/flatseal.nix
+	];
+
+#	environment.systemPackages = with pkgs; [ flatpak ];
 
 	services.flatpak = {
 		enable = true;
@@ -15,13 +19,9 @@
 		];
 		update = {
 			auto.enable = true;
-			onActivation = true;
+			# Bug: https://github.com/gmodena/nix-flatpak/issues/30
+#			onActivation = true;
 		};
 	};
-
-	xdg.systemDirs.data = [
-		"/var/lib/flatpak/exports/share"
-		"${user.home}/.local/share/flatpak/exports/share"
-	];
 }
 
