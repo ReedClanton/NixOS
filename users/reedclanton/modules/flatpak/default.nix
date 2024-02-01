@@ -17,11 +17,11 @@
 				location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 			}
 		];
-		update = {
-			auto.enable = true;
-			# Bug: https://github.com/gmodena/nix-flatpak/issues/30
+		# Commented out because: https://github.com/gmodena/nix-flatpak/issues/30
+#		update = {
+#			auto.enable = true;
 #			onActivation = true;
-		};
+#		};
 	};
 }
 
