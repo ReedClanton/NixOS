@@ -1,6 +1,6 @@
 { nix-flatpak, pkgs, ... }: {
 	imports = [
-		../../home/modules/gui/flatpak/applications/flatseal.nix
+		../../home/modules/flatpak/applications/flatseal.nix
 	];
 
 #	environment.systemPackages = with pkgs; [ flatpak ];

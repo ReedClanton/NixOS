@@ -1,7 +1,7 @@
 { ... }: {
 	imports = [
 		../../applications/gui
-		../flatpak
-		../flatpak/applications
+		../../flatpak
+		../../flatpak/applications
 	];
 }

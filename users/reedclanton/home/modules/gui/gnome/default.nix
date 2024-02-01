@@ -2,7 +2,7 @@
 	imports = [
 		../../applications/gui
 		./dconf
-		../flatpak
-		../flatpak/applications
+		../../flatpak
+		../../flatpak/applications
 	];
 }

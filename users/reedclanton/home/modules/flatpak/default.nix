@@ -20,7 +20,6 @@
 	};
 
 	xdg.systemDirs.data = [
-		"/var/lib/flatpak/exports/share"
 		"${user.home}/.local/share/flatpak/exports/share"
 	];
 }
