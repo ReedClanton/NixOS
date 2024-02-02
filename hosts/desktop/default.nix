@@ -7,6 +7,7 @@
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
 		../../modules/getty
+		./modules/hardware/gpu
 		../../modules/language
 		./modules/networking
 		../../modules/nix
