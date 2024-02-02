@@ -27,7 +27,4 @@ Each user should have one directory located in the same directory as this file. 
    - Contains configuration file(s) for specific applications/system elements (ex. Firfox, hyprland).
    - Note(s):
       - Each configuration file/set of files should be contained in a directory. For example, for `neovim` the path would be `./<userName>/home/config/neovim/init.vim`.
-7. `./<userName>/home/data/`:
-   - Stores all of user's data (i.e. *not* configuration).
-   - Is *not* included in git repo.
 
