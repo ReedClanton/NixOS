@@ -4,7 +4,7 @@
 		toolbar = true;
 		bookmarks = [
 			{
-				name = "T-Mobile Router TEST";
+				name = "T-Mobile Router";
 				url = "http://192.168.12.1/";
 				tags = [ "t_mobile" "router" ];
 			}
