@@ -2,6 +2,8 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
+		./modules/hardware/drive/steam.nix
+		./modules/hardware/drive/vm.nix
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
 		../../modules/getty
