@@ -1,8 +1,4 @@
 { pkgs, user, ... }: {
-	imports = [
-		../default.nix
-	];
-
 	services = {
 		# Ensure gnome-settings-daemon udev rules are enabled.
 		udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];

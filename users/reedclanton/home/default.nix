@@ -39,6 +39,7 @@
 		mimeApps = {
 			enable = true;
 			associations.added = {
+				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
 				"text/html" = [ "firefox.desktop" "org.gnome.gedit.desktop" ];
 				"text/plain" = [ "org.gnome.gedit.desktop" ];
 				"text/xml" = [ "firefox.desktop" "org.gnome.gedit.desktop" ];
@@ -46,6 +47,8 @@
 				"x-scheme-handler/https" = [ "firefox.desktop" ];
 			};
 			defaultApplications = {
+				# Image Viewer (Loupe).
+				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
 				# Firefox.
 				"text/html" = [ "firefox.desktop" ];
 				"x-scheme-handler/http" = [ "firefox.desktop" ];

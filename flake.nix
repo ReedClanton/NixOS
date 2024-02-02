@@ -14,10 +14,10 @@
 		# Secret management.
 		sops-nix.url = "github:Mic92/sops-nix";
 		# Handles Flatpaks.
-		flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
+		nix-flatpak.url = "github:gmodena/nix-flatpak";
 	};
 
-	outputs = inputs@{ self, flatpaks, home-manager, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:
+	outputs = inputs@{ self, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:
 	let
 		pkgs = import nixpkgs {
 			inherit system;
@@ -77,13 +77,17 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
+					(./. + "/users/${user.name}/home/modules/gui/gnome")
 				];
 			nixos-desktop-hyprland = mkComputer
 				# Name of host and UI.
@@ -92,12 +96,16 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/hyprland")
 				];
 			nixos-desktop-kde = mkComputer
@@ -107,12 +115,16 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/kde")
 				];
 			nixos-desktop-tty = mkComputer
@@ -130,14 +142,18 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
 					nixos-hardware.nixosModules.framework-11th-gen-intel
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
-					(./. + "/users/${user.name}/home/modules/gui/gnome/")
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
+					(./. + "/users/${user.name}/home/modules/gui/gnome")
 				];
 			nixos-framework13-hyprland = mkComputer
 				# Name of host and UI.
@@ -146,13 +162,17 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
 					nixos-hardware.nixosModules.framework-11th-gen-intel
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/hyprland")
 				];
 			nixos-framework13-kde = mkComputer
@@ -162,13 +182,17 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
 					nixos-hardware.nixosModules.framework-11th-gen-intel
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/kde")
 				];
 			nixos-framework13-tty = mkComputer
@@ -189,12 +213,16 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/gnome/minimalist.nix")
 				];
 			nixos-vm-hyprland = mkComputer
@@ -204,12 +232,16 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/hyprland/minimalist.nix")
 				];
 			nixos-vm-kde = mkComputer
@@ -219,12 +251,16 @@
 				# Additional module(s).
 				[
 					## Module(s) ##
-					flatpaks.nixosModules.default
+					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
+					(./. + "/users/${user.name}/modules/flatpak")
 				]
 				# Additional Home Manager module(s).
 				[
+					## Module(s) ##
+					nix-flatpak.homeManagerModules.nix-flatpak
+					## Configuration ##
 					(./. + "/users/${user.name}/home/modules/gui/kde/minimalist.nix")
 				];
 			nixos-vm-tty = mkComputer

@@ -1,6 +1,8 @@
 { ... }: {
 	imports = [
 		../../applications/gui
+		../../flatpak
+		../../flatpak/applications
 	];
 
 	wayland.windowManager.hyprland = {

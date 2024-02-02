@@ -18,7 +18,7 @@
 				# Postscript drivers for Lexmark.
 				postscript-lexmark
 				# Proprietary Samsung drivers.
-				samsung-unified-linux-driver
+#				samsung-unified-linux-driver
 				# Drivers for printers that support SPL (Samsung Printer Language).
 				splix
 				# Drivers for some Brother printers.
