@@ -42,15 +42,18 @@
 					default = "Google";
 					engines = {
 						"Flathub" = {
-							urls = [{ template = "https://flathub.org/apps/search?q={searchTerms}"; }];
-							iconUpdateURL = "https://flathub.org/_next/static/media/flathub-logo-toolbar.d9915edb.svg";
+							urls = [{
+								template = "https://flathub.org/apps/search";
+								params = [{ name = "q"; value = "{searchTerms}"; }];
+							}];
+							iconUpdateURL = "https://flathub.org/favicon.png";
 							updateInterval = 24 * 60 * 60 * 1000; # Update every day.
-							defineAliases = [ "@fl" ];
+							definedAliases = [ "@fl" ];
 						};
 						"Home Manager Options" = {
 							urls = [{
 								template = "https://mipmip.github.io/home-manager-option-search";
-								params = [ { name = "query"; value = "{searchTerms}"; } ];
+								params = [{ name = "query"; value = "{searchTerms}"; }];
 							}];
 							iconUpdateURL = "https://avatars.githubusercontent.com/u/33221035";
 							updateInterval = 24 * 60 * 60 *1000; # Update every day.
@@ -79,12 +82,14 @@
 							definedAliases = [ "@no" ];
 						};
 						"NixOS Wiki" = {
-							urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
+							urls = [{
+								template = "https://nixos.wiki/index.php";
+								params = [{ name = "search"; value = "{searchTerms}"; }];
+							}];
 							iconUpdateURL = "https://nixos.wiki/favicon.png";
 							updateInterval = 24 * 60 * 60 * 1000; # Update every day.
-							defineAliases = [ "@nw" ];
+							definedAliases = [ "@nw" ];
 						};
-						"Google".metaData.alias = "@g";
 					};
 					force = true;
 					order = [
@@ -95,6 +100,7 @@
 						"Home Manager Options"
 						"Flathub"
 						"DuckDuckGo"
+						"NixOS Wiki"
 					];
 					privateDefault = "DuckDuckGo";
 				};
