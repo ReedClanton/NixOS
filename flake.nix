@@ -53,10 +53,7 @@
 				{
 					home-manager = {
 						# Allow Home Manager to access flake data.
-						extraSpecialArgs = {
-							inherit hostName inputs pkgs shell system user;
-							flake-inputs = inputs;
-						};
+						extraSpecialArgs = { inherit hostName inputs pkgs shell system user; };
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [
