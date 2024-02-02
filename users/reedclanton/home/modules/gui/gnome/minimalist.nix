@@ -6,7 +6,7 @@
 		../../flatpak
 		../../flatpak/applications/brave.nix
 		../../flatpak/applications/flatseal.nix
-		../../flatpak/applications/libreoffice.nix
-		../../flatpak/applications/torbrowser.nix
+		../../flatpak/applications/libre-office.nix
+		../../flatpak/applications/tor-browser-launcher.nix
 	];
 }
