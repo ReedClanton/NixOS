@@ -3,8 +3,6 @@
 		../../home/modules/flatpak/applications/flatseal.nix
 	];
 
-#	environment.systemPackages = with pkgs; [ flatpak ];
-
 	services.flatpak = {
 		enable = true;
 		remotes = [
