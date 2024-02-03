@@ -47,7 +47,7 @@
 				# Host specific configuration (path derived from provided name of host).
 				./hosts/${host}
 				# User's NixOS Configruration.
-				./users/${user.name}
+				(if builtins.pathExists ./users/${user.name} then ./users/${user.name} else ./do-nothing.nix)
 				# Home Manager Setup
 				{
 					home-manager = {
@@ -60,7 +60,7 @@
 							sops-nix.homeManagerModules.sops
 							## Configuration ##
 							# Basic Home Manager setup.
-							(if builtins.pathExists ./users/${user.name}/home then ./users/${user.name}/home else null)
+							(if builtins.pathExists ./users/${user.name}/home then ./users/${user.name}/home else ./do-nothing.nix)
 							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else ./do-nothing.nix)
 						] ++ extraHomeModules;
 					};
@@ -79,14 +79,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/gnome")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/gnome then ./users/${user.name}/home/modules/gui/gnome else ./do-nothing.nix)
 				];
 			nixos-desktop-hyprland = mkComputer
 				# Name of host and UI.
@@ -98,14 +98,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists .users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/hyprland")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/hyprland then ./users/${user.name}/home/modules/gui/hyprland else ./do-nothing.nix)
 				];
 			nixos-desktop-kde = mkComputer
 				# Name of host and UI.
@@ -117,14 +117,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/kde")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/kde then ./users/${user.name}/home/modules/gui/kde else ./do-nothing.nix)
 				];
 			nixos-desktop-tty = mkComputer
 				# Name of host and UI.
@@ -145,14 +145,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/gnome")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/gnome then ./users/${user.name}/home/modules/gui/gnome else ./do-nothing.nix)
 				];
 			nixos-framework13-hyprland = mkComputer
 				# Name of host and UI.
@@ -165,14 +165,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/hyprland")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/hyprland then ./users/${user.name}/home/modules/gui/hyprland else ./do-nothing.nix)
 				];
 			nixos-framework13-kde = mkComputer
 				# Name of host and UI.
@@ -185,14 +185,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/kde")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/kde then ./users/${user.name}/home/modules/gui/kde else ./do-nothing.nix)
 				];
 			nixos-framework13-tty = mkComputer
 				# Name of host and UI.
@@ -215,14 +215,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/gnome/minimalist.nix")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/gnome/minimalist.nix then ./users/${user.name}/home/modules/gui/gnome/minimalist.nix else ./do-nothing.nix)
 				];
 			nixos-vm-hyprland = mkComputer
 				# Name of host and UI.
@@ -234,14 +234,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/hyprland/minimalist.nix")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/hyprland/minimalist.nix then ./users/${user.name}/home/modules/gui/hyprland/minimalist.nix else ./do-nothing.nix)
 				];
 			nixos-vm-kde = mkComputer
 				# Name of host and UI.
@@ -253,14 +253,14 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
-					(./. + "/users/${user.name}/modules/flatpak")
+					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/modules/gui/kde/minimalist.nix")
+					(if builtins.pathExists ./users/${user.name}/home/modules/gui/kde/minimalist.nix then ./users/${user.name}/home/modules/gui/kde/minimalist.nix else ./do-nothing.nix)
 				];
 			nixos-vm-tty = mkComputer
 				# Name of host and UI.
