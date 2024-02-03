@@ -1,3 +1,1 @@
-{
-	# Called when no action is desired.
-}
+{ # Called when no action is desired. }
