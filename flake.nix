@@ -61,7 +61,7 @@
 							## Configuration ##
 							# Basic Home Manager setup.
 							(if builtins.pathExists ./users/${user.name}/home then ./users/${user.name}/home else null)
-							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else "./")
+							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else "./do-nothing.nix")
 						] ++ extraHomeModules;
 					};
 				}
