@@ -58,11 +58,10 @@
 						users."${user.name}".imports = [
 							## External Module(s) ##
 							sops-nix.homeManagerModules.sops
-							
 							## Configuration ##
 							# Basic Home Manager setup.
 							(if builtins.pathExists ./users/${user.name}/home then ./users/${user.name}/home else null)
-							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else null)
+							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else "")
 						] ++ extraHomeModules;
 					};
 				}
