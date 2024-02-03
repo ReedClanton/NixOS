@@ -47,7 +47,7 @@
 				# Host specific configuration (path derived from provided name of host).
 				./hosts/${host}
 				# User's NixOS Configruration.
-				(if builtins.pathExists ./users/${user.name} then ./users/${user.name} else ./do-nothing.nix)
+				./users/${user.name}
 				# Home Manager Setup
 				{
 					home-manager = {
