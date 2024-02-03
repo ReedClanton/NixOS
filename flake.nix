@@ -41,14 +41,13 @@
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
-				# TODO: Remove inputs. from start of line.
 				sops-nix.nixosModules.sops
 				
 				## Configuration ##
 				# Host specific configuration (path derived from provided name of host).
 				./hosts/${host}
 				# User's NixOS Configruration.
-				(./. + "/users/${user.name}")
+				./users/${user.name}
 				# Home Manager Setup
 				{
 					home-manager = {
@@ -62,7 +61,8 @@
 							
 							## Configuration ##
 							# Basic Home Manager setup.
-							(./. + "/users/${user.name}/home")
+							(if builtins.pathExists ./users/${user.name}/home then ./users/${user.name}/home else null)
+							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else null)
 						] ++ extraHomeModules;
 					};
 				}
@@ -87,7 +87,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/desktop/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/gnome")
 				];
 			nixos-desktop-hyprland = mkComputer
@@ -107,7 +106,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/desktop/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/hyprland")
 				];
 			nixos-desktop-kde = mkComputer
@@ -127,7 +125,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/desktop/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/kde")
 				];
 			nixos-desktop-tty = mkComputer
@@ -137,9 +134,7 @@
 				# Additional module(s).
 				[ ]
 				# Additional Home Manager module(s).
-				[
-					(./. + "/users/${user.name}/home/hosts/desktop/modules/applications/tty")
-				];
+				[ ];
 			nixos-framework13-gnome = mkComputer
 				# Name of host and UI.
 				"framework13"
@@ -158,7 +153,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/framework13/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/gnome")
 				];
 			nixos-framework13-hyprland = mkComputer
@@ -179,7 +173,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/framework13/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/hyprland")
 				];
 			nixos-framework13-kde = mkComputer
@@ -200,7 +193,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/framework13/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/kde")
 				];
 			nixos-framework13-tty = mkComputer
@@ -213,9 +205,7 @@
 					nixos-hardware.nixosModules.framework-11th-gen-intel
 				]
 				# Additional Home Manager module(s).
-				[
-					(./. + "/users/${user.name}/home/hosts/framework13/modules/applications/tty")
-				];
+				[ ];
 			nixos-vm-gnome = mkComputer
 				# Name of host and UI.
 				"vm"
@@ -233,7 +223,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/vm/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/gnome/minimalist.nix")
 				];
 			nixos-vm-hyprland = mkComputer
@@ -253,7 +242,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/vm/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/hyprland/minimalist.nix")
 				];
 			nixos-vm-kde = mkComputer
@@ -273,7 +261,6 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(./. + "/users/${user.name}/home/hosts/vm/modules/applications/tty")
 					(./. + "/users/${user.name}/home/modules/gui/kde/minimalist.nix")
 				];
 			nixos-vm-tty = mkComputer
@@ -283,9 +270,7 @@
 				# Additional module(s).
 				[ ]
 				# Additional Home Manager module(s).
-				[
-					(./. + "/users/${user.name}/home/hosts/vm/modules/applications/tty")
-				];
+				[ ];
 		};
 	};
 }
