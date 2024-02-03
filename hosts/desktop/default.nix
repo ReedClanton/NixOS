@@ -4,10 +4,10 @@
 		./hardware-configuration.nix
 		./modules/hardware/drive/steam.nix
 		./modules/hardware/drive/vm.nix
+		./modules/hardware/gpu
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
 		../../modules/getty
-		./modules/hardware/gpu
 		../../modules/language
 		./modules/networking
 		../../modules/nix
