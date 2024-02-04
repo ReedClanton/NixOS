@@ -11,7 +11,7 @@
 		../../modules/language
 		./modules/networking
 		../../modules/nix
-		./modules/packages
+		../../modules/packages
 		../../modules/printing
 		../../modules/programs
 		../../modules/sound

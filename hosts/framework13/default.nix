@@ -13,7 +13,7 @@
 		../../modules/programs
 		../../modules/sound
 		../../modules/ssh
-		../../modules/sudo
+		./modules/sudo
 		../../modules/time
 		../../modules/tty
 		../../modules/v4l2loopback
