@@ -1,7 +1,7 @@
-{ config, shell, ... }: {
+{ config, user, ... }: {
 	programs.zsh = {
 		enable = true;
-		enableCompletion = shell.completion;
+		enableCompletion = user.shell.completion;
 		autocd = true;
 		dotDir = ".config/zsh";
 		history = {
@@ -9,24 +9,24 @@
 			extended = true;
 			ignoreAllDups = true;
 			ignoreDups = true;
-			ignorePatterns = shell.history.ignore;
+			ignorePatterns = user.shell.history.ignore;
 			ignoreSpace = true;
 			path = "${config.xdg.configHome}/zsh/history";
-			save = shell.history.maxLineCount;
+			save = user.shell.history.maxLineCount;
 			# TODO: Determine what I want this to be.
 			share = false;
-			size = shell.history.maxLineCount;
+			size = user.shell.history.maxLineCount;
 		};
 		historySubstringSearch.enable = true;
 		initExtra = builtins.concatStringsSep "\n" [
-			shell.shellRc
+			user.shell.shellRc
 			''compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"''
 		];
 		loginExtra = ''
 			autoload -Uz compinit && compinit
 			zstyle ':completion:*' matcher-list ''' 'm:{a-zA-Z}={A-Za-z}'
 		'';
-		profileExtra = shell.shellProfile;
+		profileExtra = user.shell.shellProfile;
 		syntaxHighlighting.enable = true;
 	};
 }

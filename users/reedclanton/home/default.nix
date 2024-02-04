@@ -1,4 +1,4 @@
-{ config, user, shell, ... }: {
+{ config, user, ... }: {
 	imports = [
 		./modules/applications/tty
 #		./modules/sops
@@ -15,7 +15,7 @@
 		stateVersion = "23.11";
 		username = user.name;
 		homeDirectory = user.home;
-		shellAliases = shell.aliases;
+		shellAliases = user.shell.aliases;
 
 		sessionVariables = {
 			# TODO: Test! Doesn't seem like just setting these worked.

@@ -19,15 +19,15 @@
 
 	outputs = inputs@{ self, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:
 	let
+		# Variable(s) used in flake(s).
+		system = "x86_64-linux";
+		user = import ./data/users/reedclanton.nix;
+
+		# Packages setup.
 		pkgs = import nixpkgs {
 			inherit system;
 			config.allowUnfree = true;
 		};
-
-		# Variable(s) used in flake(s).
-		shell = import ./data/shell.nix;
-		system = "x86_64-linux";
-		user = import ./data/users/reedclanton.nix;
 
 		# This function is used to construct NixOS flakes for each host.
 		mkComputer = host: ui: extraModules: extraHomeModules:
@@ -37,7 +37,7 @@
 		in inputs.nixpkgs.lib.nixosSystem {
 			inherit system;
 			# Allow NixOS to access flake data.
-			specialArgs = { inherit hostName inputs nixos-hardware pkgs shell system user; };
+			specialArgs = { inherit hostName inputs nixos-hardware pkgs system user; };
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
@@ -52,7 +52,7 @@
 				{
 					home-manager = {
 						# Allow Home Manager to access flake data.
-						extraSpecialArgs = { inherit hostName inputs pkgs shell system user; };
+						extraSpecialArgs = { inherit hostName inputs pkgs system user; };
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [

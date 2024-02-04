@@ -1,4 +1,4 @@
-{ pkgs, config, user, shell, ... }: {
+{ pkgs, config, user, ... }: {
 	imports = [
 		<homeManagerModulesHere>
 	];
@@ -14,7 +14,7 @@
 		stateVersion = "<nixMajorVersion>.<nixMinorVersion>"; # Ex: "23.11"
 		username = user.name;
 		homeDirectory = user.home;
-		shellAliases = shell.aliases;
+		shellAliases = user.shell.aliases;
 
 		sessionVariables = {
 			# TODO: Test! Doesn't seem like just setting these worked.
