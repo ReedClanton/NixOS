@@ -1,6 +1,6 @@
-{ pkgs, config, user, ... }: {
+{ config, user, ... }: {
 	imports = [
-		<homeManagerModulesHere>
+		<localHomeManagerModulesHere>
 	];
 
 	home = {
@@ -38,6 +38,7 @@
 		mimeApps = {
 			enable = true;
 			associations.added = {
+				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
 				"text/html" = [ "<browser>" "<textEditor>" ];
 				"text/plain" = [ "<textEditor>" ];
 				"text/xml" = [ "<browser>" "<textEditor>" ];
@@ -45,6 +46,8 @@
 				"x-scheme-handler/https" = [ "<browser>" ];
 			};
 			defaultApplications = {
+				# Image Viewer (Loupe).
+				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
 				# Firefox.
 				"text/html" = [ "<browser>" ];
 				"x-scheme-handler/http" = [ "<browser>" ];
