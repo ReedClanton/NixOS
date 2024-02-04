@@ -1,4 +1,4 @@
-{ pkgs, shell, ... }: {
+{ pkgs, user, ... }: {
 	programs.tmux = {
 		enable = true;
 		baseIndex = 1;
@@ -6,7 +6,7 @@
 		disableConfirmationPrompt = false;
 		escapeTime = 500;
 		extraConfig = builtins.readFile ../../../config/tmux/tmux.conf;
-		historyLimit = shell.history.inMemory;
+		historyLimit = user.shell.history.inMemory;
 		mouse = true;
 		plugins = with pkgs; [
 #			tmuxPlugins.better-mouse-mode
