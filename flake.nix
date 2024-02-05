@@ -52,7 +52,7 @@
 				{
 					home-manager = {
 						# Allow Home Manager to access flake data.
-						extraSpecialArgs = { inherit hostName inputs pkgs system user; };
+						extraSpecialArgs = { inherit host hostName inputs pkgs system ui user; };
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [
@@ -61,7 +61,6 @@
 							## Configuration ##
 							# Basic Home Manager setup.
 							(if builtins.pathExists ./users/${user.name}/home then ./users/${user.name}/home else ./do-nothing.nix)
-							(if builtins.pathExists ./users/${user.name}/home/hosts/${host}/modules/applications/tty then ./users/${user.name}/home/hosts/${host}/modules/applications/tty else ./do-nothing.nix)
 						] ++ extraHomeModules;
 					};
 				}
