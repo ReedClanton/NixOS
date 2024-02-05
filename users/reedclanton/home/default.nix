@@ -1,6 +1,7 @@
 { config, host, user, ... }: {
 	imports = [
 		(if builtins.pathExists ./hosts/${host}/modules/applications/tty then ./hosts/${host}/modules/applications/tty else ../../../do-nothing.nix)
+		(if builtins.pathExists ./hosts/${host}/modules/hardware/mouse then ./hosts/${host}/modules/hardware/mouse else ../../../do-nothing.nix)
 		./modules/applications/tty
 #		./modules/sops
 	];
