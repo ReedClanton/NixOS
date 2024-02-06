@@ -27,6 +27,9 @@
 			GTK2_RC_FILES="${config.xdg.configHome}/gtk-2.0/gtkrc";
 			# Removes `.compose-cache/` from home.
 			XCOMPOSECACHE="${config.xdg.cacheHome}/X11/xcompose";
+			# Removes `.zoom` from home.
+			# Note: Commented out because it breaks stuff when set.
+#			SSB_HOME="${config.xdg.configHome}/zoom";
 		};
 
 		file = {

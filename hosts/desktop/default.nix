@@ -13,6 +13,7 @@
 		./modules/networking
 		../../modules/nix
 		../../modules/packages
+		../../modules/proton
 		../../modules/printing
 		../../modules/programs
 		../../modules/sound
