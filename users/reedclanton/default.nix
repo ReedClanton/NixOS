@@ -10,9 +10,6 @@ in {
 		./modules/sops
 	];
 
-	# Ensure user's password is decrypted to `/run/secrets-for-users` instead of `/run/secrets` so it's accesible at the point when it's needed.
-	sops.secrets."users/${user.name}/pwd_hash".neededForUsers = true;
-
 	users = {
 		defaultUserShell = userShell;
 		users.${user.name} = {
