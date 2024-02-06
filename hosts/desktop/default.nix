@@ -5,6 +5,7 @@
 		./modules/hardware/drive/steam.nix
 		./modules/hardware/drive/vm.nix
 		./modules/hardware/gpu
+		../../modules/hardware/game-controller/logitech-wheel.nix
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
 		../../modules/getty
