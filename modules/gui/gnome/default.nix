@@ -3,9 +3,11 @@
 		# Ensure gnome-settings-daemon udev rules are enabled.
 		udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 		xserver = {
-			# Enable the X11 windowing system (for some reason this is needed to enable wayland).
+			# Required by GDM.
 			enable = true;
 			displayManager = {
+				# `gnome` forces Wayland, `gnome-xorg` forces X11.
+#				defaultSession = lib.mkForce "gnome";
 				gdm = {
 					enable = true;
 					wayland = true;

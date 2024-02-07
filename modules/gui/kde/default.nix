@@ -1,11 +1,12 @@
 { pkgs, user, ... }: {
 	services.xserver = {
-		# Enable the X11 windowing system (for some reason this is needed to enable wayland).
+		# Required by SDDM.
 		enable = true;
 		displayManager = {
+			# `plasmawayland` forces Wayland, `plasma` forces X11.
+#			defaultSession = lib.mkForce "plasmawayland";
 			sddm = {
 				enable = true;
-#				autoLogin.relogin = true;
 				wayland.enable = true;
 			};
 			autoLogin = {
