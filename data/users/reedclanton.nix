@@ -57,11 +57,11 @@
 			#fi
 			
 			# Launch tmux when:
-			#	 it's installed,
-			#	 not already in a tmux session, and
-			#	 in an interactive shell.
-			#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
-			if command -v tmux &> /dev/null && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
+			#	it's installed,
+			#	current session is tty,
+			#	not already in a tmux session, and
+			#	in an interactive shell.
+			if command -v tmux &> /dev/null && [ -n "$PS1" ] && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
 				if command -v tmuxp &> /dev/null; then
 					exec tmuxp load ~/.config/NixOS/users/reedclanton/home/config/tmuxp/Default.yaml
 				fi

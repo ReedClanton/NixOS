@@ -3,8 +3,6 @@
 		# Required by SDDM.
 		enable = true;
 		displayManager = {
-			# `plasmawayland` forces Wayland, `plasma` forces X11.
-#			defaultSession = lib.mkForce "plasmawayland";
 			sddm = {
 				enable = true;
 				wayland.enable = true;

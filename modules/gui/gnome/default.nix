@@ -6,8 +6,6 @@
 			# Required by GDM.
 			enable = true;
 			displayManager = {
-				# `gnome` forces Wayland, `gnome-xorg` forces X11.
-#				defaultSession = lib.mkForce "gnome";
 				gdm = {
 					enable = true;
 					wayland = true;
