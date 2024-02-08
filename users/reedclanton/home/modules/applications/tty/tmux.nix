@@ -1,4 +1,12 @@
-{ config, user, ... }: {
+{ config, pkgs, user, ... }: {
+	# TPM is used in place of `programs.tmux.plugins` because that method of insalling plugins doesn't work when those plugins are used in the status bar.
+	home.file."${config.xdg.configHome}/tmux/plugins/tpm".source = pkgs.fetchFromGitHub {
+		owner = "tmux-plugins";
+		repo = "tpm";
+		rev = "7bdb7ca";
+		sha256 = "sha256-CeI9Wq6tHqV68woE11lIY4cLoNY8XWyXyMHTDmFKJKI=";
+	};
+
 	programs.tmux = {
 		enable = true;
 		baseIndex = 1;
