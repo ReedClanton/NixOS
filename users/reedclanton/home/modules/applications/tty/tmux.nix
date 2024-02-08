@@ -87,13 +87,13 @@
 			
 			## TMUX CPU ##
 			set-option -g @plugin 'tmux-plugins/tmux-cpu'
-			set-option -g @cpu_percentage_format '%03.0f%%'
+			set-option -g @cpu_percentage_format "%03.0f%%"
 			set-option -g @cpu_medium_thresh '50'
 			set-option -g @cpu_high_thresh '80'
 			set-option -g @cpu_temp_unit 'C'
 			set-option -g @cpu_temp_medium_thresh '80'
 			set-option -g @cpu_temp_high_thresh '94'
-			set-option -g @ram_percentage_format '%03.0f%%'
+			set-option -g @ram_percentage_format "%03.0f%%"
 			set-option -g @ram_medium_thresh '65'
 			set-option -g @ram_high_thresh '85'
 			
@@ -101,6 +101,19 @@
 			set-option -g @plugin 'tmux-plugins/tmux-online-status'
 			set-option -g @online_icon ' Online '
 			set-option -g @offline_icon 'Offline!'
+			
+			## TMUX Weather ##
+			set-option -g @plugin 'aaronpowell/tmux-weather'
+			# Set cachiing duration in seconds. Default: Caching disabled when not set.
+			set-option -g @forecast-cache-duration 600
+			# Set location. Default: location based on IP address.
+			set-option -g @forecast-location 'Dallas'
+			# Configure weather representation. Default: `%C+%t+%w`. For more, see: https://github.com/chubin/wttr.in#one-line-output
+			set-option -g @forecast-format '%l:+%C,+%t,+%h+RH,+%w'\&u
+			# Ensure long forcasts don't message with the rest of the status bar. Default: 75.
+			set-option -g @forecast-char-limit 52
+			# Set location of cache file. Default: `/tmp/tmux-weather.cache`.
+			set-option -g @forecast-cache-path '${config.xdg.configHome}/tmux/plugins/tmux-weather/tmux-weather.cache'
 			
 			####################################
 			## Status Bar Layout Configuration ##
@@ -110,7 +123,7 @@
 			# Note: Line text set in plugin config.
 			set-option -g status 5
 			set-option -g status-right-length '95'
-			set-option -g status-right '|#{cpu_bg_color} #{cpu_percentage} #[default]|#{cpu_temp_bg_color} #{cpu_temp} #[default]|#{ram_bg_color} #{ram_percentage} #[default]|#{online_status}#[default]|'
+			set-option -g status-right '#{forecast} |#{cpu_bg_color} #{cpu_percentage} #[default]|#{cpu_temp_bg_color} #{cpu_temp} #[default]|#{ram_bg_color} #{ram_percentage} #[default]|#{online_status}#[default]|'
 			
 			## Second Line ##
 			set-option -g status-format[1]  '#[align=left]| TMUX | Prefix  | Resize Pane  (U,D,L,R) | Rm (Sen,Win,Pane) | Switch Session |#[align=right]Weather|^CPU ^|^CPU^|^RAM ^|Internet#[default]|'
