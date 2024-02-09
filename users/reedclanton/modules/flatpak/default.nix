@@ -15,11 +15,10 @@
 				location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 			}
 		];
-		# Commented out because: https://github.com/gmodena/nix-flatpak/issues/30
-#		update = {
-#			auto.enable = true;
-#			onActivation = true;
-#		};
+		update.auto = {
+			enable = true;
+			onCalendar = "daily";
+		};
 	};
 }
 
