@@ -8,6 +8,7 @@
 		../../modules/hardware/game-controller/logitech-wheel.nix
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
+		../../modules/documentation
 		../../modules/getty
 		../../modules/language
 		./modules/networking

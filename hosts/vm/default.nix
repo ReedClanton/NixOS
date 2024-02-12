@@ -4,6 +4,7 @@
 		./hardware-configuration.nix
 		# Setup this host.
 		./modules/boot
+		../../modules/documentation
 		../../modules/getty
 		../../modules/language
 		./modules/networking
