@@ -126,10 +126,10 @@
 			set-option -g status-right '#{forecast} |#{cpu_bg_color} #{cpu_percentage} #[default]|#{cpu_temp_bg_color} #{cpu_temp} #[default]|#{ram_bg_color} #{ram_percentage} #[default]|#{online_status}#[default]|'
 			
 			## Second Line ##
-			set-option -g status-format[1]  '#[align=left]| TMUX | Prefix  | Resize Pane  (U,D,L,R) | Rm (Sen,Win,Pane) | Switch Session |#[align=right]Weather|^CPU ^|^CPU^|^RAM ^|Internet#[default]|'
+			set-option -g status-format[1]  '#[align=left]| TMUX | Prefix  | Resize Pane  (U,D,L,R) | Rm (Sen,Win,Pane) | Switch Session | Copy Mode | Cp Start/Copy/Ln End/St/Top/Scroll Up/Dn |#[align=right]Weather|^CPU ^|^CPU^|^RAM ^|Internet#[default]|'
 			
 			## Third Line ##
-			set-option -g status-format[2]  '#[align=left]`----> | <ctl>+a | <pf> <ctl>+[y,h,g,j]   | <pf> [m,k,x]      | <pf> s         |#[align=right]%Y/%m(%B)/%d(%A), %I(%H):%M:%S %p %Z'
+			set-option -g status-format[2]  '#[align=left]`----> | <ctl>+a | <pf> <ctl>+[y,h,g,j]   | <pf> [m,k,x]      | <pf> s         | <pf> [    | <ctl> + <space>/w/e/a/R/<up>/<down>      |#[align=right]%Y/%m(%B)/%d(%A), %I(%H):%M:%S %p %Z'
 			
 			## Forth Line ##
 			set-option -g status-format[3]  '#[align=left]| VIM | Mv (L,D,U,R) | Ln St/Ed/1st char | Nx/Prv Word | Fl Tp/Bm  | Undo/Redo  | Rm Chr/Ln | Inst/@End | Fnd & Replace All Text  | Srch/Rev | Nxt/Prev | Visual Mode/Cp/Pst | Read (cp fl into cur) | Cmd     |'
