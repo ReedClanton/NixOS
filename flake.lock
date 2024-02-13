@@ -92,16 +92,16 @@
     },
     "nix-flatpak": {
       "locked": {
-        "lastModified": 1707342476,
-        "narHash": "sha256-vt93qfMPBkn6GXuDBfdigzk/ETWIRJS1gLgG1Nugsbk=",
-        "owner": "gmodena",
+        "lastModified": 1707851661,
+        "narHash": "sha256-EBbp6fushFjCUZnZD0Htqw+ngMbzhLeZwP5kEXZ9mZU=",
+        "owner": "ReedClanton",
         "repo": "nix-flatpak",
-        "rev": "1d905cdc4d6a356108a0819e36eda81d32a66f11",
+        "rev": "51aa274aaf5428d2b9b33e8d85d073fefa8b94d9",
         "type": "github"
       },
       "original": {
-        "owner": "gmodena",
-        "ref": "fix-boot-activation",
+        "owner": "ReedClanton",
+        "ref": "51aa274",
         "repo": "nix-flatpak",
         "type": "github"
       }

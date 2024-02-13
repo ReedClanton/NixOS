@@ -14,7 +14,7 @@
 		# Secret management.
 		sops-nix.url = "github:Mic92/sops-nix";
 		# Handles Flatpaks.
-		nix-flatpak.url = "github:gmodena/nix-flatpak/fix-boot-activation";
+		nix-flatpak.url = "github:ReedClanton/nix-flatpak/51aa274";
 #		nix-flatpak.url = "github:gmodena/nix-flatpak";
 	};
 

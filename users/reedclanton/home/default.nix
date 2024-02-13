@@ -4,6 +4,7 @@
 		(if builtins.pathExists ./hosts/${host}/modules/hardware/mouse then ./hosts/${host}/modules/hardware/mouse else ../../../do-nothing.nix)
 		./modules/applications/tty
 #		./modules/sops
+		./modules/xdg
 	];
 
 	home = {
@@ -35,37 +36,6 @@
 		file = {
 			".ssh/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to creation the directory this file is in, a file must be created in it. Hense the existice of this file.";
 			"${config.xdg.configHome}/sops/age/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to creation the directory this file is in, a file must be created in it. Hense the existice of this file.";
-		};
-	};
-
-	xdg = {
-		enable = true;
-		mime.enable = true;
-		mimeApps = {
-			enable = true;
-			associations.added = {
-				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
-				"text/html" = [ "firefox.desktop" "org.gnome.gedit.desktop" ];
-				"text/plain" = [ "org.gnome.gedit.desktop" ];
-				"text/xml" = [ "firefox.desktop" "org.gnome.gedit.desktop" ];
-				"x-scheme-handler/http" = [ "firefox.desktop" ];
-				"x-scheme-handler/https" = [ "firefox.desktop" ];
-			};
-			defaultApplications = {
-				# Image Viewer (Loupe).
-				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
-				# Firefox.
-				"text/html" = [ "firefox.desktop" ];
-				"x-scheme-handler/http" = [ "firefox.desktop" ];
-				"x-scheme-handler/https" = [ "firefox.desktop" ];
-				# Gedit.
-				"text/plain" = [ "org.gnome.gedit.desktop" ];
-				"text/xml" = [ "org.gnome.gedit.desktop" ];
-			};
-		};
-		userDirs = {
-			enable = true;
-			createDirectories = true;
 		};
 	};
 
