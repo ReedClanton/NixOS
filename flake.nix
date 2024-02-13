@@ -29,6 +29,10 @@
 			inherit system;
 			config.allowUnfree = true;
 		};
+    pkgs-unstable = import unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
 
 		# This function is used to construct NixOS flakes for each host.
 		mkComputer = host: ui: extraModules: extraHomeModules:
@@ -38,7 +42,7 @@
 		in inputs.nixpkgs.lib.nixosSystem {
 			inherit system;
 			# Allow NixOS to access flake data.
-			specialArgs = { inherit hostName inputs nixos-hardware pkgs system user; };
+			specialArgs = { inherit hostName inputs nixos-hardware pkgs pkgs-unstable system user; };
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
@@ -53,7 +57,7 @@
 				{
 					home-manager = {
 						# Allow Home Manager to access flake data.
-						extraSpecialArgs = { inherit host hostName inputs pkgs system ui user; };
+						extraSpecialArgs = { inherit host hostName inputs pkgs pkgs-unstable system ui user; };
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [
@@ -273,3 +277,4 @@
 		};
 	};
 }
+

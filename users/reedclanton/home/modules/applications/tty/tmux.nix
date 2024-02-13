@@ -132,10 +132,10 @@
 			set-option -g status-format[2]  '#[align=left]`----> | <ctl>+a | <pf> <ctl>+[y,h,g,j]   | <pf> [m,k,x]      | <pf> s         |#[align=right]%Y/%m(%B)/%d(%A), %I(%H):%M:%S %p %Z'
 			
 			## Forth Line ##
-			set-option -g status-format[3]  '#[align=left]| VIM | Mv (L,D,U,R) | Ln St/Ed | Fl Tp/Bm | Undo/Redo  | Rm Chr/Ln | Inst/@End | Fnd & Replace All Text  | Srch/Rev | Nxt/Prev | Visual Mode/Cp/Pst | Read (cp fl into cur) | Cmd     |'
+			set-option -g status-format[3]  '#[align=left]| VIM | Mv (L,D,U,R) | Ln St/Ed/1st non-blank | Nx Word | Fl Tp/Bm | Undo/Redo  | Rm Chr/Ln | Inst/@End | Fnd & Replace All Text  | Srch/Rev | Nxt/Prev | Visual Mode/Cp/Pst | Read (cp fl into cur) | Cmd     |'
 			
 			## Fifth Line ##
-			set-option -g status-format[4]  '#[align=left]`---> | [h,j,k,l]    | 0/$      | gg/G     |  u/<ctl>+r | x/dd      | i/A       | :%%s/<fndTxt>/<repTxt>/g | / / ?    | :n/N     | :v/y/p             | :r <flNm>             | :!<cmd> |'
+			set-option -g status-format[4]  '#[align=left]`---> | [h,j,k,l]    | 0/$/^                  | w       | gg/G     |  u/<ctl>+r | x/dd      | i/A       | :%%s/<fndTxt>/<repTxt>/g | / / ?    | :n/N     | :v/y/p             | :r <flNm>             | :!<cmd> |'
 			
 			run ${config.xdg.configHome}/tmux/plugins/tpm/tpm
 		'';

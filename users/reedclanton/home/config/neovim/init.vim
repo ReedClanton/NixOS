@@ -32,6 +32,16 @@ set shiftwidth=4
 " Sets visual width of tab character NOT what is inserted by the <tab> key.
 set tabstop=4
 
+augroup nix_files
+	autocmd!
+	autocmd FileType nix set smarttab
+	autocmd FileType nix set autoindent
+	autocmd FileType nix set expandtab
+	autocmd FileType nix set shiftwidth=2
+	autocmd FileType python set softtabstop=2
+	autocmd FileType nix set tabstop=2
+augroup END
+
 augroup python_files
 	autocmd!
 	autocmd FileType python set smarttab
