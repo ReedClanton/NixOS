@@ -228,6 +228,26 @@
 				]
 				# Additional Home Manager module(s).
 				[ ];
+      nixos-framework13-xfce = mkComputer
+        # Name of host and UI.
+        "framework13"
+        "xfce"
+        # Additional module(s).
+        [
+          ## Module(s) ##
+          nixos-hardware.nixosModules.framework-11th-gen-intel
+          nix-flatpak.nixosModules.nix-flatpak
+          ## Configuration ##
+          ./modules/gui/xfce
+          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
+        ]
+        # Additional Home Manager module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.homeManagerModules.nix-flatpak
+          ## Configuration ##
+          (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
+        ];
 			nixos-vm-gnome = mkComputer
 				# Name of host and UI.
 				"vm"
@@ -293,6 +313,25 @@
 				[ ]
 				# Additional Home Manager module(s).
 				[ ];
+      nixos-vm-xfce = mkComputer
+        # Name of host and UI.
+        "vm"
+        "xfce"
+        # Additional module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.nixosModules.nix-flatpak
+          ## Configuration ##
+          ./modules/gui/xfce
+          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
+        ]
+        # Additional Home Manager module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.homeManagerModules.nix-flatpak
+          ## Configuration ##
+          (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
+        ];
 		};
 	};
 }
