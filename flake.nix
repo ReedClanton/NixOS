@@ -138,6 +138,25 @@
 				[ ]
 				# Additional Home Manager module(s).
 				[ ];
+      nixos-desktop-xfce = mkComputer
+        # Name of host and UI.
+        "desktop"
+        "xfce"
+        # Additional module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.nixosModules.nix-flatpak
+          ## Configuration ##
+          ./modules/gui/xfce
+          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
+        ]
+        # Additional Home Manager module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.homeManagerModules.nix-flatpak
+          ## Configuration ##
+          (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
+        ];
 			nixos-framework13-gnome = mkComputer
 				# Name of host and UI.
 				"framework13"
