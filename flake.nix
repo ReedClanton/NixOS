@@ -90,8 +90,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/gnome then ./users/${user.name}/home/modules/gui/gnome else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/desktop/modules/gui/gnome then ./users/${user.name}/home/desktop/modules/gui/gnome else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-desktop-hyprland = mkComputer
 				# Name of host and UI.
@@ -110,8 +109,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/hyprland then ./users/${user.name}/home/modules/gui/hyprland else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/desktop/modules/gui/hyprland then ./users/${user.name}/home/desktop/modules/gui/hyprland else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-desktop-kde = mkComputer
 				# Name of host and UI.
@@ -130,8 +128,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/kde then ./users/${user.name}/home/modules/gui/kde else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/desktop/modules/gui/kde then ./users/${user.name}/home/desktop/modules/gui/kde else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-desktop-tty = mkComputer
 				# Name of host and UI.
@@ -158,8 +155,7 @@
           ## Module(s) ##
           nix-flatpak.homeManagerModules.nix-flatpak
           ## Configuration ##
-          (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/desktop/modules/gui/xfce then ./users/${user.name}/home/desktop/modules/gui/xfce else ./do-nothing.nix)
+          # NoOp
         ];
 			nixos-framework13-gnome = mkComputer
 				# Name of host and UI.
@@ -179,8 +175,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/gnome then ./users/${user.name}/home/modules/gui/gnome else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/framework13/modules/gui/gnome then ./users/${user.name}/home/framework13/modules/gui/gnome else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-framework13-hyprland = mkComputer
 				# Name of host and UI.
@@ -200,8 +195,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/hyprland then ./users/${user.name}/home/modules/gui/hyprland else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/framework13/modules/gui/hyprland then ./users/${user.name}/home/framework13/modules/gui/hyprland else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-framework13-kde = mkComputer
 				# Name of host and UI.
@@ -221,8 +215,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/kde then ./users/${user.name}/home/modules/gui/kde else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/framework13/modules/gui/kde then ./users/${user.name}/home/framework13/modules/gui/kde else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-framework13-tty = mkComputer
 				# Name of host and UI.
@@ -253,8 +246,7 @@
           ## Module(s) ##
           nix-flatpak.homeManagerModules.nix-flatpak
           ## Configuration ##
-          (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/framework13/modules/gui/xfce then ./users/${user.name}/home/framework13/modules/gui/xfce else ./do-nothing.nix)
+          # NoOp
         ];
 			nixos-vm-gnome = mkComputer
 				# Name of host and UI.
@@ -273,8 +265,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/gnome/minimalist.nix then ./users/${user.name}/home/modules/gui/gnome/minimalist.nix else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/vm/modules/gui/gnome then ./users/${user.name}/home/vm/modules/gui/gnome else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-vm-hyprland = mkComputer
 				# Name of host and UI.
@@ -293,8 +284,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/hyprland/minimalist.nix then ./users/${user.name}/home/modules/gui/hyprland/minimalist.nix else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/vm/modules/gui/hyprland then ./users/${user.name}/home/vm/modules/gui/hyprland else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-vm-kde = mkComputer
 				# Name of host and UI.
@@ -313,8 +303,7 @@
 					## Module(s) ##
 					nix-flatpak.homeManagerModules.nix-flatpak
 					## Configuration ##
-					(if builtins.pathExists ./users/${user.name}/home/modules/gui/kde/minimalist.nix then ./users/${user.name}/home/modules/gui/kde/minimalist.nix else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/vm/modules/gui/kde then ./users/${user.name}/home/vm/modules/gui/kde else ./do-nothing.nix)
+          # NoOp
 				];
 			nixos-vm-tty = mkComputer
 				# Name of host and UI.
@@ -341,8 +330,7 @@
           ## Module(s) ##
           nix-flatpak.homeManagerModules.nix-flatpak
           ## Configuration ##
-          (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
-          (if builtins.pathExists ./users/${user.name}/home/vm/modules/gui/xfce then ./users/${user.name}/home/vm/modules/gui/xfce else ./do-nothing.nix)
+          # NoOp
         ];
 		};
 	};
