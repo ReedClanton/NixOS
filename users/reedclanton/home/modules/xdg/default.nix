@@ -1,6 +1,10 @@
 { ... }:
 let
 	mime = {
+    audio = {
+      associations = [ "org.audacityteam.Audacity" "org.videolan.VLC" ];
+      defaultApplications = [ "org.videolan.VLC" ];
+    };
 		image = {
 			associations = [ "org.gnome.Loupe.desktop" "org.gimp.GIMP" ];
 			defaultApplications = [ "org.gnome.Loupe.desktop" ];
@@ -29,6 +33,37 @@ in {
 		mimeApps = {
 			enable = true;
 			associations.added = {
+        # Audio.
+        "audio/3gpp2" = mime.audio.associations;
+        "audio/aac" = mime.audio.associations;
+        "audio/aacp" = mime.audio.associations;
+        "audio/adpcm" = mime.audio.associations;
+        "audio/aiff" = mime.audio.associations;
+        "audio/basic" = mime.audio.associations;
+        "audio/flac" = mime.audio.associations;
+        "audio/midi" = mime.audio.associations;
+        "audio/mp4" = mime.audio.associations;
+        "audio/mp4a-latm" = mime.audio.associations;
+        "audio/mpeg" = mime.audio.associations;
+        "audio/ogg" = mime.audio.associations;
+        "audio/opus" = mime.audio.associations;
+        "audio/vnd.digital-winds" = mime.audio.associations;
+        "audio/vnd.dts" = mime.audio.associations;
+        "audio/vnd.dts.hd" = mime.audio.associations;
+        "audio/vnd.lucent.voice" = mime.audio.associations;
+        "audio/vnd.ms-playready.media.pya" = mime.audio.associations;
+        "audio/vnd.nuera.ecelp4800" = mime.audio.associations;
+        "audio/vnd.nuera.ecelp7470" = mime.audio.associations;
+        "audio/vnd.nuera.ecelp9600" = mime.audio.associations;
+        "audio/vnd.wav" = mime.audio.associations;
+        "audio/webm" = mime.audio.associations;
+        "audio/x-aiff" = mime.audio.associations;
+        "audio/x-matroska" = mime.audio.associations;
+        "audio/x-mpegurl" = mime.audio.associations;
+        "audio/x-ms-wax" = mime.audio.associations;
+        "audio/x-ms-wma" = mime.audio.associations;
+        "audio/x-pn-realaudio" = mime.audio.associations;
+        "audio/x-pn-realaudio-plugin" = mime.audio.associations;
 				# Image(s).
 				"image/aces" = mime.image.associations;
 				"image/apng" = mime.image.associations;
@@ -49,9 +84,11 @@ in {
 				"image/heif-sequence" = mime.image.associations;
 				"image/hej2k" = mime.image.associations;
 				"image/hsj2" = mime.image.associations;
+        "image/ief" = mime.image.associations;
 				"image/j2c" = mime.image.associations;
 				"image/jls" = mime.image.associations;
 				"image/jp2" = mime.image.associations;
+        "image/jpeg" = mime.image.associations;
 				"image/jph" = mime.image.associations;
 				"image/jphc" = mime.image.associations;
 				"image/jpm" = mime.image.associations;
@@ -66,6 +103,7 @@ in {
 				"image/ktx" = mime.image.associations;
 				"image/ktx2" = mime.image.associations;
 				"image/naplps" = mime.image.associations;
+        "image/pjpeg" = mime.image.associations;
 				"image/png" = mime.image.associations;
 				"image/prs.btif" = mime.image.associations;
 				"image/prs.pti" = mime.image.associations;
@@ -216,6 +254,37 @@ in {
 				"x-scheme-handler/https" = mime.web.associations;
 			};
 			defaultApplications = {
+        # Audio.
+        "audio/3gpp2" = mime.audio.defaultApplications;
+        "audio/aac" = mime.audio.defaultApplications;
+        "audio/aacp" = mime.audio.defaultApplications;
+        "audio/adpcm" = mime.audio.defaultApplications;
+        "audio/aiff" = mime.audio.defaultApplications;
+        "audio/basic" = mime.audio.defaultApplications;
+        "audio/flac" = mime.audio.defaultApplications;
+        "audio/midi" = mime.audio.defaultApplications;
+        "audio/mp4" = mime.audio.defaultApplications;
+        "audio/mp4a-latm" = mime.audio.defaultApplications;
+        "audio/mpeg" = mime.audio.defaultApplications;
+        "audio/ogg" = mime.audio.defaultApplications;
+        "audio/opus" = mime.audio.defaultApplications;
+        "audio/vnd.digital-winds" = mime.audio.defaultApplications;
+        "audio/vnd.dts" = mime.audio.defaultApplications;
+        "audio/vnd.dts.hd" = mime.audio.defaultApplications;
+        "audio/vnd.lucent.voice" = mime.audio.defaultApplications;
+        "audio/vnd.ms-playready.media.pya" = mime.audio.defaultApplications;
+        "audio/vnd.nuera.ecelp4800" = mime.audio.defaultApplications;
+        "audio/vnd.nuera.ecelp7470" = mime.audio.defaultApplications;
+        "audio/vnd.nuera.ecelp9600" = mime.audio.defaultApplications;
+        "audio/vnd.wav" = mime.audio.defaultApplications;
+        "audio/webm" = mime.audio.defaultApplications;
+        "audio/x-aiff" = mime.audio.defaultApplications;
+        "audio/x-matroska" = mime.audio.defaultApplications;
+        "audio/x-mpegurl" = mime.audio.defaultApplications;
+        "audio/x-ms-wax" = mime.audio.defaultApplications;
+        "audio/x-ms-wma" = mime.audio.defaultApplications;
+        "audio/x-pn-realaudio" = mime.audio.defaultApplications;
+        "audio/x-pn-realaudio-plugin" = mime.audio.defaultApplications;
 				# Image(s).
 				"image/aces" = mime.image.defaultApplications;
 				"image/apng" = mime.image.defaultApplications;
@@ -236,9 +305,11 @@ in {
 				"image/heif-sequence" = mime.image.defaultApplications;
 				"image/hej2k" = mime.image.defaultApplications;
 				"image/hsj2" = mime.image.defaultApplications;
+        "image/ief" = mime.image.defaultApplications;
 				"image/j2c" = mime.image.defaultApplications;
 				"image/jls" = mime.image.defaultApplications;
 				"image/jp2" = mime.image.defaultApplications;
+        "image/jpeg" = mime.image.defaultApplications;
 				"image/jph" = mime.image.defaultApplications;
 				"image/jphc" = mime.image.defaultApplications;
 				"image/jpm" = mime.image.defaultApplications;
@@ -253,6 +324,7 @@ in {
 				"image/ktx" = mime.image.defaultApplications;
 				"image/ktx2" = mime.image.defaultApplications;
 				"image/naplps" = mime.image.defaultApplications;
+        "image/pjpeg" = mime.image.defaultApplications;
 				"image/png" = mime.image.defaultApplications;
 				"image/prs.btif" = mime.image.defaultApplications;
 				"image/prs.pti" = mime.image.defaultApplications;
