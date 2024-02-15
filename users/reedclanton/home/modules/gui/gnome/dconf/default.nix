@@ -103,6 +103,7 @@
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
+      speed = 0.24242424242424243;
       two-finger-scrolling-enabled = true;
     };
 
@@ -110,10 +111,6 @@
       old-files-age = mkUint32 30;
       recent-files-max-age = -1;
       remove-old-temp-files = true;
-    };
-
-    "org/gnome/desktop/screensaver" = {
-      lock-enabled = false;
     };
 
     "org/gnome/desktop/search-providers" = {
@@ -162,11 +159,12 @@
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
+      ambient-enabled = false;
       power-button-action = "interactive";
       power-saver-profile-on-low-battery = true;
       sleep-inactive-ac-timeout = 1800;
-	  sleep-inactive-ac-type = "nothing";
-      sleep-inactive-battery-timeout = 1800;
+	    sleep-inactive-ac-type = "nothing";
+      sleep-inactive-battery-timeout = 1200;
     };
 
     "org/gnome/shell" = {
@@ -191,8 +189,9 @@
 
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h";
-	  show-hidden = false;
-	  sort-directories-first = true;
+	    show-hidden = false;
+	    sort-directories-first = true;
     };
   };
 }
+
