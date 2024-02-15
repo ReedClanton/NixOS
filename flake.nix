@@ -73,6 +73,25 @@
 		};
 	in {
 		nixosConfigurations = {
+      nixos-desktop-cde = mkComputer
+        # Name of host and UI.
+        "desktop"
+        "cde"
+        # Additional module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.nixosModules.nix-flatpak
+          ## Configuration ##
+          ./modules/gui/kde
+          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
+        ]
+        # Additional Home Manager module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.homeManagerModules.nix-flatpak
+          ## Configuration ##
+          (if builtins.pathExists ./users/${user.name}/home/modules/gui/cde then ./users/${user.name}/home/modules/gui/cde else ./do-nothing.nix)
+        ];
 			nixos-desktop-gnome = mkComputer
 				# Name of host and UI.
 				"desktop"
@@ -156,6 +175,26 @@
           nix-flatpak.homeManagerModules.nix-flatpak
           ## Configuration ##
           (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
+        ];
+      nixos-framework13-cde = mkComputer
+        # Name of host and UI.
+        "framework13"
+        "cde"
+        # Additional module(s).
+        [
+          ## Module(s) ##
+          nixos-hardware.nixosModules.framework-11th-gen-intel
+          nix-flatpak.nixosModules.nix-flatpak
+          ## Configuration ##
+          ./modules/gui/kde
+          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
+        ]
+        # Additional Home Manager module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.homeManagerModules.nix-flatpak
+          ## Configuration ##
+          (if builtins.pathExists ./users/${user.name}/home/modules/gui/cde then ./users/${user.name}/home/modules/gui/cde else ./do-nothing.nix)
         ];
 			nixos-framework13-gnome = mkComputer
 				# Name of host and UI.
@@ -247,6 +286,25 @@
           nix-flatpak.homeManagerModules.nix-flatpak
           ## Configuration ##
           (if builtins.pathExists ./users/${user.name}/home/modules/gui/xfce then ./users/${user.name}/home/modules/gui/xfce else ./do-nothing.nix)
+        ];
+      nixos-vm-cde = mkComputer
+        # Name of host and UI.
+        "vm"
+        "cde"
+        # Additional module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.nixosModules.nix-flatpak
+          ## Configuration ##
+          ./modules/gui/kde
+          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
+        ]
+        # Additional Home Manager module(s).
+        [
+          ## Module(s) ##
+          nix-flatpak.homeManagerModules.nix-flatpak
+          ## Configuration ##
+          (if builtins.pathExists ./users/${user.name}/home/modules/gui/cde then ./users/${user.name}/home/modules/gui/cde else ./do-nothing.nix)
         ];
 			nixos-vm-gnome = mkComputer
 				# Name of host and UI.
