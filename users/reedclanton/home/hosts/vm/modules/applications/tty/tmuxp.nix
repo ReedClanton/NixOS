@@ -6,7 +6,7 @@
       windows:
         - window_name: Home
           focus: true
-          layout: c65e,187x50,0,0[187x25,0,0,1,187x24,0,26{123x24,0,26,2,63x24,124,26,12}]
+          layout: 39e3,158x35,0,0[158x10,0,0,1,158x24,0,11{94x24,0,11,2,63x24,95,11,3}]
           panes:
             - focus: true
               shell_command:
