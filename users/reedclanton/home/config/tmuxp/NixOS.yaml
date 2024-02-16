@@ -38,14 +38,14 @@ windows:
     start_directory: "./hosts/"
     panes:
       - focus: true
-  - window_name: users/
+  - window_name: users/reedclanton/
     layout: even-horizontal
-    start_directory: "./users/"
+    start_directory: "./users/reedclanton/"
     panes:
       - focus: true
-  - window_name: users/
+  - window_name: users/reedclanton/home/
     layout: even-horizontal
-    start_directory: "./users/"
+    start_directory: "./users/reedclanton/home/"
     panes:
       - focus: true
 
