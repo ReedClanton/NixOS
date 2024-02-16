@@ -25,7 +25,7 @@
 			ip = "ip --color=auto";
 			n = "nvim";
 			ssh = "ssh -X";
-      t = "tmuxp load $XDG_CONFIG_HOME/tmuxp/Default.yaml $XDG_CONFIG_HOME/tmuxp/NixOS.yaml $XDG_CONFIG_HOME/tmuxp/Web.yaml";
+      t = "tmuxp load -d $XDG_CONFIG_HOME/tmuxp/Default.yaml $XDG_CONFIG_HOME/tmuxp/NixOS.yaml $XDG_CONFIG_HOME/tmuxp/Web.yaml;tmux a -t Default";
 			tD = "tmuxp load $XDG_CONFIG_HOME/tmuxp/Default.yaml";
 			tN = "tmuxp load $XDG_CONFIG_HOME/tmuxp/NixOS.yaml";
 			tW = "tmuxp load $XDG_CONFIG_HOME/tmuxp/Web.yaml";
