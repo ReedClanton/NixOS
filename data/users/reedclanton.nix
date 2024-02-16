@@ -25,9 +25,10 @@
 			ip = "ip --color=auto";
 			n = "nvim";
 			ssh = "ssh -X";
-			tD = "tmuxp load $XDG_CONFIG_HOME/NixOS/users/$USER/home/config/tmuxp/Default.yaml";
-			tN = "tmuxp load $XDG_CONFIG_HOME/NixOS/users/$USER/home/config/tmuxp/NixOS.yaml";
-			tW = "tmuxp load $XDG_CONFIG_HOME/NixOS/users/$USER/home/config/tmuxp/Web.yaml";
+      t = "tmuxp load $XDG_CONFIG_HOME/tmuxp/Default.yaml $XDG_CONFIG_HOME/tmuxp/NixOS.yaml $XDG_CONFIG_HOME/tmuxp/Web.yaml";
+			tD = "tmuxp load $XDG_CONFIG_HOME/tmuxp/Default.yaml";
+			tN = "tmuxp load $XDG_CONFIG_HOME/tmuxp/NixOS.yaml";
+			tW = "tmuxp load $XDG_CONFIG_HOME/tmuxp/Web.yaml";
 		};
 		completion = true;
 		history = {
@@ -63,7 +64,7 @@
 			#	in an interactive shell.
 			if command -v tmux &> /dev/null && [ -n "$PS1" ] && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
 				if command -v tmuxp &> /dev/null; then
-					exec tmuxp load ~/.config/NixOS/users/reedclanton/home/config/tmuxp/Default.yaml
+					exec tmuxp load ~/.config/tmuxp/Default.yaml
 				fi
 			fi
 			
