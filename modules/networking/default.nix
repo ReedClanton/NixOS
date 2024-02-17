@@ -1,4 +1,9 @@
-{ user, ... }: {
+{ pkgs, user, ... }: {
+  environment.systemPackages = with pkgs; [
+    # Query or control network driver and hardware settings.
+    ethtool
+  ];
+
 	networking = {
 		hostName = "nixos";
 		networkmanager.enable = true;

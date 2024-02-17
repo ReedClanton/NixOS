@@ -1,9 +1,9 @@
 # Enables video and audio loopback device.
 
-{ config, ... }: {
-#	environment.systemPackages = with config.boot.kernelPackages; [
-#		v4l2loopback
-#	];
+{ config, pkgs, ... }: {
+	environment.systemPackages = with pkgs; [
+		v4l-utils
+	];
 
 	boot = {
 		# Make v4l2loopback kernel module available to NixOS.

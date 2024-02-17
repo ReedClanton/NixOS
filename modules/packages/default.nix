@@ -4,7 +4,9 @@
 		# Tool(s): NixOS #
 		home-manager
 		# Tool(s): System #
+    gnumake
 		rsync
+    unzip
 		wget
 		# Tool(s): Terminal #
 		man-pages

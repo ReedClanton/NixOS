@@ -8,7 +8,7 @@
 		../../modules/getty
 		../../modules/language
 		./modules/networking
-		../../modules/nix
+		./modules/nix
 		../../modules/packages
 		./modules/printing
 		../../modules/programs
