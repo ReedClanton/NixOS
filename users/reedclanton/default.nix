@@ -5,6 +5,7 @@ let
 	userShell = pkgs.zsh;
 in {
 	imports = [
+    ./modules/arduino
 		./modules/docker
 		./modules/networking
 		./modules/sops
