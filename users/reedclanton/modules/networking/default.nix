@@ -2,6 +2,14 @@
 	networking.wireless = {
 		environmentFile = config.sops.secrets."wireless.env".path;
 		networks = {
+      "nixos-desktop" = {
+        priority = 505;
+        psk = "@nixos_desktop_psk@";
+      };
+      "nixos-framework13" = {
+        priority = 505;
+        psk = "@nixos_framework13_psk@";
+      };
 			"private" = {
 				priority = 500;
 				psk = "@private_psk@";
