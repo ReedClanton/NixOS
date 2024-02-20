@@ -4,6 +4,8 @@
 		./hardware-configuration.nix
 		./modules/hardware/drive/steam.nix
 		./modules/hardware/drive/vm.nix
+    # Commented out because installing newer firemware prevents shutdown and boot.
+#    ../../modules/hardware/wifi/mt7961
 		./modules/hardware/gpu
 		../../modules/hardware/game-controller/logitech-wheel.nix
 		# Setup this host.

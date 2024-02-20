@@ -2,6 +2,8 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
+    # Commented out because installing newer firemware prevents shutdown and boot.
+#    ../../modules/hardware/wifi/mt7961
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
 		../../modules/documentation
