@@ -4,33 +4,78 @@
 		toolbar = true;
 		bookmarks = [
 				{
-						name = "Pinned";
+						name = "Code";
 						bookmarks = [
 								{
-										name = "YNAB";
+										name = "Arduino";
 										bookmarks = [
 												{
-														name = "Budget";
-														url = "https://app.ynab.com/b988243b-760f-4e22-8fd9-b42d07afd6f1/budget/202402";
-														tags = [ "budget" "pin" "pinned" "ynab" "you" "need" ];
-												}
-												{
-														name = "All Accounts";
-														url = "https://app.ynab.com/b988243b-760f-4e22-8fd9-b42d07afd6f1/accounts";
-														tags = [ "account" "budget" "pin" "pinned" "ynab" "you" "need" "all" "accounts" ];
+														name = "Docs";
+														bookmarks = [
+																{
+																		name = "How to organize my Arduino projects' structure for easy source control? - Arduino Stack Exchange";
+																		url = "https://arduino.stackexchange.com/questions/348/how-to-organize-my-arduino-projects-structure-for-easy-source-control";
+																		tags = [ "code" "docs" "documentation" "arduino" ];
+																}
+														];
 												}
 										];
 								}
-						];
-				}
-				{
-						name = "T-Mobile Router";
-						url = "http://192.168.12.1/";
-						tags = [ "t_mobile" "router" ];
-				}
-				{
-						name = "Code";
-						bookmarks = [
+								{
+										name = "C++";
+										bookmarks = [
+												{
+														name = "Docs";
+														bookmarks = [
+																{
+																		name = "Google C++ Style Guide";
+																		url = "https://google.github.io/styleguide/cppguide.html#General_Naming_Rules";
+																		tags = [ "code" "docs" "c++" "documentation" ];
+																}
+														];
+												}
+										];
+								}
+								{
+										name = "GitHub Apps";
+										bookmarks = [
+												{
+														name = "Epic Generator";
+														url = "https://github.com/TimonVS/epic-generator";
+														tags = [ "code" "github" "apps" "epic" "generator" ];
+												}
+										];
+								}
+								{
+										name = "Mine";
+										bookmarks = [
+												{
+														name = "ReedClanton/shell_base";
+														url = "https://github.com/ReedClanton/shell_base";
+														tags = [ "code" "shell" "mine" "repo" "base" ];
+												}
+												{
+														name = "Coverage report";
+														url = "file:///home/reedclanton/git/shell_base/coverage/index.html";
+														tags = [ "code" "test" "coverage" "report" ];
+												}
+										];
+								}
+								{
+										name = "Nix";
+										bookmarks = [
+												{
+														name = "Docs";
+														bookmarks = [
+																{
+																		name = "Explainix | Explain Nix Syntax Visually";
+																		url = "https://zaynetro.com/explainix";
+																		tags = [ "code" "docs" "nix" "explainix" "syntax" "visual" ];
+																}
+														];
+												}
+										];
+								}
 								{
 										name = "POSIX_Shell";
 										bookmarks = [
@@ -157,61 +202,6 @@
 										];
 								}
 								{
-										name = "C++";
-										bookmarks = [
-												{
-														name = "Docs";
-														bookmarks = [
-																{
-																		name = "Google C++ Style Guide";
-																		url = "https://google.github.io/styleguide/cppguide.html#General_Naming_Rules";
-																		tags = [ "code" "docs" "c++" "documentation" ];
-																}
-														];
-												}
-										];
-								}
-								{
-										name = "Arduino";
-										bookmarks = [
-												{
-														name = "Docs";
-														bookmarks = [
-																{
-																		name = "How to organize my Arduino projects' structure for easy source control? - Arduino Stack Exchange";
-																		url = "https://arduino.stackexchange.com/questions/348/how-to-organize-my-arduino-projects-structure-for-easy-source-control";
-																		tags = [ "code" "docs" "documentation" "arduino" ];
-																}
-														];
-												}
-										];
-								}
-								{
-										name = "Mine";
-										bookmarks = [
-												{
-														name = "ReedClanton/shell_base";
-														url = "https://github.com/ReedClanton/shell_base";
-														tags = [ "code" "shell" "mine" "repo" "base" ];
-												}
-												{
-														name = "Coverage report";
-														url = "file:///home/reedclanton/git/shell_base/coverage/index.html";
-														tags = [ "code" "test" "coverage" "report" ];
-												}
-										];
-								}
-								{
-										name = "GitHub Apps";
-										bookmarks = [
-												{
-														name = "Epic Generator";
-														url = "https://github.com/TimonVS/epic-generator";
-														tags = [ "code" "github" "apps" "epic" "generator" ];
-												}
-										];
-								}
-								{
 										name = "Web";
 										bookmarks = [
 												{
@@ -299,6 +289,36 @@
 						];
 				}
 				{
+						name = "Pinned";
+						bookmarks = [
+								{
+										name = "YNAB";
+										bookmarks = [
+												{
+														name = "Budget";
+														url = "https://app.ynab.com/b988243b-760f-4e22-8fd9-b42d07afd6f1/budget/202402";
+														tags = [ "budget" "pin" "pinned" "ynab" "you" "need" ];
+												}
+												{
+														name = "All Accounts";
+														url = "https://app.ynab.com/b988243b-760f-4e22-8fd9-b42d07afd6f1/accounts";
+														tags = [ "account" "budget" "pin" "pinned" "ynab" "you" "need" "all" "accounts" ];
+												}
+										];
+								}
+						];
+				}
+				{
+						name = "Terminal";
+						bookmarks = [
+								{
+										name = "v4l2loopback DroidCam Fix";
+										url = "https://yauhen.cc/tags/camera/";
+										tags = [ "shell" "linux" "terminal" "v4l2" "v4l2loopback" "droid" "cam" "droidcam" "wifi" "phone" "camera" "desktop" "fix" ];
+								}
+						];
+				}
+				{
 						name = "Tools";
 						bookmarks = [
 								{
@@ -315,17 +335,12 @@
 										url = "http://www.patorjk.com/software/taag/#p=display";
 										tags = [ "tool" "generator" "ascii" "art" "text" ];
 								}
+								{
+										name = "T-Mobile Router";
+										url = "http://192.168.12.1/";
+										tags = [ "t_mobile" "router" ];
+								}
 						];
-				}
-				{
-						name = "GHX-UltiPro";
-						url = "https://ew21.ultipro.com/Login.aspx?ReturnUrl=%2f";
-						tags = [ "ghx" "work" ];
-				}
-				{
-						name = "localhost:5000";
-						url = "http://localhost:5000/";
-						tags = [ "local" ];
 				}
 				{
 						name = "Volunteer";
@@ -341,6 +356,11 @@
 										];
 								}
 						];
+				}
+				{
+						name = "GHX-UltiPro";
+						url = "https://ew21.ultipro.com/Login.aspx?ReturnUrl=%2f";
+						tags = [ "ghx" "work" ];
 				}
 		];
   }
