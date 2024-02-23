@@ -1,4 +1,4 @@
-{ nix-flatpak, pkgs, ... }: {
+{ pkgs, ... }: {
 	# Enable hardware accelerated rendering.
 	home.packages = [ pkgs.blender-hip ];
 

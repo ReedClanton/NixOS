@@ -1,4 +1,4 @@
-{ nix-flatpak, pkgs, user, ... }: {
+{ pkgs, user, ... }: {
 	home.packages = with pkgs; [ flatpak ];
 
 	services.flatpak = {
