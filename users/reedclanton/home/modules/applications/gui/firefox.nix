@@ -16,6 +16,8 @@
 					# Turn off data collection.
 					"app.shield.optoutstudies.enabled" = false;
 					"browser.aboutConfig.showWarning" = false;
+          # Switch <ctl> + <tab> from switching to the next tab to switching to the last used tab.
+          "browser.ctrlTab.sortByRecentlyUsed" = true;
 					# Ask where to download files.
 					"browser.download.useDownloadDir" = false;
 					# Remove adds from new tab page.

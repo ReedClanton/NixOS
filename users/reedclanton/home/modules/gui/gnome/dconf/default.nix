@@ -123,6 +123,11 @@
       idle-delay = mkUint32 900;
     };
 
+    "org/gnome/desktop/sound" = {
+      allow-volume-above-100-percent = true;
+      event-sounds = false;
+    };
+
     "org/gnome/desktop/wm/keybindings" = {
       switch-applications = [];
       switch-applications-backward = [];
@@ -156,6 +161,13 @@
 
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
+    };
+
+    # Disable the Insert key.
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      binding = "Insert";
+      command = ":";
+      name = "DisableInsertKey";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {

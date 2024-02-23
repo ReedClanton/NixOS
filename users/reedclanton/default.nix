@@ -7,6 +7,7 @@ in {
 	imports = [
     ./modules/arduino
 		./modules/docker
+    (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware/default.nix else ../do-nothing.nix)
 		./modules/networking
 		./modules/sops
 	];
