@@ -29,7 +29,7 @@
 														bookmarks = [
 																{
 																		name = "Google C++ Style Guide";
-																		url = "https://google.github.io/styleguide/cppguide.html#General_Naming_Rules";
+																		url = "https://google.github.io/styleguide/cppguide.html";
 																		tags = [ "code" "docs" "c++" "documentation" ];
 																}
 														];
