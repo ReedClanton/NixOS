@@ -3,7 +3,7 @@ start_directory: "~"
 windows:
   - window_name: Home
     focus: true
-    layout: c159,249x69,0,0[249x39,0,0,1,249x29,0,40{185x29,0,40,2,63x29,186,40,3}]
+    layout: 16ee,249x69,0,0[249x31,0,0,1,249x37,0,32{185x37,0,32,2,63x37,186,32[63x18,186,32,3,63x18,186,51,4]}]
     panes:
       - focus: true
         shell_command:
@@ -17,6 +17,16 @@ windows:
           WEATHER_LONG_WAIT: "900"
         shell_command:
           - weather() { clear; curl -s "https://wttr.in/Dallas?1Fnuq"; sleep $1; }
+          - sleep 1
+          - weather $WEATHER_SHORT_WAIT
+          - weather $WEATHER_SHORT_WAIT
+          - while true; do ping -c 1 -W .5 wttr.in 2>&1 >/dev/null; if [ "$?" -eq "0" ]; then weather $WEATHER_LONG_WAIT; else echo "wttr not connected, waiting '$WEATHER_SHORT_WAIT'..."; sleep $WEATHER_SHORT_WAIT; fi; done
+      - suppress_history: true
+        environment:
+          WEATHER_SHORT_WAIT: "30"
+          WEATHER_LONG_WAIT: "900"
+        shell_command:
+          - weather() { clear; curl -s "https://wttr.in/Lawton?1Fnuq"; sleep $1; }
           - sleep 1
           - weather $WEATHER_SHORT_WAIT
           - weather $WEATHER_SHORT_WAIT
