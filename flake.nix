@@ -4,6 +4,7 @@
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 		unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+#    unstable.url = "github:ReedClanton/nixpkgs/master";
 		# Includes common hardware stuff (like Framework laptop stuff).
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 		home-manager = {
