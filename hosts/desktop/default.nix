@@ -2,11 +2,9 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
-		./modules/hardware/drive/steam.nix
-		./modules/hardware/drive/vm.nix
+    ./modules/hardware
     # Commented out because installing newer firemware prevents shutdown and boot.
 #    ../../modules/hardware/wifi/mt7961
-		./modules/hardware/gpu
 		../../modules/hardware/game-controller/logitech-wheel.nix
 		# Setup this host.
 		../../modules/boot/efi-systemd.nix
