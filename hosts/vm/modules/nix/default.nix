@@ -1,6 +1,6 @@
 { lib, ... }: {
   imports = [
-    ../../modules/nix
+    ../../../../modules/nix
   ];
 
   ## Garbage Collection ##
