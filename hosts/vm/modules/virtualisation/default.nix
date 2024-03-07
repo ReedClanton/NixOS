@@ -1,14 +1,26 @@
-{ user, ... }: {
+{ lib, user, ... }: {
+  imports = [
+    ../../modules/virtualisation
+  ];
+
+  # Setup shared folder.
 	fileSystems."/vmshare" = {
 		fsType = "vboxsf";
 		device = "Shared";
 		options = [ "rw" "nofail" ];
 	};
 
-	users.extraGroups.vboxuser.members = [ user.name ];
-
+  # Configure host as guest.
 	virtualisation = {
-		vmware.guest.enable = true;
-		virtualbox.guest.enable = true;
+		vmware = {
+      guest.enable = true;
+      host.enable = lib.mkForce false;
+    };
+		virtualbox = {
+      guest.enable = true;
+      host = {
+        enable = lib.mkForce false;
+        enableExtensionPack = lib.mkForce false;
+      };
 	};
 }
