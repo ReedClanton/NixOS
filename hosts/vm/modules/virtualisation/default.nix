@@ -17,7 +17,11 @@
       host.enable = lib.mkForce false;
     };
 		virtualbox = {
-      guest.enable = true;
+      guest = {
+        enable = true;
+        # X11 is needed in order to enable the drivers that allow for automatic screen resizing.
+        x11 = true;
+      };
       host = {
         enable = lib.mkForce false;
         enableExtensionPack = lib.mkForce false;
