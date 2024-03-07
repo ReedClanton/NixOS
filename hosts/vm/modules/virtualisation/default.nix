@@ -1,6 +1,6 @@
 { lib, user, ... }: {
   imports = [
-    ../../modules/virtualisation
+    ../../../../modules/virtualisation
   ];
 
   # Setup shared folder.
@@ -22,5 +22,6 @@
         enable = lib.mkForce false;
         enableExtensionPack = lib.mkForce false;
       };
+    };
 	};
 }
