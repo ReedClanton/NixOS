@@ -20,7 +20,7 @@
 #    };
     
     "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Utilities" "YaST" "Pardus" "a34bc971-3d63-4c9a-bf67-25b18f6c9f69" "0e6d9c41-2187-48d9-946a-fabdc2c7aaaf" "dcb71360-6f7a-4f50-982b-4a90b6109ec0" "8ad2500a-c38c-4574-99d9-94ddc25a258d" "e3b0e33f-4533-47ac-8e0b-a9d4c19aeae4" "754c665e-313f-4980-8b0b-23d76c530d8b" "a05e33c3-2ed0-4f27-85f7-59779ccdd078" ];
+      folder-children = [ "Utilities" "YaST" "Pardus" "a34bc971-3d63-4c9a-bf67-25b18f6c9f69" "0e6d9c41-2187-48d9-946a-fabdc2c7aaaf" "dcb71360-6f7a-4f50-982b-4a90b6109ec0" "8ad2500a-c38c-4574-99d9-94ddc25a258d" "e3b0e33f-4533-47ac-8e0b-a9d4c19aeae4" "754c665e-313f-4980-8b0b-23d76c530d8b" "a05e33c3-2ed0-4f27-85f7-59779ccdd078" "b28077c6-4406-47bb-9944-2f97dbb63baa" "a54951de-2c86-4c90-89cf-b1abbebf809d" ];
     };
 
     "org/gnome/desktop/app-folders/folders/0e6d9c41-2187-48d9-946a-fabdc2c7aaaf" = {
@@ -62,7 +62,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/a05e33c3-2ed0-4f27-85f7-59779ccdd078" = {
-      apps = [ "org.audacityteam.Audacity.desktop" "org.blender.Blender.desktop" "com.jgraph.drawio.desktop.desktop" "droidcam.desktop" "org.freecadweb.FreeCAD.desktop" "io.freetubeapp.FreeTube.desktop" "org.gimp.GIMP.desktop" "org.gnome.Loupe.desktop" "com.obsproject.Studio.desktop" "org.nickvision.tubeconverter.desktop" "vlc.desktop" ];
+      apps = [ "org.blender.Blender.desktop" "com.jgraph.drawio.desktop.desktop" "org.freecadweb.FreeCAD.desktop" "org.gimp.GIMP.desktop" "org.gnome.Loupe.desktop" ];
       name = "Multi-Media";
       translate = false;
     };
@@ -73,14 +73,25 @@
       translate = false;
     };
 
+    "org/gnome/desktop/app-folders/folders/a54951de-2c86-4c90-89cf-b1abbebf809d" = {
+      apps = [ "org.audacityteam.Audacity.desktop" "droidcam.desktop" "org.mixxx.Mixxx.desktop" "com.obsproject.Studio.desktop" "org.rncbc.qpwgraph.desktop" "qv4l2.desktop" "qvidcap.desktop" "vlc.desktop" ];
+      name = "Audio & Video";
+      translate = false;
+    };
+
+    "org/gnome/desktop/app-folders/folders/b28077c6-4406-47bb-9944-2f97dbb63baa" = {
+      apps = [ "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "protonup-qt.desktop" ];
+      name = "Games";
+    };
+
     "org/gnome/desktop/app-folders/folders/dcb71360-6f7a-4f50-982b-4a90b6109ec0" = {
-      apps = [ "cc.arduino.arduinoide.desktop" "cc.arduino.IDE2.desktop" "io.github.nokse22.asciidraw.desktop" "org.gnome.Characters.desktop" "org.gnome.gedit.desktop" "nvim.desktop" "org.gnome.TextEditor.desktop" "com.github.liferooter.textpieces.desktop" ];
+      apps = [ "arduino.desktop" "cc.arduino.arduinoide.desktop" "cc.arduino.IDE2.desktop" "io.github.nokse22.asciidraw.desktop" "org.gnome.Characters.desktop" "org.gnome.gedit.desktop" "nvim.desktop" "org.gnome.TextEditor.desktop" "com.github.liferooter.textpieces.desktop" ];
       name = "Text";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/e3b0e33f-4533-47ac-8e0b-a9d4c19aeae4" = {
-      apps = [ "com.brave.Browser.desktop" "org.torproject.torbrowser-launcher.desktop" "org.torproject.torbrowser-launcher.settings.desktop" "com.transmissionbt.Transmission.desktop" "us.zoom.Zoom.desktop" ];
+      apps = [ "com.brave.Browser.desktop" "io.freetubeapp.FreeTube.desktop" "org.nickvision.tubeconverter.desktop" "org.torproject.torbrowser-launcher.desktop" "org.torproject.torbrowser-launcher.settings.desktop" "com.transmissionbt.Transmission.desktop" "us.zoom.Zoom.desktop" ];
       name = "Internet";
     };
 

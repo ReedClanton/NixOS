@@ -1,6 +1,5 @@
 { pkgs, user, ... }: {
   environment.systemPackages = with pkgs; [
-    arduino
     # Arduino CI/CD tool.
     arduino-ci
     arduino-cli
