@@ -2,7 +2,7 @@
 { lib, ... }: with lib.hm.gvariant; {
   dconf.settings = {
     "org/gnome/Console" = {
-      custom-font = "Source Code Pro 12";
+      custom-font = "Source Code Pro 10";
       font-scale = 0.9;
       use-system-font = false;
     };
@@ -10,6 +10,10 @@
     "org/gnome/desktop/screensaver" = {
       lock-delay = mkUint32 180;
       lock-enabled = true;
+    };
+
+    "org/gnome/mutter" = {
+      experimental-features = [ "scale-monitor-framebuffer" ];
     };
   };
 }

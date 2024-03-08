@@ -3,7 +3,7 @@ start_directory: "~"
 windows:
   - window_name: Home
     focus: true
-    layout: 16ee,249x69,0,0[249x31,0,0,1,249x37,0,32{185x37,0,32,2,63x37,186,32[63x18,186,32,3,63x18,186,51,4]}]
+    layout: 9b2a,255x65,0,0[255x27,0,0,1,255x37,0,28{191x37,0,28,2,63x37,192,28[63x18,192,28,3,63x18,192,47,4]}]
     panes:
       - focus: true
         shell_command:
@@ -26,7 +26,7 @@ windows:
           WEATHER_SHORT_WAIT: "30"
           WEATHER_LONG_WAIT: "900"
         shell_command:
-          - weather() { clear; curl -s "https://wttr.in/Lawton?1Fnuq"; sleep $1; }
+          - weather() { clear; curl -s "https://wttr.in/Denver?1Fnuq"; sleep $1; }
           - sleep 1
           - weather $WEATHER_SHORT_WAIT
           - weather $WEATHER_SHORT_WAIT
