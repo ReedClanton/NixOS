@@ -24,7 +24,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/0e6d9c41-2187-48d9-946a-fabdc2c7aaaf" = {
-      apps = [ "btop.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "org.gnome.font-viewer.desktop" "org.gnome.Logs.desktop" "cups.desktop" "nixos-manual.desktop" "org.gnome.Settings.desktop" "org.gnome.Software.desktop" "gnome-system-monitor.desktop" "com.github.LongSoft.UEFITool.desktop" ];
+      apps = [ "btop.desktop" "org.corectrl.corectrl.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "org.gnome.font-viewer.desktop" "jstest-gtk.desktop" "org.gnome.Logs.desktop" "cups.desktop" "nixos-manual.desktop" "org.berarma.Oversteer.desktop" "org.gnome.Settings.desktop" "org.gnome.Software.desktop" "gnome-system-monitor.desktop" "com.github.LongSoft.UEFITool.desktop" ];
       name = "Utilities-System";
       translate = false;
     };
@@ -80,7 +80,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/b28077c6-4406-47bb-9944-2f97dbb63baa" = {
-      apps = [ "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "protonup-qt.desktop" ];
+      apps = [ "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "protonup-qt.desktop" "com-valvesoftware-steam" ];
       name = "Games";
     };
 
