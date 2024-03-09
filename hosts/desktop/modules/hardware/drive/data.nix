@@ -1,6 +1,6 @@
-{ user, ... }: {
-	fileSystems."/run/media/${user.name}/Data" = {
-		device = "/dev/disk/by-label/Data";
-		fsType = "ext4";
-	};
+{ ... }: {
+  fileSystems."/home" = {
+    device = "/dev/disk/by-label/Data";
+    fsType = "ext4";
+  };
 }
