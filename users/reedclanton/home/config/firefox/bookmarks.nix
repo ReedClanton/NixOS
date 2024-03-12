@@ -319,6 +319,31 @@
         ];
       }
       {
+        name = "Hardware";
+        bookmarks = [
+          {
+            name = "Desktop";
+            bookmarks = [
+              {
+                name = "Motherboard - GA-990FXA-UD3 (rev. 4.0)";
+                url = "https://www.gigabyte.com/Motherboard/GA-990FXA-UD3-rev-40/support#support-dl-bios";
+                tags = [ "desktop" "gigabyte" "hardware" "motherboard" ];
+              }
+              {
+                name = "CPU - AMD FX-8350 Black Edition Vishera 8-Core 4.0 GHz (Turbo)";
+                url = "https://www.newegg.com/amd-fx-8000-series-fx-8350-black-edition/p/N82E16819113284";
+                tags = [ "amd" "cpu" "desktop" "hardware" ];
+              }
+              {
+                name = "RAM - Patriot Viper Xtreme 8GB DDR3 1600 (PC3 12800) Model PX38G1600C11";
+                url = "https://www.newegg.com/patriot-8gb-240-pin-ddr3-sdram/p/N82E16820220909";
+                tags = [ "desktop" "hardware" "memory" "ram" ];
+              }
+            ];
+          }
+        ];
+      }
+      {
         name = "Pinned";
         bookmarks = [
           {
@@ -391,11 +416,6 @@
         name = "GHX-UltiPro";
         url = "https://ew21.ultipro.com/Login.aspx?ReturnUrl=%2f";
         tags = [ "ghx" "work" ];
-      }
-      {
-        name = "Desktop Motherboard - GA-990FXA-UD3 (rev. 4.0)";
-        url = "https://www.gigabyte.com/Motherboard/GA-990FXA-UD3-rev-40/support#support-dl-bios";
-        tags = [ "desktop" "gigabyte" "motherboard" ];
       }
     ];
   }
