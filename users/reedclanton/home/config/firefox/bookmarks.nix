@@ -395,6 +395,21 @@
             url = "http://192.168.12.1/";
             tags = [ "router" "t_mobile" ];
           }
+          {
+            name = "garywill/linux-router: lnxrouter";
+            url = "https://github.com/garywill/linux-router";
+            tags = [ "application" "linux" "lnxrouter" "router" "tool" ];
+          }
+          {
+            name = "FrameworkComputer/framework-system: framework_tool";
+            url = "https://github.com/FrameworkComputer/framework-system";
+            tags = [ "application" "framework" "tool" ];
+          }
+          {
+            name = "fzwoch/obs-teleport";
+            url = "https://github.com/fzwoch/obs-teleport";
+            tags = [ "obs" "plugin" "stream" "teleport" "tool" "video" ];
+          }
         ];
       }
       {
