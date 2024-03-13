@@ -9,6 +9,10 @@
 
 	hardware.opengl.extraPackages = [ pkgs.amdvlk ];
 
-	# Enable GPU hardware acceleration for x11 (but don't turn x11 on).
-	services.xserver.videoDrivers = [ "amdgpu" ];
+	# Enable GPU hardware acceleration for x11.
+  # Note(s):
+  #   - This doesn't turn x11 on.
+  #   - This is used even when running under Wayland.
+  #   - `amdgpu` also works, but it breaks v4l2loopback and seems to perform worse.
+	services.xserver.videoDrivers = [ "ati" ];
 }
