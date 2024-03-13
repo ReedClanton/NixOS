@@ -1,7 +1,7 @@
 { config, ... }: {
 
   # This enables the drivers needed to support automatic screen resizing of guest display.
-  services.xserver.videoDrivers = [ "vmware" "virtualbox" "modesetting" ];
+  services.xserver.videoDrivers = [ "vmware" "vboxvideo" "modesetting" ];
 	
   # This creates a user space systemd service that runs the drivers needed to support automatic screen resizing.
   systemd.user.services = let
