@@ -48,7 +48,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = [ "org.gnome.FileRoller.desktop" "org.gnome.Calculator.desktop" "org.gnome.Snapshot.desktop" "org.gnome.clocks.desktop" "org.gnome.Connections.desktop" "org.gnome.Contacts.desktop" "com.github.tchx84.Flatseal.desktop" "fr.romainvigier.MetadataCleaner.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.Weather.desktop" ];
+      apps = [ "org.gnome.FileRoller.desktop" "org.gnome.Calculator.desktop" "org.gnome.Snapshot.desktop" "org.gnome.clocks.desktop" "org.gnome.Connections.desktop" "org.gnome.Contacts.desktop" "com.github.tchx84.Flatseal.desktop" "fr.romainvigier.MetadataCleaner.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.World.PikaBackup.desktop" "org.gnome.Weather.desktop" ];
       categories = [ "X-GNOME-Utilities" ];
       excluded-apps = [ "org.gnome.font-viewer.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.Logs.desktop" "org.gnome.baobab.desktop" "org.gnome.Evince.desktop" "org.gnome.Loupe.desktop" "org.gnome.Characters.desktop" ];
       name = "X-GNOME-Utilities.directory";
