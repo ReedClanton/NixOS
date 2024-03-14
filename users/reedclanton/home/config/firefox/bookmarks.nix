@@ -15,7 +15,7 @@
                   {
                     name = "How to organize my Arduino projects' structure for easy source control? - Arduino Stack Exchange";
                     url = "https://arduino.stackexchange.com/questions/348/how-to-organize-my-arduino-projects-structure-for-easy-source-control";
-                    tags = [ "code" "docs" "documentation" "arduino" ];
+                    tags = [ "arduino" "code" "docs" "documentation" ];
                   }
                 ];
               }
@@ -30,7 +30,7 @@
                   {
                     name = "Google C++ Style Guide";
                     url = "https://google.github.io/styleguide/cppguide.html";
-                    tags = [ "code" "docs" "c++" "documentation" ];
+                    tags = [ "c++" "code" "docs" "documentation" ];
                   }
                 ];
               }
@@ -42,7 +42,7 @@
               {
                 name = "Epic Generator";
                 url = "https://github.com/TimonVS/epic-generator";
-                tags = [ "code" "github" "apps" "epic" "generator" ];
+                tags = [ "apps" "code" "epic" "generator" "github" ];
               }
             ];
           }
@@ -52,12 +52,12 @@
               {
                 name = "ReedClanton/shell_base";
                 url = "https://github.com/ReedClanton/shell_base";
-                tags = [ "code" "shell" "mine" "repo" "base" ];
+                tags = [ "base" "code" "mine" "repo" "shell" ];
               }
               {
                 name = "Coverage report";
                 url = "file:///home/reedclanton/git/shell_base/coverage/index.html";
-                tags = [ "code" "test" "coverage" "report" ];
+                tags = [ "code" "coverage" "report" "test" ];
               }
             ];
           }
@@ -70,7 +70,7 @@
                   {
                     name = "Explainix | Explain Nix Syntax Visually";
                     url = "https://zaynetro.com/explainix";
-                    tags = [ "code" "docs" "nix" "explainix" "syntax" "visual" ];
+                    tags = [ "code" "docs" "explainix" "nix" "syntax" "visual" ];
                   }
                 ];
               }
@@ -85,7 +85,7 @@
                   {
                     name = "rothgar/awesome-tuis";
                     url = "https://github.com/rothgar/awesome-tuis";
-                    tags = [ "code" "posix" "shell" "article" "info" ];
+                    tags = [ "article" "code" "info" "posix" "shell" ];
                   }
                 ];
               }
@@ -95,77 +95,77 @@
                   {
                     name = "dodie/testing-in-bash";
                     url = "https://github.com/dodie/testing-in-bash/";
-                    tags = [ "code" "posix" "shell" "unit" "test" "testing" ];
+                    tags = [ "code" "posix" "shell" "test" "testing" "unit" ];
                   }
                   {
                     name = "POSIX Extended Regex";
                     url = "https://docs.thousandeyes.com/product-documentation/internet-and-wan-monitoring/tests/http-server-tests/posix-extended-regular-expression-syntax";
-                    tags = [ "code" "posix" "shell" "docs" "regex" ];
+                    tags = [ "code" "docs" "posix" "regex" "shell" ];
                   }
                   {
                     name = "POSIX-Extended Regex";
                     url = "https://en.wikibooks.org/wiki/Regular_Expressions/POSIX-Extended_Regular_Expressions";
-                    tags = [ "code" "posix" "shell" "docs" "regex" ];
+                    tags = [ "code" "docs" "posix" "regex" "shell" ];
                   }
                   {
                     name = "Shell Comparison";
                     url = "https://en.wikipedia.org/wiki/Comparison_of_command_shells";
-                    tags = [ "code" "posix" "shell" "docs" "comparison" ];
+                    tags = [ "code" "comparison" "docs" "posix" "shell" ];
                   }
                   {
                     name = "Base Specifications";
                     url = "https://pubs.opengroup.org/onlinepubs/9699919799/";
-                    tags = [ "code" "posix" "shell" "docs" "ieee" ];
+                    tags = [ "code" "docs" "ieee" "posix" "shell" ];
                   }
                   {
                     name = "POSIX I/O Redirection";
                     url = "https://www.ibm.com/docs/en/aix/7.1?topic=ks-input-output-redirection-in-korn-shell-posix-shell";
-                    tags = [ "code" "posix" "shell" "docs" "redirection" ];
+                    tags = [ "code" "docs" "posix" "redirection" "shell" ];
                   }
                   {
                     name = "Determine the Current Shell";
                     url = "https://www.baeldung.com/linux/find-current-shell";
-                    tags = [ "code" "posix" "shell" "docs" "current" ];
+                    tags = [ "code" "current" "docs" "posix" "shell" ];
                   }
                   {
                     name = "Print to the Same Line";
                     url = "https://www.baeldung.com/linux/echo-printf-overwrite-terminal-line";
-                    tags = [ "code" "posix" "shell" "docs" "print" "same" "line" ];
+                    tags = [ "code" "docs" "line" "posix" "print" "same" "shell" ];
                   }
                   {
                     name = "Catch Signls";
                     url = "https://unix.stackexchange.com/questions/520035/exit-trap-with-posix";
-                    tags = [ "code" "posix" "shell" "docs" "trap catch signls" ];
+                    tags = [ "code" "docs" "posix" "shell" "trap catch signls" ];
                   }
                   {
                     name = "String Manipulation";
                     url = "https://www.geeksforgeeks.org/string-manipulation-in-shell-scripting/";
-                    tags = [ "code" "posix" "shell" "docs" "stirng" "manipulation" ];
+                    tags = [ "code" "docs" "manipulation" "posix" "shell" "stirng" ];
                   }
                   {
                     name = "styleguide";
                     url = "https://google.github.io/styleguide/shellguide.html#s4-comments";
-                    tags = [ "code" "posix" "shell" "docs" "style" "guide" ];
+                    tags = [ "code" "docs" "guide" "posix" "shell" "style" ];
                   }
                   {
                     name = "Determine Shell";
                     url = "https://unix.stackexchange.com/questions/9501/how-to-test-what-shell-i-am-using-in-a-terminal";
-                    tags = [ "code" "posix" "shell" "docs" "detemrine" ];
+                    tags = [ "code" "detemrine" "docs" "posix" "shell" ];
                   }
                   {
                     name = "Special Characters (Control Characters)";
                     url = "https://en.wikipedia.org/wiki/Control_character";
-                    tags = [ "code" "posix" "shell" "docs" "special" "chracters" "control" ];
+                    tags = [ "chracters" "code" "control" "docs" "posix" "shell" "special" ];
                   }
                   {
                     name = "Best Practices";
                     url = "https://bertvv.github.io/cheat-sheets/Bash.html";
-                    tags = [ "code" "posix" "shell" "docs" "best" "practices" ];
+                    tags = [ "best" "code" "docs" "posix" "practices" "shell" ];
                   }
                   {
                     name = "Linux File Structure";
                     url = "https://i.stack.imgur.com/BlpRb.png";
-                    tags = [ "code" "posix" "linux" "file" "structure" ];
+                    tags = [ "code" "file" "linux" "posix" "structure" ];
                   }
                 ];
               }
@@ -185,17 +185,17 @@
                   {
                     name = "Tmux";
                     url = "https://github.com/nordtheme/tmux";
-                    tags = [ "code" "posix" "shell" "tool" "tmux" ];
+                    tags = [ "code" "posix" "shell" "tmux" "tool" ];
                   }
                   {
                     name = "pgrange/bash_unit";
                     url = "https://github.com/pgrange/bash_unit";
-                    tags = [ "code" "posix" "shell" "unit" "test" "testing" "library" ];
+                    tags = [ "code" "library" "posix" "shell" "test" "testing" "unit" ];
                   }
                   {
                     name = "shellspec/shellspec";
                     url = "https://github.com/shellspec/shellspec";
-                    tags = [ "code" "posix" "shell" "tool" "spec" "shellspec" ];
+                    tags = [ "code" "posix" "shell" "shellspec" "spec" "tool" ];
                   }
                 ];
               }
@@ -210,17 +210,17 @@
                   {
                     name = "Sphinx documentation";
                     url = "https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html";
-                    tags = [ "code" "docs" "documentation" "doc" "python" "sphinx" ];
+                    tags = [ "code" "doc" "docs" "documentation" "python" "sphinx" ];
                   }
                   {
                     name = "Exception Hierarchy";
                     url = "https://docs.python.org/3/library/exceptions.html#exception-hierarchy";
-                    tags = [ "code" "docs" "documentation" "doc" "python" "exception" "hierarchy" ];
+                    tags = [ "code" "doc" "docs" "documentation" "exception" "hierarchy" "python" ];
                   }
                   {
                     name = "PEP 8 – Style Guide";
                     url = "https://peps.python.org/pep-0008/";
-                    tags = [ "code" "docs" "style" "guide" "documentation" "doc" "python" "pep" "pep-8" "8" ];
+                    tags = [ "8" "code" "doc" "docs" "documentation" "guide" "pep" "pep-8" "python" "style" ];
                   }
                 ];
               }
@@ -235,17 +235,17 @@
                   {
                     name = "CSS/HTML/XML/JavaScript/PHP/JSON Formatter";
                     url = "https://webformatter.com/css";
-                    tags = [ "code" "tool" "html" "web" "formatter" "css" "xml" "javascript" "php" "json" ];
+                    tags = [ "code" "css" "formatter" "html" "javascript" "json" "php" "tool" "web" "xml" ];
                   }
                   {
                     name = "HTML Colors";
                     url = "https://www.w3schools.com/colors/colors_names.asp";
-                    tags = [ "code" "tool" "html" "web" "color" ];
+                    tags = [ "code" "color" "html" "tool" "web" ];
                   }
                   {
                     name = "Tmux Cheat Sheet";
                     url = "https://tmuxcheatsheet.com/";
-                    tags = [ "tool" "tmux" "cheat" "sheet" ];
+                    tags = [ "cheat" "sheet" "tmux" "tool" ];
                   }
                 ];
               }
@@ -255,12 +255,12 @@
                   {
                     name = "HTML - Named character references";
                     url = "https://www.w3.org/TR/2011/WD-html5-20110525/named-character-references.html";
-                    tags = [ "code" "html" "character" ];
+                    tags = [ "character" "code" "html" ];
                   }
                   {
                     name = "HTML Checker";
                     url = "https://validator.w3.org/nu/#textarea";
-                    tags = [ "code" "html" "checker" "validator" ];
+                    tags = [ "checker" "code" "html" "validator" ];
                   }
                 ];
               }
@@ -274,7 +274,7 @@
           {
             name = "Rocky Mountain Reserve HSA";
             url = "https://rmrbenefits.wealthcareportal.com/Page/Dashboard";
-            tags = [ "finance" "rocky" "mountain" "reserve" "hsa" "health" "savings" "account" ];
+            tags = [ "account" "finance" "health" "hsa" "mountain" "reserve" "rocky" "savings" ];
           }
           {
             name = "FCU/Bank/Credit";
@@ -282,39 +282,64 @@
               {
                 name = "AA FCU";
                 url = "https://i-branch.aafcu.com/AirAcademyCUOnline/uux.aspx#/landingPage";
-                tags = [ "finance" "aa" "fcu" "aafcu" "air" "academy" "federal" "credit" "union" ];
+                tags = [ "aa" "aafcu" "academy" "air" "credit" "fcu" "federal" "finance" "union" ];
               }
               {
                 name = "AMEX";
                 url = "https://global.americanexpress.com/activity/recent";
-                tags = [ "finance" "amex" ];
+                tags = [ "amex" "finance" ];
               }
               {
                 name = "Chase";
                 url = "https://secure25ea.chase.com/web/auth/dashboard#/dashboard/overviewAccounts/overview/multiCard";
-                tags = [ "finance" "chase" ];
+                tags = [ "chase" "finance" ];
               }
               {
                 name = "Discover";
                 url = "https://card.discover.com/web/achome/homepage";
-                tags = [ "finance" "discover" ];
+                tags = [ "discover" "finance" ];
               }
               {
                 name = "Navy FCU";
                 url = "https://myaccounts.navyfederal.org/NFCU/accounts/accountsummary";
-                tags = [ "finance" "fcu" "federal" "credit" "union" "nfcu" "navy" ];
+                tags = [ "credit" "fcu" "federal" "finance" "navy" "nfcu" "union" ];
               }
               {
                 name = "Space Age FCU";
                 url = "https://olb.spaceagefcu.org/app/user/accounts";
-                tags = [ "finance" "fcu" "federal" "credit" "union" "space" "age" "sa" "safcu" ];
+                tags = [ "age" "credit" "fcu" "federal" "finance" "sa" "safcu" "space" "union" ];
               }
             ];
           }
           {
             name = "Apple Purchases";
             url = "https://reportaproblem.apple.com/?s=6";
-            tags = [ "finance" "apple" "purchase" "history" ];
+            tags = [ "apple" "finance" "history" "purchase" ];
+          }
+        ];
+      }
+      {
+        name = "Hardware";
+        bookmarks = [
+          {
+            name = "Desktop";
+            bookmarks = [
+              {
+                name = "Motherboard - GA-990FXA-UD3 (rev. 4.0)";
+                url = "https://www.gigabyte.com/Motherboard/GA-990FXA-UD3-rev-40/support#support-dl-bios";
+                tags = [ "desktop" "gigabyte" "hardware" "motherboard" ];
+              }
+              {
+                name = "CPU - AMD FX-8350 Black Edition Vishera 8-Core 4.0 GHz (Turbo)";
+                url = "https://www.newegg.com/amd-fx-8000-series-fx-8350-black-edition/p/N82E16819113284";
+                tags = [ "amd" "cpu" "desktop" "hardware" ];
+              }
+              {
+                name = "RAM - Patriot Viper Xtreme 8GB DDR3 1600 (PC3 12800) Model PX38G1600C11";
+                url = "https://www.newegg.com/patriot-8gb-240-pin-ddr3-sdram/p/N82E16820220909";
+                tags = [ "desktop" "hardware" "memory" "ram" ];
+              }
+            ];
           }
         ];
       }
@@ -327,12 +352,12 @@
               {
                 name = "Budget";
                 url = "https://app.ynab.com/b988243b-760f-4e22-8fd9-b42d07afd6f1/budget/202402";
-                tags = [ "budget" "pin" "pinned" "ynab" "you" "need" ];
+                tags = [ "budget" "need" "pin" "pinned" "ynab" "you" ];
               }
               {
                 name = "All Accounts";
                 url = "https://app.ynab.com/b988243b-760f-4e22-8fd9-b42d07afd6f1/accounts";
-                tags = [ "account" "budget" "pin" "pinned" "ynab" "you" "need" "all" "accounts" ];
+                tags = [ "account" "accounts" "all" "budget" "need" "pin" "pinned" "ynab" "you" ];
               }
             ];
           }
@@ -344,7 +369,7 @@
           {
             name = "v4l2loopback DroidCam Fix";
             url = "https://yauhen.cc/tags/camera/";
-            tags = [ "shell" "linux" "terminal" "v4l2" "v4l2loopback" "droid" "cam" "droidcam" "wifi" "phone" "camera" "desktop" "fix" ];
+            tags = [ "cam" "camera" "desktop" "droid" "droidcam" "fix" "linux" "phone" "shell" "terminal" "v4l2" "v4l2loopback" "wifi" ];
           }
         ];
       }
@@ -354,7 +379,7 @@
           {
             name = "Safing.io";
             url = "https://safing.io/";
-            tags = [ "tool" "safing" "io" "foss" "privacy" ];
+            tags = [ "foss" "io" "privacy" "safing" "tool" ];
           }
           {
             name = "Home | endoflife.date";
@@ -363,12 +388,27 @@
           {
             name = "Text to ASCII Art Generator (TAAG)";
             url = "http://www.patorjk.com/software/taag/#p=display";
-            tags = [ "tool" "generator" "ascii" "art" "text" ];
+            tags = [ "art" "ascii" "generator" "text" "tool" ];
           }
           {
             name = "T-Mobile Router";
             url = "http://192.168.12.1/";
-            tags = [ "t_mobile" "router" ];
+            tags = [ "router" "t_mobile" ];
+          }
+          {
+            name = "garywill/linux-router: lnxrouter";
+            url = "https://github.com/garywill/linux-router";
+            tags = [ "application" "linux" "lnxrouter" "router" "tool" ];
+          }
+          {
+            name = "FrameworkComputer/framework-system: framework_tool";
+            url = "https://github.com/FrameworkComputer/framework-system";
+            tags = [ "application" "framework" "tool" ];
+          }
+          {
+            name = "fzwoch/obs-teleport";
+            url = "https://github.com/fzwoch/obs-teleport";
+            tags = [ "obs" "plugin" "stream" "teleport" "tool" "video" ];
           }
         ];
       }
@@ -381,7 +421,7 @@
               {
                 name = "Calendar";
                 url = "https://www.unitedrocks.org/calendar/";
-                tags = [ "volunteer" "united" "rocks" "climbing" "calendar" ];
+                tags = [ "calendar" "climbing" "rocks" "united" "volunteer" ];
               }
             ];
           }

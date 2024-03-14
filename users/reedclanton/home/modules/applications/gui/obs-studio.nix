@@ -11,7 +11,6 @@
       input-overlay
       obs-backgroundremoval
       obs-gstreamer
-      obs-teleport
       obs-tuna
       waveform
       wlrobs

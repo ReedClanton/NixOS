@@ -80,12 +80,12 @@
     };
 
     "org/gnome/desktop/app-folders/folders/b28077c6-4406-47bb-9944-2f97dbb63baa" = {
-      apps = [ "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "protonup-qt.desktop" "com-valvesoftware-steam" ];
+      apps = [ "org.gnome.TwentyFortyEight.desktop" "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "org.gnome.Mines.desktop" "protonup-qt.desktop" "com-valvesoftware-steam" ];
       name = "Games";
     };
 
     "org/gnome/desktop/app-folders/folders/dcb71360-6f7a-4f50-982b-4a90b6109ec0" = {
-      apps = [ "arduino.desktop" "cc.arduino.arduinoide.desktop" "cc.arduino.IDE2.desktop" "io.github.nokse22.asciidraw.desktop" "org.gnome.Characters.desktop" "org.gnome.gedit.desktop" "nvim.desktop" "org.gnome.TextEditor.desktop" "com.github.liferooter.textpieces.desktop" ];
+      apps = [ "org.gnome.gitlab.somas.Apostrophe.desktop" "arduino.desktop" "cc.arduino.arduinoide.desktop" "cc.arduino.IDE2.desktop" "io.github.nokse22.asciidraw.desktop" "org.gnome.Characters.desktop" "org.gnome.gedit.desktop" "nvim.desktop" "org.gnome.TextEditor.desktop" "com.github.liferooter.textpieces.desktop" ];
       name = "Text";
       translate = false;
     };
@@ -191,7 +191,7 @@
     };
 
     "org/gnome/shell" = {
-      favorite-apps = [ "firefox.desktop" "org.telegram.desktop.desktop" "element-desktop.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Console.desktop" "org.gnome.Calendar.desktop" "org.gnome.Geary.desktop" "com.valvesoftware.Steam.desktop" ];      
+      favorite-apps = [ "firefox.desktop" "org.telegram.desktop.desktop" "element-desktop.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Console.desktop" "org.gnome.Calendar.desktop" "org.gnome.Geary.desktop" "com.valvesoftware.Steam.desktop" ];
     };
 
     "org/gnome/shell/app-switcher" = {
