@@ -9,7 +9,7 @@
 
 	hardware.opengl.extraPackages = [ pkgs.amdvlk ];
 
-	# Enable GPU hardware acceleration for x11.
+	# Enable GPU hardware acceleration.
   # Note(s):
   #   - This doesn't turn x11 on.
   #   - This is used even when running under Wayland.
