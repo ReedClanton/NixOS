@@ -54,7 +54,7 @@
 						};
 						"Home Manager Options" = {
 							urls = [{
-								template = "https://mipmip.github.io/home-manager-option-search";
+								template = "https://home-manager-options.extranix.com";
 								params = [{ name = "query"; value = "{searchTerms}"; }];
 							}];
 							iconUpdateURL = "https://avatars.githubusercontent.com/u/33221035";
