@@ -7,6 +7,10 @@
       use-system-font = false;
     };
 
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 900;
+    };
+
     "org/gnome/desktop/screensaver" = {
       lock-delay = mkUint32 180;
       lock-enabled = true;
