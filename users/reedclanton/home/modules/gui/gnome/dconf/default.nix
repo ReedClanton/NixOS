@@ -130,10 +130,6 @@
       sort-order = [ "org.gnome.Settings.desktop" "org.gnome.Contacts.desktop" "org.gnome.Calculator.desktop" "org.gnome.Calendar.desktop" "org.gnome.Weather.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Software.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.clocks.desktop" "org.gnome.Characters.desktop" ];
     };
 
-    "org/gnome/desktop/session" = {
-      idle-delay = mkUint32 900;
-    };
-
     "org/gnome/desktop/sound" = {
       allow-volume-above-100-percent = true;
       event-sounds = false;
