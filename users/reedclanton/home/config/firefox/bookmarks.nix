@@ -344,6 +344,16 @@
         ];
       }
       {
+        name = "Medical";
+        bookmarks = [
+          {
+            name = "Guardian Dental";
+            url = "https://dentalexchange.guardiandirect.com/";
+            tags = [ "dental" "guardian" "medical" ];
+          }
+        ];
+      }
+      {
         name = "Pinned";
         bookmarks = [
           {
@@ -370,45 +380,6 @@
             name = "v4l2loopback DroidCam Fix";
             url = "https://yauhen.cc/tags/camera/";
             tags = [ "cam" "camera" "desktop" "droid" "droidcam" "fix" "linux" "phone" "shell" "terminal" "v4l2" "v4l2loopback" "wifi" ];
-          }
-        ];
-      }
-      {
-        name = "Tools";
-        bookmarks = [
-          {
-            name = "Safing.io";
-            url = "https://safing.io/";
-            tags = [ "foss" "io" "privacy" "safing" "tool" ];
-          }
-          {
-            name = "Home | endoflife.date";
-            url = "https://endoflife.date/";
-          }
-          {
-            name = "Text to ASCII Art Generator (TAAG)";
-            url = "http://www.patorjk.com/software/taag/#p=display";
-            tags = [ "art" "ascii" "generator" "text" "tool" ];
-          }
-          {
-            name = "T-Mobile Router";
-            url = "http://192.168.12.1/";
-            tags = [ "router" "t_mobile" ];
-          }
-          {
-            name = "garywill/linux-router: lnxrouter";
-            url = "https://github.com/garywill/linux-router";
-            tags = [ "application" "linux" "lnxrouter" "router" "tool" ];
-          }
-          {
-            name = "FrameworkComputer/framework-system: framework_tool";
-            url = "https://github.com/FrameworkComputer/framework-system";
-            tags = [ "application" "framework" "tool" ];
-          }
-          {
-            name = "fzwoch/obs-teleport";
-            url = "https://github.com/fzwoch/obs-teleport";
-            tags = [ "obs" "plugin" "stream" "teleport" "tool" "video" ];
           }
         ];
       }
