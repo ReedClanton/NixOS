@@ -403,6 +403,11 @@
         url = "https://ew21.ultipro.com/Login.aspx?ReturnUrl=%2f";
         tags = [ "ghx" "work" ];
       }
+      {
+        name = "XDG MIME Types";
+        url = "https://mimetype.io/all-types";
+        tags = [ "list" "mime" "types" "xdg" ];
+      }
     ];
   }
 ]
