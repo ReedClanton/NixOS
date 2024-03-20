@@ -4,6 +4,7 @@
 		# Tool(s): NixOS #
 		home-manager
 		# Tool(s): System #
+    cryptsetup
     gnumake
 		rsync
     unzip
