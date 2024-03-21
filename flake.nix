@@ -42,7 +42,7 @@
 		in inputs.nixpkgs.lib.nixosSystem {
 			inherit system;
 			# Allow NixOS to access flake data.
-			specialArgs = { inherit hostName inputs nixos-hardware pkgs pkgs-unstable system ui user; };
+			specialArgs = { inherit host hostName inputs nixos-hardware pkgs pkgs-unstable system ui user; };
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager

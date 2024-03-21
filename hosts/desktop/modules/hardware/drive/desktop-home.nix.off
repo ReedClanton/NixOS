@@ -1,0 +1,10 @@
+{ host, ... }: {
+  # Decrypt.
+  boot.initrd.luks.devices."${host}-home".device = "/dev/disk/by-label/${host}-home";
+
+  # Mount.
+  fileSystems."/${host}-home" = {
+    device = "/dev/mapper/${host}-home";
+    fsType = "ext4";
+  };
+}
