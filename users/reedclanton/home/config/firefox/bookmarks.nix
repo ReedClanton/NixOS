@@ -371,6 +371,66 @@
               }
             ];
           }
+          {
+            name = "Intresting";
+            url = "https://docs.google.com/document/d/1ijyfy62qqJErlmYG30gclUgpBZ9UTKjeO4vSwqc9eVc/edit?pli=1";
+            tags = [ "doc" "docs" "document" "documents" "google" "interesting" "intresting" "pin" "pinned" ];
+          }
+          {
+            name = "reedclanton@gmail.com";
+            url = "https://mail.google.com/mail/u/0/#all";
+            tags = [ "clanton" "email" "gmail" "google" "pin" "pinned" "reed" "reedclanton" ];
+          }
+          {
+            name = "clantonreed@gmail.com";
+            url = "https://mail.google.com/mail/u/1/#all";
+            tags = [ "clanton" "clantonreed" "email" "gmail" "google" "pin" "pinned" "reed" ];
+          }
+          {
+            name = "Calendar";
+            url = "https://calendar.google.com/calendar/u/0/r/month/2024/3/1";
+            tags = [ "calendar" "google" "pin" "pinned" ];
+          }
+          {
+            name = "YouTube Music";
+            url = "https://music.youtube.com/";
+            tags = [ "google" "music" "pin" "pinned" "tube" "you" "youtube" ];
+          }
+          {
+            name = "Mastodon";
+            url = "https://mastodon.social/home";
+            tags = [ "home" "mastodon" "pin" "pinned" ];
+          }
+          {
+            name = "WhatsApp";
+            url = "https://web.whatsapp.com/";
+            tags = [ "app" "message" "messages" "messaging" "pin" "pinned" "what" "whats" "whatsapp" ];
+          }
+          {
+            name = "LeetCode";
+            url = "https://leetcode.com/problemset/?difficulty=EASY&page=1&listId=wpwgkgt";
+            tags = [ "code" "leet" "leetcode" "pin" "pinned" ];
+          }
+          {
+            name = "ChatGPT";
+            url = "https://chat.openai.com/c/e322904e-e1f3-4179-bfe0-cac3c2b80912";
+            tags = [ "chat" "chatgpt" "gpt" "pin" "pinned" ];
+          }
+          {
+            name = "GitHub - ReedClanton";
+            url = "https://github.com/ReedClanton?tab=repositories";
+            tags = [ "git" "github" "hub" "pin" "pinned" "reedclanton" ];
+          }
+          {
+            name = "GitHub - gmodena/nix-flatpak";
+            url = "https://github.com/gmodena/nix-flatpak";
+            tags = [ "flat" "flatpak" "git" "github" "gmodena" "hub" "pak" "pin" "pinned" ];
+          }
+          {
+            name = "LinkedIn";
+            url = "https://www.linkedin.com/jobs/search";
+            tags = [ "Link" "in" "linked" "linkedin" "pin" "pinned" ];
+          }
         ];
       }
       {
