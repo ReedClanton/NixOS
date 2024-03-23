@@ -344,6 +344,16 @@
         ];
       }
       {
+        name = "Medical";
+        bookmarks = [
+          {
+            name = "Guardian Dental";
+            url = "https://dentalexchange.guardiandirect.com/";
+            tags = [ "dental" "guardian" "medical" ];
+          }
+        ];
+      }
+      {
         name = "Pinned";
         bookmarks = [
           {
@@ -361,6 +371,66 @@
               }
             ];
           }
+          {
+            name = "Intresting";
+            url = "https://docs.google.com/document/d/1ijyfy62qqJErlmYG30gclUgpBZ9UTKjeO4vSwqc9eVc/edit?pli=1";
+            tags = [ "doc" "docs" "document" "documents" "google" "interesting" "intresting" "pin" "pinned" ];
+          }
+          {
+            name = "reedclanton@gmail.com";
+            url = "https://mail.google.com/mail/u/0/#all";
+            tags = [ "clanton" "email" "gmail" "google" "pin" "pinned" "reed" "reedclanton" ];
+          }
+          {
+            name = "clantonreed@gmail.com";
+            url = "https://mail.google.com/mail/u/1/#all";
+            tags = [ "clanton" "clantonreed" "email" "gmail" "google" "pin" "pinned" "reed" ];
+          }
+          {
+            name = "Calendar";
+            url = "https://calendar.google.com/calendar/u/0/r/month/2024/3/1";
+            tags = [ "calendar" "google" "pin" "pinned" ];
+          }
+          {
+            name = "YouTube Music";
+            url = "https://music.youtube.com/";
+            tags = [ "google" "music" "pin" "pinned" "tube" "you" "youtube" ];
+          }
+          {
+            name = "Mastodon";
+            url = "https://mastodon.social/home";
+            tags = [ "home" "mastodon" "pin" "pinned" ];
+          }
+          {
+            name = "WhatsApp";
+            url = "https://web.whatsapp.com/";
+            tags = [ "app" "message" "messages" "messaging" "pin" "pinned" "what" "whats" "whatsapp" ];
+          }
+          {
+            name = "LeetCode";
+            url = "https://leetcode.com/problemset/?difficulty=EASY&page=1&listId=wpwgkgt";
+            tags = [ "code" "leet" "leetcode" "pin" "pinned" ];
+          }
+          {
+            name = "ChatGPT";
+            url = "https://chat.openai.com/c/e322904e-e1f3-4179-bfe0-cac3c2b80912";
+            tags = [ "chat" "chatgpt" "gpt" "pin" "pinned" ];
+          }
+          {
+            name = "GitHub - ReedClanton";
+            url = "https://github.com/ReedClanton?tab=repositories";
+            tags = [ "git" "github" "hub" "pin" "pinned" "reedclanton" ];
+          }
+          {
+            name = "GitHub - gmodena/nix-flatpak";
+            url = "https://github.com/gmodena/nix-flatpak";
+            tags = [ "flat" "flatpak" "git" "github" "gmodena" "hub" "pak" "pin" "pinned" ];
+          }
+          {
+            name = "LinkedIn";
+            url = "https://www.linkedin.com/jobs/search";
+            tags = [ "Link" "in" "linked" "linkedin" "pin" "pinned" ];
+          }
         ];
       }
       {
@@ -370,45 +440,6 @@
             name = "v4l2loopback DroidCam Fix";
             url = "https://yauhen.cc/tags/camera/";
             tags = [ "cam" "camera" "desktop" "droid" "droidcam" "fix" "linux" "phone" "shell" "terminal" "v4l2" "v4l2loopback" "wifi" ];
-          }
-        ];
-      }
-      {
-        name = "Tools";
-        bookmarks = [
-          {
-            name = "Safing.io";
-            url = "https://safing.io/";
-            tags = [ "foss" "io" "privacy" "safing" "tool" ];
-          }
-          {
-            name = "Home | endoflife.date";
-            url = "https://endoflife.date/";
-          }
-          {
-            name = "Text to ASCII Art Generator (TAAG)";
-            url = "http://www.patorjk.com/software/taag/#p=display";
-            tags = [ "art" "ascii" "generator" "text" "tool" ];
-          }
-          {
-            name = "T-Mobile Router";
-            url = "http://192.168.12.1/";
-            tags = [ "router" "t_mobile" ];
-          }
-          {
-            name = "garywill/linux-router: lnxrouter";
-            url = "https://github.com/garywill/linux-router";
-            tags = [ "application" "linux" "lnxrouter" "router" "tool" ];
-          }
-          {
-            name = "FrameworkComputer/framework-system: framework_tool";
-            url = "https://github.com/FrameworkComputer/framework-system";
-            tags = [ "application" "framework" "tool" ];
-          }
-          {
-            name = "fzwoch/obs-teleport";
-            url = "https://github.com/fzwoch/obs-teleport";
-            tags = [ "obs" "plugin" "stream" "teleport" "tool" "video" ];
           }
         ];
       }
@@ -431,6 +462,11 @@
         name = "GHX-UltiPro";
         url = "https://ew21.ultipro.com/Login.aspx?ReturnUrl=%2f";
         tags = [ "ghx" "work" ];
+      }
+      {
+        name = "XDG MIME Types";
+        url = "https://mimetype.io/all-types";
+        tags = [ "list" "mime" "types" "xdg" ];
       }
     ];
   }
