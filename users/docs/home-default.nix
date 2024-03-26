@@ -24,42 +24,14 @@
 			GTK2_RC_FILES="${config.xdg.configHome}/gtk-2.0/gtkrc";
 			# Removes `.compose-cache/` from home.
 			XCOMPOSECACHE="${config.xdg.cacheHome}/X11/xcompose";
+      # Removes `.zoom` from home.
+      # Note: Commented out because it breaks stuff when set.
+#     SSB_HOME="${config.xdg.configHome}/zoom";
 		};
 
 		file = {
-			".ssh/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to creation the directory this file is in, a file must be created in it. Hense the existice of this file.";
-			"${config.xdg.configHome}/sops/age/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to creation the directory this file is in, a file must be created in it. Hense the existice of this file.";
-		};
-	};
-
-	xdg = {
-		enable = true;
-		mime.enable = true;
-		mimeApps = {
-			enable = true;
-			associations.added = {
-				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
-				"text/html" = [ "<browser>" "<textEditor>" ];
-				"text/plain" = [ "<textEditor>" ];
-				"text/xml" = [ "<browser>" "<textEditor>" ];
-				"x-scheme-handler/http" = [ "<browser>" ];
-				"x-scheme-handler/https" = [ "<browser>" ];
-			};
-			defaultApplications = {
-				# Image Viewer (Loupe).
-				"image/bmp" = [ "org.gnome.Loupe.desktop" ];
-				# Firefox.
-				"text/html" = [ "<browser>" ];
-				"x-scheme-handler/http" = [ "<browser>" ];
-				"x-scheme-handler/https" = [ "<browser>" ];
-				# Gedit.
-				"text/plain" = [ "<textEditor>" ];
-				"text/xml" = [ "<textEditor>" ];
-			};
-		};
-		userDirs = {
-			enable = true;
-			createDirectories = true;
+			".ssh/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to create the directory this file is in, a file must be created in it. Hense the existice of this file.";
+			"${config.xdg.configHome}/sops/age/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to create the directory this file is in, a file must be created in it. Hense the existice of this file.";
 		};
 	};
 
