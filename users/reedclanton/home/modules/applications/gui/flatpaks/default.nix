@@ -13,6 +13,7 @@
 				location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 			}
 		];
+    uninstallUnmanagedPackages = true;
 		update = {
 			auto.enable = true;
 			onActivation = true;
