@@ -1,7 +1,7 @@
 { ... }: {
 	imports = [
     # Configure flatpak.
-    (if builtins.pathExists ../../applications/gui/flatpaks then ../../applications/gui/flatpaks else ../../../../../../do-nothing.nix)
+    (if builtins.pathExists ../../applications/gui/flatpaks/default.nix then ../../applications/gui/flatpaks else ../../../../../../do-nothing.nix)
     # Install some flatpak(s).
     ../../applications/gui/flatpaks/applications/brave.nix
     ../../applications/gui/flatpaks/applications/flatseal.nix
