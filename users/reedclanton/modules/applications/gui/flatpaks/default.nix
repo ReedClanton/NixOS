@@ -1,8 +1,4 @@
-{ nix-flatpak, pkgs, ... }: {
-	imports = [
-		../../home/modules/applications/gui/flatpaks/applications/flatseal.nix
-	];
-
+{ ... }: {
 	services.flatpak = {
 		enable = true;
 		remotes = [
@@ -15,10 +11,13 @@
 				location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 			}
 		];
+    uninstallUnmanagedPackages = true;
 		update.auto = {
 			enable = true;
 			onCalendar = "daily";
 		};
 	};
+
+  # TODO: Find NixOS equivalent to HM's xdg.systemDirs.data = [ "/var/lib/flatpak/exports/share" ];
 }
 

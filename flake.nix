@@ -83,7 +83,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -102,7 +101,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
-					(if builtins.pathExists .users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -121,7 +119,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -148,7 +145,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           ## Configuration ##
           ./modules/gui/xfce
-          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
         ]
         # Additional Home Manager module(s).
         [
@@ -168,7 +164,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -188,7 +183,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -208,7 +202,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -239,7 +232,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           ## Configuration ##
           ./modules/gui/xfce
-          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
         ]
         # Additional Home Manager module(s).
         [
@@ -258,7 +250,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/gnome
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -277,7 +268,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/hyprland
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -296,7 +286,6 @@
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
 					./modules/gui/kde
-					(if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
 				]
 				# Additional Home Manager module(s).
 				[
@@ -323,7 +312,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           ## Configuration ##
           ./modules/gui/xfce
-          (if builtins.pathExists ./users/${user.name}/modules/flatpak then ./users/${user.name}/modules/flatpak else ./do-nothing.nix)
         ]
         # Additional Home Manager module(s).
         [
