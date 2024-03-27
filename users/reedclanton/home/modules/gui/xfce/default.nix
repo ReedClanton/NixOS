@@ -3,7 +3,7 @@
    # Configure flatpak.
     (if builtins.pathExists ../../applications/gui/flatpaks then ../../applications/gui/flatpaks else ../../../../../../do-nothing.nix)
     # Install all flatpak(s).
-    (if builtins.pathExists ../../applications/gui/flatpaks/applications then ../../applications/gui/flatpaks/applications else ../../../../../../do-nothing.nix        )
+    (if builtins.pathExists ../../applications/gui/flatpaks/applications then ../../applications/gui/flatpaks/applications else ../../../../../../do-nothing.nix)
     # Install all package(s).
     (if builtins.pathExists ../../applications/gui/packages then ../../applications/gui/packages else ../../../../../../do-nothing.nix)
     # Install all program(s).
