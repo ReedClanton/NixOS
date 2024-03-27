@@ -4,8 +4,6 @@
     (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../../do-nothing.nix))
     (if builtins.pathExists ./modules/applications/tty/packages then ./modules/applications/tty/packages else ../../../do-nothing.nix)
     (if builtins.pathExists ./modules/applications/tty/programs then ./modules/applications/tty/programs else ../../../do-nothing.nix)
-    # TODO: Remove.
-		./modules/applications/tty
 #		./modules/sops
 		./modules/xdg
 	];
