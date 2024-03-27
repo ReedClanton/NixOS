@@ -9,8 +9,6 @@
     # Install all program(s).
     (if builtins.pathExists ../../applications/gui/programs then ../../applications/gui/programs else ../../../../../../do-nothing.nix)
     # TODO: Remove.
-		../../applications/gui
-    # TODO: Remove.
 		../../flatpak
     # TODO: Remove.
 		../../flatpak/applications

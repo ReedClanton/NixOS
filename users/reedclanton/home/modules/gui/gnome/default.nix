@@ -8,8 +8,6 @@
     (if builtins.pathExists ../../applications/gui/packages then ../../applications/gui/packages else ../../../../../../do-nothing.nix)
     # Install all program(s).
     (if builtins.pathExists ../../applications/gui/programs then ../../applications/gui/programs else ../../../../../../do-nothing.nix)
-    # TODO: Remove.
-		../../applications/gui
 		./dconf
     # TODO: Remove.
 		../../flatpak

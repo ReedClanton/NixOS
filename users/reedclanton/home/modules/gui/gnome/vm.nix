@@ -12,8 +12,7 @@
     # Install some package(s).
     ../../applications/gui/packages/gedit.nix
     # Install some program(s).
-    # TODO: Update with new path.
-    ../../applications/gui/firefox.nix
+    ../../applications/gui/programs/firefox.nix
 		./dconf
 	];
 }
