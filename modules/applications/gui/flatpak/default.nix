@@ -1,8 +1,4 @@
-{ nix-flatpak, pkgs, ... }: {
-	imports = [
-		../../home/modules/flatpak/applications/flatseal.nix
-	];
-
+{ ... }: {
 	services.flatpak = {
 		enable = true;
 		remotes = [
@@ -15,6 +11,7 @@
 				location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 			}
 		];
+    uninstallUnmanagedPackages = true;
 		update.auto = {
 			enable = true;
 			onCalendar = "daily";

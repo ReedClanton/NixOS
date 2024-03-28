@@ -1,12 +1,15 @@
 { ... }: {
 	imports = [
-		../../applications/gui/firefox.nix
-		../../applications/gui/gedit.nix
-		./dconf
-		../../flatpak
-		../../flatpak/applications/brave.nix
-		../../flatpak/applications/flatseal.nix
-		../../flatpak/applications/libre-office.nix
-		../../flatpak/applications/tor-browser-launcher.nix
+    # Configure flatpak.
+    (if builtins.pathExists ../../applications/gui/flatpaks/default.nix then ../../applications/gui/flatpaks else ../../../../../../modules/applications/gui/flatpak)
+    # Install some flatpak(s).
+    ../../applications/gui/flatpaks/applications/brave.nix
+    ../../applications/gui/flatpaks/applications/libre-office.nix
+    ../../applications/gui/flatpaks/applications/tor-browser-launcher.nix
+    # Install some package(s).
+    ../../applications/gui/packages/gedit.nix
+    # Install some program(s).
+    ../../applications/gui/programs/firefox.nix
+    (if builtins.pathExists ./dconf/default.nix then ./dconf else ../../../../../../do-nothing.nix)
 	];
 }
