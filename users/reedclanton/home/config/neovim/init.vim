@@ -1,6 +1,10 @@
 " Turn line numbers on.
 set number
 
+" Turn on spell check.
+set spell
+set spelllang=en_us
+
 " TODO
 set breakindent
 
