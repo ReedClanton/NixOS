@@ -9,6 +9,5 @@
     # Install all program(s).
     (if builtins.pathExists ../../applications/gui/programs/default.nix then ../../applications/gui/programs else ../../../../../../do-nothing.nix)
     (if builtins.pathExists ./dconf/default.nix then ./dconf else ../../../../../../do-nothing.nix)
-		./dconf
 	];
 }
