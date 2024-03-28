@@ -17,7 +17,5 @@
 			onCalendar = "daily";
 		};
 	};
-
-  # TODO: Find NixOS equivalent to HM's xdg.systemDirs.data = [ "/var/lib/flatpak/exports/share" ];
 }
 

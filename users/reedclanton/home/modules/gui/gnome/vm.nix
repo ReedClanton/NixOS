@@ -1,7 +1,7 @@
 { ... }: {
 	imports = [
     # Configure flatpak.
-    (if builtins.pathExists ../../applications/gui/flatpaks then ../../applications/gui/flatpaks else ../../../../../../do-nothing.nix)
+    (if builtins.pathExists ../../applications/gui/flatpaks/default.nix then ../../applications/gui/flatpaks else ../../../../../../modules/applications/gui/flatpak)
     # Install some flatpak(s).
     ../../applications/gui/flatpaks/applications/brave.nix
     ../../applications/gui/flatpaks/applications/libre-office.nix
@@ -10,6 +10,6 @@
     ../../applications/gui/packages/gedit.nix
     # Install some program(s).
     ../../applications/gui/programs/firefox.nix
-    ./dconf
+    (if builtins.pathExists ./dconf/default.nix then ./dconf else ../../../../../../do-nothing.nix)
 	];
 }
