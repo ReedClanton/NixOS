@@ -45,3 +45,8 @@ fsType
 ext4
 framework13's
 pipewire
+GL
+benchmarking
+filesystem
+POSIX
+mutex
