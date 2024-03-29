@@ -28,7 +28,7 @@
 					"browser.urlbar.quicksuggest.dataCollection.enabled" = false;
 					# Turn off search bar adds.
 					"browser.urlbar.suggest.quicksuggest.sponsored" = false;
-					# Don't warn when quitting with ctrl + q.
+					# Don't warn when quitting with ctl + q.
 					"browser.warnOnQuitShortcut" = false;
 					# HTTPS only in private browsing.
 					"dom.security.https_only_mode_ever_enabled_pbm" = true;
