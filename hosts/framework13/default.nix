@@ -2,7 +2,7 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
-    # Commented out because installing newer firemware prevents shutdown and boot.
+    # Commented out because installing newer firmware prevents shutdown and boot.
 #    ../../modules/hardware/wifi/mt7961
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../do-nothing.nix)
 		# Setup this host.
@@ -14,6 +14,7 @@
 		(if builtins.pathExists ./modules/language/default.nix then ./modules/language else ../../modules/language)
 		(if builtins.pathExists ./modules/networking/default.nix then ./modules/networking else ../../modules/networking)
 		(if builtins.pathExists ./modules/nix/default.nix then ./modules/nix else ../../modules/nix)
+    (if builtins.pathExists ./modules/power/default.nix then ./modules/power else ../../modules/power)
 		(if builtins.pathExists ./modules/printing/default.nix then ./modules/printing else ../../modules/printing)
     (if builtins.pathExists ./modules/proton/default.nix then ./modules/proton else ../../modules/proton)
 		(if builtins.pathExists ./modules/sound/default.nix then ./modules/sound else ../../modules/sound)
