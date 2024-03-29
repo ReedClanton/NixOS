@@ -39,3 +39,8 @@ XDG's
 tty
 pluginConfig
 sha256
+fileSystems
+dev
+fsType
+ext4
+framework13's
