@@ -55,3 +55,6 @@ fwupdmgr
 cpufreq
 Benchmarking
 framework13
+VM
+builtins
+pathExists
