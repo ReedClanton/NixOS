@@ -50,3 +50,6 @@ benchmarking
 filesystem
 POSIX
 mutex
+PulseAudio
+fwupdmgr
+cpufreq
