@@ -13,8 +13,10 @@
     #     - performance
     #     - powersave
     cpuFreqGovernor = "ondemand";
-    # Enables powertop auto tuning on startup.
-#    powertop.enable = true;
+    # CPU auto tuned power saving at startup.
+    #   Note(s):
+    #     - Good for mobile devices.
+    powertop.enable = false;
   };
 }
 
