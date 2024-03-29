@@ -52,21 +52,16 @@
 			maxLineCount = 999999;
 		};
 		shellProfile = ''
-			# Create aliases of flatpak apps.
-			#if [ -f $HOME/shell/shell_flatpak_aliases ]; then
-			#	. $HOME/shell/shell_flatpak_aliases
-			#fi
-			
 			# Launch tmux when:
 			#	it's installed,
 			#	current session is tty,
 			#	not already in a tmux session, and
 			#	in an interactive shell.
-			if command -v tmux &> /dev/null && [ -n "$PS1" ] && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
-				if command -v tmuxp &> /dev/null; then
-					exec tmuxp load ~/.config/tmuxp/Default.yaml
-				fi
-			fi
+			#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [ $(expr "$TERM" : ".*screen") ] && [ -z "$TMUX" ]; then
+			#	if command -v tmuxp &> /dev/null; then
+			#		exec tmuxp load ~/.config/tmuxp/Default.yaml
+			#	fi
+			#fi
 			
 			# Back up home directory each time any terminal is opened.
 			#backUp >$HOME/shell/functions/backUp/backUp.log 2>&1 &
