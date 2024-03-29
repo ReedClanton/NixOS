@@ -53,3 +53,5 @@ mutex
 PulseAudio
 fwupdmgr
 cpufreq
+Benchmarking
+framework13
