@@ -8,6 +8,7 @@
 		# Setup this host.
     (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../modules/applications/tty/packages)
     (if builtins.pathExists ./modules/applications/tty/programs/default.nix then ./modules/applications/tty/programs else ../../modules/applications/tty/programs)
+    (if builtins.pathExists ./modules/benchmark/default.nix then ./modules/benchmark else ../../modules/benchmark)
 		(if builtins.pathExists ./modules/boot/default.nix then ./modules/boot else ../../modules/boot/efi-systemd.nix)
 		(if builtins.pathExists ./modules/documentation/default.nix then ./modules/documentation else ../../modules/documentation)
 		(if builtins.pathExists ./modules/getty/default.nix then ./modules/getty else ../../modules/getty)
