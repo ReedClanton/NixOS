@@ -18,6 +18,11 @@
 			# Virtual Microphone. Custom DroidCam v4l2loopback driver needed for audio.
 #			"snd-aloop"
 		];
+
+    # Set initial kernel module settings.
+    extraModprobeConfig = ''
+      options v4l2loopback video_nr=2 exclusive_caps=1 card_label=v4l2loopback
+    '';
 	};
 }
 
