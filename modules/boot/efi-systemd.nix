@@ -6,7 +6,7 @@
 			efi.canTouchEfiVariables = true;
 			systemd-boot = {
 				enable = true;
-				# Disabled for secrity. May need to enable for backwards compatibility.
+				# Disabled for security. May need to enable for backwards compatibility.
 				editor = false;
 				configurationLimit = 10;
 			};

@@ -51,7 +51,7 @@
 				## Configuration ##
 				# Host specific configuration (path derived from provided name of host).
 				./hosts/${host}
-				# User's NixOS Configruration.
+				# User's NixOS Configuration.
 				./users/${user.name}
 				# Home Manager Setup
 				{
