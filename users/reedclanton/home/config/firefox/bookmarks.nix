@@ -74,6 +74,16 @@
                   }
                 ];
               }
+              {
+                name = "Tools";
+                bookmarks = [
+                  {
+                    name = "nixos-anywhere";
+                    url = "https://github.com/nix-community/nixos-anywhere";
+                    tags = [ "any" "anywhere" "code" "nix" "nixos" "tool" "where" ];
+                  }
+                ];
+              }
             ];
           }
           {
