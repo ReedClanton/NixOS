@@ -63,3 +63,11 @@ hsphfpd
 bluetooth
 wireplumber
 UPower
+sudo
+passwd
+chpasswd
+UI
+NoOp
+Flatpaks
+https
+Alsa
