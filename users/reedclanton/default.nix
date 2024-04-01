@@ -5,8 +5,8 @@ let
 	userShell = pkgs.zsh;
 in {
 	imports = [
-    ./modules/arduino
-		./modules/docker
+#    ./modules/arduino
+#		./modules/docker
 #    (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../do-nothing.nix))
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../do-nothing.nix)
 		./modules/networking
