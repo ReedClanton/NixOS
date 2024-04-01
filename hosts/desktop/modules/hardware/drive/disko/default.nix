@@ -66,7 +66,7 @@
 #            start = "1M";
 #            size = "1M";
 #          };
-          # Root.
+          # Home.
           home = {
             # TODO: Set size once swap added.
             size = "100%";
