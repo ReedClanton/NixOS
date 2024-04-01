@@ -2,8 +2,8 @@
 	imports = [
 #    ./hosts/${host}
 #    (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../../do-nothing.nix))
-    (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../../do-nothing.nix)
-    (if builtins.pathExists ./modules/applications/tty/programs/default.nix then ./modules/applications/tty/programs else ../../../do-nothing.nix)
+#    (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../../do-nothing.nix)
+#    (if builtins.pathExists ./modules/applications/tty/programs/default.nix then ./modules/applications/tty/programs else ../../../do-nothing.nix)
 ##		./modules/sops
 		./modules/xdg
 	];
