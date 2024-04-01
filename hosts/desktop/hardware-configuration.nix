@@ -14,26 +14,26 @@
   boot.extraModulePackages = [ ];
 
   # Mount root.
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/desktop-root";
-    fsType = "ext4";
-  };
+#  fileSystems."/" = {
+#    device = "/dev/disk/by-label/desktop-root";
+#    fsType = "ext4";
+#  };
   # Mount boot.
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/5C5D-3BA3";
-    fsType = "vfat";
-  };
+#  fileSystems."/boot" = {
+#    device = "/dev/disk/by-uuid/5C5D-3BA3";
+#    fsType = "vfat";
+#  };
   # Decrypt home.
-  boot.initrd.luks.devices."desktop-home".device = "/dev/disk/by-label/desktop-home";
+#  boot.initrd.luks.devices."desktop-home".device = "/dev/disk/by-label/desktop-home";
   # Mount home.
-  fileSystems."/home" = {
-    device = "/dev/mapper/desktop-home";
-    fsType = "ext4";
-  };
+#  fileSystems."/home" = {
+#    device = "/dev/mapper/desktop-home";
+#    fsType = "ext4";
+#  };
   # Mount swap.
-  swapDevices = [
-    { device = "/dev/disk/by-label/swap"; }
-  ];
+#  swapDevices = [
+#    { device = "/dev/disk/by-label/swap"; }
+#  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
