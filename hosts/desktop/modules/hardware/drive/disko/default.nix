@@ -12,7 +12,7 @@
           # Boot.
           ESP = {
             type = "EF00";
-            size = "1G";
+            size = "500M";
 #            name = lib.toUpper "${host}-BOOT";
 #            label = lib.toUpper "${host}-BOOT";
             content = {
@@ -25,37 +25,68 @@
           root = {
             size = "100%";
 #            name = "${host}-root";
-            label = "${host}-root";
+#            label = "${host}-root";
             content = {
               type = "filesystem";
               format = "ext4";
               mountpoint = "/";
             };
           };
-          # TODO: Swap RAID 0.
+          # Swap RAID 0.
+          mdadm = {
+            size = "130G";
+            content = {
+              type = "mdraid";
+              name = "raid0";
+            };
+          };
         };
       };
   };
-#  disko.devices.disk.disk1 = {
-#      type = "disk";
-#      device = "/dev/nvme1n1";
-#      content = {
-#        type = "gpt";
-#        partitions = {
-#          # Home.
-#          home = {
-#            size = "100%";
-##            name = "${host}-home";
-##            label = "${host}-home";
-#            content = {
-#              type = "filesystem";
-#              format = "ext4";
-#              mountpoint = "/home";
-#            };
-#          };
-#          # TODO: Add swap raid 0.
-#        };
-#      };
-#  };
+  disko.devices.disk.disk1 = {
+      type = "disk";
+      device = "/dev/nvme1n1";
+      content = {
+        type = "gpt";
+        partitions = {
+          # Home.
+          home = {
+            size = "100%";
+#            name = "${host}-home";
+#            label = "${host}-home";
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              mountpoint = "/home";
+            };
+          };
+          # Swap RAID 0.
+          mdadm = {
+            size = "130G";
+            content = {
+              type = "mdraid";
+              name = "raid0";
+            };
+          };
+        };
+      };
+  };
+
+  # Setup RAID 0 swap.
+  disko.devices.mdadm.raid0 = {
+    type = "mdadm";
+    level = 0;
+    content = {
+      type = "gpt";
+      partitions.swap = {
+        size = "100%";
+        content = {
+          type = "swap";
+          # Marks this device as the one that's used to resume from hibernation.
+          resumeDevice = true;
+        };
+      };
+    };
+  };
 }
 
