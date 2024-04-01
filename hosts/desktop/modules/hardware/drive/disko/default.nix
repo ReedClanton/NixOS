@@ -13,6 +13,7 @@
           ESP = {
             type = "EF00";
             size = "500M";
+            start = "1M";
 #            name = lib.toUpper "${host}-BOOT";
 #            label = lib.toUpper "${host}-BOOT";
             content = {
@@ -23,7 +24,8 @@
           };
           # Root.
           root = {
-            size = "100%";
+#            size = "100%";
+            end = "-131G";
 #            name = "${host}-root";
 #            label = "${host}-root";
             content = {
@@ -51,7 +53,9 @@
         partitions = {
           # Home.
           home = {
-            size = "100%";
+#            size = "100%";
+            start = "1M";
+            end = "-131G";
 #            name = "${host}-home";
 #            label = "${host}-home";
             content = {
