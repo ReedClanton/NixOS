@@ -11,11 +11,11 @@
         partitions = {
           # For grub MBR.
           # TODO: Determine if needed.
-#          MBR = {
-#            type = "EF02";
+          MBR = {
+            type = "EF02";
 #            start = "1M";
-#            size = "1M";
-#          };
+            size = "1M";
+          };
           # Boot.
           ESP = {
             type = "EF00";
@@ -51,11 +51,11 @@
         partitions = {
           # For grub MBR.
           # TODO: Determine if needed.
-#          MBR = {
-#            type = "EF02";
+          MBR = {
+            type = "EF02";
 #            start = "1M";
-#            size = "1M";
-#          };
+            size = "1M";
+          };
           # Home.
           home = {
             size = "100%";
