@@ -3,6 +3,9 @@
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../do-nothing.nix)
+
+    ./modules/hardware/drive/disko
+
     # Host has no bluetooth adapter.
 #    (if builtins.pathExists ./modules/hardware/bluetooth/default.nix then ./modules/hardware/bluetooth else ../../modules/hardware/bluetooth)
 		../../modules/hardware/game-controller/logitech-wheel.nix
