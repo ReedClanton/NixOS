@@ -3,14 +3,9 @@
     inputs.disko.nixosModules.disko
   ];
 
-  disko.devices.disk = {
-    disk0 =
-    let
-      first-partition-start-in-M = 1;
-    in {
+  disko.devices.disk.disk0 = {
       type = "disk";
-      # TODO: Add id.
-      device = "/dev/disk/by-id/<idHere>";
+      device = "/dev/nvme0n1";
       content = {
         type = "gpt";
         partitions = {
@@ -24,10 +19,9 @@
           # Boot.
           ESP = {
             type = "EF00";
-            start = "${first-partition-start-in-M}M";
-            size = "1G";
-            name = lib.toUpper "${host}-BOOT";
-            label = lib.toUpper "${host}-BOOT";
+            size = "500M";
+#            name = lib.toUpper "${host}-BOOT";
+#            label = lib.toUpper "${host}-BOOT";
             content = {
               type = "filesystem";
               format = "vfat";
@@ -36,12 +30,9 @@
           };
           # Root.
           root = {
-            # TODO: Set size.
             size = "100%";
-#            start = "1026M";
-#            end = "113666M";
-            name = "${host}-root";
-            label = "${host}-root";
+#            name = "${host}-root";
+#            label = "${host}-root";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -51,11 +42,10 @@
           # TODO: Swap RAID 0.
         };
       };
-    };
-    disk1 = {
+  };
+  disko.devices.disk.disk1 = {
       type = "disk";
-      # TODO: Add id.
-      device = "/dev/disk/by-id/<idHere>";
+      device = "/dev/nvme1n1";
       content = {
         type = "gpt";
         partitions = {
@@ -68,22 +58,18 @@
 #          };
           # Home.
           home = {
-            # TODO: Set size once swap added.
             size = "100%";
-#            start = "1026M";
-#            end = "113666M";
-            name = "${host}-home";
-            label = "${host}-home";
+#            name = "${host}-home";
+#            label = "${host}-home";
             content = {
               type = "filesystem";
               format = "ext4";
-              mountpoint = "/";
+              mountpoint = "/home";
             };
           };
           # TODO: Add swap raid 0.
         };
       };
-    };
   };
 }
 
