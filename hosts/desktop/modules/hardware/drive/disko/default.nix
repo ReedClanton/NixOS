@@ -42,14 +42,14 @@
             };
           };
           # Swap RAID 0.
-          swap-raid0 = {
+          mdadm = {
             # 80G.
             start = "-81921M";
             end = "-1M";
             label = "swap-p0";
             content = {
               type = "mdraid";
-              name = "swap";
+              name = "raid0";
             };
           };
         };
@@ -78,14 +78,14 @@
             };
           };
           # Swap RAID 0.
-          swap-raid0 = {
+          mdadm = {
             # 80G.
             start = "-81921M";
             end = "-1M";
             label = "swap-p1";
             content = {
               type = "mdraid";
-              name = "swap";
+              name = "raid0";
             };
           };
         };
@@ -93,7 +93,7 @@
   };
 
   # Setup RAID 0 swap.
-  disko.devices.mdadm.swap = {
+  disko.devices.mdadm.raid0 = {
     type = "mdadm";
     level = 0;
     content = {
