@@ -12,10 +12,9 @@
           # Boot.
           ESP = {
             type = "EF00";
-            size = "500M";
             start = "1M";
-#            name = lib.toUpper "${host}-BOOT";
-#            label = lib.toUpper "${host}-BOOT";
+            size = "500M";
+            label = lib.toUpper "${host}-BOOT";
             content = {
               type = "filesystem";
               format = "vfat";
@@ -24,10 +23,8 @@
           };
           # Root.
           root = {
-#            size = "100%";
-            end = "-131G";
-#            name = "${host}-root";
-#            label = "${host}-root";
+            size = "100%";
+            label = "${host}-root";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -36,10 +33,13 @@
           };
           # Swap RAID 0.
           mdadm = {
-            size = "130G";
+            # 80G.
+            start = "-81921M";
+            end = "-1M";
+            label = "swap-p0";
             content = {
               type = "mdraid";
-              name = "raid0";
+              name = "swap";
             };
           };
         };
@@ -53,11 +53,9 @@
         partitions = {
           # Home.
           home = {
-#            size = "100%";
+            size = "100%";
             start = "1M";
-            end = "-131G";
-#            name = "${host}-home";
-#            label = "${host}-home";
+            label = "${host}-home";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -66,10 +64,13 @@
           };
           # Swap RAID 0.
           mdadm = {
-            size = "130G";
+            # 80G.
+            start = "-81921M";
+            end = "-1M";
+            label = "swap-p1";
             content = {
               type = "mdraid";
-              name = "raid0";
+              name = "swap";
             };
           };
         };
@@ -77,13 +78,14 @@
   };
 
   # Setup RAID 0 swap.
-  disko.devices.mdadm.raid0 = {
+  disko.devices.mdadm.swap = {
     type = "mdadm";
     level = 0;
     content = {
       type = "gpt";
       partitions.swap = {
         size = "100%";
+        label = "swap";
         content = {
           type = "swap";
           # Marks this device as the one that's used to resume from hibernation.
@@ -92,5 +94,9 @@
       };
     };
   };
+
+  swapDevices = [
+    { device = "/dev/by-label/swap"; }
+  ];
 }
 
