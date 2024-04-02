@@ -4,6 +4,28 @@
   ];
 
   disko.devices.disk.disk0 = {
+    type = "disk";
+    device = "/dev/sda";
+    content = {
+      type = "gpt";
+      partitions = {
+        # Boot.
+        ESP = {
+          type = "EF00";
+          start = "1M";
+          size = "500M";
+          label = lib.toUpper "${host}-boot";
+          content = {
+            type = "filesystem";
+            format = "vfat";
+            mountpoint = "/boot";
+          };
+        };
+      };
+    };
+  };
+
+  disko.devices.disk.disk1 = {
       type = "disk";
       device = "/dev/nvme0n1";
       content = {
@@ -14,12 +36,12 @@
             type = "EF00";
             start = "1M";
             size = "500M";
-            label = lib.toUpper "${host}-BOOT";
-            content = {
-              type = "filesystem";
-              format = "vfat";
-              mountpoint = "/boot";
-            };
+#            label = lib.toUpper "${host}-BOOT";
+#            content = {
+#              type = "filesystem";
+#              format = "vfat";
+#              mountpoint = "/boot";
+#            };
           };
           # Root.
           root = {
@@ -45,7 +67,7 @@
         };
       };
   };
-  disko.devices.disk.disk1 = {
+  disko.devices.disk.disk2 = {
       type = "disk";
       device = "/dev/nvme1n1";
       content = {
