@@ -13,7 +13,7 @@
         ESP = {
           type = "EF00";
           start = "1M";
-          size = "500M";
+          size = "2049M";
           label = lib.toUpper "${host}-boot";
           content = {
             type = "filesystem";
@@ -31,18 +31,6 @@
       content = {
         type = "gpt";
         partitions = {
-          # Boot.
-          ESP = {
-            type = "EF00";
-            start = "1M";
-            size = "500M";
-#            label = lib.toUpper "${host}-BOOT";
-#            content = {
-#              type = "filesystem";
-#              format = "vfat";
-#              mountpoint = "/boot";
-#            };
-          };
           # Root.
           root = {
             size = "100%";
@@ -78,16 +66,16 @@
             size = "100%";
             start = "1M";
             label = "${host}-home";
-#            content = {
-#              type = "luks";
-#              name = "${host}-home";
-#              settings.allowDiscards = true;
+            content = {
+              type = "luks";
+              name = "${host}-home";
+              settings.allowDiscards = true;
               content = {
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = "/home";
               };
-#            };
+            };
           };
           # Swap RAID 0.
           mdadm = {
@@ -122,8 +110,8 @@
     };
   };
 
-  swapDevices = [
-    { device = "/dev/by-label/swap"; }
-  ];
+#  swapDevices = [
+#    { device = "/dev/by-label/swap"; }
+#  ];
 }
 
