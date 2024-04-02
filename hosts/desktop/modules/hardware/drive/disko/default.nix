@@ -56,11 +56,16 @@
             size = "100%";
             start = "1M";
             label = "${host}-home";
-            content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/home";
-            };
+#            content = {
+#              type = "luks";
+#              name = "${host}-home";
+#              settings.allowDiscards = true;
+              content = {
+                type = "filesystem";
+                format = "ext4";
+                mountpoint = "/home";
+              };
+#            };
           };
           # Swap RAID 0.
           mdadm = {
