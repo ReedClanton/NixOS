@@ -101,11 +101,11 @@
       partitions.primary = {
         size = "100%";
         label = "swap";
-        content = {
-          type = "swap";
-          # Marks this device as the one that's used to resume from hibernation.
-          resumeDevice = true;
-        };
+#        content = {
+#          type = "swap";
+#          # Marks this device as the one that's used to resume from hibernation.
+#          resumeDevice = true;
+#        };
       };
     };
   };
