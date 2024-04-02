@@ -93,22 +93,22 @@
   };
 
   # Setup RAID 0 swap.
-  disko.devices.mdadm.swap = {
-    type = "mdadm";
-    level = 0;
-    content = {
-      type = "gpt";
-      partitions.swap = {
-        size = "100%";
-        label = "swap";
-        content = {
-          type = "swap";
-          # Marks this device as the one that's used to resume from hibernation.
-          resumeDevice = true;
-        };
-      };
-    };
-  };
+#  disko.devices.mdadm.swap = {
+#    type = "mdadm";
+#    level = 0;
+#    content = {
+#      type = "gpt";
+#      partitions.swap = {
+#        size = "100%";
+#        label = "swap";
+#        content = {
+#          type = "swap";
+#          # Marks this device as the one that's used to resume from hibernation.
+#          resumeDevice = true;
+#        };
+#      };
+#    };
+#  };
 
 #  swapDevices = [
 #    { device = "/dev/by-label/swap"; }
