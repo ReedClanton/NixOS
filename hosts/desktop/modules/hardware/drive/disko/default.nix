@@ -26,7 +26,7 @@
 
   disko.devices.disk.one = {
     type = "disk";
-    device = "/dev/sdc";
+    device = "/dev/sdb";
     content = {
       type = "gpt";
       # Boot RAID 0.
