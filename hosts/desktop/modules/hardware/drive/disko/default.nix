@@ -5,27 +5,6 @@
 
   disko.devices.disk.zero = {
     type = "disk";
-    device = "/dev/disk/by-id/ata-INTEL_SSDSA2CT040G3_CVPR138403A5040AGN";
-    content = {
-      type = "gpt";
-      partitions = {
-        # Boot.
-        ESP = {
-          type = "EF00";
-          start = "1M";
-          size = "2049M";
-          label = lib.toUpper "${host}-boot-p0";
-          content = {
-            type = "mdraid";
-            name = "boot";
-          };
-        };
-      };
-    };
-  };
-
-  disko.devices.disk.one = {
-    type = "disk";
     device = "/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14CNEACB89263P";
     content = {
       type = "gpt";
@@ -34,29 +13,19 @@
         type = "EF00";
         start = "1M";
         size = "2049M";
-        label = lib.toUpper "${host}-boot-p1";
+        label = lib.toUpper "${host}-boot";
         content = {
-          type = "mdraid";
-          name = "boot";
+          type = "filesystem";
+          format = "vfat";
+          mountpoint = "/boot";
         };
       };
     };
   };
 
-  disko.devices.mdadm.boot = {
-    type = "mdadm";
-    level = 0;
-    metadata = "1.0";
-    content = {
-      type = "filesystem";
-      format = "vfat";
-      mountpoint = "/boot";
-    };
-  };
-
-  disko.devices.disk.two = {
+  disko.devices.disk.one = {
     type = "disk";
-    device = "/dev/disk/by-id/nvme-XG7000-1TB_2280_9Q40203002763";
+    device = "/dev/nvme0n1";
     content = {
       type = "gpt";
       # Root.
@@ -72,9 +41,9 @@
       };
     };
   };
-  disko.devices.disk.three = {
+  disko.devices.disk.two = {
     type = "disk";
-    device = "/dev/disk/by-id/nvme-XG7000-4TB_2280_9F40202002184";
+    device = "/dev/nvme1n1";
     content = {
       type = "gpt";
       partitions = {
