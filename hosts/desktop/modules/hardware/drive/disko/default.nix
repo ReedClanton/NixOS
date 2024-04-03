@@ -8,7 +8,7 @@
     device = "/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14CNEACB89263P";
     content = {
       type = "gpt";
-      # Boot RAID 0.
+      # Boot.
       partitions.ESP = {
         type = "EF00";
         start = "1M";
