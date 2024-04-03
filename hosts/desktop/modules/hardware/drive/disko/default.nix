@@ -5,7 +5,7 @@
 
   disko.devices.disk.zero = {
     type = "disk";
-    device = "/dev/sda";
+    device = "/dev/disk/by-id/ata-INTEL_SSDSA2CT040G3_CVPR138403A5040AGN";
     content = {
       type = "gpt";
       partitions = {
@@ -26,7 +26,7 @@
 
   disko.devices.disk.one = {
     type = "disk";
-    device = "/dev/sdb";
+    device = "/dev/disk/by-id/ata-Samsung_SSD_840_Series_S14CNEACB89263P";
     content = {
       type = "gpt";
       # Boot RAID 0.
@@ -56,7 +56,7 @@
 
   disko.devices.disk.two = {
     type = "disk";
-    device = "/dev/nvme0n1";
+    device = "/dev/disk/by-id/nvme-XG7000-1TB_2280_9Q40203002763";
     content = {
       type = "gpt";
       # Root.
@@ -74,7 +74,7 @@
   };
   disko.devices.disk.three = {
     type = "disk";
-    device = "/dev/nvme1n1";
+    device = "/dev/disk/by-id/nvme-XG7000-4TB_2280_9F40202002184";
     content = {
       type = "gpt";
       partitions = {
