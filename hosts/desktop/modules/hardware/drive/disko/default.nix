@@ -30,27 +30,15 @@
       device = "/dev/nvme0n1";
       content = {
         type = "gpt";
-        partitions = {
-          # Root.
-          root = {
-            size = "100%";
-            label = "${host}-root";
-            content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/";
-            };
-          };
-          # Swap RAID 0.
-          mdadm = {
-            # 80G.
-            start = "-81921M";
-            end = "-1M";
-            label = "swap-p0";
-            content = {
-              type = "mdraid";
-              name = "raid0";
-            };
+        # Root.
+        partitions.root = {
+          size = "100%";
+          start = "1M";
+          label = "${host}-root";
+          content = {
+            type = "filesystem";
+            format = "ext4";
+            mountpoint = "/";
           };
         };
       };
@@ -77,37 +65,20 @@
               };
             };
           };
-          # Swap RAID 0.
-          mdadm = {
-            # 80G.
-            start = "-81921M";
+          # Swap.
+          swap = {
+            # 130G.
+            start = "-133121M";
             end = "-1M";
-            label = "swap-p1";
+            label = "swap";
             content = {
-              type = "mdraid";
-              name = "raid0";
+              type = "swap";
+              # Marks this device as the one that's used to resume from hibernation.
+              resumeDevice = true;
             };
           };
         };
       };
-  };
-
-  # Setup RAID 0 swap.
-  disko.devices.mdadm.raid0 = {
-    type = "mdadm";
-    level = 0;
-    content = {
-      type = "gpt";
-      partitions.primary = {
-        size = "100%";
-        label = "swap";
-#        content = {
-#          type = "swap";
-#          # Marks this device as the one that's used to resume from hibernation.
-#          resumeDevice = true;
-#        };
-      };
-    };
   };
 
 #  swapDevices = [
