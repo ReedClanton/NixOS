@@ -18,7 +18,8 @@ in {
 		users.${user.name} = {
 			description = user.description;
 			extraGroups = user.extraGroups;
-			hashedPasswordFile = config.sops.secrets."users/${user.name}/pwd_hash".path;
+#			hashedPasswordFile = config.sops.secrets."users/${user.name}/pwd_hash".path;
+      initialPassword = "password";
 			isNormalUser = user.isNormalUser;
 			shell = userShell;
 		};

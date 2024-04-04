@@ -4,36 +4,14 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
-  boot.initrd.availableKernelModules = [ "ahci" "ohci_pci" "ehci_pci" "pata_atiixp" "xhci_pci" "firewire_ohci" "usbhid" "usb_storage" "uas" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "ahci" "ohci_pci" "ehci_pci" "pata_atiixp" "xhci_pci" "nvme" "firewire_ohci" "usbhid" "usb_storage" "uas" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
-
-  # Mount root.
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/desktop-root";
-    fsType = "ext4";
-  };
-  # Mount boot.
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/5C5D-3BA3";
-    fsType = "vfat";
-  };
-  # Decrypt home.
-  boot.initrd.luks.devices."desktop-home".device = "/dev/disk/by-label/desktop-home";
-  # Mount home.
-  fileSystems."/home" = {
-    device = "/dev/mapper/desktop-home";
-    fsType = "ext4";
-  };
-  # Mount swap.
-  swapDevices = [
-    { device = "/dev/disk/by-label/swap"; }
-  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

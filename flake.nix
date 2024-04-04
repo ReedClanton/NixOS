@@ -2,20 +2,28 @@
 	description = "Root of NixOS system configuration. Contains all flakes.";
 
 	inputs = {
+    # Module that handles disk partitioning.
+    disko = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/disko";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-23.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # Desktop environment.
+    hyprland.url = "github:hyprwm/Hyprland";
+    # Primary source of package(s).
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    # Handles Flatpaks.
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    # Includes common hardware stuff (like Framework laptop stuff).
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    # Secret management.
+    sops-nix.url = "github:Mic92/sops-nix";
+    # Here in case something is needed from unstable that's not in `nixpkgs`.
 		unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 #    unstable.url = "github:ReedClanton/nixpkgs/master";
-		# Includes common hardware stuff (like Framework laptop stuff).
-		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-		home-manager = {
-			url = "github:nix-community/home-manager/release-23.11";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-		hyprland.url = "github:hyprwm/Hyprland";
-		# Secret management.
-		sops-nix.url = "github:Mic92/sops-nix";
-		# Handles Flatpaks.
-		nix-flatpak.url = "github:gmodena/nix-flatpak";
 	};
 
 	outputs = inputs@{ self, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:

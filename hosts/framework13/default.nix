@@ -3,7 +3,6 @@
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../do-nothing.nix)
-    (if builtins.pathExists ./modules/hardware/bluetooth/default.nix then ./modules/hardware/bluetooth else ../../modules/hardware/bluetooth)
 		# Setup this host.
     (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../modules/applications/tty/packages)
     (if builtins.pathExists ./modules/applications/tty/programs/default.nix then ./modules/applications/tty/programs else ../../modules/applications/tty/programs)
