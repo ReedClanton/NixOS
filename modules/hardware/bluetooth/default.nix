@@ -5,7 +5,7 @@
     #   Note(s):
     #     - Conflicts with wireplumber (pipewire) and duplicates functionality.
     hsphfpd.enable = false;
-    # Determines if bluetooth should be on and searching upon boot.
+    # Determines if Bluetooth should be on and searching upon boot.
     powerOnBoot = false;
     # Report headphones' battery level to UPower.
     settings.General = {

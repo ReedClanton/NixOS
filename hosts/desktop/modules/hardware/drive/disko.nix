@@ -1,4 +1,4 @@
-{ host, inputs, lib, ... }: {
+{ host, inputs, lib, pkgs, ... }: {
   imports = [
     inputs.disko.nixosModules.disko
   ];
@@ -206,5 +206,8 @@
       };
     };
   };
+
+  # Used to configure software RAID.
+  environment.systemPackages = with pkgs; [ mdadm ];
 }
 
