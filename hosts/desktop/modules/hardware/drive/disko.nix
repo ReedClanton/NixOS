@@ -151,35 +151,8 @@
       };
     };
   };
-#  disko.devices.disk.five = {
-#    type = "disk";
-#    device = "/dev/disk/by-id/usb-XG7000-1_TB_2280_012345678906-0:0";
-#    content = {
-#      type = "gpt";
-#      partitions =
-#      let
-#        first-partition-name = "usb-1tb";
-#      in {
-#        "${first-partition-name}" =
-#        let
-#          label-name = "${host}-${first-partition-name}";
-#        in {
-#          size = "100%";
-#          start = "1M";
-#          label = "${label-name}";
-#          content = {
-#            type = "filesystem";
-#            format = "ext4";
-#            # Not critical to system boot so don't allow boot halt.
-#            mountOptions = [ "nofail" ];
-#            mountpoint = "/mnt/${label-name}";
-#          };
-#        };
-#      };
-#    };
-#  };
   # 40G internal Intel SSD.
-  disko.devices.disk.six = {
+  disko.devices.disk.five = {
     type = "disk";
     device = "/dev/disk/by-id/ata-INTEL_SSDSA2CT040G3_CVPR138403A5040AGN";
     content = {
