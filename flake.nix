@@ -26,7 +26,7 @@
 #    unstable.url = "github:ReedClanton/nixpkgs/master";
 	};
 
-	outputs = inputs@{ self, disko, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:
+	outputs = inputs@{ self, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:
 	let
 		# Variable(s) used in flake(s).
 		system = "x86_64-linux";
@@ -50,7 +50,7 @@
 		in inputs.nixpkgs.lib.nixosSystem {
 			inherit system;
 			# Allow NixOS to access flake data.
-			specialArgs = { inherit disko host hostName inputs nixos-hardware pkgs pkgs-unstable system ui user; };
+			specialArgs = { inherit host hostName inputs nixos-hardware pkgs pkgs-unstable system ui user; };
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
