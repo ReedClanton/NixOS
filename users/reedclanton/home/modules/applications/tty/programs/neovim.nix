@@ -1,4 +1,4 @@
-{ config, lib, user, ... }: {
+{ config, lib, pkgs, user, ... }: {
   home = {
     # Link NeoVIM spell dictionary into configuration.
     activation.linkNeoVIMSpellFile = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
@@ -17,6 +17,10 @@
 #			pluginConfig = ''
 #		'';
 #		};
+    plugins = with pkgs.vimPlugins; [
+      taskwarrior
+      vim-better-whitespace
+    ];
 	};
 }
 
