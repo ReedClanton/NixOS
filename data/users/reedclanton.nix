@@ -15,6 +15,7 @@
 		aliases = {
 			c = "clear;pwd;ls -GAp";
 			eixt = "exit";
+      f = "fzf";
 			g = "c;git branch -a;git status";
 			gF = "git fetch --all -ftp";
 			# TODO: Configure color in grep directly.
