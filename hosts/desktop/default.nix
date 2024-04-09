@@ -2,6 +2,7 @@
 	imports = [
 		# Include the results of the hardware scan.
 		./hardware-configuration.nix
+    # Include custom host specific hardware configuration.
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../do-nothing.nix)
 		# Setup this host.
     (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../modules/applications/tty/packages)
@@ -20,7 +21,6 @@
     (if builtins.pathExists ./modules/sudo/default.nix then ./modules/sudo else ../../modules/sudo)
     (if builtins.pathExists ./modules/time/default.nix then ./modules/time else ../../modules/time)
     (if builtins.pathExists ./modules/tty/default.nix then ./modules/tty else ../../modules/tty)
-    (if builtins.pathExists ./modules/v4l2loopback/default.nix then ./modules/v4l2loopback else ../../modules/v4l2loopback)
     (if builtins.pathExists ./modules/virtualisation/default.nix then ./modules/virtualisation else ../../modules/virtualisation)
     (if builtins.pathExists ./modules/xdg/default.nix then ./modules/xdg else ../../modules/xdg)
 	];
