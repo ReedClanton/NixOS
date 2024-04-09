@@ -15,7 +15,6 @@
 		(if builtins.pathExists ./modules/networking/default.nix then ./modules/networking else ../../modules/networking)
 		(if builtins.pathExists ./modules/nix/default.nix then ./modules/nix else ../../modules/nix)
     (if builtins.pathExists ./modules/power/default.nix then ./modules/power else ../../modules/power)
-		(if builtins.pathExists ./modules/printing/default.nix then ./modules/printing else ../../modules/printing)
     (if builtins.pathExists ./modules/proton/default.nix then ./modules/proton else ../../modules/proton)
 		(if builtins.pathExists ./modules/sound/default.nix then ./modules/sound else ../../modules/sound)
 		(if builtins.pathExists ./modules/ssh/default.nix then ./modules/ssh else ../../modules/ssh)
