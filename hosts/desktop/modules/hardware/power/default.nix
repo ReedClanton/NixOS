@@ -1,5 +1,5 @@
 { lib, ... }: {
-  imports = [ ../../../../../modules/power ];
+  imports = [ ../../../../../modules/hardware/power ];
 
   powerManagement = {
 #    cpufreq = {
