@@ -17,7 +17,6 @@
     (if builtins.pathExists ./modules/nix/default.nix then ./modules/nix else ../../modules/nix)
     # Not relevant to a VM.
 #    (if builtins.pathExists ./modules/power/default.nix then ./modules/power else ../../modules/power)
-    (if builtins.pathExists ./modules/printing/default.nix then ./modules/printing else ../../modules/printing)
     # Won't be running games in a VM.
 #    (if builtins.pathExists ./modules/proton/default.nix then ./modules/proton else ../../modules/proton)
     (if builtins.pathExists ./modules/sound/default.nix then ./modules/sound else ../../modules/sound)
