@@ -14,6 +14,7 @@
 	shell = {
 		aliases = {
 			c = "clear;pwd;ls -GAp";
+      e = "eza";
 			eixt = "exit";
       f = "fzf";
 			g = "c;git branch -a;git status";
