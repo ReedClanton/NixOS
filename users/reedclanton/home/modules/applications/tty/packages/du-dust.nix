@@ -1,4 +1,4 @@
 { pkgs, ... }: {
-	environment.systemPackages = with pkgs; [ du-dust ];
+	home.packages = with pkgs; [ du-dust ];
 }
 
