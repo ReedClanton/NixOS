@@ -5,6 +5,7 @@
       enableBashIntegration = true;
       enableZshIntegration = true;
       settings = {
+        # Configures something to do with date/time. Other option is 'us'.
         dialect = "uk";
         # Immediately run command when 'enter' is pressed.
         enter_accept = true;
@@ -17,6 +18,7 @@
         # Loop through terminal ignore list and anchor each to start of line.
         history_filter = map (cmd: "^${cmd}") user.shell.history.ignore;
         search_mode = "fuzzy";
+        # Determine if full command is shown at bottom of Atuin. Not really needed and kinda a wast of space.
         show_preview = true;
         # Updating is handled by Nix.
         update_check = false;
