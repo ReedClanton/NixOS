@@ -35,6 +35,7 @@
 		completion = true;
 		history = {
 			ignore = [
+        " *"
 				"btop"
 				"c"
 				"clear;neofetch;pwd;ls -GAp"
