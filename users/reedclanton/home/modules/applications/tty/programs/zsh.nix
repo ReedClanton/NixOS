@@ -13,7 +13,6 @@
 			ignoreSpace = true;
 			path = "${config.xdg.configHome}/zsh/history";
 			save = user.shell.history.maxLineCount;
-			# TODO: Determine what I want this to be.
 			share = false;
 			size = user.shell.history.maxLineCount;
 		};
