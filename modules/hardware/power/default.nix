@@ -1,4 +1,8 @@
-{ ... }: {
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [
+    powertop
+  ];
+
   powerManagement = {
     # Set CPU minimum and maximum frequency.
     #   Note(s):
