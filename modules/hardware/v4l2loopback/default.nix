@@ -20,8 +20,10 @@
 		];
 
     # Set initial kernel module settings.
+    # Note(s):
+    #   - Set video card number to 2 or higher to avoid conflicting with existing cameras.
     extraModprobeConfig = ''
-      options v4l2loopback video_nr=2 exclusive_caps=1 card_label=v4l2loopback
+      options v4l2loopback video_nr=3 exclusive_caps=1 card_label=v4l2loopback
     '';
 	};
 }
