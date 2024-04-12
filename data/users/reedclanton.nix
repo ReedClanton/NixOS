@@ -18,6 +18,7 @@
 			eixt = "exit";
       f = "fzf";
 			g = "c;git branch -a;git status";
+      gg = "c;git branch;git status";
 			gF = "git fetch --all -ftp";
 			# TODO: Configure color in grep directly.
 			grep = "grep --color=auto";
