@@ -13,6 +13,8 @@ in {
 		./modules/sops
     # GUI user setup.
     (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../do-nothing.nix))
+    # Host specific user setup.
+    (if builtins.pathExists ./hosts/default.nix then ./hosts else ../../do-nothing.nix)
 	];
 
 	users = {
