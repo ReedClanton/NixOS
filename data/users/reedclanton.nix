@@ -25,7 +25,7 @@
 			# TODO: Configure color in grep directly.
 			grep = "grep --color=auto";
 			h = "clear;neofetch;pwd;ls -GAp";
-			history = "history|bat";
+			history = "history --show-all --force-colorization|bat";
 			# TODO: Configure color in ip directly.
 			ip = "ip --color=auto";
 			n = "nvim";
@@ -39,7 +39,6 @@
 		history = {
 			ignore = [
         " *"
-				"btop"
 				"c"
 				"clear;neofetch;pwd;ls -GAp"
 				"eixt"
