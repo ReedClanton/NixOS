@@ -1,7 +1,6 @@
 { lib, hostName, ... }: {
 	imports = [
-    # TODO: update path to include hardware directory.
-		../../../../../modules/networking
+		../../../../../modules/hardware/networking
 	];
 
 	networking = {
