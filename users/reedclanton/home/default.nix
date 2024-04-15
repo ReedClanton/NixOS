@@ -1,11 +1,16 @@
 { config, host, ui, user, ... }: {
 	imports = [
-    ./hosts/${host}
-    (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../../do-nothing.nix))
+    # Hardware setup.
+    (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../../do-nothing.nix)
+    # User setup.
     (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../../do-nothing.nix)
     (if builtins.pathExists ./modules/applications/tty/programs/default.nix then ./modules/applications/tty/programs else ../../../do-nothing.nix)
-#		./modules/sops
+    (if builtins.pathExists ./modules/sops/default.nix then ./modules/sops else ../../../do-nothing.nix)
 		./modules/xdg
+    # GUI setup.
+    (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../../do-nothing.nix))
+    # Host setup.
+    (if builtins.pathExists ./hosts/default.nix then ./hosts else ../../../do-nothing.nix)
 	];
 
 	home = {

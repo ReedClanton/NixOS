@@ -1,6 +1,6 @@
 { lib, hostName, ... }: {
 	imports = [
-		../../../../modules/networking
+		../../../../../modules/hardware/networking
 	];
 
 	networking = {
