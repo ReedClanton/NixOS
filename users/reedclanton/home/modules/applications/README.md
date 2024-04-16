@@ -14,6 +14,9 @@ Installs all applications. This includes both TTY and GUI applications, so this 
 
 Import file to install all Home Manager installed application(s).
 
+### Rule(s) & Guideline(s)
+
+- File *shale* only import other file(s) and not configure anything itself.
 
 ## [`gui/`](./gui/README.md)
 
