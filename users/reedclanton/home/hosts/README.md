@@ -1,6 +1,6 @@
 # User's Host Specific Home Manager Configuration
 
-Contains all of this user's, host specific, Home Manager `nix` configuration.
+Contains all of this user's, host specific, Home Manager `nix` configuration. This means that if a `nix` expression would apply to all hosts, then it won't be found here. 
 
 ## Usage
 
@@ -8,23 +8,20 @@ Contains one directory for each host user would like to have Home Manager config
 
 ## Rule(s) & Guideline(s)
 
-- `defalut.nix` is the entry point and thus is the only file that may be directly called from an external directory.
-- Each directory name must be one of the following:
-   - Named after a host:
-      - Contents shale be host specific Home Manager configuration desired by user.
-   - [`config`](./config/README.md) (may not exist).
-   - [`data`](./data/README.md) (may not exist).
+- `defalut.nix` is the entry point and thus is the only file that may be directly called from a parent directory.
+- Each directory not listed in [Content(s)](#contents) must be named after a host:
+   - Contents shale be host specific Home Manager configuration user would like run when on a host of that name.
 - No other files or directories other than the one(s) listed here, and this file, shale exist.
 
 # Content(s)
 
 ## `default.nix`
 
-File that handles running this user's Home Manager host specific configuration.
+File that handles running this user's Home Manager host specific configuration. Provided parameter(s), like `host`, are used to run `nix` file(s) associated with the current host.
 
 ### Purpose
 
-Handles importing, and only importing, of any host specific Home Manager configuration. In other words, this file configures Home Manager by importing files rather than containing `nix` syntax itself.
+Handles importing, and only importing, of any host specific Home Manager configuration.
 
 ### Usage
 
@@ -37,7 +34,7 @@ Argument(s) passed to this file are used to search for and find imported file(s)
 - May *only* import `nix` files:
    - May *not* contain `nix` configuration.
 - *All* import(s) *must* be optional:
-   - If one doesn't exist, ignore it.
+   - If an import doesn't exist, it's ignored.
 
 ## `<host>/`
 
