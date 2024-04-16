@@ -1,6 +1,6 @@
 # User's Home Manager GUI Package(s)
 
-Contains all GUI application(s) user would like installed by Home Manger.
+Contains all GUI package(s) (`home.packages`) user would like installed by Home Manger.
 
 ## Purpose
 
@@ -8,7 +8,7 @@ Groups all GUI package(s) together. Doing so allows for greater control over wha
 
 ## Usage
 
-Call `default.nix` to install all packages, or call only the package(s) desired.
+Call `default.nix` to install all package(s), or install only the desired ones by calling specific file(s).
 
 ## Rule(s) & Guideline(s)
 
@@ -21,7 +21,7 @@ Call `default.nix` to install all packages, or call only the package(s) desired.
 
 ### Purpose
 
-Installs all package(s) in contained in `nix` files in currently directory via Home Manager.
+Installs all package(s) contained in `nix` files in currently directory via Home Manager.
 
 ### Usage
 
