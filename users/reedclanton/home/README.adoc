@@ -27,7 +27,8 @@ TODO
 
 ## [`config/`](./config/README.md)
 
-include::test.adoc[]
+[source]
+include::test.adoc[lines=1..]
 
 ## `hosts/`
 
