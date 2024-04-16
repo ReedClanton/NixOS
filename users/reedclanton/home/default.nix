@@ -3,8 +3,7 @@
     # Hardware setup.
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../../do-nothing.nix)
     # User setup.
-    (if builtins.pathExists ./modules/applications/tty/packages/default.nix then ./modules/applications/tty/packages else ../../../do-nothing.nix)
-    (if builtins.pathExists ./modules/applications/tty/programs/default.nix then ./modules/applications/tty/programs else ../../../do-nothing.nix)
+    (if builtins.pathExists ./modules/applications/tty/default.nix then ./modules/applications/tty else ../../../do-nothing.nix)
     (if builtins.pathExists ./modules/sops/default.nix then ./modules/sops else ../../../do-nothing.nix)
 		./modules/xdg
     # GUI setup.
