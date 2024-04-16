@@ -1,3 +1,5 @@
+:toc:
+
 # Home Manager Configuration
 
 All `nix` files in this directory are run by Home Manager.
@@ -24,7 +26,7 @@ TODO
 
 # [`config/`](./config/README.md)
 
-TODO
+include::test.md[]
 
 # `hosts/`
 
