@@ -6,7 +6,7 @@ Contains all of this user's, host specific, Home Manager `nix` configuration.
 
 Contains one directory for each host user would like to have Home Manager configuration run for.
 
-## Rule(s) & Guidelines
+## Rule(s) & Guideline(s)
 
 - `defalut.nix` is the entry point and thus is the only file that may be directly called from an external directory.
 - Each directory name must be one of the following:

@@ -10,7 +10,7 @@ Contains all data and `nix` needed to fully configure Home Manager for the user.
 
 `default.nix` is called with all parameters needed provided.
 
-## Rule(s) & Guidelines
+## Rule(s) & Guideline(s)
 
 - `default.nix` is the entry point and thus is the only file that may be directly called from an external directory.
 
@@ -31,7 +31,7 @@ Is in charge of:
 
 Ensure the argument(s) declared at the top are available. Then call with Home Manager to kick off user's Home Manager configuration.
 
-### Rules & Guidelines
+### Rule(s) & Guideline(s)
 
 - This is to be the only file in this directory, or any child directory, that's directly called from outside this directory.
 - File should only import other file(s) and set basic Home Manager setting(s):
