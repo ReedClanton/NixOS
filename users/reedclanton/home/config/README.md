@@ -1,10 +1,10 @@
 # Purpose
 
-Organizes configuration files.
+Organizes configuration file(s) used by this user's Home Manager configuration.
 
 # Usage
 
-Contains *only* directories. Each directory's name must correspond with an application or module run by Home Manager via `../default.nix`. Contents of each directory may be any type of configuration file, however, `nix` files and non-configuration data are *not* allowed.
+Contains *only* directories. Each directory's name must correspond with an application or module run by Home Manager. Contents of each directory may be any type of configuration file, however, `nix` files and non-configuration data are *not* allowed.
 
 # Rule(s) & Guideline(s)
 
