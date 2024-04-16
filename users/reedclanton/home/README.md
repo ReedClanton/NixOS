@@ -29,9 +29,9 @@ Stores non `nix` configuration file(s) for programs installed by Home Manager. S
 
 # [`hosts/`](./hosts/README.md)
 
-See linked document for more.
+Stores Home Manager configurations that are host specific. See section title link for more.
 
 # [`modules/`](./modules/README.md)
 
-See linked document for more.
+Stores user's Home Manager `nix` files. See section title link for more.
 
