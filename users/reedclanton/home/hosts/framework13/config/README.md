@@ -11,8 +11,7 @@ Contains *only* directories. Each directory's name must correspond with an appli
 - May contain only directories named after the program that's installed by Home Manager.
 - The `README.md` is the only non-directory file allowed in this directory.
 - No `nix` files may be stored here.
-- No non-configuration data may be stored here.
-- No host independent configuration file(s) are allowed.
+- All types of configuration files are allowed.
 - No non-configuration data may be stored here.
 - No host independent configuration file(s) are allowed.
 
