@@ -4,21 +4,24 @@ All `nix` files in this directory are run by Home Manager.
 
 ## Purpose
 
-Contains all data and `nix` needed to fully configure Home Manager for the user. May be run independent of NixOS.
+Contains all data, configuration, and `nix` file(s) needed to fully configure Home Manager for this user. May be run independent of NixOS.
 
 ## Usage
 
-`default.nix` is called with all parameters needed provided.
+Home Manager configuration has been broken out into this directory so it may be removed or used independently of NixOS.
 
 ## Rule(s) & Guideline(s)
 
-- `default.nix` is the entry point and thus is the only file that may be directly called from an external directory.
+- `default.nix` is the entry point and thus is the only file that may be directly called from an external directory:
+   - Must be called from within a Home Manager context (i.e. Home Manager isn't imported).
+- No other file may be called from any file that exists outside of this directory.
+- No file or directory that's not documented in this README may be added to this directory (other than this README).
 
 # Content(s)
 
 ## `default.nix`
 
-File that brings together this user's Home Manager configuration. When in doubt as to what Home Manager files are being run, start here.
+File that's in charge of building this user's Home Manager configuration. When in doubt as to what Home Manager files are being run, start here.
 
 ### Purpose
 
@@ -29,7 +32,7 @@ Is in charge of:
 
 ### Usage
 
-Ensure the argument(s) declared at the top are available. Then call with Home Manager to kick off user's Home Manager configuration.
+Ensure the argument(s) declared at the top are available. Then call from within a Home Manager context (i.e. Home Manager isn't imported) to kick off user's Home Manager configuration.
 
 ### Rule(s) & Guideline(s)
 
@@ -40,6 +43,10 @@ Ensure the argument(s) declared at the top are available. Then call with Home Ma
 ## [`config/`](./config/README.md)
 
 Stores non `nix` configuration file(s) for programs installed by Home Manager. See section title link for more.
+
+## [`data/`](./data/README.md) (may not exist)
+
+Stores files that aren't `nix` or application configuration files. See section title link for more.
 
 ## [`hosts/`](./hosts/README.md)
 
