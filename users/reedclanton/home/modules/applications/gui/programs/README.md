@@ -12,7 +12,6 @@ Call `default.nix` to install all program(s), or install only the desired ones b
 
 ## Rule(s) & Guideline(s)
 
-- May only contain `nix` file(s).
 - May only contain `nix` file(s) that install and configure a program via Home Manager.
 
 # Content(s)

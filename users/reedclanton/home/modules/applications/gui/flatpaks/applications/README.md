@@ -1,10 +1,10 @@
-# User's Home Manager GUI Package(s)
+# User's Home Manager Flatpak Package(s)
 
-Contains all GUI package(s) (`home.packages`) user would like installed by Home Manger.
+Contains all flatpak package(s) user would like installed by Home Manger.
 
 ## Purpose
 
-Groups all GUI package(s) together. Doing so allows for greater control over what is and isn't installed.
+Groups all flatpak package(s) together. Doing so allows for greater control over what is and isn't installed.
 
 ## Usage
 
