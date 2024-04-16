@@ -41,17 +41,5 @@ Argument(s) passed to this file are used to search for and find imported file(s)
 
 ## `<host>/`
 
-TODO
-
-### Purpose
-
-TODO
-
-### Usage
-
-TODO
-
-### Rules & Guidelines
-
-TODO
+Contents is subject to frequent change. For more information about a particular host, take a look at it's `README.md`.
 
