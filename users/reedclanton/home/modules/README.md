@@ -14,8 +14,10 @@ Contains *only* directories. Each directory's name must correspond with a module
 
 - May *only* contain directories.
 - *All* directories must be the name of a module (ex. `xdg`) or module group (ex. `hardware`).
-- `./<moduleName>/default.nix` is presumed to exist.
-- Additional `default.nix` files that select for a subset may exist in child directories.
+- `./<moduleName>/default.nix` is presumed to exist:
+   - This file shale run all module configuration when possible.
+- Additional `default.nix` files that select for a subset may exist in child directories:
+   - This files may be the primary files called in lieu of the root `default.nix`.
 
 # Content(s)
 
