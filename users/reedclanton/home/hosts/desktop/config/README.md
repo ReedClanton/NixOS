@@ -1,6 +1,6 @@
 # Purpose
 
-Organizes configuration file(s) used by this user's Home Manager configuration.
+Organizes configuration file(s) needed by `nix` node in `../modules/`.
 
 # Usage
 
@@ -12,4 +12,5 @@ Contains *only* directories. Each directory's name must correspond with an appli
 - The `README.md` is the only non-directory file allowed in this directory.
 - No `nix` files may be stored here.
 - No non-configuration data may be stored here.
+- No host independent configuration file(s) are allowed.
 
