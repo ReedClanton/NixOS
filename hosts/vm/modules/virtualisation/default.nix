@@ -1,6 +1,6 @@
 { lib, user, ... }: {
   imports = [
-    ../../../../modules/virtualisation
+    ../../../../modules/nixos/virtualisation
   ];
 
   # Setup shared folder.

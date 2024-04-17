@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-	imports = [ ../../../../../modules/hardware/gpu ];
+	imports = [ ../../../../../modules/nixos/hardware/gpu ];
 
 	boot = {
 		initrd.kernelModules = [ "amdgpu" ];

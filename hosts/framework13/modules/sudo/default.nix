@@ -1,6 +1,6 @@
 { user, ... }: {
 	imports = [
-		../../../../modules/sudo
+		../../../../modules/nixos/sudo
 	];
 
 	security.sudo.extraRules = [{
