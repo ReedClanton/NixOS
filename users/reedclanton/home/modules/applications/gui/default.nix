@@ -20,6 +20,6 @@ let
 		);
 in {
   # Manually import flatpak setup because `default.nix` files aren't imported by `validFiles`.
-	imports = validFiles ./. ++ [ (if builtins.pathExists ./flatpaks/default.nix then ./flatpaks else ../../../../../../do-nothing.nix) ];
+	imports = validFiles ./. ++ [ (if builtins.pathExists ./flatpaks/default.nix then ./flatpaks else ../../../../../../modules/home-manager/applications/gui/flatpaks) ];
 }
 

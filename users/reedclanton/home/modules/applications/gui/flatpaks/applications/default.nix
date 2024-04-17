@@ -19,6 +19,6 @@ let
 			(files dir)
 		);
 in {
-	imports = validFiles ./.;
+	imports = validFiles ./. ++ [ ../../../../../../../../modules/home-manager/applications/gui/flatpaks/applications ];
 }
 
