@@ -146,3 +146,5 @@ ethernet
 systemd
 networkd
 resizing
+Arduino
+dconf2nix
