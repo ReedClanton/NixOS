@@ -90,7 +90,7 @@
 					## Module(s) ##
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/gnome
+					./modules/nixos/gui/gnome
 				]
 				# Additional Home Manager module(s).
 				[
@@ -106,7 +106,7 @@
 					## Module(s) ##
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/hyprland
+					./modules/nixos/gui/hyprland
 				]
 				# Additional Home Manager module(s).
 				[
@@ -122,7 +122,7 @@
 					## Module(s) ##
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/kde
+					./modules/nixos/gui/kde
 				]
 				# Additional Home Manager module(s).
 				[
@@ -146,7 +146,7 @@
           ## Module(s) ##
           nix-flatpak.nixosModules.nix-flatpak
           ## Configuration ##
-          ./modules/gui/xfce
+          ./modules/nixos/gui/xfce
         ]
         # Additional Home Manager module(s).
         [
@@ -163,7 +163,7 @@
 					nixos-hardware.nixosModules.framework-11th-gen-intel
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/gnome
+					./modules/nixos/gui/gnome
 				]
 				# Additional Home Manager module(s).
 				[
@@ -180,7 +180,7 @@
 					nixos-hardware.nixosModules.framework-11th-gen-intel
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/hyprland
+					./modules/nixos/gui/hyprland
 				]
 				# Additional Home Manager module(s).
 				[
@@ -197,7 +197,7 @@
 					nixos-hardware.nixosModules.framework-11th-gen-intel
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/kde
+					./modules/nixos/gui/kde
 				]
 				# Additional Home Manager module(s).
 				[
@@ -225,7 +225,7 @@
           nixos-hardware.nixosModules.framework-11th-gen-intel
           nix-flatpak.nixosModules.nix-flatpak
           ## Configuration ##
-          ./modules/gui/xfce
+          ./modules/nixos/gui/xfce
         ]
         # Additional Home Manager module(s).
         [
@@ -241,7 +241,7 @@
 					## Module(s) ##
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/gnome
+					./modules/nixos/gui/gnome
 				]
 				# Additional Home Manager module(s).
 				[
@@ -257,7 +257,7 @@
 					## Module(s) ##
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/hyprland
+					./modules/nixos/gui/hyprland
 				]
 				# Additional Home Manager module(s).
 				[
@@ -273,7 +273,7 @@
 					## Module(s) ##
 					nix-flatpak.nixosModules.nix-flatpak
 					## Configuration ##
-					./modules/gui/kde
+					./modules/nixos/gui/kde
 				]
 				# Additional Home Manager module(s).
 				[
@@ -297,7 +297,7 @@
           ## Module(s) ##
           nix-flatpak.nixosModules.nix-flatpak
           ## Configuration ##
-          ./modules/gui/xfce
+          ./modules/nixos/gui/xfce
         ]
         # Additional Home Manager module(s).
         [
