@@ -12,17 +12,24 @@ windows:
     layout: even-horizontal
     panes:
       - focus: true
+      - focus: false
+  - window_name: ./flake.nix
+    layout: even-horizontal
+    panes:
+      - focus: true
         shell_command: nvim flake.nix
-  - window_name: modules/
+  - window_name: modules/home-manager/
     layout: even-horizontal
-    start_directory: "./modules/"
+    start_directory: "./modules/home-manager"
     panes:
       - focus: true
-  - window_name: modules/
+      - focus: false
+  - window_name: modules/nixos/
     layout: even-horizontal
-    start_directory: "./modules/"
+    start_directory: "./modules/nixos/"
     panes:
       - focus: true
+      - focus: false
   - window_name: data/
     layout: even-horizontal
     start_directory: "./data/"
@@ -33,19 +40,23 @@ windows:
     start_directory: "./hosts/"
     panes:
       - focus: true
-  - window_name: hosts/
-    layout: even-horizontal
-    start_directory: "./hosts/"
-    panes:
-      - focus: true
+      - focus: false
   - window_name: users/reedclanton/
     layout: even-horizontal
     start_directory: "./users/reedclanton/"
     panes:
       - focus: true
+      - focus: false
   - window_name: users/reedclanton/home/
     layout: even-horizontal
     start_directory: "./users/reedclanton/home/"
     panes:
       - focus: true
+      - focus: false
+  - window_name: users/reedclanton/home/
+    layout: even-horizontal
+    start_directory: "./users/reedclanton/home/"
+    panes:
+      - focus: true
+      - focus: false
 
