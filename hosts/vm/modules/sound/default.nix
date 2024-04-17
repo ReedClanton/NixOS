@@ -1,5 +1,5 @@
 { lib, ... }: {
-	imports = [ ../../../../modules/sound ];
+	imports = [ ../../../../modules/nixos/sound ];
 
 	# Enable sound with pipewire.
 	sound.enable = lib.mkForce false;

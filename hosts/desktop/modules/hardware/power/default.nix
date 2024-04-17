@@ -1,5 +1,5 @@
 { lib, ... }: {
-  imports = [ ../../../../../modules/hardware/power ];
+  imports = [ ../../../../../modules/nixos/hardware/power ];
 
   powerManagement = {
 #    cpufreq = {

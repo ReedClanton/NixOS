@@ -1,6 +1,6 @@
 { lib, pkgs, ... }: {
 	imports = [
-		../../../../modules/boot/efi-systemd.nix
+		../../../../modules/nixos/boot/efi-systemd.nix
 	];
 
 	boot = {

@@ -1,5 +1,5 @@
 { lib, pkgs, user, ... }: {
-  imports = [ ../../../../../modules/hardware/gpu ];
+  imports = [ ../../../../../modules/nixos/hardware/gpu ];
   
 	programs.corectrl = {
 		enable = lib.mkForce false;
