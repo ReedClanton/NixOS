@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, sops-nix, user, ... }: {
+{ config, pkgs, user, ... }: {
 	environment.systemPackages = with pkgs; [ sops ];
 
 	sops = {
