@@ -1,5 +1,8 @@
-{ lib, ... }: {
-  imports = [ ../../../../../modules/nixos/hardware/power ];
+{# Note(s):
+#   - Other power management tools, like tlp, may overwrite these settings.
+
+ lib, ... }: {
+  imports = [ ../../../../../../modules/nixos/hardware/power ];
 
   powerManagement = {
 #    cpufreq = {
