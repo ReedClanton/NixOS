@@ -1,4 +1,9 @@
 { pkgs, ... }: {
+  imports = [
+    # Power usage measuring tool.
+    ../powerstat.nix
+  ];
+
   environment.systemPackages = with pkgs; [
     powertop
   ];

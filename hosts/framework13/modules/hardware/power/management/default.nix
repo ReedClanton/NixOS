@@ -2,7 +2,7 @@
 #   - Other power management tools, like tlp, may overwrite these settings.
 
  lib, ... }: {
-  imports = [ ../../../../../../modules/nixos/hardware/power ];
+  imports = [ ../../../../../../modules/nixos/hardware/power/management ];
 
   powerManagement = {
 #    cpufreq = {
