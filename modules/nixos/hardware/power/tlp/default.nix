@@ -51,9 +51,6 @@
 #      CPU_SCALING_MIN_FREQ_ON_BAT = 400000;
 
       # AMD/Intel.
-      # Note(s):
-      #   - Must be set by host.
-      #   - These defaults are for a Framework 13 11th generation.
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
