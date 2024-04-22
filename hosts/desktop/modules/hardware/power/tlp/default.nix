@@ -10,10 +10,7 @@
 
     ## GPU/Graphics ##
     # AMD ATI (Legacy)
-    # TODO(s):
-    #   - Test on desktop.
-    #   - Choose desktop values.
-#    RADEON_POWER_PROFILE_ON_AC = "high";
+    RADEON_POWER_PROFILE_ON_AC = "high";
 
     ## Memory/RAM/Sleep ##
     # NoOp
