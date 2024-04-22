@@ -1,13 +1,7 @@
-{ lib, ... }: {
-  imports = [ ../../../../../modules/nixos/hardware/power ];
-
-  powerManagement = {
-#    cpufreq = {
-#      min = 800000;
-#      max = 2200000;
-#    };
-    cpuFreqGovernor = lib.mkForce "powersave";
-    powertop.enable = lib.mkForce true;
-  };
+{ ... }: {
+  imports = [
+    (if builtins.pathExists ./management/default.nix then ./management else ../../../../../modules/nixos/hardware/power/management)
+    (if builtins.pathExists ./tlp/default.nix then ./tlp else ../../../../../modules/nixos/hardware/power/tlp)
+  ];
 }
 
