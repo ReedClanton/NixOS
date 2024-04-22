@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ lib, pkgs, ... }: {
   imports = [
     # Power usage measuring tool.
     ../powerstat.nix
@@ -41,49 +41,26 @@
       CPU_MIN_PERF_ON_BAT = 1;
 
       # AMD/Intel.
-      # Note(s):
-      #   - Must be set by host.
-      #   - Use output of `tlp-stat -p` to determine values.
-      #   - `CPU_DRIVER_OPMODE_ON_AC/BAT` must *not* be `active`.
-#      CPU_SCALING_MAX_FREQ_ON_AC = 4700000;
-#      CPU_SCALING_MAX_FREQ_ON_BAT = 2550000;
-#      CPU_SCALING_MIN_FREQ_ON_AC = 2550000;
-#      CPU_SCALING_MIN_FREQ_ON_BAT = 400000;
-
-      # AMD/Intel.
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
 
       ## GPU/Graphics ##
-      # Intel.
-      # Note(s):
-      #   - Must be set by host (when relevant).
-      #   - Use output of `tlp-stat -g` to determine values.
-#      INTEL_GPU_BOOST_FREQ_ON_AC = 1300;
-#      INTEL_GPU_BOOST_FREQ_ON_BAT = 1000;
-#      INTEL_GPU_MAX_FREQ_ON_AC = 1300;
-#      INTEL_GPU_MAX_FREQ_ON_BAT = 800;
-#      INTEL_GPU_MIN_FREQ_ON_AC = 200;
-#      INTEL_GPU_MIN_FREQ_ON_BAT = 100;
-
       # AMD ATI (Legacy)
       # Note(s):
       #   - Must be set by host (when relevant).
       # TODO(s):
       #   - Test on desktop.
       #   - Choose desktop values.
+      #   - Remove from this file.
 #      RADEON_POWER_PROFILE_ON_AC = "high";
 #      RADEON_POWER_PROFILE_ON_BAT = "auto";
 
       ## Memory/RAM/Sleep ##
       # TODO:
-      #   - Test on Framwork
-      #   - Choose Framework default
       #   - Test on desktop.
       #   - Choose desktop default.
-      #   - Choose default for here.
-#      MEM_SLEEP_ON_AC = "s2idle";
-#      MEM_SLEEP_ON_BAT = "deep";
+      MEM_SLEEP_ON_AC = "s2idle";
+      MEM_SLEEP_ON_BAT = "deep";
 
       ## Platform ##
       PLATFORM_PROFILE_ON_AC = "performance";
@@ -96,12 +73,12 @@
 
       ## Battery ##
       # Note(s):
-      #   - Must be set by host.
+      #   - Must be set by host (when relevant/supported).
       #   - Not supported on all, or even most, hardware.
       # Start charging once bellow this.
-#      START_CHARGE_THRESH_BAT0 = 60;
+      START_CHARGE_THRESH_BAT0 = 60;
       # Stop charging once above this.
-#      STOP_CHARGE_THRESH_BAT0 = 80;
+      STOP_CHARGE_THRESH_BAT0 = 80;
     };
   };
 }

@@ -15,6 +15,8 @@
 
     ## GPU/Graphics ##
     # Intel.
+    # Note(s):
+    #   - Use output of `tlp-stat -g` to determine values.
     INTEL_GPU_BOOST_FREQ_ON_AC = 1300;
     INTEL_GPU_BOOST_FREQ_ON_BAT = 1000;
     INTEL_GPU_MAX_FREQ_ON_AC = 1300;
@@ -23,14 +25,7 @@
     INTEL_GPU_MIN_FREQ_ON_BAT = 100;
 
     ## Memory/RAM/Sleep ##
-    # TODO:
-    #   - Test on Framwork
-    #   - Choose Framework default
-    #   - Test on desktop.
-    #   - Choose desktop default.
-    #   - Choose default for here.
-#    MEM_SLEEP_ON_AC = "s2idle";
-#    MEM_SLEEP_ON_BAT = "deep";
+    # NoOp
 
     ## Platform ##
     # NoOp
@@ -39,12 +34,7 @@
     # NoOp
 
     ## Battery ##
-    # Note(s):
-    #   - Not supported on Framework 13.
-    # Start charging once bellow this.
-#    START_CHARGE_THRESH_BAT0 = 60;
-    # Stop charging once above this.
-#    STOP_CHARGE_THRESH_BAT0 = 80;
+    # NoOp
   };
 }
 
