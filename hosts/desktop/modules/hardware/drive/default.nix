@@ -199,7 +199,7 @@
       let
         first-partition-name = "bk-usb-ssd";
       in {
-        "${first-parition-name}" =
+        "${first-partition-name}" =
         let
           label-name = "${host}-${first-partition-name}";
         in {
