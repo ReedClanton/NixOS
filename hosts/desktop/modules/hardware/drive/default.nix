@@ -1,4 +1,4 @@
-{ host, inputs, lib, pkgs, ... }: {
+{ host, inputs, lib, pkgs, user, ... }: {
   imports = [
     inputs.disko.nixosModules.disko
   ];
