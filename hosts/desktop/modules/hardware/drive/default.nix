@@ -122,7 +122,7 @@
               format = "ext4";
               # Not critical to system boot so don't allow boot halt.
               mountOptions = [ "nofail" ];
-              mountpoint = "/mnt/${label-name}";
+              mountpoint = "/run/media/${user.name}/${label-name}";
             };
           };
         };
@@ -154,7 +154,7 @@
               format = "ext4";
               # Not critical to system boot so don't allow boot halt.
               mountOptions = [ "nofail" ];
-              mountpoint = "/mnt/${label-name}";
+              mountpoint = "/run/media/${user.name}/${label-name}";
             };
           };
         };
@@ -183,7 +183,7 @@
             format = "ext4";
             # Not critical to system boot so don't allow boot halt.
             mountOptions = [ "nofail" ];
-            mountpoint = "/mnt/${label-name}";
+            mountpoint = "/run/media/${user.name}/${label-name}";
           };
         };
       };
@@ -215,7 +215,7 @@
               format = "ext4";
               # Not critical to system boot so don't allow boot halt.
               mountOptions = [ "nofail" ];
-              mountpoint = "/mnt/${label-name}";
+              mountpoint = "/run/media/${user.name}/${label-name}";
             };
           };
         };
