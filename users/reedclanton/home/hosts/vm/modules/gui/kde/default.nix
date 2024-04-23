@@ -12,8 +12,6 @@
     ../../../../../modules/applications/gui/packages/gedit.nix
     # Install some program(s).
     ../../../../../modules/applications/gui/programs/firefox.nix
-    # Host specific VE configuration.
-    (if builtins.pathExists ./dconf/default.nix then ./dconf else ../../../../../../../../do-nothing.nix)
   ];
 }
 

@@ -15,11 +15,10 @@ let
 	validFiles = dir: map
 		(file: ./. + "/${file}")
 		(filter
-			(file: hasSuffix ".nix" file && ! hasSuffix "default.nix" file)
+			(file: hasSuffix ".nix" file && file != "default.nix")
 			(files dir)
 		);
 in {
-  # Manually import flatpak setup because `default.nix` files aren't imported by `validFiles`.
-	imports = validFiles ./. ++ [ (if builtins.pathExists ./flatpaks/default.nix then ./flatpaks else ../../../../../../modules/home-manager/applications/gui/flatpaks) ];
+	imports = validFiles ./.;
 }
 
