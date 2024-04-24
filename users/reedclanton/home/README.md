@@ -1,6 +1,6 @@
 # Home Manager Configuration
 
-All `nix` files in this directory are run by Home Manager.
+All `nix` files in this directory are run by Home Manager. All other files are utilized in some way by those `nix` file(s).
 
 ## Purpose
 
@@ -12,8 +12,7 @@ Home Manager configuration has been broken out into this directory so it may be 
 
 ## Rule(s) & Guideline(s)
 
-- `default.nix` is the entry point and thus is the only file that may be directly called from an external directory:
-   - Must be called from within a Home Manager context (i.e. Home Manager isn't imported).
+- `default.nix` is the entry point to this Home Manager configuration.
 - No other file may be called from any file that exists outside of this directory.
 - No file or directory that's not documented in this README may be added to this directory (other than this README).
 
@@ -32,11 +31,12 @@ Is in charge of:
 
 ### Usage
 
-Ensure the argument(s) declared at the top are available. Then call from within a Home Manager context (i.e. Home Manager isn't imported) to kick off user's Home Manager configuration.
+Ensure the argument(s) declared at the top are available. Then call from within a Home Manager context (i.e. Home Manager already exists within calling scope) to kick off user's Home Manager configuration.
 
 ### Rule(s) & Guideline(s)
 
 - This is to be the only file in this directory, or any child directory, that's directly called from outside this directory.
+- Must be called from within a Home Manager context (i.e. Home Manager isn't imported, thus it be already exist in the calling scope).
 - File should only import other file(s) and set basic Home Manager setting(s):
    - A good rule of thumb here is that `home.<thing>` may be set, but `home.<thing>.<thing2>` should probably be broken out into a module.
 
