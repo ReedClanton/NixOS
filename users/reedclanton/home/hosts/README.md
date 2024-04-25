@@ -8,9 +8,9 @@ Contains one directory for each host user would like to have Home Manager config
 
 ## Rule(s) & Guideline(s)
 
-- `defalut.nix` is the entry point and thus is the only file that may be directly called from a parent directory.
+- This is to be the only file in this directory, or any child directory, that's directly called from outside this directory.
 - Each directory not listed in [Content(s)](#contents) must be named after a host:
-   - Contents shale be host specific Home Manager configuration user would like run when on a host of that name.
+   - Contents shale be host specific Home Manager configuration user would like run when on a host named after the directory name.
 - No other files or directories other than the one(s) listed here, and this file, shale exist.
 
 # Content(s)
@@ -31,6 +31,7 @@ Argument(s) passed to this file are used to search for and find imported file(s)
 
 ### Rules & Guidelines
 
+- This is to be the only file in this directory, or any child directory, that's directly called from outside this directory.
 - May *only* import `nix` files:
    - May *not* contain `nix` configuration.
 - *All* import(s) *must* be optional:

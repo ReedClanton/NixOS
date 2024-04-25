@@ -1,4 +1,4 @@
-{ host, inputs, lib, pkgs, ... }: {
+{ host, inputs, lib, pkgs, user, ... }: {
   imports = [
     inputs.disko.nixosModules.disko
   ];
@@ -114,11 +114,16 @@
           start = "1M";
           label = "${label-name}";
           content = {
-            type = "filesystem";
-            format = "ext4";
-            # Not critical to system boot so don't allow boot halt.
-            mountOptions = [ "nofail" ];
-            mountpoint = "/mnt/${label-name}";
+            type = "luks";
+            name = "${label-name}";
+            settings.allowDiscards = true;
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              # Not critical to system boot so don't allow boot halt.
+              mountOptions = [ "nofail" ];
+              mountpoint = "/run/media/${user.name}/${label-name}";
+            };
           };
         };
       };
@@ -141,11 +146,16 @@
           start = "1M";
           label = "${label-name}";
           content = {
-            type = "filesystem";
-            format = "ext4";
-            # Not critical to system boot so don't allow boot halt.
-            mountOptions = [ "nofail" ];
-            mountpoint = "/mnt/${label-name}";
+            type = "luks";
+            name = "${label-name}";
+            settings.allowDiscards = true;
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              # Not critical to system boot so don't allow boot halt.
+              mountOptions = [ "nofail" ];
+              mountpoint = "/run/media/${user.name}/${label-name}";
+            };
           };
         };
       };
@@ -173,14 +183,44 @@
             format = "ext4";
             # Not critical to system boot so don't allow boot halt.
             mountOptions = [ "nofail" ];
-            mountpoint = "/mnt/${label-name}";
+            mountpoint = "/run/media/${user.name}/${label-name}";
           };
         };
       };
     };
   };
-
-  # Used to configure software RAID.
-  environment.systemPackages = with pkgs; [ mdadm ];
+  # External USB backup SSD.
+  disko.devices.disk.six = {
+    type = "disk";
+    device = "/dev/disk/by-id/usb-XG7000-1_TB_2280_012345678906-0:0";
+    content = {
+      type = "gpt";
+      partitions =
+      let
+        first-partition-name = "bk-usb-ssd";
+      in {
+        "${first-partition-name}" =
+        let
+          label-name = "${host}-${first-partition-name}";
+        in {
+          size = "100%";
+          start = "1M";
+          label = "${label-name}";
+          content = {
+            type = "luks";
+            name = "${label-name}";
+            settings.allowDiscards = true;
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              # Not critical to system boot so don't allow boot halt.
+              mountOptions = [ "nofail" ];
+              mountpoint = "/run/media/${user.name}/${label-name}";
+            };
+          };
+        };
+      };
+    };
+  };
 }
 

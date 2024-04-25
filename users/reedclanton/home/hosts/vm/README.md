@@ -10,10 +10,11 @@ Tracks all Home Manager configuration that's specific to this host. Any configur
 
 ## Usage
 
-Contents is run by `../default.nix` rather than.
+Contents is run by `../default.nix` rather than this directory containing a `default.nix`. This was done because each host is normally very similar, thus this reduces duplicated code.
 
 ## Rule(s) & Guideline(s)
 
+- *Will* be called from an external, parent, directory.
 - May *only* contain host specific Home Manager configuration.
 - May *not* contain any NixOS (non Home Manager) or host independent configuration.
 
