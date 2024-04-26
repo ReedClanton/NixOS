@@ -6,7 +6,7 @@
   # Setup shared folder.
 	fileSystems."/vmshare" = {
 		fsType = "vboxsf";
-		device = "Shared";
+		device = "Share";
 		options = [ "rw" "nofail" ];
 	};
 
