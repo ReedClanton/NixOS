@@ -123,10 +123,10 @@
 			# Note: Line text set in plugin config.
 			set-option -g status 5
 			set-option -g status-right-length '95'
-			set-option -g status-right '#{forecast} |#{cpu_bg_color} #{cpu_percentage} #[default]|#{cpu_temp_bg_color} #{cpu_temp} #[default]|#{ram_bg_color} #{ram_percentage} #[default]|#{online_status}#[default]|'
+			set-option -g status-right '#{forecast} |#{cpu_bg_color} #{cpu_percentage} #[default]|#{ram_bg_color} #{ram_percentage} #[default]|#{online_status}#[default]|'
 			
 			## Second Line ##
-			set-option -g status-format[1]  '#[align=left]| TMUX | Prefix  | Resize Pane  (U,D,L,R) | Rm (Sen,Win,Pane) | Switch Session | Copy Mode | Cp Start/Copy/Ln End/St/Top/Scroll Up/Dn |#[align=right]Weather|^CPU ^|^CPU^|^RAM ^|Internet#[default]|'
+			set-option -g status-format[1]  '#[align=left]| TMUX | Prefix  | Resize Pane  (U,D,L,R) | Rm (Sen,Win,Pane) | Switch Session | Copy Mode | Cp Start/Copy/Ln End/St/Top/Scroll Up/Dn |#[align=right]Weather|^CPU ^|^RAM ^|Internet#[default]|'
 			
 			## Third Line ##
 			set-option -g status-format[2]  '#[align=left]`----> | <ctl>+a | <pf> <ctl>+[y,h,g,j]   | <pf> [m,k,x]      | <pf> s         | <pf> [    | <ctl> + <space>/w/e/a/R/<up>/<down>      |#[align=right]%Y/%m(%B)/%d(%A), %I(%H):%M:%S %p %Z'
