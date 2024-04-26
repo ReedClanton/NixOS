@@ -33,7 +33,6 @@
           label-name = "${host}-${second-partition-name}";
         in {
           size = "100%";
-          start = "1M";
           label = "${label-name}";
           content = {
             type = "filesystem";
