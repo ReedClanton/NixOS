@@ -8,7 +8,7 @@
       urgency.annotations.coefficient = 0;
       urgency.blocked.coefficient = -5;
       urgency.blocking.coefficient = 10;
-      urgency.due.coefficient = 14;
+      urgency.due.coefficient = 14.5;
       urgency.uda.priority.H.coefficient = 8;
       urgency.user.project.Health.coefficient = 4;
       urgency.user.project.Health_Fitness.coefficient = 4;
