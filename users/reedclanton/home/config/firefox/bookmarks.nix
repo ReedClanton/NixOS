@@ -4,6 +4,31 @@
     toolbar = true;
     bookmarks = [
       {
+        name = "BeerDay";
+        bookmarks = [
+          {
+            name = "Proximity Malts";
+            url = "https://proximitymalt.com/proximity-malts/";
+            tags = [ "beer" "beerday" "day" "malt" "malts" ];
+          }
+          {
+            name = "Weyermann Berwing Products";
+            url = "https://www.weyermann.de/en-us/products-2/brewery-2/";
+            tags = [ "beer" "beerday" "day" "grain" "malt" "malts" "wort" ];
+          }
+          {
+            name = "BJCP Style Guidelines";
+            url = "https://www.bjcp.org/bjcp-style-guidelines/";
+            tags = [ "beer" "beerday" "bjcp" "day" "guidelines" "style" ];
+          }
+          {
+            name = "CraftBeer.com - Styles";
+            url = "https://www.craftbeer.com/beer-styles";
+            tags = [ "beer" "beerday" "craft" "day" "style" "styles" ];
+          }
+        ];
+      }
+      {
         name = "Code";
         bookmarks = [
           {
