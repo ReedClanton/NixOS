@@ -24,7 +24,7 @@
 			gF = "git fetch --all -ftp";
 			# TODO: Configure color in grep directly.
 			grep = "grep --color=auto";
-			h = "clear;neofetch;pwd;ls -GAp";
+			h = "clear;fastfetch;pwd;ls -GAp";
 			history = "history --show-all --force-colorization|bat";
 			# TODO: Configure color in ip directly.
 			ip = "ip --color=auto";
@@ -40,7 +40,7 @@
 			ignore = [
         " *"
 				"c"
-				"clear;neofetch;pwd;ls -GAp"
+				"clear;fastfetch;pwd;ls -GAp"
 				"eixt"
 				"exec lynx"
 				"exec lynx -accept_all_cookies"
