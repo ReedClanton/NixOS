@@ -8,12 +8,13 @@ Contains all data, configuration, and `nix` file(s) needed to fully configure Ho
 
 ## Usage
 
-Home Manager configuration has been broken out into this directory so it may be removed or used independently of NixOS.
+Home Manager configuration has been broken out into this directory so it may be removed or used independent of NixOS.
 
 ## Rule(s) & Guideline(s)
 
 - `default.nix` is the entry point to this Home Manager configuration.
-- No other file may be called from any file that exists outside of this directory.
+- The only file(s) that may be called that exist about this directory are common Home Manager modules:
+   - These calls must not prevent successful execution when the external file doesn't exist.
 - No file or directory that's not documented in this README may be added to this directory (other than this README).
 
 # Content(s)
@@ -35,7 +36,7 @@ Ensure the argument(s) declared at the top are available. Then call from within 
 
 ### Rule(s) & Guideline(s)
 
-- This is to be the only file in this directory, or any child directory, that's directly called from outside this directory.
+- This is to be the only file in this directory, or any child directory, that's directly called from an outside (i.e. parent) directory.
 - Must be called from within a Home Manager context (i.e. Home Manager isn't imported, thus it be already exist in the calling scope).
 - File should only import other file(s) and set basic Home Manager setting(s):
    - A good rule of thumb here is that `home.<thing>` may be set, but `home.<thing>.<thing2>` should probably be broken out into a module.
