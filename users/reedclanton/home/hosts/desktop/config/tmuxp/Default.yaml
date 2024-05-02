@@ -7,7 +7,7 @@ windows:
     panes:
       - focus: true
         shell_command:
-          - clear;neofetch;pwd;ls -GAp
+          - clear;fastfetch;pwd;ls -GAp
       - suppress_history: true
         shell_command:
           - btop
