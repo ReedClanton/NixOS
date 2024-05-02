@@ -32,10 +32,7 @@
 		"lm",
         "wm",
         "wmtheme",
-        "theme",
-        "icons",
         "font",
-        "cursor",
         "cpu",
         "gpu",
 		"opengl",
@@ -50,8 +47,7 @@
 		"publicip",
 		"wifi",
 		"bluetooth",
-        "locale",
-        "break",
-        "colors"
+        "break"
+//        "colors"
     ]
 }
