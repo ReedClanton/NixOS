@@ -40,6 +40,14 @@
 
 		file = {
 			".ssh/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to create the directory this file is in, a file must be created in it. Hense the existice of this file.";
+      "${config.xdg.userDirs.templates}".source = ./config/user-files/templates;
+#      "${config.xdg.userDirs.templates}".source = builtins.fetchGit {
+#        name = "Templates";
+#        publicKey = "AAAAC3NzaC1lZDI1NTE5AAAAILQj/QNsm5TfP44w+0A/z/gcGMlkjy9mSv+oD3zS+HA2";
+##        ref = "main";
+#        rev = "5c4f5c981b065d340fffac5123f416ff7f7fe217";
+#        url = "git@github.com:ReedClanton/home-templates.git";
+#      };
 			"${config.xdg.configHome}/sops/age/.keep".text = "Home Manager can only create directories that contain something. Thus in order for Home Manager to create the directory this file is in, a file must be created in it. Hense the existice of this file.";
 		};
 	};
