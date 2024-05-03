@@ -494,14 +494,39 @@
         ];
       }
       {
+        name = "XDG";
+        bookmarks = [
+          {
+            name = "MIME";
+            bookmarks = [
+              {
+                name = "Some Types";
+                url = "https://mimetype.io/all-types";
+                tags = [ "list" "mime" "types" "xdg" ];
+              }
+              {
+                name = "Types Organized";
+                url = "https://www.fileformat.info/info/mimetype/index.htm";
+                tags = [ "mime" "type" "types" "xdg" ];
+              }
+              {
+                name = "Get MIME Type";
+                url = "https://www.baeldung.com/linux/file-mime-types#1-the-xdg-mime-command";
+                tags = [ "mime" "type" "types" "xdg" ];
+              }
+              {
+                name = "All Types";
+                url = "https://www.iana.org/assignments/media-types/media-types.xhtml";
+                tags = [ "mime" "type" "types" "xdg" ];
+              }
+            ];
+          }
+        ];
+      }
+      {
         name = "GHX-UltiPro";
         url = "https://ew21.ultipro.com/Login.aspx?ReturnUrl=%2f";
         tags = [ "ghx" "work" ];
-      }
-      {
-        name = "XDG MIME Types";
-        url = "https://mimetype.io/all-types";
-        tags = [ "list" "mime" "types" "xdg" ];
       }
     ];
   }
