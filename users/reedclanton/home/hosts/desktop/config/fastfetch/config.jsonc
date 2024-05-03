@@ -27,9 +27,7 @@
 		"poweradapter",
         "display",
 		"brightness",
-		"wallpaper",
         "de",
-		"lm",
         "wm",
         "wmtheme",
         "font",
@@ -47,7 +45,7 @@
 		"publicip",
 		"wifi",
 		"bluetooth",
-        "break"
-//        "colors"
+        "break",
+        "colors"
     ]
 }
