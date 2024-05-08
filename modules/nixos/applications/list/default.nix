@@ -1,5 +1,6 @@
 { config, lib, ... }: with lib; {
-  environment.etc."current-system-packages".text =
+  # Generate list of installed package(s).
+  environment.etc."current-system-nixos-packages".text =
   let
     packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
     sortedUnique = builtins.sort builtins.lessThan (unique packages);
