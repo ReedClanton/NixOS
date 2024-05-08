@@ -5,7 +5,7 @@
     programs = builtins.mapAttrs
       (name: value:
         (if name == "bash" || name != "exa" && name != "mako" && (builtins.tryEval (builtins.hasAttr "enable" value && value.enable)).value then
-          "program: ${name}"
+          "${name}"
         else
           ""))
       config.programs;
