@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, user, ... }:
 with lib;
 let
 	# Recursively constructs an attrset of a given folder, recursing on directories, value of attrs is the file type.
@@ -19,6 +19,19 @@ let
 			(files dir)
 		);
 in {
-	imports = validFiles ./.;
+  imports =
+  let
+    # Used in log/warning/error messages.
+    current-file-path = "user/${user.name}/home/modules/applications/tty/packages/default.nix";
+    # Tracks location of global package(s).
+    global-applications = "./../../../../../../../modules/home-manager/applications/tty/packages/default.nix";
+  in validFiles ./. ++ [
+    (
+      if builtins.pathExists (./. + (builtins.substring 1 9999 "${global-applications}")) then
+        ./. + (builtins.substring 1 9999 "${global-applications}")
+      else
+        trivial.warn "${current-file-path}: Common packages (${global-applications}) couldn't be found. Only user specific ones will be installed." ../../../../../../../do-nothing.nix
+    )
+  ];
 }
 
