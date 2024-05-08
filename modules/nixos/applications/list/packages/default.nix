@@ -1,5 +1,5 @@
 { config, lib, ... }: with lib; {
-  # Generate list of installed package(s).
+  # Generate list of NixOS installed package(s).
   environment.etc."nixos-package-list".text =
   let
     packages = builtins.map (p: "${p.name}") config.environment.systemPackages;
