@@ -1,9 +1,31 @@
 { config, lib, ... }: with lib; {
-  # Generate list of installed package(s).
-  home.file."${config.xdg.userDirs.documents}/home-manager-package-list".text =
+  imports =
   let
-    packages = builtins.map (p: "${p.name}") config.home.packages;
-    sortedUnique = builtins.sort builtins.lessThan (unique packages);
-    formatted = builtins.concatStringsSep "\n" sortedUnique;
-  in formatted;
+    # Used in log/warning/error messages.
+    current-file-path = "modules/home-manager/applications/list/default.nix";
+    # Tracks location of file that generates list of flatpak(s) installed.
+    flatpak-list = "./flatpaks/default.nix";
+    # Tracks location of file that generates list of package(s) installed.
+    package-list = "./packages/default.nix";
+  in [
+    # Generate list of installed Home Manager flatpak package(s).
+    (
+      if builtins.pathExists (./. + (builtins.substring 1 9999 "${flatpak-list}")) then
+        ./. + (builtins.substring 1 9999 "${flatpak-list}")
+      else
+        trivial.warn
+          "${current-file-path}: Common Home Manager flatpak package list generation not found (${flatpak-list}), package list won't be generated."
+          ../../../../do-nothing.nix
+    )
+    # Generate list of installed Home Manager package(s).
+    (
+      if builtins.pathExists (./. + (builtins.substring 1 9999 "${package-list}")) then
+        ./. + (builtins.substring 1 9999 "${package-list}")
+      else
+        trivial.warn
+          "${current-file-path}: Common Home Manager package list generation not found (${package-list}), package list won't be generated."
+          ../../../../do-nothing.nix
+    )
+  ];
 }
+

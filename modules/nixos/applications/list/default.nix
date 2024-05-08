@@ -8,13 +8,13 @@
     # Tracks location of file that generates list of package(s) installed.
     package-list = "./packages/default.nix";
   in [
-    # Generate list of installed flatpak package(s).
+    # Generate list of installed NixOS flatpak package(s).
     (
       if builtins.pathExists (./. + (builtins.substring 1 9999 "${flatpak-list}")) then
         ./. + (builtins.substring 1 9999 "${flatpak-list}")
       else
         trivial.warn
-          "${current-file-path}: Common flatpak package list generation not found (${flatpak-list}), package list won't be generated."
+          "${current-file-path}: Common NixOS flatpak package list generation not found (${flatpak-list}), package list won't be generated."
           ../../../../do-nothing.nix
     )
     # Generate list of installed NixOS package(s).
