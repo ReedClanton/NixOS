@@ -14,6 +14,10 @@
 				priority = 450;
 				psk = "@iPhone_13_Pro_psk@";
 			};
+      "Obi-WLAN Kenobi" = {
+        priority = 350;
+        psk = "@obi_wlan_kenobi_psk@";
+      };
 			"Primary" = {
 				priority = 350;
 				psk = "@Primary_psk@";
