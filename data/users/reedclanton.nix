@@ -21,6 +21,8 @@
       gg = "c;git branch;git status";
       gA = "git add";
       "git addd" = "git add";
+      gD = "git diff";
+      "git ddiff" = "git diff";
 			gF = "git fetch --all -ftp";
 			# TODO: Configure color in grep directly.
 			grep = "grep --color=auto";
