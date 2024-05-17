@@ -31,7 +31,7 @@
 
     "org/gnome/desktop/app-folders/folders/754c665e-313f-4980-8b0b-23d76c530d8b" = {
       apps = [ "virtualbox.desktop" "vmware-netcfg.desktop" "vmware-player.desktop" "vmware-workstation.desktop" ];
-      name = "Virtualisation";
+      name = "Virtualization";
       translate = false;
     };
 

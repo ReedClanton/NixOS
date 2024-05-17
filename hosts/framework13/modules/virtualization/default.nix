@@ -14,12 +14,10 @@
       else
         trivial.warn
           "${current-file-path}: Common host virtualization setup not found (${virtualization-setup}), host virtualization won't be configured."
-          ../../../../do-nothing.nix
-      )
+          ../../../../do-nothing.nix)
     else
       # TTY doesn't need host virtualization setup.
-      ../../../../do-nothing.nix
-    )
+      ../../../../do-nothing.nix)
   ];
 }
 
