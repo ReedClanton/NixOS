@@ -14,6 +14,10 @@
 				priority = 450;
 				psk = "@iPhone_13_Pro_psk@";
 			};
+      "ConnectsWorkspace" = {
+        priority = 350;
+        psk = "@connectsworkspace_psk@";
+      };
       "Obi-WLAN Kenobi" = {
         priority = 350;
         psk = "@obi_wlan_kenobi_psk@";
@@ -22,6 +26,26 @@
 				priority = 350;
 				psk = "@Primary_psk@";
 			};
+      "AURUM LIVING" = {
+        priority = 300;
+        psk = "@aurum_living_psk@";
+      };
+      "OYB Guest" = {
+        priority = 300;
+        psk = "@oyb_guest_psk@";
+      };
+      "Incantation - Guest" = {
+        priority = 300;
+        psk = "@incantation_guest_psk@";
+      };
+      "Movement Guest" = {
+        priority = 300;
+        psk = "@movement_guest_psk@";
+      };
+      "MVM Guest" = {
+        priority = 300;
+        psk = "@mvm_guest_psk@";
+      };
 			"Becks Coffee" = {
 				priority = 300;
 				psk = "@Becks_Coffee_psk@";
