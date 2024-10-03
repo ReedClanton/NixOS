@@ -7,7 +7,7 @@
 				enable = true;
 				# Disabled for security. May need to enable for backwards compatibility.
 				editor = false;
-				configurationLimit = 10;
+				configurationLimit = 20;
 			};
 			timeout = 1;
 		};
