@@ -26,7 +26,7 @@
 				priority = 350;
 				psk = "@Primary_psk@";
 			};
-      "AURUM LIVING" = {
+      "Aurum Living" = {
         priority = 300;
         psk = "@aurum_living_psk@";
       };
