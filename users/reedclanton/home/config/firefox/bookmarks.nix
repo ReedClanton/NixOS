@@ -589,6 +589,11 @@
           {
             name = "BGoldeN";
             bookmarks = [
+              {
+                name = "Volunteer Sign Up";
+                url = "https://www.signupgenius.com/go/70a0d4aa5ab2dabfe3-coop#/";
+                tags = [ "bank" "bgolden" "food" "fresh" "genius" "golden" "pantry" "sign" "signupgenius" "up" "volunteer" "volunteers" ];
+              }
             ];
           }
         ];
