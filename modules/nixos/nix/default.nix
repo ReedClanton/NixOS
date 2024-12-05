@@ -20,9 +20,9 @@
 
 		## Garbage Collection ##
 		gc = {
-			automatic = false;
+			automatic = true;
 			dates = "weekly";
-			options = "--delete-older-than 365d";
+			options = "--delete-older-than 183d";
 		};
 	};
 }
