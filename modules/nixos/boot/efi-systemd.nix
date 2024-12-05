@@ -8,7 +8,7 @@
 				enable = true;
 				# Disabled for security. May need to enable for backwards compatibility.
 				editor = false;
-				configurationLimit = 25;
+				configurationLimit = 31;
 			};
 			timeout = 1;
 		};
