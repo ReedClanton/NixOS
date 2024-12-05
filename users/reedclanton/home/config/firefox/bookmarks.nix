@@ -117,6 +117,11 @@
                     url = "https://zaynetro.com/explainix";
                     tags = [ "code" "docs" "explainix" "nix" "syntax" "visual" ];
                   }
+                  {
+                    name = "Linux kernel";
+                    url = "https://nixos.wiki/wiki/Linux_kernel";
+                    tags = [ "available" "code" "doc" "docs" "documentation" "kernel" "linux" "list" "nix" "nixos" "os" "wiki" ];
+                  }
                 ];
               }
               {
