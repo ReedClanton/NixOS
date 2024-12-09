@@ -14,6 +14,10 @@
 				priority = 450;
 				psk = "@iPhone_13_Pro_psk@";
 			};
+      "SpectrumSetup-33" = {
+        priority = 350;
+        psk = "@spectrumsetup_33_psk@";
+      };
       "ConnectsWorkspace" = {
         priority = 350;
         psk = "@connectsworkspace_psk@";
