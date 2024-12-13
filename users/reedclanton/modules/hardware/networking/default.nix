@@ -14,6 +14,12 @@
 				priority = 450;
 				psk = "@iPhone_13_Pro_psk@";
 			};
+      "aainflight.com" = {
+        priority = 350;
+      };
+      "Origin_Guest" = {
+        priority = 350;
+      };
       "SpectrumSetup-33" = {
         priority = 350;
         psk = "@spectrumsetup_33_psk@";
