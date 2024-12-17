@@ -192,3 +192,13 @@ overrideAttrs
 VMware
 x86
 LTS
+softtabstop
+noexpandtab
+spelllang
+usr
+env
+Northstrat
+CACI
+DFARS
+ITAR
+Raytheon
