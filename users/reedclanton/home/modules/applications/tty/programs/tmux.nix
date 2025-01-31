@@ -73,8 +73,11 @@
 			bind-key		k kill-window
 			
 			## Select ##
-			unbind-key		0
+			unbind-key	0
 			bind-key		0 select-window -t :10
+      # Remove binding that removes last text in copy buffer.
+      unbind-key    -
+      bind-key    - select-window -t :11
 			
 			###################
 			## TMUX Plugin(s) ##
@@ -107,7 +110,7 @@
 			# Set cachiing duration in seconds. Default: Caching disabled when not set.
 			set-option -g @forecast-cache-duration 600
 			# Set location. Default: location based on IP address.
-			set-option -g @forecast-location 'Dallas'
+			set-option -g @forecast-location 'Golden'
 			# Configure weather representation. Default: `%C+%t+%w`. For more, see: https://github.com/chubin/wttr.in#one-line-output
 			set-option -g @forecast-format '%l:+%C,+%t,+%h+RH,+%w'\&u
 			# Ensure long forcasts don't message with the rest of the status bar. Default: 75.
@@ -120,7 +123,6 @@
 			####################################
 			
 			## First Line ##
-			# Note: Line text set in plugin config.
 			set-option -g status 5
 			set-option -g status-right-length '95'
 			set-option -g status-right '#{forecast} |#{cpu_bg_color} #{cpu_percentage} #[default]|#{ram_bg_color} #{ram_percentage} #[default]|#{online_status}#[default]|'
