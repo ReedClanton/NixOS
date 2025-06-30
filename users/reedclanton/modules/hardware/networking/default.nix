@@ -6,14 +6,22 @@
 				priority = 500;
 				psk = "@private_psk@";
 			};
+     "iPhone 13 Pro" = {
+        priority = 450;
+        psk = "@iPhone_13_Pro_psk@";
+      };
 			"private-2.4" = {
 				priority = 400;
 				psk = "@private_2_4_psk@";
 			};
-			"iPhone 13 Pro" = {
-				priority = 450;
-				psk = "@iPhone_13_Pro_psk@";
-			};
+      "UNIT 463" = {
+        priority = 400;
+        psk = "@unit_463@";
+      };
+      "UNIT 242" = {
+        priority = 400;
+        psk = "@unit_242@";
+      };
       "aainflight.com" = {
         priority = 350;
       };
