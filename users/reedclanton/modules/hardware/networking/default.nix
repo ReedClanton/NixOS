@@ -22,6 +22,10 @@
         priority = 400;
         psk = "@unit_242@";
       };
+      "AURUM LIVING" = {
+        priority = 375;
+        psk = "@aurum_living_psk@";
+      };
       "aainflight.com" = {
         priority = 350;
       };
