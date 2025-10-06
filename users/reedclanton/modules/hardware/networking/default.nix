@@ -22,6 +22,10 @@
         priority = 400;
         psk = "@unit_242@";
       };
+      "GL-AXT1800-87c-5G" = {
+        priority = 550;
+        psk = "@gl_axt1800_87c_5g@";
+      };
       "AURUM LIVING" = {
         priority = 375;
         psk = "@aurum_living_psk@";
