@@ -26,6 +26,9 @@
         priority = 390;
         psk = "@gl_axt1800_87c_5g@";
       };
+      "@Homegrown Free WiFi" = {
+        priority = 375;
+      };
       "AURUM LIVING" = {
         priority = 375;
         psk = "@aurum_living_psk@";
