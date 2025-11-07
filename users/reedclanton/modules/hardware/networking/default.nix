@@ -18,6 +18,10 @@
         priority = 400;
         psk = "@unit_463@";
       };
+      "Pixel_1465" = {
+        priority = 401;
+        psk = "@pixel_1465@";
+      };
       "UNIT 242" = {
         priority = 400;
         psk = "@unit_242@";
