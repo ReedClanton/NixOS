@@ -37,6 +37,9 @@
         priority = 375;
         psk = "@aurum_living_psk@";
       };
+      "Tavern242_Guest" = {
+        priority = 375;
+      };
       "aainflight.com" = {
         priority = 350;
       };
