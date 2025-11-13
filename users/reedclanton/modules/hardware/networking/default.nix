@@ -33,6 +33,9 @@
       "@Homegrown Free WiFi" = {
         priority = 375;
       };
+      "The Russell Guest" = {
+        priority = 375;
+      };
       "AURUM LIVING" = {
         priority = 375;
         psk = "@aurum_living_psk@";
