@@ -30,6 +30,10 @@
         priority = 390;
         psk = "@gl_axt1800_87c_5g@";
       };
+      "New Image Guest" = {
+        priority = 375;
+        psk = "@new_image_guest@";
+      };
       "@Homegrown Free WiFi" = {
         priority = 375;
       };
