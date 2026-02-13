@@ -36,7 +36,7 @@
 		# Remove part(s) of GNOME I don't want.
 		gnome.excludePackages = (with pkgs; [
 			gnome-photos
-		]) ++ (with pkgs.gnome; [
+		]) ++ (with pkgs; [
 			epiphany
 			gnome-maps
 			gnome-music
