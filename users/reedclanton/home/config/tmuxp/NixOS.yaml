@@ -1,13 +1,13 @@
 session_name: NixOS
 start_directory: "~/.config/NixOS/"
-shell_command_before: clear;pwd;ls -GAp
+shell_command_before: clear;pwd;ls -GA
 windows:
   - window_name: Run
     focus: true
     layout: even-horizontal
     panes:
       - focus: true
-        shell_command: clear;pwd;ls -GAp;git branch -a;git status
+        shell_command: clear;pwd;ls -GA;git branch -a;git status
   - window_name: ./
     layout: even-horizontal
     panes:
