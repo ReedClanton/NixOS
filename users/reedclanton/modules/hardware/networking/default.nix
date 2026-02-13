@@ -6,14 +6,61 @@
 				priority = 500;
 				psk = "@private_psk@";
 			};
+     "iPhone 13 Pro" = {
+        priority = 450;
+        psk = "@iPhone_13_Pro_psk@";
+      };
 			"private-2.4" = {
 				priority = 400;
 				psk = "@private_2_4_psk@";
 			};
-			"iPhone 13 Pro" = {
-				priority = 450;
-				psk = "@iPhone_13_Pro_psk@";
-			};
+      "UNIT 463" = {
+        priority = 400;
+        psk = "@unit_463@";
+      };
+      "Pixel_1465" = {
+        priority = 401;
+        psk = "@pixel_1465@";
+      };
+      "UNIT 242" = {
+        priority = 400;
+        psk = "@unit_242@";
+      };
+      "GL-AXT1800-87c-5G" = {
+        priority = 390;
+        psk = "@gl_axt1800_87c_5g@";
+      };
+      "New Image Guest" = {
+        priority = 375;
+        psk = "@new_image_guest@";
+      };
+      "@Homegrown Free WiFi" = {
+        priority = 375;
+      };
+      "The Russell Guest" = {
+        priority = 375;
+      };
+      "AURUM LIVING" = {
+        priority = 375;
+        psk = "@aurum_living_psk@";
+      };
+      "Tavern242_Guest" = {
+        priority = 375;
+      };
+      "aainflight.com" = {
+        priority = 350;
+      };
+      "Origin_Guest" = {
+        priority = 350;
+      };
+      "SpectrumSetup-33" = {
+        priority = 350;
+        psk = "@spectrumsetup_33_psk@";
+      };
+      "ConnectsWorkspace" = {
+        priority = 350;
+        psk = "@connectsworkspace_psk@";
+      };
       "Obi-WLAN Kenobi" = {
         priority = 350;
         psk = "@obi_wlan_kenobi_psk@";
@@ -22,6 +69,26 @@
 				priority = 350;
 				psk = "@Primary_psk@";
 			};
+      "Aurum Living" = {
+        priority = 300;
+        psk = "@aurum_living_psk@";
+      };
+      "OYB Guest" = {
+        priority = 300;
+        psk = "@oyb_guest_psk@";
+      };
+      "Incantation - Guest" = {
+        priority = 300;
+        psk = "@incantation_guest_psk@";
+      };
+      "Movement Guest" = {
+        priority = 300;
+        psk = "@movement_guest_psk@";
+      };
+      "MVM Guest" = {
+        priority = 300;
+        psk = "@mvm_guest_psk@";
+      };
 			"Becks Coffee" = {
 				priority = 300;
 				psk = "@Becks_Coffee_psk@";

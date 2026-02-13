@@ -16,7 +16,7 @@ windows:
           WEATHER_SHORT_WAIT: "30"
           WEATHER_LONG_WAIT: "900"
         shell_command:
-          - weather() { clear; curl -s "https://wttr.in/Dallas?1Fnuq"; sleep $1; }
+          - weather() { clear; curl -s "https://wttr.in/Golden?1Fnuq"; sleep $1; }
           - sleep 1
           - weather $WEATHER_SHORT_WAIT
           - weather $WEATHER_SHORT_WAIT
@@ -26,7 +26,7 @@ windows:
           WEATHER_SHORT_WAIT: "30"
           WEATHER_LONG_WAIT: "900"
         shell_command:
-          - weather() { clear; curl -s "https://wttr.in/Denver?1Fnuq"; sleep $1; }
+          - weather() { clear; curl -s "https://wttr.in/Aurora+Colorado?1Fnuq"; sleep $1; }
           - sleep 1
           - weather $WEATHER_SHORT_WAIT
           - weather $WEATHER_SHORT_WAIT

@@ -18,9 +18,10 @@
     # Handles Flatpaks.
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     # Includes common hardware stuff (like Framework laptop stuff).
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    # Note: The latest version of this repo is broken.
+    nixos-hardware.url = "github:NixOS/nixos-hardware/a8dd1b21995964b115b1e3ec639dd6ce24ab9806";
     # Secret management.
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "github:Mic92/sops-nix/799b572ef1ce4c6ed8efa806b9b542ae8d9cfe6e";
     # Here in case something is needed from unstable that's not in `nixpkgs`.
 		unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 #    unstable.url = "github:ReedClanton/nixpkgs/master";

@@ -187,7 +187,7 @@
     };
 
     "org/gnome/shell" = {
-      favorite-apps = [ "firefox.desktop" "org.telegram.desktop.desktop" "element-desktop.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Console.desktop" "org.gnome.Calendar.desktop" "org.gnome.Geary.desktop" "com.valvesoftware.Steam.desktop" ];
+      favorite-apps = [ "firefox.desktop" "org.gnome.World.Secrets.desktop" "org.telegram.desktop.desktop" "slack.desktop" "discord.desktop" "element-desktop.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Calendar.desktop" "org.gnome.Geary.desktop" "com.valvesoftware.Steam.desktop" ];
     };
 
     "org/gnome/shell/app-switcher" = {

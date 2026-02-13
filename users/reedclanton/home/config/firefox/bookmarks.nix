@@ -93,9 +93,34 @@
                 name = "Docs";
                 bookmarks = [
                   {
+                    name = "NixOS & Flakes Book";
+                    bookmarks = [
+                      {
+                        name = "Introduction to Flakes";
+                        url = "https://nixos-and-flakes.thiscute.world/nixos-with-flakes/introduction-to-flakes#nix-flakes-and-classic-nix";
+                        tags = [ "book" "code" "doc" "docs" "documentation" "flake" "flakes" "introduction" "nix" "nixos" "os" ];
+                      }
+                      {
+                        name = "Updating the System";
+                        url = "https://nixos-and-flakes.thiscute.world/nixos-with-flakes/update-the-system";
+                        tags = [ "book" "code" "doc" "docs" "documentation" "flake" "flakes" "nix" "nixos" "os" "system" "update" "updating" ];
+                      }
+                      {
+                        name = "Downgrading or Upgrading Packages";
+                        url = "https://nixos-and-flakes.thiscute.world/nixos-with-flakes/downgrade-or-upgrade-packages";
+                        tags = [ "book" "code" "doc" "docs" "documentation" "downgrade" "downgrading" "flake" "flakes" "nix" "nixos" "os" "package" "packages" "update" "updating" "upgrade" "upgrading" ];
+                      }
+                    ];
+                  }
+                  {
                     name = "Explainix | Explain Nix Syntax Visually";
                     url = "https://zaynetro.com/explainix";
                     tags = [ "code" "docs" "explainix" "nix" "syntax" "visual" ];
+                  }
+                  {
+                    name = "Linux kernel";
+                    url = "https://nixos.wiki/wiki/Linux_kernel";
+                    tags = [ "available" "code" "doc" "docs" "documentation" "kernel" "linux" "list" "nix" "nixos" "os" "wiki" ];
                   }
                 ];
               }
@@ -485,9 +510,144 @@
             name = "United Rocks";
             bookmarks = [
               {
+                name = "Drive";
+                bookmarks = [
+                  {
+                    name = "Climbers on Team";
+                    url = "https://drive.google.com/drive/u/3/folders/0AJTQtMeacptDUk9PVA";
+                    tags = [ "climb" "climber" "climbers" "climbing" "doc" "docs" "document" "documents" "drive" "folder" "folders" "google" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                  }
+                  {
+                    name = "Climbers on Team";
+                    bookmarks = [
+                      {
+                        name = "Team Folders";
+                        url = "https://drive.google.com/drive/u/3/folders/1TjIowu6M15RbBHGDVp6PvzE04kabgfw2";
+                        tags = [ "climb" "climber" "climbers" "climbing" "doc" "docs" "document" "documents" "drive" "folder" "folders" "google" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                      }
+                      {
+                        name = "Team Folders";
+                        bookmarks = [
+                          {
+                            name = "Movement Englewood, CO";
+                            url = "https://drive.google.com/drive/u/3/folders/1i8xbQtDNWJ1ObKZQyRk5-zxEVrjKXlyL";
+                            tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "englewood" "folder" "folders" "google" "movement" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                          }
+                          {
+                            name = "Movement Englewood, CO";
+                            bookmarks = [
+                              {
+                                name = "Englewood - Climber Progress 2024";
+                                url = "https://docs.google.com/spreadsheets/d/1mjy-z-1lzNLV92o3g8lsHJbh3kHTVIu2sjMCtqU87Zc/edit?gid=328942084#gid=328942084";
+                                tags = [ "2024" "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "englewood" "google" "movement" "progress" "rocks" "team" "united" "unitedrocks" "volunteer" ];
+                              }
+                              {
+                                name = "Movement Englewood Team Member Information (Responses)";
+                                url = "https://docs.google.com/spreadsheets/d/1PJVx5xaGkUotlQCgReLURECwvQgL_QkIMRSO5HN0UlM/edit?gid=175370928#gid=175370928";
+                                tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "englewood" "google" "info" "information" "member" "movement" "responses" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                              }
+                            ];
+                          }
+                        ];
+                      }
+                    ];
+                  }
+                  {
+                    name = "United Rocks";
+                    bookmarks = [
+                      {
+                        name = "Board Meetings";
+                        url = "https://drive.google.com/drive/u/3/folders/1ryZz2T4RAKWgTAueEyLKxDvTzqmkyeZq";
+                        tags = [ "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "rocks" "united" "unitedrocks" "volunteer" ];
+                      }
+                      {
+                        name = "Board Meetings";
+                        bookmarks = [
+                          {
+                            name = "2024";
+                            url = "https://drive.google.com/drive/u/3/folders/1o38DX4AclXryWHSd5wb4f_ktcgnYZvpa";
+                            tags = [ "2024" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "rocks" "united" "unitedrocks" "volunteer" ];
+                          }
+                        ];
+                      }
+                      {
+                        name = "Branding/Marketing";
+                        bookmarks = [
+                          {
+                            name = "Email Signature";
+                            url = "https://drive.google.com/drive/u/3/folders/1ElvnfCfCIcehoZJDesPuL7lqm7MnAPAX";
+                            tags = [ "branding" "drive" "email" "google" "marketing" "rocks" "signature" "united" "unitedrocks" "volunteer" "volunteers" ];
+                          }
+                          {
+                            name = "United Rocks - Marketing Assessment.docx";
+                            url = "https://docs.google.com/document/d/17syTHJtCnhFrSy1W-95a2lbQmVGCuKsB/edit";
+                            tags = [ "assessment" "brand" "branding" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "logo" "marketing" "rocks" "united" "unitedrocks" "volunteer" ];
+                          }
+                        ];
+                      }
+                      {
+                        name = "Finances";
+                        bookmarks = [
+                          {
+                            name = "Taxes";
+                            url = "https://drive.google.com/drive/u/3/folders/1oANuDS9GhV8edI6GnOM-phs_KJIYWhIO";
+                            tags = [ "climb" "climbing" "doc" "docs" "drive" "finance" "finances" "folder" "folders" "google" "rocks" "tax" "taxes" "united" "unitedrocks" "volunteer" ];
+                          }
+                        ];
+                      }
+                      {
+                        name = "Volunteer Coordinator Docs";
+                        bookmarks = [
+                          {
+                            name = "SafeSport Certificates - Training Manual Forms";
+                            url = "https://drive.google.com/drive/u/3/folders/1SeI5OmogDsvrgd65itrRNqaG58PMXdJL";
+                            tags = [ "certificates" "climb" "climbing" "coordinator" "doc" "docs" "drive" "folder" "folders" "forms" "google" "manual" "rocks" "safe" "safesport" "sport" "training" "united" "unitedrocks" "volunteer" "volunteers" ];
+                          }
+                          {
+                            name = "SafeSport Certificates - Training Manual Forms";
+                            bookmarks = [
+                              {
+                                name = "Movement, Englewood";
+                                url = "https://drive.google.com/drive/u/3/folders/1c-yHlGtfqar0hasDLuTnCGMA7cm6WAK5";
+                                tags = [ "certificates" "climb" "climbing" "coordinator" "doc" "docs" "drive" "englewood" "folder" "folders" "forms" "google" "manual" "movement" "rocks" "safe" "safesport" "sport" "training" "united" "unitedrocks" "volunteer" "volunteers" ];
+                              }
+                            ];
+                          }
+                        ];
+                      }
+                    ];
+                  }
+                ];
+              }
+              {
                 name = "Calendar";
                 url = "https://www.unitedrocks.org/calendar/";
-                tags = [ "calendar" "climbing" "rocks" "united" "volunteer" ];
+                tags = [ "calendar" "climb" "climbing" "rocks" "united" "unitedrocks" "volunteer" ];
+              }
+            ];
+          }
+          {
+            name = "BGoldeN";
+            bookmarks = [
+              {
+                name = "Volunteer Sign Up";
+                url = "https://www.signupgenius.com/go/70a0d4aa5ab2dabfe3-coop#/";
+                tags = [ "bank" "bgolden" "food" "fresh" "genius" "golden" "pantry" "sign" "signupgenius" "up" "volunteer" "volunteers" ];
+              }
+            ];
+          }
+        ];
+      }
+      {
+        name = "Work";
+        bookmarks = [
+          {
+            name = "Raytheon";
+            bookmarks = [
+              {
+                name = "Healthy you Incentives (alight)";
+                url = "https://alightwell.com/weba/#/index/pagelayout/page?id=60000001762&pageParameters=%7B%22encryptedParameters%22:%20%22gAAAAABmfa_Ti576l3GfrCSzHN1ueLC4cQoDAl3y6HU_Z7_UfN2g3hpQddU2-wYM9qsL73DDUXyxJNvHNAP0mnO7BgJIDd9c9D3VkhN3Wc_3MIs6mNPL1-s%3D%22%7D";
+                tags = [ "alight" "health" "healthy" "incentives" "raytheon" "rtx" "you" ];
               }
             ];
           }
