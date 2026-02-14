@@ -1,5 +1,5 @@
 { user, ... }: {
-	hardware.opengl = {
+	hardware.graphics = {
     enable = true;
     # Driver set in host because it's based on hardware.
 #    extraPackages = with pkgs; [  ];

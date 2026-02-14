@@ -1,25 +1,29 @@
 { pkgs, user, ... }: {
-	services.xserver = {
-		# Required by SDDM.
-		enable = true;
-		displayManager = {
-			sddm = {
-				enable = true;
-				wayland.enable = true;
-			};
-			autoLogin = {
-				enable = true;
-				user = user.name;
-			};
-		};
-		# Enable Desktop Environment.
-		desktopManager.plasma5.enable = true;
-		# Configure keymap in X11.
-		layout = user.services.xserver.layout;
-		xkbVariant = user.services.xserver.xkbVariant;
-		# Exclude default X11 packages I don't want.
-		excludePackages = with pkgs; [ xterm ];
-	};
+  services = {
+    # Enable Desktop Environment.
+    desktopManager.plasma5.enable = true;
+    displayManager = {
+      autoLogin = {
+        enable = true;
+        user = user.name;
+      };
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };
+    };
+    xserver = {
+      # Required by SDDM.
+      enable = true;
+      # Exclude default X11 packages I don't want.
+      excludePackages = with pkgs; [ xterm ];
+      # Configure keymap in X11.
+      xkb = {
+        layout = user.services.xserver.xkb.layout;
+        variant = user.services.xserver.xkb.variant;
+      };
+    };
+  };
 
 	environment = {
 		# Remove part(s) of KDE I don't want.
