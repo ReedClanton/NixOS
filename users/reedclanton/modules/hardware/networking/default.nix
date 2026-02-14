@@ -47,6 +47,9 @@
       "Tavern242_Guest" = {
         priority = 375;
       };
+      "@Bangers" = {
+        priority = 350;
+      };
       "aainflight.com" = {
         priority = 350;
       };
