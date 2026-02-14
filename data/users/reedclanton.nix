@@ -6,8 +6,10 @@
 	isNormalUser = true;
 	name = "reedclanton";
 	services.xserver = {
-		layout = "us";
-		xkbVariant = "";
+		xkb = {
+      layout = "us";
+      variant = "";
+    };
 	};
 	timeZone = "America/Chicago";
 

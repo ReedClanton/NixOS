@@ -14,7 +14,7 @@
     # Desktop environment.
     hyprland.url = "github:hyprwm/Hyprland";
     # Primary source of package(s).
-		nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     # Handles Flatpaks.
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     # Includes common hardware stuff (like Framework laptop stuff).

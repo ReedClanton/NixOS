@@ -64,8 +64,6 @@ in {
 
   users.users.${user.name}.extraGroups = [ "audio" ];
 
-	# Enable sound with pipewire.
-	sound.enable = true;
   # Turn off PulseAudio.
 	hardware.pulseaudio.enable = false;
   # RealtimeKit priority scheduling for audio.

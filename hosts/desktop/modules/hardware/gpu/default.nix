@@ -8,7 +8,7 @@
 	};
 
   # Hardware specific driver needed to enable OpenGL.
-	hardware.opengl.extraPackages = with pkgs; [ amdvlk ];
+	hardware.graphics.extraPackages = with pkgs; [ amdvlk ];
 
 	# Enable GPU hardware acceleration.
   # Note(s):
