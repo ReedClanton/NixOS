@@ -8,13 +8,13 @@
       url = "github:nix-community/disko";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Desktop environment.
     hyprland.url = "github:hyprwm/Hyprland";
     # Primary source of package(s).
-		nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     # Handles Flatpaks.
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     # Includes common hardware stuff (like Framework laptop stuff).
