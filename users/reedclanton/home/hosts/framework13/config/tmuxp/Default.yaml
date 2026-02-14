@@ -3,7 +3,7 @@ start_directory: "~"
 windows:
   - window_name: Home
     focus: true
-    layout: 9b2a,255x65,0,0[255x27,0,0,1,255x37,0,28{191x37,0,28,2,63x37,192,28[63x18,192,28,3,63x18,192,47,4]}]
+    layout: ee51,255x65,0,0[255x31,0,0,1,255x33,0,32{191x33,0,32,2,63x33,192,32[63x16,192,32,3,63x16,192,49,4]}]
     panes:
       - focus: true
         shell_command:
