@@ -50,6 +50,9 @@
       "@Bangers" = {
         priority = 350;
       };
+      "IHGWiFi.com" = {
+        priority = 350;
+      };
       "aainflight.com" = {
         priority = 350;
       };
