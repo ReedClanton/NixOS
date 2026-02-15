@@ -17,7 +17,7 @@
 			size = user.shell.history.maxLineCount;
 		};
 		historySubstringSearch.enable = true;
-		initExtra = builtins.concatStringsSep "\n" [
+    initContent = builtins.concatStringsSep "\n" [
 			user.shell.shellRc
 			''compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"''
 		];
