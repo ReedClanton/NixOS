@@ -19,6 +19,7 @@
         xfce = {
           enable = true;
           enableScreensaver = false;
+          enableWaylandSession = true;
           enableXfwm = true;
         };
       };

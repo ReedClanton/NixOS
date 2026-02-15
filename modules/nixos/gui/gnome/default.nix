@@ -1,13 +1,15 @@
 { pkgs, user, ... }: {
 	services = {
+    # Enable Desktop Environment.
+    desktopManager.gnome.enable = true;
     displayManager = {
-#      gdm = {
-#        enable = true;
-#        wayland = true;
-#      };
       autoLogin = {
         enable = true;
         user = user.name;
+      };
+      gdm = {
+        enable = true;
+        wayland = true;
       };
     };
 		# Ensure gnome-settings-daemon udev rules are enabled.
@@ -15,14 +17,6 @@
 		xserver = {
 			# Required by GDM.
 			enable = true;
-			displayManager = {
-				gdm = {
-					enable = true;
-					wayland = true;
-				};
-			};
-			# Enable Desktop Environment.
-			desktopManager.gnome.enable = true;
 			# Exclude default X11 packages I don't want.
 			excludePackages = with pkgs; [ xterm ];
       xkb = {

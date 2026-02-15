@@ -41,14 +41,14 @@
 				id = 0;
 				isDefault = true;
 				search = {
-					default = "Google";
+					default = "google";
 					engines = {
 						"Flathub" = {
 							urls = [{
 								template = "https://flathub.org/apps/search";
 								params = [{ name = "q"; value = "{searchTerms}"; }];
 							}];
-							iconUpdateURL = "https://flathub.org/favicon.png";
+							icon = "https://flathub.org/favicon.png";
 							updateInterval = 24 * 60 * 60 * 1000; # Update every day.
 							definedAliases = [ "@fl" ];
 						};
@@ -57,7 +57,7 @@
 								template = "https://home-manager-options.extranix.com";
 								params = [{ name = "query"; value = "{searchTerms}"; }];
 							}];
-							iconUpdateURL = "https://avatars.githubusercontent.com/u/33221035";
+							icon = "https://avatars.githubusercontent.com/u/33221035";
 							updateInterval = 24 * 60 * 60 *1000; # Update every day.
 							definedAliases = [ "@hm" ];
 						};
@@ -88,23 +88,25 @@
 								template = "https://nixos.wiki/index.php";
 								params = [{ name = "search"; value = "{searchTerms}"; }];
 							}];
-							iconUpdateURL = "https://nixos.wiki/favicon.png";
+							icon = "https://nixos.wiki/favicon.png";
 							updateInterval = 24 * 60 * 60 * 1000; # Update every day.
 							definedAliases = [ "@nw" ];
 						};
 					};
 					force = true;
 					order = [
-						"Google"
+						"google"
 						"Nix Packages"
 						"Nix Options"
 						"Nix Wiki"
 						"Home Manager Options"
 						"Flathub"
-						"DuckDuckGo"
+            # DuckDuckGo
+						"ddg"
 						"NixOS Wiki"
 					];
-					privateDefault = "DuckDuckGo";
+          # DuckDuckGo
+					privateDefault = "ddg";
 				};
 				settings = {
 					"browser.startup.homepage" = "https://www.google.com";
