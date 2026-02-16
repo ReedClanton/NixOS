@@ -28,7 +28,7 @@
       };
       "SpectrumSetup-18" = {
         priority = 400;
-        psk = "@spectrumsetup_18@";
+        psk = "ext:spectrumsetup_18";
       };
       "GL-AXT1800-87c-5G" = {
         priority = 390;
