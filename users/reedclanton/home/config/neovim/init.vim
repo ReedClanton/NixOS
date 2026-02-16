@@ -5,6 +5,8 @@ set number
 set spell
 set spelllang=en_us
 
+colorscheme retrobox
+
 " Causes wrapped lines to be indented to line up with the start of said line.
 set breakindent
 " Determines the amount of white space to add in normal mode.

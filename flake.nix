@@ -18,16 +18,12 @@
     # Handles Flatpaks.
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     # Includes common hardware stuff (like Framework laptop stuff).
-    # Note: The latest version of this repo is broken.
-    nixos-hardware.url = "github:NixOS/nixos-hardware/a8dd1b21995964b115b1e3ec639dd6ce24ab9806";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     # Secret management.
     sops-nix.url = "github:Mic92/sops-nix";
-    # Here in case something is needed from unstable that's not in `nixpkgs`.
-		unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-#    unstable.url = "github:ReedClanton/nixpkgs/master";
 	};
 
-	outputs = inputs@{ self, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, unstable, ... }:
+	outputs = inputs@{ self, home-manager, nix-flatpak, nixpkgs, nixos-hardware, sops-nix, ... }:
 	let
 		# Variable(s) used in flake(s).
 		system = "x86_64-linux";
@@ -38,10 +34,6 @@
 			inherit system;
 			config.allowUnfree = true;
 		};
-    pkgs-unstable = import unstable {
-      inherit system;
-      config.allowUnfree = true;
-    };
 
 		# This function is used to construct NixOS flakes for each host.
 		mkComputer = host: ui: extraModules: extraHomeModules:
@@ -51,12 +43,12 @@
 		in inputs.nixpkgs.lib.nixosSystem {
 			inherit system;
 			# Allow NixOS to access flake data.
-			specialArgs = { inherit host hostName inputs nixos-hardware pkgs pkgs-unstable system ui user; };
+			specialArgs = { inherit host hostName inputs nixos-hardware pkgs system ui user; };
 			modules = [
 				## External Module(s) ##
 				home-manager.nixosModules.home-manager
 				sops-nix.nixosModules.sops
-				
+
 				## Configuration ##
 				# Host specific configuration (path derived from provided name of host).
 				./hosts/${host}
@@ -66,7 +58,7 @@
 				{
 					home-manager = {
 						# Allow Home Manager to access flake data.
-						extraSpecialArgs = { inherit host hostName inputs pkgs pkgs-unstable system ui user; };
+						extraSpecialArgs = { inherit host hostName inputs pkgs system ui user; };
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users."${user.name}".imports = [
