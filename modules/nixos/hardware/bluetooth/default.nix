@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, lib, ... }: {
   hardware.bluetooth = {
     enable = true;
     # Enable support for hsphfpd protocol used by audio devices (experimental).
@@ -6,7 +6,7 @@
     #     - Conflicts with wireplumber (pipewire) and duplicates functionality.
     hsphfpd.enable = false;
     # Determines if Bluetooth should be on and searching upon boot.
-    powerOnBoot = false;
+    powerOnBoot = lib.mkDefault false;
     # Report headphones' battery level to UPower.
     settings.General = {
       Experimental = config.services.upower.enable;

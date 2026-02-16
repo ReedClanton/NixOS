@@ -1,11 +1,7 @@
 { ... }: {
-	environment.pathsToLink = [ "/share/zsh" ];
-	
-	programs.zsh = {
+	programs.neovim = {
 		enable = true;
-		enableCompletion = true;
-		enableLsColors = true;
-		syntaxHighlighting.enable = true;
+		defaultEditor = true;
 	};
 }
 
