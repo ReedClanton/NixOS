@@ -110,7 +110,7 @@
 			# Set cachiing duration in seconds. Default: Caching disabled when not set.
 			set-option -g @forecast-cache-duration 600
 			# Set location. Default: location based on IP address.
-			set-option -g @forecast-location 'Golden'
+			set-option -g @forecast-location 'Arvada'
 			# Configure weather representation. Default: `%C+%t+%w`. For more, see: https://github.com/chubin/wttr.in#one-line-output
 			set-option -g @forecast-format '%l:+%C,+%t,+%h+RH,+%w'\&u
 			# Ensure long forcasts don't message with the rest of the status bar. Default: 75.
