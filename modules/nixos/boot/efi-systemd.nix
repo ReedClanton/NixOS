@@ -5,7 +5,7 @@
     # for `linuxPackages_` and update each instance. It's known currently that
     # `./modules/nixos/hardware/game-controller/logitech-wheel.nix` and
     # `./modules/nixos/virtualisation/default.nix` must be updated.
-    kernelPackages = lib.mkDefault pkgs.linuxPackages_6_19;
+    kernelPackages = lib.mkDefault pkgs.linuxPackages_6_18;
 		loader = {
 			efi.canTouchEfiVariables = true;
 			systemd-boot = {

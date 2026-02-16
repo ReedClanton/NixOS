@@ -9,9 +9,9 @@
   #    - At time of writing, the latest version of the Linux kernel that's supported by VirtualBox is 6.19. Once this
   #      changes, the value of `boot.kernelPackages` and the package installed by `environment.systemPackages` bellow
   #      should be updated.
-  boot.kernelPackages = pkgs.linuxPackages_6_19;
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
   environment.systemPackages = [
-    pkgs.linuxKernel.packages.linux_6_19.vmware
+    pkgs.linuxKernel.packages.linux_6_18.vmware
   ];
   virtualisation.virtualbox.host = {
     enable = true;

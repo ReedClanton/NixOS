@@ -21,7 +21,7 @@
 		(if builtins.pathExists ./modules/sudo/default.nix then ./modules/sudo else ../../modules/nixos/sudo)
 		(if builtins.pathExists ./modules/time/default.nix then ./modules/time else ../../modules/nixos/time)
 		(if builtins.pathExists ./modules/tty/default.nix then ./modules/tty else ../../modules/nixos/tty)
-#		(if builtins.pathExists ./modules/virtualisation/default.nix then ./modules/virtualisation else ../../modules/nixos/virtualisation)
+		(if builtins.pathExists ./modules/virtualisation/default.nix then ./modules/virtualisation else ../../modules/nixos/virtualisation)
 		(if builtins.pathExists ./modules/xdg/default.nix then ./modules/xdg else ../../modules/nixos/xdg)
 	];
 
