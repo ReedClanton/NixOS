@@ -11,7 +11,10 @@
 		};
 		profiles = {
 			"${user.name}" = {
-				bookmarks = import ../../../../config/firefox/bookmarks.nix;
+        bookmarks = {
+          force = true;
+          settings = import ../../../../config/firefox/bookmarks.nix;
+        };
 				settings = {
 					# Turn off data collection.
 					"app.shield.optoutstudies.enabled" = false;

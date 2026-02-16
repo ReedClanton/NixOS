@@ -37,12 +37,11 @@
 	environment = {
 		# Remove part(s) of GNOME I don't want.
 		gnome.excludePackages = (with pkgs; [
+      epiphany
 			gnome-photos
-		]) ++ (with pkgs; [
-			epiphany
-			gnome-maps
-			gnome-music
-			totem
+      gnome-maps
+      gnome-music
+      totem
 		]);
 
 		# Install Gnome specific programs/package(s).

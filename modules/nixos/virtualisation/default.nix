@@ -6,12 +6,12 @@
   #      that's used.
   #    - The best fix would be to create a Nix overlay for this option, or the `virtualisation.vmware.host.package`
   #      option. However, until I figure this out, this solution will have to do.
-  #    - At time of writing, the latest version of the Linux kernel that's supported by VirtualBox is 6.8. Once this
+  #    - At time of writing, the latest version of the Linux kernel that's supported by VirtualBox is 6.19. Once this
   #      changes, the value of `boot.kernelPackages` and the package installed by `environment.systemPackages` bellow
   #      should be updated.
-  boot.kernelPackages = pkgs.linuxPackages_6_8;
+  boot.kernelPackages = pkgs.linuxPackages_6_19;
   environment.systemPackages = [
-    pkgs.linuxKernel.packages.linux_6_8.vmware
+    pkgs.linuxKernel.packages.linux_6_19.vmware
   ];
   virtualisation.virtualbox.host = {
     enable = true;

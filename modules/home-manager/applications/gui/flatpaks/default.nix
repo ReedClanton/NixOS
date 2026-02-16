@@ -11,7 +11,7 @@
 				location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 			}
 		];
-    uninstallUnmanagedPackages = true;
+    uninstallUnmanaged = true;
 		update.auto = {
 			enable = true;
 			onCalendar = "daily";

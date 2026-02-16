@@ -3,7 +3,7 @@
 		enable = true;
 		enableCompletion = user.shell.completion;
 		autocd = true;
-		dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
 		history = {
 			# Adds time stamps.
 			extended = true;
