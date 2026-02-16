@@ -26,6 +26,10 @@
         priority = 400;
         psk = "@unit_242@";
       };
+      "SpectrumSetup-18" = {
+        priority = 400;
+        psk = "@spectrumsetup_18@";
+      };
       "GL-AXT1800-87c-5G" = {
         priority = 390;
         psk = "@gl_axt1800_87c_5g@";
