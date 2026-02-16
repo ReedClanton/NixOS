@@ -18,5 +18,7 @@
           ./. + (builtins.substring 1 9999 "${do-nothing}")
     )
   ];
+  # Turn Bluetooth on. Defaults to off in global configuration.
+  hardware.bluetooth.powerOnBoot = lib.mkForce true;
 }
 
