@@ -8,7 +8,7 @@
 	};
 
   # Hardware specific driver needed to enable OpenGL.
-	hardware= {
+  hardware= {
     amdgpu.overdrive.enable = true;
     graphics.extraPackages = with pkgs; [ amdvlk ];
   };
