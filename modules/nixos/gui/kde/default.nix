@@ -1,7 +1,7 @@
 { pkgs, user, ... }: {
   services = {
     # Enable Desktop Environment.
-    desktopManager.plasma5.enable = true;
+    desktopManager.plasma6.enable = true;
     displayManager = {
       autoLogin = {
         enable = true;
@@ -27,14 +27,14 @@
 
 	environment = {
 		# Remove part(s) of KDE I don't want.
-#		plasma5.excludePackages = (with pkgs; [
+#		plasma6.excludePackages = (with pkgs; [
 			# NoOp
 #		]) ++ (with pkgs.libsForQt5; [
 			# NoOp
 #		]);
 
 		# Install KDE specific package(s).
-		systemPackages = with pkgs.libsForQt5; [
+		systemPackages = with pkgs.kdePackages; [
 			xdg-desktop-portal-kde
 		];
 	};
