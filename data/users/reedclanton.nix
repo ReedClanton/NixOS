@@ -71,7 +71,7 @@
 			#		exec tmuxp load ~/.config/tmuxp/Default.yaml
 			#	fi
 			#fi
-			
+
 			# Back up home directory each time any terminal is opened.
 			#backUp >$HOME/shell/functions/backUp/backUp.log 2>&1 &
 		'';
