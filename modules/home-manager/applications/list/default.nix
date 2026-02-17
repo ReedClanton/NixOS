@@ -1,8 +1,14 @@
-{ config, lib, ... }: with lib; {
+{ config, ui, lib, ... }: with lib; {
   # Generate list of all application(s) installed by Home Manager.
   home.file."${config.xdg.userDirs.documents}/home-manager-install-list".text =
   let
-    flatpaks-list = builtins.map (p: "flatpak: ${p.appId}") config.services.flatpak.packages;
+    # Only include flatpaks if running a GUI.
+    flatpaks-list = (
+      if ("${ui}" == "tty") then
+        null
+      else
+        (builtins.map (p: "flatpak: ${p.appId}") config.services.flatpak.packages)
+    );
     packages-list = builtins.map (p: "package: ${p.name}") config.home.packages;
     programs = builtins.mapAttrs
       (name: value:
@@ -12,7 +18,13 @@
           ""))
       config.programs;
     programs-list = builtins.map (key: builtins.getAttr key programs) (builtins.attrNames programs);
-    install-list = flatpaks-list ++ packages-list ++ programs-list;
+    # Only include flatpaks if running a GUI.
+    install-list = (
+      if (builtins.isNull flatpaks-list) then
+        packages-list ++ programs-list
+      else
+        flatpaks-list ++ packages-list ++ programs-list
+    );
     sortedUnique = builtins.sort builtins.lessThan (unique install-list);
     formatted = builtins.concatStringsSep "\n" sortedUnique;
   in formatted;
