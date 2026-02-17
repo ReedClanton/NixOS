@@ -3,17 +3,19 @@
 
 	programs.git = {
 		enable = true;
-		userName = user.name;
-		userEmail = user.email;
-		aliases = {
-			pu = "push";
-			co = "checkout";
-			cm = "commit";
-		};
-		extraConfig = {
-			color.ui = true;
-			core.editor = "nvim";
-		};
+    settings = {
+      aliases = {
+        pu = "push";
+        co = "checkout";
+        cm = "commit";
+      };
+      color.ui = true;
+      core.editor = "nvim";
+      user = {
+        email = user.email;
+        name = user.name;
+      };
+    };
 	};
 }
 

@@ -6,14 +6,16 @@
 	isNormalUser = true;
 	name = "reedclanton";
 	services.xserver = {
-		layout = "us";
-		xkbVariant = "";
+		xkb = {
+      layout = "us";
+      variant = "";
+    };
 	};
 	timeZone = "America/Chicago";
 
 	shell = {
 		aliases = {
-			c = "clear;pwd;ls -GAp";
+			c = "clear;pwd;ls -GA";
       e = "eza";
 			eixt = "exit";
       f = "fzf";
@@ -42,7 +44,7 @@
 			ignore = [
         " *"
 				"c"
-				"clear;fastfetch;pwd;ls -GAp"
+				"clear;fastfetch;pwd;ls -GA"
 				"eixt"
 				"exec lynx"
 				"exec lynx -accept_all_cookies"

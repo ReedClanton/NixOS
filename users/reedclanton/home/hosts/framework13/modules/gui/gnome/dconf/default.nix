@@ -2,9 +2,7 @@
 { lib, ... }: with lib.hm.gvariant; {
   dconf.settings = {
     "org/gnome/Console" = {
-      custom-font = "Source Code Pro 10";
-      font-scale = 0.9;
-      use-system-font = false;
+      font-scale = 0.8;
     };
 
     "org/gnome/desktop/session" = {

@@ -13,7 +13,7 @@
 		defaultEditor = true;
 		extraConfig = builtins.readFile ../../../../config/neovim/init.vim;
     plugins = with pkgs.vimPlugins; [
-      taskwarrior
+      taskwarrior2
       vim-better-whitespace
     ];
 	};

@@ -31,7 +31,7 @@
       # Bind 'ctrl' + r to bring up Atuin's search.
       ''bind -x '"\C-r": __atuin_history' ''
     ];
-    zsh.initExtra = builtins.concatStringsSep "\n" [
+    zsh.initContent = builtins.concatStringsSep "\n" [
       user.shell.shellRc
       # Bind 'ctrl' + r to bring up Atuin's search.
       "bindkey '^r' atuin-search"

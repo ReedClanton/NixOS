@@ -1,32 +1,37 @@
 { pkgs, user, ... }: {
-	services.xserver = {
-		enable = true;
-		displayManager = {
+  services = {
+    displayManager = {
       defaultSession = "xfce";
-			sddm = {
-				enable = true;
-				wayland.enable = true;
-			};
-			autoLogin = {
-				enable = true;
-				user = user.name;
-			};
-		};
-		# Enable Desktop Environment.
-		desktopManager = {
-      xterm.enable = false;
-      xfce = {
+      sddm = {
         enable = true;
-        enableScreensaver = false;
-        enableXfwm = true;
+        wayland.enable = true;
+      };
+      autoLogin = {
+        enable = true;
+        user = user.name;
       };
     };
-		# Configure keymap in X11.
-		layout = user.services.xserver.layout;
-		xkbVariant = user.services.xserver.xkbVariant;
-		# Exclude default X11 packages I don't want.
-		excludePackages = with pkgs; [ xterm ];
-	};
+    xserver = {
+      enable = true;
+      # Enable Desktop Environment.
+      desktopManager = {
+        xterm.enable = false;
+        xfce = {
+          enable = true;
+          enableScreensaver = false;
+          enableWaylandSession = true;
+          enableXfwm = true;
+        };
+      };
+      # Exclude default X11 packages I don't want.
+      excludePackages = with pkgs; [ xterm ];
+      # Configure keymap in X11.
+      xkb = {
+        layout = user.services.xserver.xkb.layout;
+        variant = user.services.xserver.xkb.variant;
+      };
+    };
+  };
 
   # Install XFCE specific programs/package(s).
 	environment.systemPackages = with pkgs; [

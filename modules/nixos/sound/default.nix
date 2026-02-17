@@ -64,23 +64,22 @@ in {
 
   users.users.${user.name}.extraGroups = [ "audio" ];
 
-	# Enable sound with pipewire.
-	sound.enable = true;
-  # Turn off PulseAudio.
-	hardware.pulseaudio.enable = false;
   # RealtimeKit priority scheduling for audio.
 	security.rtkit.enable = true;
-  # Use Pipewire.
-	services.pipewire = {
-    audio.enable = true;
-		enable = true;
-		alsa = {
-			enable = true;
-			support32Bit = true;
-		};
-#    package = pkgPatchedWithMicBoostDisabled;
-		pulse.enable = true;
-		jack.enable = true;
+	services = {
+    # Use Pipewire.
+    pipewire = {
+      audio.enable = true;
+		  enable = true;
+		  alsa = {
+			  enable = true;
+			  support32Bit = true;
+		  };
+#      package = pkgPatchedWithMicBoostDisabled;
+      # Enable PulseAudio server emulation.
+		  pulse.enable = true;
+		  jack.enable = true;
+    };
 	};
 }
 

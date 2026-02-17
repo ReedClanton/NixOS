@@ -3,11 +3,11 @@ start_directory: "~"
 windows:
   - window_name: Home
     focus: true
-    layout: ee51,255x65,0,0[255x31,0,0,1,255x33,0,32{191x33,0,32,2,63x33,192,32[63x16,192,32,3,63x16,192,49,4]}]
+    layout: 41dc,298x70,0,0[298x32,0,0,1,298x37,0,33{234x37,0,33,2,63x37,235,33[63x18,235,33,3,63x18,235,52,4]}]
     panes:
       - focus: true
         shell_command:
-          - clear;fastfetch;pwd;ls -GAp
+          - clear;fastfetch;pwd;ls -GA
       - suppress_history: true
         shell_command:
           - btop
@@ -33,30 +33,30 @@ windows:
           - while true; do ping -c 1 -W .5 wttr.in 2>&1 >/dev/null; if [ "$?" -eq "0" ]; then weather $WEATHER_LONG_WAIT; else echo "wttr not connected, waiting '$WEATHER_SHORT_WAIT'..."; sleep $WEATHER_SHORT_WAIT; fi; done
   - window_name: Home-2
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-3
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-4
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-5
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-6
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-7
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-8
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Home-9
     shell_command_before:
-      - clear;pwd;ls -GAp
+      - clear;pwd;ls -GA
   - window_name: Tasks
     suppress_history: true
     shell_command_before:
-      - clear;pwd;ls -GAp;vit
+      - clear;pwd;ls -GA;vit
 

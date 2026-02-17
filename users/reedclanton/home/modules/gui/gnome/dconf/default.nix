@@ -7,18 +7,11 @@
 
     "org/gnome/TextEditor" = {
       highlight-current-line = true;
-	  show-line-numbers = true;
+      show-line-numbers = true;
       show-map = true;
       style-scheme = "cobalt";
     };
 
-#    "org/gnome/clocks" = {
-#      world-clocks = [
-#        { location = mkVariant [ (mkUint32 2) (mkVariant [ "Denver" "KBKF" true [ (mkTuple [ 0.6930702459669482 (-1.8283729951886007) ]) ] [ (mkTuple [ 0.6935790792570746 (-1.8323287315783685) ]) ] ]) ]; }
-#        { location = mkVariant [ (mkUint32 2) (mkVariant [ "Dallas" "KDAL" true [ (mkTuple [ 0.5733842925114371 (-1.690448351049749) ]) ] [ (mkTuple [ 0.5721722660656822 (-1.6895950770317414) ]) ] ]) ]; }
-#      ];
-#    };
-    
     "org/gnome/desktop/app-folders" = {
       folder-children = [ "Utilities" "YaST" "Pardus" "a34bc971-3d63-4c9a-bf67-25b18f6c9f69" "0e6d9c41-2187-48d9-946a-fabdc2c7aaaf" "dcb71360-6f7a-4f50-982b-4a90b6109ec0" "8ad2500a-c38c-4574-99d9-94ddc25a258d" "e3b0e33f-4533-47ac-8e0b-a9d4c19aeae4" "754c665e-313f-4980-8b0b-23d76c530d8b" "a05e33c3-2ed0-4f27-85f7-59779ccdd078" "b28077c6-4406-47bb-9944-2f97dbb63baa" "a54951de-2c86-4c90-89cf-b1abbebf809d" ];
     };
@@ -193,13 +186,6 @@
     "org/gnome/shell/app-switcher" = {
       current-workspace-only = true;
     };
-
-#    "org/gnome/shell/world-clocks" = {
-#      locations = [
-#        (mkVariant [ (mkUint32 2) (mkVariant [ "Denver" "KBKF" true [ (mkTuple [ 0.6930702459669482 (-1.8283729951886007) ]) ] [ (mkTuple [ 0.6935790792570746 (-1.8323287315783685) ]) ] ]) ])
-#        (mkVariant [ (mkUint32 2) (mkVariant [ "Dallas" "KDAL" true [ (mkTuple [ 0.5733842925114371 (-1.690448351049749) ]) ] [ (mkTuple [ 0.5721722660656822 (-1.6895950770317414) ]) ] ]) ])
-#      ];
-#    };
 
     "org/gtk/gtk4/settings/file-chooser" = {
       show-hidden = true;
