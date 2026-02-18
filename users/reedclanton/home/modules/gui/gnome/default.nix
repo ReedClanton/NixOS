@@ -6,12 +6,14 @@
     # Tracks location of GNOME dconf configuration.
     dconf-configuration = "./dconf/default.nix";
   in [
-    # Configure VE.
+    # Configure DE.
     (
       if builtins.pathExists (./. + (builtins.substring 1 9999 "${dconf-configuration}")) then
         ./. + (builtins.substring 1 9999 "${dconf-configuration}")
       else
-        trivial.warn "${current-file-path}: User '${user.name}' has no GNOME dconf configuration (${dconf-configuration})." ../../../../../../do-nothing.nix
+        trivial.warn
+          "${current-file-path}: User '${user.name}' has no GNOME dconf configuration (${dconf-configuration})."
+          ../../../../../../do-nothing.nix
     )
 	];
 }

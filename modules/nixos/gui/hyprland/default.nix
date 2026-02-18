@@ -40,6 +40,7 @@
       ## Terminal ##
       kitty
       ## XDG ##
+      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
       ## Wallpaper ##
       hyprpaper

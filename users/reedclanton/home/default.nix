@@ -9,14 +9,10 @@
 		(if builtins.pathExists ./modules/xdg/default.nix then ./modules/xdg else ../../../do-nothing.nix)
     # GUI setup.
     (
-      if builtins.pathExists ./modules/gui/${ui}/default.nix then
-        ./modules/gui/${ui}
-      else (
-        if builtins.pathExists ../../../modules/home-manager/gui/${ui}/default.nix then
-          ../../../modules/home-manager/gui/${ui}
-        else
-          ../../../do-nothing.nix
-      )
+      if builtins.pathExists ./modules/gui/default.nix then
+        ./modules/gui
+      else
+        ../../../do-nothing.nix
     )
     # Host setup.
     (if builtins.pathExists ./hosts/default.nix then ./hosts else ../../../do-nothing.nix)
