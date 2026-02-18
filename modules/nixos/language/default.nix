@@ -1,4 +1,12 @@
-{ ... }: {
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [
+    font-awesome
+    source-code-pro
+  ];
+  fonts.packages = with pkgs; [
+    font-awesome
+    source-code-pro
+  ];
 	i18n = {
 		defaultLocale = "en_US.UTF-8";
 		extraLocaleSettings = {

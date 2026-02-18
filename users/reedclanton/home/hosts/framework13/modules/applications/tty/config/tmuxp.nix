@@ -1,7 +1,7 @@
 { config, ui, ... }: {
   home.file = {
     "${config.xdg.configHome}/tmuxp/Default.yaml".source = (
-      if "${ui}" == "tty" then
+      if "${ui}" == "tty" || "${ui}" == "hyprland" then
         ../../../../config/tmuxp/Default-tty.yaml
       else (
         if "${ui}" == "gnome" then

@@ -1,5 +1,4 @@
 # System level user configuration.
-
 { config, host, pkgs, ui, user, ... }:
 let
 	userShell = pkgs.zsh;
@@ -12,7 +11,16 @@ in {
     (if builtins.pathExists ./modules/docker/default.nix then ./modules/docker else ../../do-nothing.nix)
     (if builtins.pathExists ./modules/sops/default.nix then ./modules/sops else ../../do-nothing.nix)
     # GUI user setup.
-    (if builtins.pathExists ./modules/gui/${ui}/${host}.nix then ./modules/gui/${ui}/${host}.nix else (if builtins.pathExists ./modules/gui/${ui} then ./modules/gui/${ui} else ../../do-nothing.nix))
+    (
+      if builtins.pathExists ./modules/gui/${ui}/default.nix then
+        ./modules/gui/${ui}
+      else (
+        if builtins.pathExists ../../modules/nixos/gui/${ui}/default.nix then
+          ../../modules/nixos/gui/${ui}
+        else
+          ../../do-nothing.nix
+      )
+    )
     # Host specific user setup.
     (if builtins.pathExists ./hosts/default.nix then ./hosts else ../../do-nothing.nix)
 	];
