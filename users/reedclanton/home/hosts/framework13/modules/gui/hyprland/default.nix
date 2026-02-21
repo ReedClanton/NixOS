@@ -1,7 +1,16 @@
 { ... }: {
+  # Import external host and user specific configuration for this Window Manager (WM).
   imports = [
-    # Install GUI applications for this DE.
-    (if builtins.pathExists ../../../../../modules/applications/gui/default.nix then ../../../../../modules/applications/gui else ../../../../../../../../do-nothing.nix)
+    ../../../../../../../../do-nothing.nix
   ];
+
+  # Host, and user, specific WM configuration.
+  wayland.windowManager.hyprland.settings = {
+    # Increase the sensitivity of the track pad.
+    device = {
+      name = "pixa3854:00-093a:0274-touchpad";
+      sensitivity = 0.5;
+    };
+  };
 }
 
