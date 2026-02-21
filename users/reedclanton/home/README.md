@@ -1,19 +1,22 @@
 # Home Manager Configuration
 
-All `nix` files in this directory are run by Home Manager. All other files are utilized in some way by those `nix` file(s).
+All `nix` files in this directory, and all sub-directories, are run by Home Manager.
 
 ## Purpose
 
-Contains all data, configuration, and `nix` file(s) needed to fully configure Home Manager for this user. May be run independent of NixOS.
+Contains all data, configuration, and `nix` file(s) needed to fully configure Home Manager for
+this user. May be run independent of NixOS.
 
 ## Usage
 
-Home Manager configuration has been broken out into this directory so it may be removed or used independent of NixOS.
+Home Manager configuration has been broken out into this directory so it may be removed or used
+independent of NixOS.
 
 ## Rule(s) & Guideline(s)
 
 - `default.nix` is the entry point to this Home Manager configuration.
-- The only file(s) that may be called that exist about this directory are common Home Manager modules:
+- The only file(s) that may be called that exist about this directory are common Home Manager
+modules:
    - These calls must not prevent successful execution when the external file doesn't exist.
 - No file or directory that's not documented in this README may be added to this directory (other than this README).
 

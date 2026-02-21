@@ -9,9 +9,18 @@
 		(if builtins.pathExists ./modules/xdg/default.nix then ./modules/xdg else ../../../do-nothing.nix)
     # GUI setup.
     (
-      if builtins.pathExists ./modules/gui/default.nix then
-        ./modules/gui
-      else
+      # Check if *any* GUI setup is needed.
+      if "${ui}" != "tty" then (
+        # Determine *what* GUI setup is needed.
+        if "${host}" == "vm" && builtins.pathExists ./modules/gui/vm.nix then
+          ./modules/gui/vm.nix
+        else (
+          if "${host}" != "vm" && builtins.pathExists ./modules/gui/default.nix then
+            ./modules/gui
+          else
+            ../../../do-nothing.nix
+        )
+      ) else
         ../../../do-nothing.nix
     )
     # Host setup.
