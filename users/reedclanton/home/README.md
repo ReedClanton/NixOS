@@ -18,7 +18,8 @@ independent of NixOS.
 - The only file(s) that may be called that exist about this directory are common Home Manager
 modules:
    - These calls must not prevent successful execution when the external file doesn't exist.
-- No file or directory that's not documented in this README may be added to this directory (other than this README).
+- No file or directory that's not documented in this README may be added to this directory
+(other than this README).
 
 # Content(s)
 
