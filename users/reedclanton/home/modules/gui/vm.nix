@@ -1,5 +1,5 @@
-{ host, lib, ui, user, ... }: with lib; {
-  # TODO: Comment and update README.md.
+{ lib, ui, user, ... }: with lib; {
+  # Configures Home Manager for the virtual machine host.
   imports =
   let
     # Used in log/warning/error messages.
@@ -10,17 +10,17 @@
     brave-flatpak = "./flatpaks/applications/brave.nix";
     libre-office-flatpak = "./flatpaks/applications/libre-office.nix";
     tor-browser-launcher-flatpak = "./flatpaks/applications/tor-browser-launcher.nix";
-    # Tracks location of common (global) home-manager Flatpak application(s).
+    # Tracks location of common (global) Home Manager Flatpak application(s).
     global-flatpak-applications = "./../../../../../modules/home-manager/applications/gui/flatpaks/applications/default.nix";
-    # Tracks location of common (global) home-manager GUI packages & programs that should be
+    # Tracks location of common (global) Home Manager GUI packages & programs that should be
     # installed.
     gedit-package = "./../../../../../modules/applications/gui/packages/gedit.nix";
     firefox-program = "./../../../../../modules/applications/gui/programs/firefox.nix";
     # Tracks location of file that installs GUI program(s).
     program-applications = "./programs/default.nix";
-    # Tracks location of local home-manager Desktop Environment (DE) configuration.
+    # Tracks location of local Home Manager Desktop Environment (DE) configuration.
     local-de-configuration = "./${ui}/default.nix";
-    # Tracks location of common (global) home-manager Desktop Environment (DE) configuration.
+    # Tracks location of common (global) Home Manager Desktop Environment (DE) configuration.
     global-de-configuration = "./../../../../../modules/home-manager/gui/${ui}/default.nix";
   in [
     # Configure flatpak package manager.
@@ -29,7 +29,7 @@
         ./. + (builtins.substring 1 9999 "${local-flatpak-configuration}")
       else
         trivial.warn
-          "${current-file-path}: User '${user.name}' has no home-manager flatpak package manager configuration (${local-flatpak-configuration})..."
+          "${current-file-path}: User '${user.name}' has no Home Manager flatpak package manager configuration (${local-flatpak-configuration})..."
           ../../../../../do-nothing.nix
     )
     # Install some flatpak(s).
@@ -38,7 +38,7 @@
         ./. + (builtins.substring 1 9999 "${brave-flatpak}")
       else
         trivial.warn
-          "${current-file-path}: The Brave Flatpak (${brave-flatpak}) is an expected application in the user's (${user.name}) home-manger configuration for the '${host}' host. This application will be missing..."
+          "${current-file-path}: The Brave Flatpak (${brave-flatpak}) is an expected application in the user's (${user.name}) home-manger configuration for the 'vm` host. This application will be missing..."
           ../../../../../do-nothing.nix
     )
     (
@@ -46,7 +46,7 @@
         ./. + (builtins.substring 1 9999 "${libre-office-flatpak}")
       else
         trivial.warn
-          "${current-file-path}: The Libre Office (${libre-office-flatpak}) is an expected application in the user's (${user.name}) home-manager configuration for the '${host}' host. This application will be missing..."
+          "${current-file-path}: The Libre Office (${libre-office-flatpak}) is an expected application in the user's (${user.name}) Home Manager configuration for the 'vm' host. This application will be missing..."
           ../../../../../do-nothing.nix
     )
     (
@@ -54,7 +54,7 @@
         ./. + (builtins.substring 1 9999 "${tor-browser-launcher-flatpak}")
       else
         trivial.warn
-          "${current-file-path}: The Tor Browser Launcher Flatpak (${tor-browser-launcher-flatpak}) is an expected application in the user's (${user.name}) home-manger configuration for the '${host}' host. This application will be missing..."
+          "${current-file-path}: The Tor Browser Launcher Flatpak (${tor-browser-launcher-flatpak}) is an expected application in the user's (${user.name}) home-manger configuration for the 'vm' host. This application will be missing..."
           ../../../../../do-nothing.nix
     )
     # Install common (global) Flatpak(s).
@@ -84,7 +84,7 @@
         ./. + (builtins.substring 1 9999 "${local-de-configuration}")
       else
         trivial.warn
-          "${current-file-path}: User '${user.name}' has no home-manager specific, host independent, desktop environment configuration found (${local-de-configuration}) for this host (${host})..."
+          "${current-file-path}: User '${user.name}' has no Home Manager specific, host independent, desktop environment configuration found (${local-de-configuration}) for host `vm`..."
           ../../../../../do-nothing.nix
     )
     # Run common (global) DE configuration.
@@ -93,7 +93,7 @@
         ./. + (builtins.substring 1 9999 "${global-de-configuration}")
       else
         trivial.warn
-          "${current-file-path}: No common home-manager specific, host (${host}) & user (${user.name}) independent, desktop environment configuration found (${global-de-configuration})..."
+          "${current-file-path}: No common Home Manager specific, host (vm) & user (${user.name}) independent, desktop environment configuration found (${global-de-configuration})..."
           ../../../../../do-nothing.nix
     )
   ];

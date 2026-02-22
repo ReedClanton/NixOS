@@ -18,7 +18,7 @@
         ./. + (builtins.substring 1 9999 "${flatpak-configuration}")
       else
         trivial.warn
-          "${current-file-path}: User '${user.name}' has no home-manager flatpak package manager configuration (${flatpak-configuration})..."
+          "${current-file-path}: User '${user.name}' has no Home Manager flatpak package manager configuration (${flatpak-configuration})..."
           ../../../../../../do-nothing.nix
     )
     # Install flatpak(s).
@@ -27,7 +27,7 @@
         ./. + (builtins.substring 1 9999 "${flatpak-applications}")
       else
         trivial.warn
-          "${current-file-path}: User '${user.name}' has no home-manager flatpak(s) installed (${flatpak-applications})..."
+          "${current-file-path}: User '${user.name}' has no Home Manager flatpak(s) installed (${flatpak-applications})..."
           ../../../../../../do-nothing.nix
     )
     # Install package(s).
@@ -36,7 +36,7 @@
         ./. + (builtins.substring 1 9999 "${package-applications}")
       else
         trivial.warn
-          "${current-file-path}: User '${user.name}' has no home-manager packages installed (${package-applications})..."
+          "${current-file-path}: User '${user.name}' has no Home Manager packages installed (${package-applications})..."
           ../../../../../../do-nothing.nix
     )
     # Install program(s).
@@ -45,7 +45,7 @@
         ./. + (builtins.substring 1 9999 "${program-applications}")
       else
         trivial.warn
-          "${current-file-path}: User '${user.name}' has no home-manager programs installed (${program-applications})..."
+          "${current-file-path}: User '${user.name}' has no Home Manager programs installed (${program-applications})..."
           ../../../../../../do-nothing.nix
     )
   ];
