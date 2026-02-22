@@ -5,7 +5,8 @@ All `nix` files in this directory, and all sub-directories, are run by Home Mana
 ## Purpose
 
 Contains all data, configuration, and `nix` file(s) needed to fully configure Home Manager for
-this user. May be run independent of NixOS.
+this user. May be run independent of NixOS. May call common Home Manager content from
+`<root>/modules/home-manager`.
 
 ## Usage
 
@@ -15,7 +16,7 @@ independent of NixOS.
 ## Rule(s) & Guideline(s)
 
 - `default.nix` is the entry point to this Home Manager configuration.
-- The only file(s) that may be called that exist about this directory are common Home Manager
+- The only file(s) that may be called that exist outside this directory are common Home Manager
 modules:
    - These calls must not prevent successful execution when the external file doesn't exist.
 - No file or directory that's not documented in this README may be added to this directory
@@ -25,7 +26,8 @@ modules:
 
 ## `default.nix`
 
-File that's in charge of building this user's Home Manager configuration. When in doubt as to what Home Manager files are being run, start here.
+File that's in charge of building this user's Home Manager configuration. When in doubt as to what
+Home Manager files are being run, start here.
 
 ### Purpose
 
@@ -36,18 +38,24 @@ Is in charge of:
 
 ### Usage
 
-Ensure the argument(s) declared at the top are available. Then call from within a Home Manager context (i.e. Home Manager already exists within calling scope) to kick off user's Home Manager configuration.
+Ensure the argument(s) declared at the top are available. Then call from within a Home Manager
+context (i.e. Home Manager already exists within calling scope) to kick off user's
+Home Manager configuration.
 
 ### Rule(s) & Guideline(s)
 
-- This is to be the only file in this directory, or any child directory, that's directly called from an outside (i.e. parent) directory.
-- Must be called from within a Home Manager context (i.e. Home Manager isn't imported, thus it be already exist in the calling scope).
+- This is to be the only file in this directory, or any child directory, that's directly
+called from an outside (i.e. parent) directory.
+- Must be called from within a Home Manager context (i.e. Home Manager isn't imported,
+thus it must already exist in the calling scope).
 - File should only import other file(s) and set basic Home Manager setting(s):
-   - A good rule of thumb here is that `home.<thing>` may be set, but `home.<thing>.<thing2>` should probably be broken out into a module.
+   - A good rule of thumb here is that `home.<thing>` may be set, but `home.<thing>.<thing2>`
+   should probably be broken out into a module.
 
 ## [`config/`](./config/README.md)
 
-Stores non `nix` configuration file(s) for programs installed by Home Manager. See section title link for more.
+Stores non `nix` configuration file(s) for programs installed by Home Manager.
+See section title link for more.
 
 ## [`data/`](./data/README.md) (may not exist)
 
