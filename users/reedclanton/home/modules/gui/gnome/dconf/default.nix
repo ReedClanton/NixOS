@@ -113,7 +113,6 @@
     };
 
     "org/gnome/desktop/screensaver" = {
-      lock-delay = mkUint32 180;
       lock-enabled = false;
     };
 
