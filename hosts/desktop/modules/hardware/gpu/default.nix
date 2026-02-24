@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
 	imports = [ ../../../../../modules/nixos/hardware/gpu ];
 
 	boot = {
@@ -8,10 +8,7 @@
 	};
 
   # Hardware specific driver needed to enable OpenGL.
-  hardware= {
-    amdgpu.overdrive.enable = true;
-    graphics.extraPackages = with pkgs; [ amdvlk ];
-  };
+  hardware.amdgpu.overdrive.enable = true;
 
 	# Enable GPU hardware acceleration.
   # Note(s):
