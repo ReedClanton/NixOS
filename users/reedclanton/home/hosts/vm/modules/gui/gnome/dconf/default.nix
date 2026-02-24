@@ -2,7 +2,7 @@
 { lib, ... }: with lib.hm.gvariant; {
   dconf.settings = {
     "org/gnome/desktop/session" = {
-      idle-delay = lib.mkForce mkUint32 0;
+      idle-delay = lib.mkForce (mkUint32 0);
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
