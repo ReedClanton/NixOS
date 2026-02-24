@@ -112,6 +112,15 @@
       sort-order = [ "org.gnome.Settings.desktop" "org.gnome.Contacts.desktop" "org.gnome.Calculator.desktop" "org.gnome.Calendar.desktop" "org.gnome.Weather.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Software.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.clocks.desktop" "org.gnome.Characters.desktop" ];
     };
 
+    "org/gnome/desktop/screensaver" = {
+      lock-delay = mkUint32 180;
+      lock-enabled = false;
+    };
+
+    "org/gnome/desktop/session" = {
+      idle-delay = mkUint32 900;
+    };
+
     "org/gnome/desktop/sound" = {
       allow-volume-above-100-percent = true;
       event-sounds = false;
@@ -146,6 +155,13 @@
       edge-tiling = true;
       experimental-features = [ "scale-monitor-framebuffer" ];
       workspaces-only-on-primary = false;
+    };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      power-button-action = "interactive";
+      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-battery-timeout = 1800;
+      sleep-inactive-battery-type = "poweroff";
     };
 
     "org/gnome/shell" = {
