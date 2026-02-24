@@ -17,7 +17,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/0e6d9c41-2187-48d9-946a-fabdc2c7aaaf" = {
-      apps = [ "btop.desktop" "org.corectrl.corectrl.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "org.gnome.font-viewer.desktop" "jstest-gtk.desktop" "org.gnome.Logs.desktop" "cups.desktop" "nixos-manual.desktop" "org.berarma.Oversteer.desktop" "org.gnome.Settings.desktop" "org.gnome.Software.desktop" "gnome-system-monitor.desktop" "com.github.LongSoft.UEFITool.desktop" ];
+      apps = [ "btop.desktop" "org.corectrl.CoreCtrl.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "org.gnome.font-viewer.desktop" "jstest-gtk.desktop" "org.gnome.Logs.desktop" "cups.desktop" "nixos-manual.desktop" "org.gnome.Settings.desktop" "org.gnome.Software.desktop" "org.gnome.SystemMonitor.desktop" "com.github.LongSoft.UEFITool.desktop" ];
       name = "Utilities-System";
       translate = false;
     };
@@ -29,7 +29,7 @@
     };
 
     "org/gnome/desktop/app-folders/folders/8ad2500a-c38c-4574-99d9-94ddc25a258d" = {
-      apps = [ "simple-scan.desktop" "org.gnome.Evince.desktop" "org.libreoffice.LibreOffice.desktop" "org.libreoffice.LibreOffice.base.desktop" "org.libreoffice.LibreOffice.calc.desktop" "org.libreoffice.LibreOffice.draw.desktop" "org.libreoffice.LibreOffice.impress.desktop" "org.libreoffice.LibreOffice.math.desktop" "org.libreoffice.LibreOffice.writer.desktop" ];
+      apps = [ "org.gnome.SimpleScan.desktop" "org.gnome.Papers.desktop" "org.libreoffice.LibreOffice.desktop" "org.libreoffice.LibreOffice.base.desktop" "org.libreoffice.LibreOffice.calc.desktop" "org.libreoffice.LibreOffice.draw.desktop" "org.libreoffice.LibreOffice.impress.desktop" "org.libreoffice.LibreOffice.math.desktop" "org.libreoffice.LibreOffice.writer.desktop" ];
       name = "Office";
       translate = false;
     };
@@ -55,30 +55,30 @@
     };
 
     "org/gnome/desktop/app-folders/folders/a05e33c3-2ed0-4f27-85f7-59779ccdd078" = {
-      apps = [ "org.blender.Blender.desktop" "com.jgraph.drawio.desktop.desktop" "org.freecadweb.FreeCAD.desktop" "org.gimp.GIMP.desktop" "org.gnome.Loupe.desktop" ];
+      apps = [ "org.blender.Blender.desktop" "com.jgraph.drawio.desktop.desktop" "org.freecad.FreeCAD.desktop" "org.gimp.GIMP.desktop" "org.gnome.Loupe.desktop" "org.kde.kdenlive.desktop" ];
       name = "Multi-Media";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/a34bc971-3d63-4c9a-bf67-25b18f6c9f69" = {
-      apps = [ "ca.desrt.dconf-editor.desktop" "org.gnome.Extensions.desktop" "yelp.desktop" "org.gnome.Tour.desktop" ];
+      apps = [ "ca.desrt.dconf-editor.desktop" "org.gnome.Extensions.desktop" "org.gnome.Yelp.desktop" "org.gnome.Tour.desktop" ];
       name = "Utilities-Gnome";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/a54951de-2c86-4c90-89cf-b1abbebf809d" = {
-      apps = [ "org.audacityteam.Audacity.desktop" "droidcam.desktop" "org.mixxx.Mixxx.desktop" "com.obsproject.Studio.desktop" "org.rncbc.qpwgraph.desktop" "qv4l2.desktop" "qvidcap.desktop" "vlc.desktop" ];
+      apps = [ "org.audacityteam.Audacity.desktop" "org.gnome.Decibels.desktop" "droidcam.desktop" "org.mixxx.Mixxx.desktop" "com.obsproject.Studio.desktop" "org.rncbc.qpwgraph.desktop" "org.gnome.Showtime.desktop" "vlc.desktop" ];
       name = "Audio & Video";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/b28077c6-4406-47bb-9944-2f97dbb63baa" = {
-      apps = [ "org.gnome.TwentyFortyEight.desktop" "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "org.gnome.Mines.desktop" "protonup-qt.desktop" "com-valvesoftware-steam" ];
+      apps = [ "org.gnome.TwentyFortyEight.desktop" "org.wesnoth.Wesnoth.desktop" "com.mojang.Minecraft.desktop" "org.gnome.Mines.desktop" "io.github.berarma.Oversteer.desktop" "protonup-qt.desktop" ];
       name = "Games";
     };
 
     "org/gnome/desktop/app-folders/folders/dcb71360-6f7a-4f50-982b-4a90b6109ec0" = {
-      apps = [ "org.gnome.gitlab.somas.Apostrophe.desktop" "arduino.desktop" "cc.arduino.arduinoide.desktop" "cc.arduino.IDE2.desktop" "io.github.nokse22.asciidraw.desktop" "org.gnome.Characters.desktop" "org.gnome.gedit.desktop" "nvim.desktop" "org.gnome.TextEditor.desktop" "com.github.liferooter.textpieces.desktop" ];
+      apps = [ "org.gnome.gitlab.somas.Apostrophe.desktop" "arduino.desktop" "cc.arduino.arduinoide.desktop" "cc.arduino.IDE2.desktop" "io.github.nokse22.asciidraw.desktop" "org.gnome.Characters.desktop" "org.gnome.gedit.desktop" "nvim.desktop" "org.gnome.TextEditor.desktop" "com.github.liferooter.textpieces.desktop" "io.gitlab.liferooter.TextPieces.desktop" ];
       name = "Text";
       translate = false;
     };
@@ -97,40 +97,30 @@
       show-battery-percentage = true;
     };
 
-    "org/gnome/desktop/peripherals/keyboard" = {
-      numlock-state = true;
-    };
-
     "org/gnome/desktop/peripherals/mouse" = {
       accel-profile = "flat";
       speed = -0.88;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
-      speed = 0.24242424242424243;
+      speed = 0.242424;
       two-finger-scrolling-enabled = true;
-    };
-
-    "org/gnome/desktop/privacy" = {
-      old-files-age = mkUint32 30;
-      recent-files-max-age = -1;
-      remove-old-temp-files = true;
     };
 
     "org/gnome/desktop/search-providers" = {
       enabled = [ "org.gnome.Weather.desktop" ];
-#      sort-order = [ "org.gnome.Settings.desktop" "org.gnome.Documents.desktop" "org.gnome.Contacts.desktop" "org.gnome.Calculator.desktop" "org.gnome.Calendar.desktop" "org.gnome.Weather.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Software.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.clocks.desktop" "org.gnome.Characters.desktop" ];
       sort-order = [ "org.gnome.Settings.desktop" "org.gnome.Contacts.desktop" "org.gnome.Calculator.desktop" "org.gnome.Calendar.desktop" "org.gnome.Weather.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Software.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.clocks.desktop" "org.gnome.Characters.desktop" ];
     };
 
     "org/gnome/desktop/sound" = {
       allow-volume-above-100-percent = true;
       event-sounds = false;
+      input-feedback-sounds = false;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      switch-applications = [];
-      switch-applications-backward = [];
+      switch-to-workspace-left = [ "<Control><Super>Left" ];
+      switch-to-workspace-right = [ "<Control><Super>Right" ];
       switch-windows = [ "<Alt>Tab" ];
       switch-windows-backward = [ "<Shift><Alt>Tab" ];
     };
@@ -152,35 +142,15 @@
     };
 
     "org/gnome/mutter" = {
+      dynamic-workspaces = false;
       edge-tiling = true;
-    };
-
-    "org/gnome/nautilus/preferences" = {
-      default-folder-viewer = "icon-view";
-    };
-
-    "org/gnome/settings-daemon/plugins/color" = {
-      night-light-enabled = true;
-    };
-
-    # Disable the Insert key.
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "Insert";
-      command = ":";
-      name = "DisableInsertKey";
-    };
-
-    "org/gnome/settings-daemon/plugins/power" = {
-      ambient-enabled = false;
-      power-button-action = "interactive";
-      power-saver-profile-on-low-battery = true;
-      sleep-inactive-ac-timeout = 1800;
-	    sleep-inactive-ac-type = "nothing";
-      sleep-inactive-battery-timeout = 1200;
+      experimental-features = [ "scale-monitor-framebuffer" ];
+      workspaces-only-on-primary = false;
     };
 
     "org/gnome/shell" = {
       favorite-apps = [ "firefox.desktop" "org.gnome.World.Secrets.desktop" "org.telegram.desktop.desktop" "slack.desktop" "discord.desktop" "element-desktop.desktop" "org.gnome.Console.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Calendar.desktop" "org.gnome.Geary.desktop" "com.valvesoftware.Steam.desktop" ];
+      welcome-dialog-last-shown-version = "45.2";
     };
 
     "org/gnome/shell/app-switcher" = {
@@ -193,10 +163,8 @@
     };
 
     "org/gtk/settings/file-chooser" = {
-      clock-format = "12h";
-	    show-hidden = false;
-	    sort-directories-first = true;
+      show-hidden = false;
+      sort-directories-first = true;
     };
   };
 }
-

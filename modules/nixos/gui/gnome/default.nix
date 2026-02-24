@@ -27,9 +27,6 @@
 		};
 	};
 
-	# TODO: Sort out if this is needed by firefox.
-#	services.gnome.gnome-browser-connector.enable = true;
-
 	# Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
 	systemd.services."getty@tty1".enable = false;
 	systemd.services."autovt@tty1".enable = false;
@@ -41,6 +38,7 @@
 			gnome-photos
       gnome-maps
       gnome-music
+      gnome-software
       totem
 		]);
 

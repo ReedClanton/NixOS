@@ -115,8 +115,6 @@
 			# TODO: Test! Doesn't seem like just setting these worked.
 			# Removes `.gnupg/` from home.
 			GNUPGHOME = "${config.xdg.dataHome}/gnupg";
-			# Removes `.gtkrc-2.0` from home.
-			GTK2_RC_FILES="${config.xdg.configHome}/gtk-2.0/gtkrc";
 			# Removes `.compose-cache/` from home.
 			XCOMPOSECACHE="${config.xdg.cacheHome}/X11/xcompose";
 			# Removes `.zoom` from home.
