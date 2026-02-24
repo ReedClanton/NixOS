@@ -1,9 +1,10 @@
 { lib, pkgs, user, ... }: {
   imports = [ ../../../../../modules/nixos/hardware/gpu ];
-  
+
+  hardware.amdgpu.overdrive.enable = lib.mkForce false;
+
 	programs.corectrl = {
 		enable = lib.mkForce false;
-		gpuOverclock.enable = lib.mkForce false;
 	};
 
 	# Enable GPU hardware acceleration.

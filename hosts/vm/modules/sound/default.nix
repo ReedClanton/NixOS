@@ -1,8 +1,6 @@
 { lib, ... }: {
 	imports = [ ../../../../modules/nixos/sound ];
 
-	# Enable sound with pipewire.
-	sound.enable = lib.mkForce false;
 	security.rtkit.enable = lib.mkForce false;
 	services.pipewire = {
 		enable = lib.mkForce false;

@@ -1,6 +1,6 @@
-{ lib, ... }: {
+{ lib, ... }: with lib; {
   imports = [ ../default.nix ];
 
-	services.xserver.displayManager.gdm.wayland = lib.mkForce false;
+  services.displayManager.gdm.wayland = mkForce false;
 }
 
