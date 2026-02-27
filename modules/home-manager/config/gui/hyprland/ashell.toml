@@ -1,0 +1,50 @@
+[clock]
+format = "%Y/%m(%B)/%d(%A), %I(%H):%M:%S %p"
+
+[media_player]
+max_title_length = 100
+
+[modules]
+center = ["WindowTitle"]
+left = ["Workspaces", "MediaPlayer", "Privacy"]
+right = ["SystemInfo", "Tray", "Settings", "Clock"]
+
+[system_info]
+indicators = [
+    "Cpu",
+    "Temperature",
+    "Memory",
+    "MemorySwap",
+	# TODO: Add Disk.
+    "IpAddress",
+    "DownloadSpeed",
+    "UploadSpeed",
+]
+
+[system_info.cpu]
+alert_threshold = 90
+warn_threshold = 80
+
+[system_info.disk]
+alert_threshold = 85
+warn_threshold = 65
+
+[system_info.memory]
+alert_threshold = 80
+warn_threshold = 60
+
+[system_info.memory_swap]
+alert_threshold = 1
+
+[system_info.temperature]
+alert_threshold = 80
+warn_threshold = 60
+
+[window_title]
+mode = "Title"
+truncate_title_after_length = 150
+
+[workspaces]
+enable_workspace_filling = true
+max_workspaces = 4
+workspace_names = ["Web", "Social", "System", "Game"]

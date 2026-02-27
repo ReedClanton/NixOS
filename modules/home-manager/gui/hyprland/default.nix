@@ -1,8 +1,44 @@
-{ lib, user, ... }: {
-  ## Status Bar ##
-  programs.waybar = {
-    enable = true;
+{ config, lib, pkgs, user, ... }: {
+  ## Set Dark Theme ##
+  dconf.settings."org/gnome/desktop/interface" = {
+    gtk-theme = "gruvbox-dark";
+    color-scheme = "prefer-dark";
   };
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+  };
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "macchiato";
+        accent = "maroon";
+      };
+      name = "Papirus-Dark";
+    };
+    theme = {
+      package = pkgs.gruvbox-dark-gtk;
+      name = "gruvbox-dark";
+    };
+    colorScheme = "dark";
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.extraConfig.Settings = ''
+      gtk-application-prefer-dark-theme=1
+    '';
+  };
+  # Ensure theme gets applied.
+  xdg.configFile."gtk-4.0/gtk.css".force = true;
+
+  ## Status Bar ##
+  # Config file configuration.
+  home.file."${config.xdg.configHome}/ashell/config.toml".source = ../../config/gui/hyprland/ashell.toml;
+  # Nix (Home Manger) configuration.
+  programs.ashell = {
+    enable = true;
+    systemd.enable = true;
+  };
+
   ## Hyprland ##
   wayland.windowManager.hyprland = {
     enable = true;

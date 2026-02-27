@@ -32,7 +32,7 @@
       ## Clipboard ##
       wl-clipboard
       ## File Manager ##
-      kdePackages.dolphin
+      nautilus
       ## Notification Daemon ##
       mako
       ## Status Bar ##
