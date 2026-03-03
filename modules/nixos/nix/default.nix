@@ -10,6 +10,7 @@
 	nix = {
 		settings = {
 			## System Updating ##
+      # This causes builds to take longer. Use `dates` to run it on a schedule.
 			auto-optimise-store = true;
 			experimental-features = [ "nix-command" "flakes" ];
 
@@ -22,7 +23,7 @@
 		gc = {
 			automatic = true;
 			dates = "weekly";
-			options = "--delete-older-than 183d";
+			options = "--delete-older-than 30d";
 		};
 	};
 }
