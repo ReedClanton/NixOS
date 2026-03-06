@@ -51,6 +51,10 @@
       "Tavern242_Guest" = {
         priority = 375;
       };
+      "OldeTownSocial" = {
+        priority = 375;
+        pskRaw = "ext:oldetownsocial_psk";
+      };
       "@Bangers" = {
         priority = 350;
       };
