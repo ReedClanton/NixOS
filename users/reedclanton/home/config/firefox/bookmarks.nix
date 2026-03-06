@@ -401,6 +401,16 @@
               }
             ];
           }
+          {
+            name = "GL-ATX1800";
+            bookmarks = [
+              {
+                name = "Admin Panel";
+                url = "http://192.168.8.1/#/internet";
+                tags = [ "admin" "axt1800" "gl" "hardware" "iNet" "network" "panel" "router" ];
+              }
+            ];
+          }
         ];
       }
       {
@@ -514,7 +524,7 @@
                 bookmarks = [
                   {
                     name = "Climbers on Team";
-                    url = "https://drive.google.com/drive/u/3/folders/0AJTQtMeacptDUk9PVA";
+                    url = "https://drive.google.com/drive/u/2/folders/0AJTQtMeacptDUk9PVA";
                     tags = [ "climb" "climber" "climbers" "climbing" "doc" "docs" "document" "documents" "drive" "folder" "folders" "google" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
                   }
                   {
@@ -522,7 +532,7 @@
                     bookmarks = [
                       {
                         name = "Team Folders";
-                        url = "https://drive.google.com/drive/u/3/folders/1TjIowu6M15RbBHGDVp6PvzE04kabgfw2";
+                        url = "https://drive.google.com/drive/folders/1TjIowu6M15RbBHGDVp6PvzE04kabgfw2?usp=drive_link";
                         tags = [ "climb" "climber" "climbers" "climbing" "doc" "docs" "document" "documents" "drive" "folder" "folders" "google" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
                       }
                       {
@@ -530,21 +540,36 @@
                         bookmarks = [
                           {
                             name = "Movement Englewood, CO";
-                            url = "https://drive.google.com/drive/u/3/folders/1i8xbQtDNWJ1ObKZQyRk5-zxEVrjKXlyL";
+                            url = "https://drive.google.com/drive/folders/1i8xbQtDNWJ1ObKZQyRk5-zxEVrjKXlyL?usp=drive_link";
                             tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "englewood" "folder" "folders" "google" "movement" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
                           }
                           {
-                            name = "Movement Englewood, CO";
+                            name = "Movement Golden, CO";
+                            url = "https://drive.google.com/drive/folders/1RvScf6xq2cq42C4EdKZoLQrTxPICmN1L?usp=drive_link";
+                            tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "folder" "folders" "golden" "google" "movement" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                          }
+                          {
+                            name = "Movement Golden, CO";
                             bookmarks = [
                               {
-                                name = "Englewood - Climber Progress 2024";
-                                url = "https://docs.google.com/spreadsheets/d/1mjy-z-1lzNLV92o3g8lsHJbh3kHTVIu2sjMCtqU87Zc/edit?gid=328942084#gid=328942084";
-                                tags = [ "2024" "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "englewood" "google" "movement" "progress" "rocks" "team" "united" "unitedrocks" "volunteer" ];
+                                name = "Climbers Agreements 2025-2026";
+                                url = "https://drive.google.com/drive/u/2/folders/13D8Bp-_XQl8myLpDpkHxFnX5NM3jpmXU";
+                                tags = [ "2025" "2026" "agreements" "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "folder" "folders" "golden" "google" "movement" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
                               }
                               {
-                                name = "Movement Englewood Team Member Information (Responses)";
-                                url = "https://docs.google.com/spreadsheets/d/1PJVx5xaGkUotlQCgReLURECwvQgL_QkIMRSO5HN0UlM/edit?gid=175370928#gid=175370928";
-                                tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "englewood" "google" "info" "information" "member" "movement" "responses" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                                name = "Climber Progress Reports 2025-2026";
+                                url = "https://docs.google.com/spreadsheets/d/1nOTa1MOUwL_PDALBRMYQCsvivvUEs3JLUKGQ7uYEJyM/edit?usp=drive_link";
+                                tags = [ "2025" "2026" "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "folder" "folders" "golden" "google" "movement" "progress" "report" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                              }
+                              {
+                                name = "Golden Team Member Information Form";
+                                url = "https://docs.google.com/forms/d/12EUjTAwmMG_otEDJ7UhaAG6Mgbf6eRmdKOjIFewGc_E/edit";
+                                tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "folder" "folders" "formatter" "golden" "google" "info" "information" "member" "movement" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                              }
+                              {
+                                name = "Golden Team Member Information Form (Responses)";
+                                url = "https://docs.google.com/spreadsheets/d/1QITRtoy3wGJf0OFTxexRDj88Vxd62ZUz-z6FhqHbvq4/edit?usp=drive_link";
+                                tags = [ "climb" "climber" "climbers" "climbing" "co" "colorado" "doc" "docs" "document" "documents" "drive" "folder" "folders" "form" "golden" "google" "info" "information" "member" "movement" "responses" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
                               }
                             ];
                           }
@@ -554,75 +579,100 @@
                   }
                   {
                     name = "United Rocks";
+                    url = "https://drive.google.com/drive/u/2/folders/0APcaqp8klY7LUk9PVA";
+                    tags = [ "climb" "climber" "climbers" "climbing" "doc" "docs" "document" "documents" "drive" "folder" "folders" "google" "rocks" "team" "united" "unitedrocks" "volunteer" "volunteers" ];
+                  }
+                  {
+                    name = "United Rocks";
                     bookmarks = [
                       {
-                        name = "Board Meetings";
-                        url = "https://drive.google.com/drive/u/3/folders/1ryZz2T4RAKWgTAueEyLKxDvTzqmkyeZq";
-                        tags = [ "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "rocks" "united" "unitedrocks" "volunteer" ];
+                        name = "Board Meetings Minutes";
+                        url = "https://drive.google.com/drive/folders/1ryZz2T4RAKWgTAueEyLKxDvTzqmkyeZq?usp=drive_link";
+                        tags = [ "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minutes" "rocks" "united" "unitedrocks" "volunteer" ];
                       }
                       {
-                        name = "Board Meetings";
+                        name = "Board Meetings Minutes";
                         bookmarks = [
                           {
-                            name = "2024";
-                            url = "https://drive.google.com/drive/u/3/folders/1o38DX4AclXryWHSd5wb4f_ktcgnYZvpa";
-                            tags = [ "2024" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "rocks" "united" "unitedrocks" "volunteer" ];
-                          }
-                        ];
-                      }
-                      {
-                        name = "Branding/Marketing";
-                        bookmarks = [
-                          {
-                            name = "Email Signature";
-                            url = "https://drive.google.com/drive/u/3/folders/1ElvnfCfCIcehoZJDesPuL7lqm7MnAPAX";
-                            tags = [ "branding" "drive" "email" "google" "marketing" "rocks" "signature" "united" "unitedrocks" "volunteer" "volunteers" ];
+                            name = "2022";
+                            url = "https://drive.google.com/drive/folders/10itwQieOCg9QyeZyiW9-HvjIwXDgENGh?usp=drive_link";
+                            tags = [ "2022" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minute" "minutes" "rocks" "united" "unitedrocks" "volunteer" ];
                           }
                           {
-                            name = "United Rocks - Marketing Assessment.docx";
-                            url = "https://docs.google.com/document/d/17syTHJtCnhFrSy1W-95a2lbQmVGCuKsB/edit";
-                            tags = [ "assessment" "brand" "branding" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "logo" "marketing" "rocks" "united" "unitedrocks" "volunteer" ];
-                          }
-                        ];
-                      }
-                      {
-                        name = "Finances";
-                        bookmarks = [
-                          {
-                            name = "Taxes";
-                            url = "https://drive.google.com/drive/u/3/folders/1oANuDS9GhV8edI6GnOM-phs_KJIYWhIO";
-                            tags = [ "climb" "climbing" "doc" "docs" "drive" "finance" "finances" "folder" "folders" "google" "rocks" "tax" "taxes" "united" "unitedrocks" "volunteer" ];
-                          }
-                        ];
-                      }
-                      {
-                        name = "Volunteer Coordinator Docs";
-                        bookmarks = [
-                          {
-                            name = "SafeSport Certificates - Training Manual Forms";
-                            url = "https://drive.google.com/drive/u/3/folders/1SeI5OmogDsvrgd65itrRNqaG58PMXdJL";
-                            tags = [ "certificates" "climb" "climbing" "coordinator" "doc" "docs" "drive" "folder" "folders" "forms" "google" "manual" "rocks" "safe" "safesport" "sport" "training" "united" "unitedrocks" "volunteer" "volunteers" ];
-                          }
-                          {
-                            name = "SafeSport Certificates - Training Manual Forms";
+                            name = "2022";
                             bookmarks = [
-                              {
-                                name = "Movement, Englewood";
-                                url = "https://drive.google.com/drive/u/3/folders/1c-yHlGtfqar0hasDLuTnCGMA7cm6WAK5";
-                                tags = [ "certificates" "climb" "climbing" "coordinator" "doc" "docs" "drive" "englewood" "folder" "folders" "forms" "google" "manual" "movement" "rocks" "safe" "safesport" "sport" "training" "united" "unitedrocks" "volunteer" "volunteers" ];
-                              }
                             ];
                           }
+                          {
+                            name = "2023";
+                            url = "https://drive.google.com/drive/folders/1CEPLvVZVHatT1r7bMdXmGlnLCIfZtZDH?usp=drive_link";
+                            tags = [ "2023" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minute" "minutes" "rocks" "united" "unitedrocks" "volunteer" ];
+                          }
+                          {
+                            name = "2023";
+                            bookmarks = [
+                            ];
+                          }
+                          {
+                            name = "2024";
+                            url = "https://drive.google.com/drive/folders/1o38DX4AclXryWHSd5wb4f_ktcgnYZvpa?usp=drive_link";
+                            tags = [ "2024" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minute" "minutes" "rocks" "united" "unitedrocks" "volunteer" ];
+                          }
+                          {
+                            name = "2024";
+                            bookmarks = [
+                            ];
+                          }
+                          {
+                            name = "2025";
+                            url = "https://drive.google.com/drive/folders/1b2rKW_-TAkGTfIO8Hf00GvtU0XnardII?usp=drive_link";
+                            tags = [ "2025" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minute" "minutes" "rocks" "united" "unitedrocks" "volunteer" ];
+                          }
+                          {
+                            name = "2025";
+                            bookmarks = [
+                            ];
+                          }
+                          {
+                            name = "2026";
+                            url = "https://drive.google.com/drive/folders/1p3l_dof2v6rWo2DD5qST_gjGNSWmXBb2?usp=drive_link";
+                            tags = [ "2026" "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minute" "minutes" "rocks" "united" "unitedrocks" "volunteer" ];
+                          }
+                          {
+                            name = "2026";
+                            bookmarks = [
+                            ];
+                          }
+                          {
+                            name = "Meeting Templates";
+                            url = "https://drive.google.com/drive/folders/1YQWQ9C0kv2NFQeeo6YQIpbA5er-WKC3P?usp=drive_link";
+                            tags = [ "board" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "meeting" "meetings" "minute" "minutes" "rocks" "template" "templates" "united" "unitedrocks" "volunteer" ];
+                          }
                         ];
+                      }
+                      {
+                        name = "Pictures/Videos";
+                        url = "https://drive.google.com/drive/folders/1G6Kx2RbFUrfP_I6N7Hkl6ujOXQ4ijwlU?usp=drive_link";
+                        tags = [ "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "picture picture" "rocks" "united" "unitedrocks" "video" "videos" "volunteer" ];
+                      }
+                      {
+                        name = "Practice Management Team";
+                        url = "https://drive.google.com/drive/u/2/folders/1nt8KWrR3XsrXJbF_xm7O6nBM5Sfn8WE0";
+                        tags = [ "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "management" "practice" "rocks" "team" "united" "unitedrocks" "volunteer" ];
+                      }
+                      {
+                        name = "Stack Team App Resources";
+                        url = "https://drive.google.com/drive/folders/1VnodSWPAGdgV190Cc28id1Vt0yqrlPtU?usp=drive_link";
+                        tags = [ "app" "climb" "climbing" "doc" "docs" "drive" "folder" "folders" "google" "recources" "resource" "rocks" "stack" "team" "united" "unitedrocks" "volunteer" ];
+                      }
+                      {
+                        name = "Yearly Calendar";
+                        url = "https://drive.google.com/drive/u/2/folders/1wzKm1BXqp4VqxReD_tfjVMzZslC9WPCu";
+                        tags = [ "calendar" "climb" "climbing" "rocks" "united" "unitedrocks" "volunteer" "year" "yearly" ];
                       }
                     ];
                   }
                 ];
-              }
-              {
-                name = "Calendar";
-                url = "https://www.unitedrocks.org/calendar/";
-                tags = [ "calendar" "climb" "climbing" "rocks" "united" "unitedrocks" "volunteer" ];
               }
             ];
           }
