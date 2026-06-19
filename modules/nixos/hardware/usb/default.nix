@@ -2,9 +2,12 @@
   # Service for automatically mounting iOS devices.
   # Note(s):
   #    - Hasn't worked for me. I've had to use `ifuse` to mount iOS devices.
-  services.usbmuxd = {
-    enable = true;
-    package = pkgs.usbmuxd2;
+  services = {
+    gvfs.enable = true;
+    usbmuxd = {
+      enable = true;
+      package = pkgs.usbmuxd2;
+    };
   };
   environment.systemPackages = with pkgs; [
     # Includes packages for USB tethering.
