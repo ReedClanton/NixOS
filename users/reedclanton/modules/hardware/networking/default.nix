@@ -2,9 +2,9 @@
 	networking.wireless = {
     secretsFile = "/run/secrets/wireless.conf";
 		networks = {
-     "iPhone 13 Pro" = {
+     "iPhone" = {
         priority = 500;
-        pskRaw = "ext:iPhone_13_Pro_psk";
+        pskRaw = "ext:iPhone_psk";
       };
       "Pixel_1465" = {
         priority = 450;
@@ -33,6 +33,14 @@
       "GL-AXT1800-87c-5G" = {
         priority = 390;
         pskRaw = "ext:gl_axt1800_87c_5g_psk";
+      };
+      "ImperialGuest" = {
+        priority = 375;
+        pskRaw = "ext:ImperialGuest_psk";
+      };
+      "TaoBobaDenver" = {
+        priority = 375;
+        pskRaw = "ext:TaoBobaDenver_psk";
       };
       "New Image Guest" = {
         priority = 375;
