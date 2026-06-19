@@ -2,9 +2,9 @@
 	networking.wireless = {
     secretsFile = "/run/secrets/wireless.conf";
 		networks = {
-     "iPhone" = {
+     "iPhone 17 Pro Max" = {
         priority = 500;
-        pskRaw = "ext:iPhone_psk";
+        pskRaw = "ext:iPhone_17_Pro_Max_psk";
       };
       "Pixel_1465" = {
         priority = 450;
