@@ -1,7 +1,8 @@
 { pkgs, ... }: {
+  boot.kernelModules = [
+    "ipheth"
+  ];
   # Service for automatically mounting iOS devices.
-  # Note(s):
-  #    - Hasn't worked for me. I've had to use `ifuse` to mount iOS devices.
   services = {
     gvfs.enable = true;
     usbmuxd = {
