@@ -34,6 +34,10 @@
         priority = 390;
         pskRaw = "ext:gl_axt1800_87c_5g_psk";
       };
+      "ATILA" = {
+        priority = 375;
+        pskRaw = "ext:ATILA_psk";
+      };
       "ImperialGuest" = {
         priority = 375;
         pskRaw = "ext:ImperialGuest_psk";
