@@ -34,6 +34,9 @@
         priority = 390;
         pskRaw = "ext:gl_axt1800_87c_5g_psk";
       };
+      "Fly0Tucson0Free0WiFi" = {
+        priority = 375;
+      };
       "ATILA" = {
         priority = 375;
         pskRaw = "ext:ATILA_psk";
