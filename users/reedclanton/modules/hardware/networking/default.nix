@@ -70,6 +70,10 @@
         priority = 375;
         pskRaw = "ext:oldetownsocial_psk";
       };
+      # This requires a login portal that asks for my work username and password.
+      "RGuest" = {
+        priority = 375;
+      };
       "@Bangers" = {
         priority = 350;
       };
