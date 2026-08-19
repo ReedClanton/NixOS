@@ -37,6 +37,9 @@
       "Fly-Tucson-Free-WiFi" = {
         priority = 375;
       };
+      "JWMarriott_guest" = {
+        priority = 375;
+      };
       "ATILA" = {
         priority = 375;
         pskRaw = "ext:ATILA_psk";
