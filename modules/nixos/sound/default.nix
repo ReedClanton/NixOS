@@ -10,7 +10,7 @@ let
     # This is much faster.
     buildCommand = ''
       set -euo pipefail
-      
+
       # Copy original files, for each split-output (`out`, `dev` etc.).
       # TODO: Remove hard coded refrence to pipewire so this function will
       #   work with any package.
@@ -28,7 +28,7 @@ let
             og-pkg.outputs
           )
       }
-      
+
       # Replace:
       #     [Element (Internal|Int) Mic Boost]
       #     required-any = any
@@ -60,7 +60,12 @@ let
   });
 in {
   # Alsa terminal utilities.
-  environment.systemPackages = with pkgs; [ alsa-utils ];
+  environment.systemPackages = with pkgs; [
+    # Alsa terminal utilities.
+    alsa-utils
+    # Audio equalizer.
+    easyeffects
+  ];
 
   users.users.${user.name}.extraGroups = [ "audio" ];
 
