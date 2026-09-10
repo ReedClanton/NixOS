@@ -7,6 +7,7 @@
     (if builtins.pathExists ./networking/default.nix then ./networking else ../../../../modules/nixos/hardware/networking)
     (if builtins.pathExists ./power/default.nix then ./power else ../../../../do-nothing.nix)
     (if builtins.pathExists ./printing/default.nix then ./printing else ../../../../modules/nixos/hardware/printing)
+    (if builtins.pathExists ./sound/default.nix then ./sound else ../../../../modules/nixos/hardware/sound)
     (if builtins.pathExists ./v4l2loopback/default.nix then ./v4l2loopback else ../../../../modules/nixos/hardware/v4l2loopback)
   ];
 }

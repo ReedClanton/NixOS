@@ -16,7 +16,6 @@
 		(if builtins.pathExists ./modules/language/default.nix then ./modules/language else ../../modules/nixos/language)
 		(if builtins.pathExists ./modules/nix/default.nix then ./modules/nix else ../../modules/nixos/nix)
     (if builtins.pathExists ./modules/proton/default.nix then ./modules/proton else ../../modules/nixos/proton)
-		(if builtins.pathExists ./modules/sound/default.nix then ./modules/sound else ../../modules/nixos/sound)
 		(if builtins.pathExists ./modules/ssh/default.nix then ./modules/ssh else ../../modules/nixos/ssh)
 		(if builtins.pathExists ./modules/sudo/default.nix then ./modules/sudo else ../../modules/nixos/sudo)
 		(if builtins.pathExists ./modules/time/default.nix then ./modules/time else ../../modules/nixos/time)

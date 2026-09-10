@@ -26,6 +26,9 @@
     # Tracks location of local/global printing configuration.
     local-printing-configuration = "./printing/default.nix";
     global-printing-configuration = "./../../../../modules/nixos/hardware/printing/default.nix";
+    # Tracks location of local/global sound configuration.
+    local-sound-configuration = "./sound/default.nix";
+    global-sound-configuration = "./../../../../modules/nixos/hardware/sound/default.nix";
     # Tracks location of local/global USB configuration.
     local-usb-configuration = "./usb/default.nix";
     global-usb-configuration = "./../../../../modules/nixos/hardware/usb/default.nix";
@@ -137,7 +140,23 @@
               ./. + (builtins.substring 1 9999 "${global-printing-configuration}")
             else
               trivial.warn
-                "${current-file-path}: Common networking configuration file (${global-printing-configuration}) and local configuration file (${local-printing-configuration}) couldn't be found. Printing will not be configured."
+                "${current-file-path}: Common pringing configuration file (${global-printing-configuration}) and local configuration file (${local-printing-configuration}) couldn't be found. Printing will not be configured."
+                ./. + (builtins.substring 1 9999 "${do-nothing}")
+          )
+    )
+    # Setup sound.
+    (
+      if builtins.pathExists (./. + (builtins.substring 1 9999 "${local-sound-configuration}")) then
+        ./. + (builtins.substring 1 9999 "${local-sound-configuration}")
+      else
+        trivial.warn
+          "${current-file-path}: Host machine '${host}' has no local sound configuration (${local-sound-configuration}), calling common module (${global          -sound-configuration})..."
+          (
+            if builtins.pathExists (./. + (builtins.substring 1 9999 "${global-sound-configuration}")) then
+              ./. + (builtins.substring 1 9999 "${global-sound-configuration}")
+            else
+              trivial.warn
+                "${current-file-path}: Common sound configuration file (${global-sound-configuration}) and local configuration file (${local-sound-                configuration}) couldn't be found. Sound will not be configured."
                 ./. + (builtins.substring 1 9999 "${do-nothing}")
           )
     )
