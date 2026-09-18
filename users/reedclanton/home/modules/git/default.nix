@@ -13,8 +13,7 @@ in {
   # Recursively links the contents of shell_base/src/shell/ into ~/.config/zsh/.
   xdg.configFile."shell" = {
     source = "${shellBase}/src/shell";
-    # Links each file individually instead of linking the whole directory, so ~/.config/zsh/
-    # stays a real, writable directory (zsh writes things like .zcompdump there).
+    # Links each file individually instead of linking the whole directory.
     recursive = true;
   };
 }
