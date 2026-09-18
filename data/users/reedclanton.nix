@@ -77,8 +77,8 @@
 		'';
 		shellRc = ''
 			# Source Shell Function(s)
-			if [ -f $HOME/Shell/shell_functions ]; then
-				. $HOME/Shell/shell_functions
+			if [ -f $HOME/.config/shell ]; then
+				. $HOME/.config/shell
 			fi
 		'';
 	};
