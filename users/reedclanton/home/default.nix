@@ -25,7 +25,7 @@
   in [
     # Git setup.
     (
-      if builtins.pathExists (./. + (builtins.substring 1 9999 "${git-configuration}}")) then
+      if builtins.pathExists (./. + (builtins.substring 1 9999 "${git-configuration}")) then
         ./. + (builtins.substring 1 9999 "${git-configuration}")
       else
         trivial.warn
