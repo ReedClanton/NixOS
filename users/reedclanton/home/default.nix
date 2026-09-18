@@ -3,6 +3,8 @@
   let
     # Used in log/warning/error messages.
     current-file-path = "user/${user.name}/home/default.nix";
+    # Clones git repo(s) into home Directory.
+    git-configuration = "./modules/git/default.nix";
     # Tracks location of user's local Home Manager hardware setup configuration.
     hardware-configuration = "./modules/hardware/default.nix";
     # Tracks location of the code that creates a list of applications that are installed
@@ -21,6 +23,15 @@
     # Tracks location of Home Manager host specific configuration.
     host-configuration = "./hosts/default.nix";
   in [
+    # Git setup.
+    (
+      if builtins.pathExists (./. + (builtins.substring 1 9999 "${git-configuration}}")) then
+        ./. + (builtins.substring 1 9999 "${git-configuration}")
+      else
+        trivial.warn
+          "${current-file-path}: No Home Manager host (${host}) independent git configuration exists (${git-configuration}) for this user (${user.name})..."
+          ../../../do-nothing.nix
+    )
     # Hardware setup.
     (
       if builtins.pathExists (./. + (builtins.substring 1 9999 "${hardware-configuration}")) then
