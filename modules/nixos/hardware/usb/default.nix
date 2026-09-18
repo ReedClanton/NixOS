@@ -16,6 +16,8 @@
     #    - Haven't been able to get USB tethering to work. Might have to do with my usage of wpa.
     libimobiledevice
     ifuse
+    # This is mostly here to provide `lsusb`.
+    usbutils
   ];
 }
 
