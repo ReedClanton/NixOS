@@ -34,6 +34,12 @@
         priority = 390;
         pskRaw = "ext:gl_axt1800_87c_5g_psk";
       };
+      "Graduate_Guest" = {
+        priority = 375;
+      };
+      "Unitedwifi.com" = {
+        priority = 375;
+      };
       "SouthwestWiFi" = {
         priority = 375;
       };
