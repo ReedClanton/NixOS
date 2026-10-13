@@ -49,6 +49,9 @@
       "JWMarriott_guest" = {
         priority = 375;
       };
+      "Denver Beer Co Guest" = {
+        priority = 375;
+      };
       "ATILA" = {
         priority = 375;
         pskRaw = "ext:ATILA_psk";

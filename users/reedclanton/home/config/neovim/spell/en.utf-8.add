@@ -271,6 +271,7 @@ sourceFunctions
 someFunctionName
 eval
 shellFunctionSetup
+<<<<<<< Updated upstream
 ReedClanton
 PRs
 fileExtension
@@ -283,3 +284,22 @@ setenv
 unsetenv
 specfile
 shellcheck
+=======
+ShellSpec
+kcov
+Korn
+ksh
+precheck
+GitLab
+shellspec
+Dockerfile
+OpenBSD
+busybox
+BusyBox
+MacOS
+BusyBox's
+ubuntu
+just
+yash
+ShellSpec's
+>>>>>>> Stashed changes
