@@ -7,6 +7,7 @@ in {
     # Hardware setup.
     (if builtins.pathExists ./modules/hardware/default.nix then ./modules/hardware else ../../do-nothing.nix)
     # User setup.
+    (if builtins.pathExists ./modules/applications/default.nix then ./modules/applications else ../../do-nothing.nix)
     (if builtins.pathExists ./modules/arduino/default.nix then ./modules/arduino else ../../do-nothing.nix)
     (if builtins.pathExists ./modules/docker/default.nix then ./modules/docker else ../../do-nothing.nix)
     (if builtins.pathExists ./modules/sops/default.nix then ./modules/sops else ../../do-nothing.nix)
